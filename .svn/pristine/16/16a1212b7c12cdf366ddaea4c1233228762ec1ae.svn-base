@@ -1,4 +1,0 @@
-@import '../../components/container/container';
-@import '../../components/button/button';
-@import '../../components/navbar/navbar';
-@import '../../components/sticky-bar/sticky-bar';
