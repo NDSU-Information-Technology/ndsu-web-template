@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>NDSU - North Dakota State University</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="ie7.css" />
+    <![endif]-->
+    <link rel="icon" href="https://static.ndsu.nodak.edu/favicon.ico" />
+    <meta name="keywords" content="North, Dakota, State, University, NDSU, Website, Fargo, ND, Home Page,, information, about, student, academic, admissions, news, prospective, students, registration, faculty, courses, agriculture"
+    />
+    <meta name="Description" content="With energy and momentum, North Dakota State University addresses the needs and aspirations of people in a changing world by building on our land-grant foundation. This is North Dakota State University's Website at Fargo, ND. Web Site with information and news for prospective, undergraduate and graduate students as well as faculty, staff, alumni, visitors and friends."
+    />
+    <meta name="language" content="en-US" />
+    <script type="application/ld+json">
+        {
+	"@context": "http://schema.org",
+	"@type": "CollegeOrUniversity",
+	"name": "North Dakota State University",
+	"url": "https://www.ndsu.edu",
+	"logo": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/logo_usage/NDSU.logo.typebox.jpg",
+	"sameAs": [
+		"https://www.facebook.com/ndsu.fargo",
+		"https://twitter.com/ndsu",
+		"https://www.youtube.com/ndsuofficial",
+		"https://en.wikipedia.org/wiki/North_Dakota_State_University"
+	],
+	"memberOf": [
+		{ "@type": "Organization",
+		"url": "https://www.ndus.edu",
+		"name": "North Dakota University System"
+		},
+		{ "@type": "Organization",
+		"url": "https://www.internet2.edu",
+		"name": "Internet2"
+		}
+	],
+	"contactPoint": [
+		{ "@type": "ContactPoint",
+		"telephone": "+1-701-231-8802",
+		/* Not valid; we know */
+		"contactType": "Admission"
+		},
+		{ "@type": "ContactPoint",
+		"telephone": "+1-701-231-8011",
+		/* Not valid; we know */
+		"contactType": "Information"
+		}
+	]
+}
+    </script>
+    <link rel="stylesheet" type="text/css" href="styles/css/styles-test.css?ver=1453823760" />
+    <!--<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7180074/6080952/css/fonts.css" />-->
+</head>
+
+<body class="">
+    <!--For ARIA roles and attributes: https://www.w3.org/TR/html-aria/-->
+    <section class="sr-navigation" role="navigation">
+        <ul class="remove-list-style">
+            <li>
+                <a class="sr-only sr-only-focusable" href="#container" title="Skip to special events list">Skip to special events list</a>
+            </li>
+            <li>
+                <a class="sr-only sr-only-focusable" href="#nav" title="NDSU Guides">NDSU Guides</a>
+            </li>
+            <li>
+                <a class="sr-only sr-only-focusable" href="#footernav" title="NDSU Navigation">Navigate NDSU Web</a>
+            </li>
+        </ul>
+    </section>
+    <header>
+        <div class="navbar-mobile-container">
+            <div class="green-bar">
+                <div class="container flex-container flex-middle" role="navigation">
+                    <h1><img src="images/logo.png" alt="North Dakota State University" title="" height="35" width="73" /></h1>
+
+                    <ul class="navbar navbar-right navbar-mobilize">
+                        <li class="nav-item"><a class="nav-link btn-clear-yellow-white" href="about/" title="NDSU at a glance">About&nbsp;NDSU</a></li>
+                        <li class="nav-item"><a class="nav-link btn-clear-yellow-white" href="academics/" title="Academic programs (majors)">Academics</a></li>
+                        <li class="nav-item"><a class="nav-link btn-clear-yellow-white" href="admission/" title="Office of Admission">Admission</a></li>
+                        <li class="nav-item"><a class="nav-link btn-clear-yellow-white" href="http://www.gobison.com/" title="Bison Athletics">Athletics</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-yellow navbar-toggle"><span class="sr-only">Mobile menu</span></button>
+                </div>
+            </div>
+            <div class="theme-gray">
+                <ul class="navbar navbar-mobile navbar-vertical theme-gray">
+                </ul>
+            </div>
+            <div class="page-title-bar">
+                <div class="container page-title-wrapper">
+                    <h2 class="page-title">Undergraduate Students</h2>
+                </div>
+            </div>
+        </div>
+        <div class="theme-gray sticky-navbar" role="navigation">
+            <div class="container">
+                <span class="sr-only">NDSU Guides</span>
+                <ul class="navbar navbar-left navbar-mobilize">
+                    <li class="nav-item nav-item-mobile-hide nav-item-home"><a class="nav-link" href="/"><span class="sr-only">Home</span>&#8962;</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admission/" title="Prospective Students">Prospective&nbsp;Students</a>
+                        <ul class="navbar navbar-vertical child-navbar">
+                            <li class="nav-item"><a class="nav-link" href="admission/" title="Undergraduate Admission">Undergraduate</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gradschool/" title="Graduate School">Graduate</a></li>
+                            <li class="nav-item"><a class="nav-link" href="admission/international/" title="International">International</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="undergraduate/">Undergraduate&nbsp;Students</a>
+                        <ul class="navbar navbar-vertical child-navbar">
+                            <li class="nav-item"><a class="nav-link" href="#" title="Undergraduate Admission">Menu Item</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" title="International">Third Menu Item</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="gradschool/">Graduate&nbsp;Students</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faculty_staff/">Faculty/Staff</a>
+                        <ul class="navbar child-navbar extended-child-navbar">
+                            <li class="nav-item extended-child-section">
+                                <h3 class="child-section-title">Section 1 Title</h3>
+                                <ul class="navbar child-navbar navbar-vertical">
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Undergraduate Admission">Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="International">Third Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item extended-child-section">
+                                <h3 class="child-section-title">Section 2</h3>
+                                <ul class="navbar child-navbar navbar-vertical">
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Undergraduate Admission">Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="International">Third Menu Item</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item extended-child-section">
+                                <h3 class="child-section-title">Section Three</h3>
+                                <ul class="navbar child-navbar navbar-vertical">
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Undergraduate Admission">Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="International">Third Menu Item</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item extended-child-section">
+                                <h3 class="child-section-title">Last Section</h3>
+                                <ul class="navbar child-navbar navbar-vertical">
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Undergraduate Admission">Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="Graduate School">Another Menu Item</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" title="International">Third Menu Item</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="research/">Researchers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="alumni_friends/">Alumni/Friends</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="jumbotron dept-intro" style="background-image:url(https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg)">
+
+        </div>
+        <section class="generic-content">
+            <h3>Big headline - h3</h3>
+            <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
+                ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet
+                aliquet. Fusce facilisis lorem non rutrum facilisis. Nam nec ex sapien. Aliquam eget metus vel augue finibus
+                ultricies et ac lacus. Maecenas sit amet metus erat.</p>
+        </section>
+
+        <section class="my-3 container">
+            <div id="homepageCarousel" class="carousel" aria-label="Home page banner">
+                <ul class="slides-container">
+                    <li class="slide">
+                        <a class="full-size" href="https://www.ndsu.edu/news/studentnews/deanslistspring2017/">
+                            <img src="https://www.ndsu.edu/pubweb/homepage/images/banners/2017/05_May/DeansList_Sp2017.jpg" alt="Congratulations Dean's List Honorees - Spring 2017"/>
+                    </a>
+                    </li>
+                    <li class="slide">
+                        <a class="full-size" href="https://www.facebook.com/hashtag/ndsutrue?source=feed_text&story_id=10154157417623275">
+                            <img src="https://www.ndsu.edu/pubweb/homepage/images/banners/2015/08_Aug/NDSUtrue.jpg" alt="#NDSUtrue"  />
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a class="full-size" href="https://www.ndsu.edu/news/banner_stories/bersie/">
+                            <img src="https://www.ndsu.edu/pubweb/homepage/images/banners/2017/05_May/SF_Bersie_CommencementSP17.jpg" alt="Commencement speaker to encourage graduates to remember lessons learned"/>
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a class="full-size" href="https://www.ndsu.edu/news/banner_stories/murphy/">
+                            <img src="https://www.ndsu.edu/pubweb/homepage/images/banners/2017/05_May/SF_Murphy_CommencementSP17.jpg" alt="Commencement speaker to urge graduates to embrace authenticity"/>
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a class="full-size" href="https://www.ndsu.edu/police_safety/">
+                            <img src="https://www.ndsu.edu/pubweb/homepage/images/banners/2015/02_Feb/Safety_TextTip.jpg" alt="Campus Safety: If you see something, text a tip - 701-526-6006"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="generic-content gray">
+            <h4>Second headline - h4</h4>
+            <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
+                ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet
+                aliquet. Fusce facilisis lorem non rutrum facilisis. Nam nec ex sapien. Aliquam eget metus vel augue finibus
+                ultricies et ac lacus. Maecenas sit amet metus erat.</p>
+        </section>
+        <section class="generic-content">
+            <h3>Big headline - h3</h3>
+            <p class="text-column-2">Donec ut lobortis nisi, posuere egestas mauris. Nulla non quam sed dui faucibus interdum. Vivamus finibus felis
+                sed ex mollis interdum. Vivamus rutrum quam eu risus convallis, ut cursus sem semper. Praesent arcu nisi,
+                varius ut vestibulum viverra, hendrerit et velit. Aenean consectetur, sapien sed laoreet condimentum, augue
+                arcu tristique mi, vel ultrices tellus diam at lorem. Donec scelerisque massa et quam cursus, vitae pellentesque
+                nisi sodales. Proin eleifend at lorem vel efficitur. Donec sodales vulputate enim, ac lobortis neque rutrum
+                vel. Maecenas cursus suscipit sapien. Sed ut volutpat enim. In egestas malesuada accumsan. Aliquam interdum
+                lectus urna, vel pulvinar purus auctor dictum. Quisque malesuada dolor a rhoncus scelerisque. Fusce eget
+                libero non enim porta tincidunt vitae et ligula. Curabitur euismod, nulla eget rutrum ullamcorper, nulla
+                lectus iaculis massa, in semper dui ex vitae est.</p>
+        </section>
+        <section class="generic-content gray">
+            <h3>Big headline - h3</h3>
+            <div class="text-column-3">
+                <p>Donec ut lobortis nisi, posuere egestas mauris. Nulla non quam sed dui faucibus interdum. Vivamus finibus
+                    felis sed ex mollis interdum. Vivamus rutrum quam eu risus convallis, ut cursus sem semper. Praesent
+                    arcu nisi, varius ut vestibulum viverra, hendrerit et velit. Aenean consectetur, sapien sed laoreet condimentum,
+                    augue arcu tristique mi, vel ultrices tellus diam at lorem. Donec scelerisque massa et quam cursus, vitae
+                    pellentesque nisi sodales. Proin eleifend at lorem vel efficitur.</p>
+                <p>Maecenas consectetur augue at massa mollis, a blandit tortor ultrices. Morbi interdum leo in tristique varius.
+                    Mauris quis ornare lorem. Nam vitae nisl nunc. Morbi commodo lacus a dui interdum, sit amet dignissim
+                    arcu commodo. Nam mollis varius commodo. Vestibulum sagittis consectetur egestas. Nullam tristique pellentesque
+                    sapien, vitae dictum nisl pellentesque sit amet. Morbi condimentum sagittis feugiat. Nam sed nibh vitae
+                    lectus finibus hendrerit.</p>
+                <p>Donec sodales vulputate enim, ac lobortis neque rutrum vel. Maecenas cursus suscipit sapien. Sed ut volutpat
+                    enim. In egestas malesuada accumsan. Aliquam interdum lectus urna, vel pulvinar purus auctor dictum.
+                    Quisque malesuada dolor a rhoncus scelerisque. Fusce eget libero non enim porta tincidunt vitae et ligula.
+                    Curabitur euismod, nulla eget rutrum ullamcorper, nulla lectus iaculis massa, in semper dui ex vitae
+                    est. Morbi congue dignissim odio eu pulvinar. Donec consectetur at felis id ultrices. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus egestas tellus nec
+                    augue hendrerit, sit amet scelerisque sapien euismod. In dictum, erat id ullamcorper malesuada, turpis
+                    enim hendrerit arcu, nec finibus turpis velit malesuada ante.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="theme-dark">
+        <div class="">
+            <div class="sflgru-banner">
+                <p class="sr-only">Student Focused. Land Grant. Research University.</p>
+            </div>
+        </div>
+        <!--<section class="alpha-links py-3" role="navigation">
+            <ul class="flex-container row flex-center">
+                <li class="index flex-item flex-item-mx-1"><a class="btn btn-yellow btn-tiny px-5" href="alphaindex/" title="NDSU Index"><span>NDSU Index</span></a></li>
+                <li class="a flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/A" title="Index: A"><span>A</span></a></li>
+                <li class="b flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/B" title="Index: B"><span>B</span></a></li>
+                <li class="c flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/C" title="Index: C"><span>C</span></a></li>
+                <li class="d flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/D" title="Index: D"><span>D</span></a></li>
+                <li class="e flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/E" title="Index: E"><span>E</span></a></li>
+                <li class="f flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/F" title="Index: F"><span>F</span></a></li>
+                <li class="g flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/G" title="Index: G"><span>G</span></a></li>
+                <li class="h flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/H" title="Index: H"><span>H</span></a></li>
+                <li class="i flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/I" title="Index: I"><span>I</span></a></li>
+                <li class="j flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/J" title="Index: J"><span>J</span></a></li>
+                <li class="k flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/K" title="Index: K"><span>K</span></a></li>
+                <li class="l flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/L" title="Index: L"><span>L</span></a></li>
+                <li class="m flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/M" title="Index: M"><span>M</span></a></li>
+                <li class="n flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/N" title="Index: N"><span>N</span></a></li>
+                <li class="o flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/O" title="Index: O"><span>O</span></a></li>
+                <li class="p flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/P" title="Index: P"><span>P</span></a></li>
+                <li class="q flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/Q" title="Index: Q"><span>Q</span></a></li>
+                <li class="r flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/R" title="Index: R"><span>R</span></a></li>
+                <li class="s flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/S" title="Index: S"><span>S</span></a></li>
+                <li class="t flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/T" title="Index: T"><span>T</span></a></li>
+                <li class="u flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/U" title="Index: U"><span>U</span></a></li>
+                <li class="v flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/V" title="Index: V"><span>V</span></a></li>
+                <li class="w flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/W" title="Index: W"><span>W</span></a></li>
+                <li class="x flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/X" title="Index: X"><span>X</span></a></li>
+                <li class="y flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/Y" title="Index: Y"><span>Y</span></a></li>
+                <li class="z flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/Z" title="Index: Z"><span>Z</span></a></li>
+            </ul>
+        </section>-->
+        <div class="footer-nav" role="navigation">
+            <ul class="navbar container">
+                <li class="nav-item">
+                    <a class="nav-link" href="alphaindex/buildings" title="Alphabetical Building List">Campus Map</a>
+                    <ul class="navbar navbar-vertical child-navbar" data-navbar-direction="vertical">
+                        <li class="nav-item"><a class="nav-link" href="pubweb/homepage/CampusMap_2pg.pdf">Campus Map (pdf)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="alphaindex/buildings" title="Alphabetical Building List">Building List</a></li>
+                        <li class="nav-item"><a class="nav-link" href="alphaindex/" title="Complete Office List">Campus Offices</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://jobs.ndsu.edu" title="Employment opportunities at NDSU">Employment</a></li>
+                <li class="nav-item"><a class="nav-link" href="equity/">Equity</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="onlineservices/">Online Services</a>
+                    <ul class="navbar navbar-vertical child-navbar dropup" data-navbar-direction="vertical">
+                        <li class="nav-item"><a class="nav-link" href="https://bb.ndsu.nodak.edu/">Blackboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://studentadmin.connectnd.us/psp/NDCSPRD/EMPLOYEE/HRMS/h/?tab=GUEST"
+                                title="Campus Connection: Register for classes and pay your bill online">Campus Connection</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pubweb/itdivision/mailhub/">Email</a></li>
+                        <li class="nav-item"><a class="nav-link" href="its/help_desk/"><abbr title="Information Technology">IT</abbr> Help Desk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://library.ndsu.edu">Libraries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="onestop/">One Stop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.ndsu.edu/enrollmentmanagement/studentsuccess/">Student Success Collaborative</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="directory/">Phone/Email Directory</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registrar/" title="Office of the Registrar">Registration And Records</a>
+                    <ul class="navbar navbar-vertical child-navbar" data-navbar-direction="vertical">
+                        <li class="nav-item"><a class="nav-link" href="registrar/academics/schedule/">Course Schedule</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registrar/dates/">Dates and Deadlines</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <section class="contact container py-4">
+                <a id="switchView" href="/admission/#?display=mobile" title="Mobile view">Mobile Site</a><span class="sr-only">.</span>
+                <address>
+                    <h3>North Dakota State University</h3>
+                    <div class="address-line">
+                        <div class="address-part">Phone: </div>
+                        <div class="address-part"><a href="tel:17012318643">+1 (701) 231-8643</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Fax: </div>
+                        <div class="address-part"><a href="fax:17012318202">+1 (701) 231-8802</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Campus address: </div>
+                        <div class="address-part"><a href="http://www.ndsu.edu/ndsu/main/directory/bldg_details.php?choice=15" title="Ceres Hall building">Ceres Hall 114</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Physical/delivery address: </div>
+                        <div class="address-part"><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1340+Administration+Ave.%2C+Fargo%2C+ND+58102"
+                                title="Find on a map">1301 Administration Ave., Fargo, ND 58102</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Mailing address: </div>
+                        <div class="address-part">NDSU Dept. 2832 / PO Box 6050 / Fargo, ND 58108-6050</div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Courier address: </div>
+                        <div class="address-part">
+                            North Dakota State University Office of Admission <br> 1301 Administration Ave. / 114 Ceres Hall<br>                            Fargo, ND 58102
+                        </div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Page manager: </div>
+                        <div class="address-part"><a href="mailto:ndsu.admission@ndsu.edu" title="Admission Email" class="mail-link">Office of Admission</a>
+                        </div>
+                    </div>
+                </address>
+            </section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" defer src="scripts/global.js"></script>
+    <script type="text/javascript" defer src="scripts/navbar.js"></script>
+    <script type="text/javascript" src="scripts/carousel.js"></script>
+    <script type="text/javascript" defer>
+        var homepageCarousel = new myCarousel();
+        homepageCarousel.init({
+            id: 'homepageCarousel',
+            pause: 6000,
+            slidenav: false,
+            animate: true,
+            startAnimated: true
+        });
+    </script>
+</body>
+
+</html>

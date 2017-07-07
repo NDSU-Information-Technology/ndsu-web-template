@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>NDSU - North Dakota State University</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="ie7.css" />
+    <![endif]-->
+    <link rel="icon" href="https://static.ndsu.nodak.edu/favicon.ico" />
+    <meta name="keywords" content="North, Dakota, State, University, NDSU, Website, Fargo, ND, Home Page,, information, about, student, academic, admissions, news, prospective, students, registration, faculty, courses, agriculture"
+    />
+    <meta name="Description" content="With energy and momentum, North Dakota State University addresses the needs and aspirations of people in a changing world by building on our land-grant foundation. This is North Dakota State University's Website at Fargo, ND. Web Site with information and news for prospective, undergraduate and graduate students as well as faculty, staff, alumni, visitors and friends."
+    />
+    <meta name="language" content="en-US" />
+    <script type="application/ld+json">
+        {
+	"@context": "http://schema.org",
+	"@type": "CollegeOrUniversity",
+	"name": "North Dakota State University",
+	"url": "https://www.ndsu.edu",
+	"logo": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/logo_usage/NDSU.logo.typebox.jpg",
+	"sameAs": [
+		"https://www.facebook.com/ndsu.fargo",
+		"https://twitter.com/ndsu",
+		"https://www.youtube.com/ndsuofficial",
+		"https://en.wikipedia.org/wiki/North_Dakota_State_University"
+	],
+	"memberOf": [
+		{ "@type": "Organization",
+		"url": "https://www.ndus.edu",
+		"name": "North Dakota University System"
+		},
+		{ "@type": "Organization",
+		"url": "https://www.internet2.edu",
+		"name": "Internet2"
+		}
+	],
+	"contactPoint": [
+		{ "@type": "ContactPoint",
+		"telephone": "+1-701-231-8802",
+		/* Not valid; we know */
+		"contactType": "Admission"
+		},
+		{ "@type": "ContactPoint",
+		"telephone": "+1-701-231-8011",
+		/* Not valid; we know */
+		"contactType": "Information"
+		}
+	]
+}
+    </script>
+    <link rel="stylesheet" type="text/css" href="styles/css/styles-test.css?ver=1453823760" />
+    <link rel="stylesheet" type="text/css" href="styles/css/homepage.css?ver=1453823760" />
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7180074/6080952/css/fonts.css" />
+</head>
+
+<body class="">
+    <!--For ARIA roles and attributes: https://www.w3.org/TR/html-aria/-->
+    <section class="sr-navigation" role="navigation">
+        <ul role="menu" class="remove-list-style">
+            <li>
+                <a class="sr-only sr-only-focusable" role="menuitem" href="#container" title="Skip to special events list">Skip to special events list</a>
+            </li>
+            <li>
+                <a class="sr-only sr-only-focusable" role="menuitem" href="#nav" title="NDSU Guides">NDSU Guides</a>
+            </li>
+            <li>
+                <a class="sr-only sr-only-focusable" role="menuitem" href="#footernav" title="NDSU Navigation">Navigate NDSU Web</a>
+            </li>
+        </ul>
+    </section>
+    <header>
+        <div class="top-bar-wrapper">
+            <div class="top-bar container" role="navigation">
+                <h1><img src="images/logo.png" alt="North Dakota State University" title="" height="35" width="73" /></h1>
+
+                <ul class="navbar navbar-right" role="menubar">
+                    <li class="nav-item"><a class="nav-link" role="menuitem" href="about/" title="NDSU at a glance">About&nbsp;NDSU</a></li>
+                    <li class="nav-item"><a class="nav-link" role="menuitem" href="academics/" title="Academic programs (majors)">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" role="menuitem" href="admission/" title="Office of Admission">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" role="menuitem" href="http://www.gobison.com/" title="Bison Athletics">Athletics</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar" role="navigation">
+            <span class="sr-only">NDSU Guides</span>
+            <ul class="navbar container" role="menubar">
+                <li class="nav-item secondary">
+                    <a id="linkProspectiveStudents" class="nav-link" role="menuitem" aria-haspopup="true" href="admission/" title="Prospective Students">Prospective&nbsp;Students</a>
+                    <ul class="navbar navbar-vertical secondary-menu" role="menu" aria-labelledby="linkProspectiveStudents" data-navbar-direction="vertical">
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="admission/" title="Undergraduate Admission">Undergraduate</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="gradschool/" title="Graduate School">Graduate</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="admission/international/" title="International">International</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="undergraduate/">Undergraduate&nbsp;Students</a></li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="gradschool/">Graduate&nbsp;Students</a></li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="faculty_staff/">Faculty/Staff</a></li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="research/">Researchers</a></li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="alumni_friends/">Alumni/Friends</a></li>
+            </ul>
+            </nav>
+    </header>
+    <main>
+        <div class="jumbotron dept-intro" style="background-image:url(https://www.ndsu.edu/fileadmin/admission/admission_intro.jpg)">
+        </div>
+        <div class="container layout">
+            <div class="nav-col">
+                <h3 class="csc-firstHeader"><a href="admission/" title="Office of Admission" id="homelink">Office of Admission</a><span class="sr-only"> navigation</span></h3>
+                <ul class="navbar navbar-vertical">
+                    <li class="nav-item"><a class="nav-link" href="admission/about_ndsu/" title="About NDSU">About NDSU</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/academic/" title="Academic Information">Academic Information</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/admission_information/" title="Admission Information">Admission Information</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/forms/" title="Applications + Forms">Applications + Forms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://www.ndsu.edu/visit" title="Campus Visit Opportunities">Campus Visit Opportunities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/cost_tuition/" title="Costs + Financial Aid">Costs + Financial Aid</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/counselor_advisor_resources/" title="Counselor + Advisor Resources">Counselor + Advisor Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/diverse/" title="Diversity Resources">Diversity Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/eventregistration/" title="Event Registration">Event Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/international/" title="International Admission">International Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://www.ndsu.edu/veterans/prospective_students/" title="Military + Veterans Certification">Military + Veterans Certification</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/scholarships/" title="Scholarships">Scholarships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/staff_directory/" title="Staff Directory">Staff Directory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/transfer/" title="Transfer Students">Transfer Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission/photos/" title="Photo Gallery">Photo Gallery</a></li>
+                </ul>
+            </div>
+            <div class="main-col">
+                <!--  CONTENT ELEMENT, uid:171176/text [begin] -->
+                <div id="c171176" class="csc-frame csc-frame-default">
+                    <!--  Text: [begin] -->
+                    <h5>North Dakota State University is a student-focused, land-grant, research university with more than 14,000
+                        students from 47 states and 79 countries, creating a diverse student population. Programs are academically
+                        rigorous, but more than 70 percent of our classes have 40 or fewer students, creating an immersive
+                        learning environment in which our faculty are committed to student success. The campus offers excellent
+                        facilities for living, learning and making lifelong connections. NDSU is a public institution and
+                        a member of the North Dakota University System and is fully accredited by the North Central Association
+                        of Colleges and Schools.<br><br></h5>
+                    <!--  Text: [end] -->
+                </div>
+                <!--  CONTENT ELEMENT, uid:171176/text [end] -->
+
+                <!--  CONTENT ELEMENT, uid:443823/media [begin] -->
+                <div id="c443823" class="csc-frame csc-frame-default">
+                    <!--  Media element: [begin] -->
+                    <object type="application/x-shockwave-flash" data="https://www.youtube.com/v/SHY4d_tmeLI?fs=1" width="700" height="400" id="mmswf59418f709a9d7550587210"
+                        style="visibility: visible;"><param name="quality" value="high"><param name="menu" value="false"><param name="allowScriptAccess" value="sameDomain"><param name="allowFullScreen" value="true"></object>
+                    <!--  Media element: [end] -->
+                </div>
+                <!--  CONTENT ELEMENT, uid:443823/media [end] -->
+            </div>
+        </div>
+        <div class="jumbotron dept-intro my-5" style="background-image:url(https://www.ndsu.edu/fileadmin/admission/admission_intro.jpg)">
+        </div>
+    </main>
+    <footer class="theme-dark">
+        <div class="">
+            <div class="sflgru-banner">
+                <p class="sr-only">Student Focused. Land Grant. Research University.</p>
+            </div>
+        </div>
+        <section class="alpha-links py-3" role="navigation">
+            <ul class="flex-container row flex-center">
+                <li class="index flex-item flex-item-mx-1"><a class="btn btn-yellow btn-tiny px-5" href="alphaindex/" title="NDSU Index"><span>NDSU Index</span></a></li>
+                <li class="a flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/A" title="Index: A"><span>A</span></a></li>
+                <li class="b flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/B" title="Index: B"><span>B</span></a></li>
+                <li class="c flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/C" title="Index: C"><span>C</span></a></li>
+                <li class="d flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/D" title="Index: D"><span>D</span></a></li>
+                <li class="e flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/E" title="Index: E"><span>E</span></a></li>
+                <li class="f flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/F" title="Index: F"><span>F</span></a></li>
+                <li class="g flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/G" title="Index: G"><span>G</span></a></li>
+                <li class="h flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/H" title="Index: H"><span>H</span></a></li>
+                <li class="i flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/I" title="Index: I"><span>I</span></a></li>
+                <li class="j flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/J" title="Index: J"><span>J</span></a></li>
+                <li class="k flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/K" title="Index: K"><span>K</span></a></li>
+                <li class="l flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/L" title="Index: L"><span>L</span></a></li>
+                <li class="m flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/M" title="Index: M"><span>M</span></a></li>
+                <li class="n flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/N" title="Index: N"><span>N</span></a></li>
+                <li class="o flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/O" title="Index: O"><span>O</span></a></li>
+                <li class="p flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/P" title="Index: P"><span>P</span></a></li>
+                <li class="q flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/Q" title="Index: Q"><span>Q</span></a></li>
+                <li class="r flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/R" title="Index: R"><span>R</span></a></li>
+                <li class="s flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/S" title="Index: S"><span>S</span></a></li>
+                <li class="t flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/T" title="Index: T"><span>T</span></a></li>
+                <li class="u flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/U" title="Index: U"><span>U</span></a></li>
+                <li class="v flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/V" title="Index: V"><span>V</span></a></li>
+                <li class="w flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/W" title="Index: W"><span>W</span></a></li>
+                <li class="x flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/X" title="Index: X"><span>X</span></a></li>
+                <li class="y flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/Y" title="Index: Y"><span>Y</span></a></li>
+                <li class="z flex-item flex-item-mx-1"><a class="btn btn-darkgray btn-tiny" href="alphaindex/Z" title="Index: Z"><span>Z</span></a></li>
+            </ul>
+        </section>
+        <div class="footer-nav" role="navigation">
+            <ul role="menubar" class="navbar container">
+                <li class="nav-item secondary">
+                    <a class="nav-link" role="menuitem" href="alphaindex/buildings" title="Alphabetical Building List">Campus Map</a>
+                    <ul class="navbar navbar-vertical secondary-menu" role="menu" data-navbar-direction="vertical">
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="pubweb/homepage/CampusMap_2pg.pdf">Campus Map (pdf)</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="alphaindex/buildings" title="Alphabetical Building List">Building List</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="alphaindex/" title="Complete Office List">Campus Offices</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="https://jobs.ndsu.edu" title="Employment opportunities at NDSU">Employment</a></li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="equity/">Equity</a></li>
+                <li class="nav-item secondary">
+                    <a role="menuitem" class="nav-link" href="onlineservices/">Online Services</a>
+                    <ul class="navbar navbar-vertical secondary-menu" role="menu" data-navbar-direction="vertical">
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="https://bb.ndsu.nodak.edu/">Blackboard</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="https://studentadmin.connectnd.us/psp/NDCSPRD/EMPLOYEE/HRMS/h/?tab=GUEST"
+                                title="Campus Connection: Register for classes and pay your bill online">Campus Connection</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="pubweb/itdivision/mailhub/">Email</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="its/help_desk/"><abbr title="Information Technology">IT</abbr> Help Desk</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="https://library.ndsu.edu">Libraries</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="onestop/">One Stop</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="https://www.ndsu.edu/enrollmentmanagement/studentsuccess/">Student Success Collaborative</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" role="menuitem" href="directory/">Phone/Email Directory</a></li>
+                <li class="nav-item secondary">
+                    <a class="nav-link" role="menuitem" href="registrar/" title="Office of the Registrar">Registration And Records</a>
+                    <ul class="navbar navbar-vertical secondary-menu" role="menu" data-navbar-direction="vertical">
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="registrar/academics/schedule/">Course Schedule</a></li>
+                        <li class="nav-item"><a class="nav-link" role="menuitem" href="registrar/dates/">Dates and Deadlines</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <section class="contact container py-4">
+                <a id="switchView" href="/admission/#?display=mobile" title="Mobile view">Mobile Site</a><span class="sr-only">.</span>
+                <address>
+                    <h3>North Dakota State University</h3>
+                    <div class="address-line">
+                        <div class="address-part">Phone: </div>
+                        <div class="address-part"><a href="tel:17012318643">+1 (701) 231-8643</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Fax: </div>
+                        <div class="address-part"><a href="fax:17012318202">+1 (701) 231-8802</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Campus address: </div>
+                        <div class="address-part"><a href="http://www.ndsu.edu/ndsu/main/directory/bldg_details.php?choice=15" title="Ceres Hall building">Ceres Hall 114</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Physical/delivery address: </div>
+                        <div class="address-part"><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1340+Administration+Ave.%2C+Fargo%2C+ND+58102"
+                                title="Find on a map">1301 Administration Ave., Fargo, ND 58102</a></div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Mailing address: </div>
+                        <div class="address-part">NDSU Dept. 2832 / PO Box 6050 / Fargo, ND 58108-6050</div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Courier address: </div>
+                        <div class="address-part">
+                            North Dakota State University Office of Admission <br> 1301 Administration Ave. / 114 Ceres Hall<br>                            Fargo, ND 58102
+                        </div>
+                    </div>
+                    <div class="address-line">
+                        <div class="address-part">Page manager: </div>
+                        <div class="address-part"><a href="mailto:ndsu.admission@ndsu.edu" title="Admission Email" class="mail-link">Office of Admission</a>
+                        </div>
+                    </div>
+                </address>
+            </section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" defer src="scripts/navbar.js"></script>
+</body>
+
+</html>

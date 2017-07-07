@@ -1,0 +1,33 @@
+
+$font-size-rem-base: 16px;
+
+$themesList: ('dark', 'gray');
+
+// Color Definitions
+$green: #002119;
+$yellow: #ffcc00;
+$black: #000;
+$white: #fff;
+$logcabin: #222222;
+$zeus: #231f20;
+$mineshaft: #333333;
+$capecod: #404041;
+$stormdust: #666666;
+$davegray: #6d6e71;
+$mountainmist: #999999;
+$silverchalice: #aaaaaa;
+$celeste: #cccccc;
+$blazeOrange: #ff6600;
+
+// Spacers
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .125),
+  2: ($spacer * .25),
+  3: ($spacer * .5),
+  4: $spacer,
+  5: ($spacer * 1.5),
+  6: ($spacer * 2),
+  7: ($spacer * 3)
+) !default;

@@ -1,0 +1,20 @@
+$jumbotron-padding: 0rem;
+
+.jumbotron {
+  padding: $content-padding;
+  margin-bottom: $jumbotron-padding;
+  background-color: $yellow;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  box-sizing: border-box;
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.dept-intro {
+    min-height: 350px;
+}

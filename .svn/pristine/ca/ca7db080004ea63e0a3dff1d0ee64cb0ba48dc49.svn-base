@@ -1,0 +1,55 @@
+.container {
+	@include fixed-container();
+}
+
+.container-fluid {
+	@include container-padding();
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+
+	&.multiline {
+		flex-wrap: wrap;
+	}
+
+	&.row{
+		flex-direction: row;
+	}
+	&.column{
+		flex-direction: column;
+	}
+	&.flex-center{
+		justify-content: center;
+	}
+
+	&.flex-middle {
+		align-items: center;
+	}
+
+	.flex-item{
+		flex: 0 1 auto;
+	}
+	
+	@each $size in (1, 2, 3, 4, 5, 6, 7, 8, 9) {
+		.flex-item-size-#{$size} { flex-grow: $size; }
+	}
+
+    @each $size, $length in $spacers {
+        .flex-item-m-#{$size}  { margin:        $length !important; }
+        .flex-item-mt-#{$size} { margin-top:    $length !important; }
+        .flex-item-mr-#{$size} { margin-right:  $length !important; }
+        .flex-item-mb-#{$size} { margin-bottom: $length !important; }
+        .flex-item-ml-#{$size} { margin-left:   $length !important; }
+        .flex-item-mx-#{$size} {
+            margin-right: $length !important;
+            margin-left:  $length !important;
+        }
+        .flex-item-my-#{$size} {
+            margin-top:    $length !important;
+            margin-bottom: $length !important;
+        }
+    }
+}

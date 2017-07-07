@@ -1,0 +1,20 @@
+.breadcrumbs {
+    margin: 1rem 0;
+    ol{
+        list-style: none;
+        display: block;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+    }
+    li + li:before {
+        content:" / ";
+    }
+
+    li:last-child,
+    li:last-child a{
+        color: $stormdust;
+    }
+}

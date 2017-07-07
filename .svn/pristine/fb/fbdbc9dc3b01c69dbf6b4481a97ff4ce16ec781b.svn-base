@@ -1,0 +1,20 @@
+.hide-xl-down {
+  display: none !important; }
+
+@media (max-width: 1199px) {
+  .hide-lg-down {
+    display: none !important; } }
+
+@media (max-width: 991px) {
+  .hide-md-down {
+    display: none !important; } }
+
+@media (max-width: 767px) {
+  .hide-sm-down {
+    display: none !important; } }
+
+@media (max-width: 574px) {
+  .hide-xs-down {
+    display: none !important; } }
+
+/* LINKS */

@@ -1,0 +1,87 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+	margin: 0 auto;
+	padding: 0 $container-padding-xl;
+	max-width: 1220px;
+
+	@include media-lg() {
+		max-width: 1050px;
+	}
+	@include media-md() {
+		max-width: 880px;
+	}
+}
+
+.container-fluid {
+	padding: 0 $container-padding-xl;
+}
+
+.section {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+
+	&.multiline {
+		flex-wrap: wrap;
+	}
+
+	&.row{
+		flex-direction: row;
+	}
+	&.column{
+		flex-direction: column;
+	}
+	&.flex-center{
+		justify-content: center;
+	}
+
+	&.flex-middle {
+		align-items: center;
+	}
+
+	.flex-item{
+		flex: 0 1 auto;
+	}
+	
+	@each $size in (1, 2, 3, 4, 5, 6, 7, 8, 9) {
+		.flex-item-size-#{$size} { flex-grow: $size; }
+	}
+
+    @each $size, $length in $spacers {
+        .flex-item-m-#{$size}  { margin:        $length !important; }
+        .flex-item-mt-#{$size} { margin-top:    $length !important; }
+        .flex-item-mr-#{$size} { margin-right:  $length !important; }
+        .flex-item-mb-#{$size} { margin-bottom: $length !important; }
+        .flex-item-ml-#{$size} { margin-left:   $length !important; }
+        .flex-item-mx-#{$size} {
+            margin-right: $length !important;
+            margin-left:  $length !important;
+        }
+        .flex-item-my-#{$size} {
+            margin-top:    $length !important;
+            margin-bottom: $length !important;
+        }
+    }
+}
+
+.layout {
+	display: flex;
+	justify-content: space-between;
+    flex-direction: row;
+
+    .nav-col {
+        flex: 0 0 220px;
+    }
+    .main-col {
+        flex: 1 1 auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}

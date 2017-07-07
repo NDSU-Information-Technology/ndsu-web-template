@@ -1,0 +1,51 @@
+'use strict';
+
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
+
+const sources = {
+    "html": {
+        "watch": [
+            './src/**/*.html'
+        ]
+    },
+    "scss": {
+        "compile": [
+            './src/styles/scss/*.scss'
+        ],
+        "watch": [
+            './src/styles/scss/**/*.scss'
+        ]
+    }
+};
+
+gulp.task('scss', function () {
+    return gulp.src(sources.scss.compile)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('./src/styles/css'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('scss:watch', function () {
+    gulp.watch(sources.scss.watch, ['scss']);
+});
+gulp.task('html:watch', function () {
+    gulp.watch(sources.html.watch).on('change', browserSync.reload);
+});
+
+gulp.task('watch', ['scss:watch', 'html:watch']);
+
+gulp.task('serve', ['scss'], function () {
+
+    browserSync.init({
+        server: {
+            baseDir: './src',
+            index: "template.html"
+        }
+    });
+
+    gulp.start('watch');
+});

@@ -1,0 +1,12 @@
+@mixin btn-variant($main-color, $main-bg, $active-color, $active-bg, $underline-mode: -1){
+    background-color: $main-bg;
+    
+    &:hover, &:focus {
+        background-color: $active-bg;
+    }
+    
+    @include linkColor($main-color, $active-color);
+    @if ($underline-mode > -1) {
+        @include linkUnderline($underline-mode);
+    }
+}

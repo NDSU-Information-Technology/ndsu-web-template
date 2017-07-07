@@ -1,0 +1,30 @@
+/* LINKS */
+#indexModules .index-module {
+  border: 1px solid #404041; }
+
+#indexModules ul li {
+  line-height: 1.5em; }
+
+#indexModules h2 {
+  font-family: Gotham, "Gotham SSm A", "Gotham SSm B", Muli, sans-serif;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #ffcc00; }
+  #indexModules h2 a {
+    color: #ffcc00; }
+  #indexModules h2 a:hover, #indexModules h2 a:focus, #indexModules h2 a[aria-expanded=true] {
+    color: #fff; }
+
+#indexModules h6 {
+  margin-top: 0.5em;
+  font-weight: normal; }
+
+#homepageCarousel .slide img {
+  width: 0; }
+
+#homepageCarousel .slide.current img,
+#homepageCarousel .slide.in-transition img {
+  width: 100%; }

@@ -1,0 +1,19 @@
+if (!window.fullOverlayElement) {
+    var fullOverlay = document.createElement('div');
+    fullOverlay.className = 'full-overlay';
+    fullOverlay.addEventListener('click', (e) => {
+        if (fullOverlay.offsetHeight !== 0) {
+            window.hideOverlay();
+        }
+    });
+
+    window.fullOverlayElement = fullOverlay;
+    document.body.appendChild(window.fullOverlayElement);
+}
+
+window.showOverlay = () => {
+    window.fullOverlayElement.style.display = 'block';
+};
+window.hideOverlay = () => {
+    window.fullOverlayElement.style.display = 'none';
+};

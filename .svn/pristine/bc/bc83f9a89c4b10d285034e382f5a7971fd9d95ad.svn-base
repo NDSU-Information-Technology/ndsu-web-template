@@ -1,0 +1,45 @@
+$text-columns: (2, 3, 4);
+
+.generic-content{
+	padding: $container-padding-xl;
+
+    line-height: 3em;
+    h3, h4 {
+        font-weight: 100;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        font-family: Georgia, serif;
+    }
+    h3 {
+        font-size: 4em;
+    }
+    h4{
+        font-size: 3.5em;
+    }
+    p {
+        font-size: 2em;
+    }
+    p + p {
+        margin-top: 0.5em;
+    }
+
+    &.gray {
+        background-color: $celeste;
+    }
+}
+
+@each $colCount in $text-columns {
+    .text-column-#{$colCount} {
+        column-count: $colCount;
+    }
+}
+@include media-xl() {
+    [class^='text-column-']{
+        column-gap: 2em;
+    }
+}
+@include media-sm {
+    [class^='text-column-']{
+        column-count: 1;
+    }
+}

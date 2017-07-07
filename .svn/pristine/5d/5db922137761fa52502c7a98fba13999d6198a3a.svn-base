@@ -1,0 +1,28 @@
+# Navbar Component
+
+The `navbar` component is part of the minimal version.
+
+## Basic Usage
+
+
+```html
+<div role="navigation">
+    <ul class="navbar">
+        <li class="nav-item"><a class="nav-link" href="link1/">Link 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
+    </ul>
+</div>
+```
+
+## Styling
+
+### Alignment
+
+### Color
+
+### Direction
+
+## Dropdown Menu
+
+## Mobile Navigation

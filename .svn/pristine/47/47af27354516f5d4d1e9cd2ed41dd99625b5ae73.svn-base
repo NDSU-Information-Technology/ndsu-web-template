@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins/_buttons';
+@import 'mixins/_breakpoints';
+@import 'mixins/_display';
+@import 'mixins/_links';
+@import 'mixins/_themes';
+
+@mixin gotham-font {
+	font-family: Gotham, "Gotham SSm A", "Gotham SSm B", Muli, sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+@mixin fixed-container() {
+	margin: 0 auto;
+	@include media-xl() {
+		max-width: 1220px;
+	}
+	@include media-lg() {
+		max-width: 1050px;
+	}
+	@include media-md() {
+		max-width: 880px;
+	}
+}
+
+@mixin full-overlay(){
+	visibility: hidden;
+	content: "";
+	position: fixed;
+	top: 0; bottom: 0; right: 0; left: 0;
+	background-color: rgba($black, 0);
+	// Default Navbar z-index is 1001
+	// Mobile Navbar z-index is 2000
+	z-index: 1500;
+	transition: background-color 0.3s ease-out;
+	overflow: hidden;
+	padding: 3em;
+
+	&.active {
+		visibility: visible;
+		background-color: rgba($black, 0.75);
+	}
+}
+
+
+@mixin content-padding() {
+	@include media-xl {
+		padding: $content-padding-xl;
+	}
+	@include media-lg {
+		padding: $content-padding-lg;
+	}
+	@include media-md {
+		padding: $content-padding-md;
+	}
+	@include media-sm {
+		padding: $content-padding-sm;
+	}
+	@include media-xs {
+		padding: $content-padding-xs;
+	}
+}

@@ -1,0 +1,10 @@
+@include createTheme('dark', $black, $silverchalice, $white, $yellow) {
+    a {
+        @include linkUnderline();
+    }
+}
+@include createTheme('gray', $logcabin, $white, $white, $yellow) {
+    a {
+        @include linkUnderline();
+    }
+}
