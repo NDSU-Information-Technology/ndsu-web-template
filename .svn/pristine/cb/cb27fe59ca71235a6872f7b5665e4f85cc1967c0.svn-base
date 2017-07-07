@@ -1,9 +1,0 @@
-@import 'variables';
-@import 'mixins/_buttons';
-@import 'mixins/_breakpoints';
-@import 'mixins/_links';
-
-%gotham-font {
-	font-family: Gotham, "Gotham SSm A", "Gotham SSm B", Muli, sans-serif;
-	text-rendering: optimizeLegibility;
-}

@@ -1,6 +1,0 @@
-.sflgru-banner{
-    text-align: center;
-    background: $green url(https://static.ndsu.nodak.edu/templates/images/sflgru_bar.png) no-repeat center center;
-    height: 29px;
-    margin-top: 1em;
-}
