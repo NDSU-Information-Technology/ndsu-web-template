@@ -1,0 +1,42 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address,
+del, dfn, em, img, ins, q,
+small, strong, sub, sup,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, figure {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ol, ul {
+	list-style-position: inside;
+	margin-left: 1.5em;
+}
+ul {
+	list-style: disc;
+}
+// a:focus,
+// input:focus {
+// 	outline: 1px dotted $yellow;
+// }
+
+
+@include media-xl {
+	h1 { font-size: 3.5em; }
+	h2 { font-size: 3em; }
+	h3 { font-size: 2.5em; }
+	h4 { font-size: 2em; }
+	h5 { font-size: 1.25em; }
+	h6 { font-size: 1em; }
+}
+@include media-sm {
+	h1 { font-size: 2.5em; }
+	h2 { font-size: 2em; }
+	h3 { font-size: 1.75em; }
+	h4 { font-size: 1.5em; }
+	h5 { font-size: 1.125em; }
+}

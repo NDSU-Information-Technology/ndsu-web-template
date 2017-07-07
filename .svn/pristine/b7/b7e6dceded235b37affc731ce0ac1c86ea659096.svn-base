@@ -1,0 +1,22 @@
+
+/* BREAKPOINTS - BASED ON BOOTSTRAP v4 */
+@mixin xsScreen() {
+    @media (max-width: 575px){
+        @content;
+    }
+}
+@mixin sScreen() {
+    @media (max-width: 767px){
+        @content;
+    }
+}
+@mixin mScreen() {
+    @media (max-width: 991px){
+        @content;
+    }
+}
+@mixin lScreen() {
+    @media (max-width: 1199px){
+        @content;
+    }
+}

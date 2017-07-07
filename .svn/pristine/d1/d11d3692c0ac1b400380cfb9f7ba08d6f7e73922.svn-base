@@ -1,0 +1,7 @@
+@each $size in $media-sizes {
+    .hide-#{$size}-down {
+        @include media-size($size) {
+            display: none !important;
+        }
+    }
+}

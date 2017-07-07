@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixins';
+
+
+.theme-dark {
+    
+	background-color: $black;
+    color: $silverchalice;
+
+    a {
+        @include linkColor($white, $yellow);
+        @include linkUnderline();
+    }
+}

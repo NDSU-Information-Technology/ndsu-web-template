@@ -1,0 +1,29 @@
+'use strict';
+ 
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+
+const sources = {
+    "scss": {
+        "compile":  [
+            './src/styles/scss/*.scss'
+        ],
+        "watch": [
+            './src/styles/scss/**/*.scss'
+        ]
+    }
+};
+ 
+gulp.task('scss', function () {
+  return gulp.src(sources.scss.compile)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('./src/styles/css'));
+});
+ 
+gulp.task('scss:watch', function () {
+  gulp.watch(sources.scss.watch, ['scss']);
+});
+
+gulp.task('watch', ['scss:watch']);

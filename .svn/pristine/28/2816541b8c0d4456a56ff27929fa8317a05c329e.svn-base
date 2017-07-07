@@ -1,0 +1,20 @@
+@import 'mixins';
+
+.btn {
+    transition: all 0.3s ease-out;
+    @include buttonify();
+}
+a.btn {
+    text-decoration: none;
+}
+
+.btn-yellow {
+    @include btn-variant($logcabin, $yellow, $mineshaft, lighten($yellow,10%));
+}
+.btn-darkgray {
+    @include btn-variant($white, $mineshaft, $mineshaft, $silverchalice);
+}
+
+.btn-tiny {
+    padding: 0.25em 0.5em;
+}

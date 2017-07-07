@@ -1,0 +1,156 @@
+@import 'variables';
+@import 'mixins';
+
+.navbar {
+	@include gotham-font;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+	z-index:1000;
+	align-items: center;
+	justify-content: center;
+
+	.nav-item{
+		flex: 0 0 auto;
+		white-space: nowrap;
+		position: relative;
+	}
+
+	.nav-link{
+        display: table-cell;
+        vertical-align: middle;
+		text-align: center;
+		@include linkUnderline(-1);
+		@include buttonify(true);
+	}
+
+	&.navbar-vertical {
+		flex-direction: column;
+		align-items: stretch;
+		.nav-link {
+			text-align: left;
+		}
+	}
+	&.navbar-left {
+		justify-content: flex-start;
+		.nav-link {
+			text-align: left;
+		}
+	}
+	&.navbar-justify {
+		justify-content: space-around;
+		.nav-item{
+			flex-grow: 1;
+		}
+	}
+	&.navbar-right {
+		justify-content: flex-end;
+		.nav-link {
+			text-align: right;
+		}
+	}
+	
+	.nav-item.nav-item-haschild {
+		& >.nav-link::after {
+			content: "\00a0\00a0\25BC";
+		}
+		&.nav-item-haschild-up > .nav-link::after{
+			content: "\00a0\00a0\25B2";
+		}
+	}
+	
+	&.child-navbar{
+		text-transform: none;
+		z-index: 1001;
+		position: absolute;
+		left: 0;
+		visibility: hidden;
+	}
+}
+
+.sticky-navbar-on {
+	position: fixed;
+	top: 0; left: 0;right: 0;
+	z-index: 1001;
+	box-shadow: 1px 1px 2px $logcabin;
+}
+
+.navbar-toggle {
+	z-index: $z-index-mobile-navbar;
+	&:before {
+		content: "\2630";
+	}
+	font-weight: bold;
+}
+
+.navbar-mobile-container {
+	z-index: $z-index-mobile-navbar;
+	position: absolute;
+	top: 40px; left: 0; right: 0;
+	box-shadow: 1px 1px 2px $black;
+	transition: all 0.3s ease-out;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+.navbar.navbar-mobile {
+
+	.child-navbar{
+		text-indent: 1em;
+		position: relative;
+		display: none;
+		visibility: visible;
+	}
+	.child-navbar.active {
+		display: flex;
+	}
+}
+
+
+
+@include extendTheme('gray', '.navbar') {
+	background-color: inherit;
+	.nav-link{
+    	@include btn-variant($white, $logcabin, $yellow, $black);
+	}
+}
+
+@include extendTheme('gray', '.navbar-mobile') {
+	.nav-item + .nav-item {
+		border-top: 1px solid $mineshaft;
+	}
+	.child-navbar .nav-link {
+		@include btn-variant($logcabin, $gray99, $yellow, $black);
+	}
+	.nav-link.active {
+		box-shadow: 1px 1px 1px $black;
+	}
+}
+
+@include media-xl() {
+	.navbar-toggle  {
+		display: none;
+	}
+}
+@include media-lg() {
+}
+@include media-md() {
+}
+@include media-sm() {
+	.navbar-mobilize{
+		display: none;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	
+}
+@include media-xs() {
+	
+}

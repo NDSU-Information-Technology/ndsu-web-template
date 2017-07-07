@@ -1,0 +1,22 @@
+# Developer Guide
+
+
+
+## Running Gulp tasks for development
+
+Styles are written using SCSS preprocessor. `NodeJS` is required to compile SCSS to CSS. It is advised to use provided `gulp` tasks to automate build as well as to enable `browsersync`.
+
+Make sure to have `gulp` installed globally on your machine.
+
+`npm install gulp -g`
+
+In the directory, run the `install` command to install all dependencies.
+
+`npm install`
+
+And finally, run the task `serve` to begin `browsersync`.
+
+`gulp serve`
+
+Your default browser should launch `localhost:3000` and open the default page for the development (*template.html*). All changes to *.html* and *.scss* will be refreshed automatically by `browsersync`.
+ 
