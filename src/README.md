@@ -2,7 +2,30 @@
 
 ## Project Structures
 
-The source files are divided into two groups: `essentials` and `components`.
+The source files (`src` directory) are divided into two groups: `essentials` and `components`. The script and style files from the source will be concatenated into one single file each for script and sytle. The sample _.html_ and _.md_ files will be copied into `dist` directory for end-users to refer to.
+
+* Root
+  * dist
+    * components
+      * component name
+        * _README.md, example.html_
+        * _no script files_
+    * README.md for `dist` directory
+    * _sample basic layouts/templates (e.g. template.html, two-column.html)_
+  * src
+    * components
+      * component name
+        * _style, script, README.md, example.html_
+    * essentials
+      * scripts
+        _essential script files (e.g. global.js)_
+      * styles
+        * mixins
+        * _essential style files (e.g basic.scss, variables.scss)_
+    * README.md for `src` directory
+    * _sample basic layouts/templates (e.g. template.html, two-column.html)_
+  * README.md
+  * _Other necessary project files (e.g. gulpfile.js, package.json)_
 
 ### Essentials
 
@@ -52,6 +75,22 @@ Currently there are two build versions of styles and scripts: minimal and full. 
 
 The style definition for each version is located under `src` directory (`minimal.scss` and `full.css`). The sript definition is written into the config object in the `gulpfile.js` file. (_Perhaps a better way to manage a version? JSON file?_).
 
+## The README.md file
+Each component should have a _README.md_ file that gives at least brief description on how to use the component. This also includes an example markup for each usage. 
+
+Please edit the _README.md_ file located in the `src` directory. Every component's _README.md_ file will be copied to the `dist` directory for end user's use by executing one of the following gulp tasks:
+
+```bash
+gulp build
+```
+OR
+
+```bash
+gulp copy
+```
+
+Make sure to do this before you execute commit and/or push.
+
 ## Running gulp tasks for development
 
 Styles are written using SCSS preprocessor. `NodeJS` is required to compile SCSS to CSS. It is advised to use provided `gulp` tasks to automate build as well as to enable `browsersync`.
@@ -59,7 +98,7 @@ Styles are written using SCSS preprocessor. `NodeJS` is required to compile SCSS
 Make sure to have `gulp` installed globally on your machine.
 
 ```bash
-np install gulp -g
+npm install gulp -g
 ```
 
 In the directory, run the `install` command to install all dependencies.

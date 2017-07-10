@@ -131,14 +131,14 @@ Example of mobile navigation components:
 </div>
 ```
 
-The mobile `navbar` starts empty, and will be filled based on other menus exisiting on the page. For more information on how to include menu items on a mobile navigation, please go to _Mobile Navigation_ section of the [`navbar` component](/components/navbar) page.
+The mobile `navbar` starts empty, and will be filled based on other menus exisiting on the page. For more information on how to include menu items on a mobile navigation, please go to _Mobile Navigation_ section of the [`navbar` component](/dist/components/navbar) page.
 
 
 #### Desktop Navigation
-Visit the [`navbar` component](/components/navbar) for more information on how to use the `navbar` component as desktop navigation.
+Visit the [`navbar` component](/dist/components/navbar) for more information on how to use the `navbar` component as desktop navigation.
 
 #### Sticky Components
-Visit the [`sticky-bar` component](/components/sticky-bar) for more information on how to use the `sticky-bar` component for both desktop and mobile navigations.
+Visit the [`sticky-bar` component](/dist/components/sticky-bar) for more information on how to use the `sticky-bar` component for both desktop and mobile navigations.
 
 
 ### Main
