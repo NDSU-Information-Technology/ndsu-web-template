@@ -1,9 +1,9 @@
 # NDSU Template
 *Work In Progress*
 
-If you are a user, [go to `dist` directory](/dist/) for information on how to use the template.
+If you are a user, [go to `dist` directory](/dist) for information on how to use the template.
 
-If you are a developer, [go to `src` directory](/src/) for development guide.
+If you are a developer, [go to `src` directory](/src) for development guide.
 
 ## Lisense
 

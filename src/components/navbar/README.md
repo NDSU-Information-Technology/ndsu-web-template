@@ -163,4 +163,4 @@ Example:
 </div>
 ```
 
-A nested c
+A child `navbar` component will also be included in mobile navigation if its parent is included.
