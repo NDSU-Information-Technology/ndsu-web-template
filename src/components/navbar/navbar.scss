@@ -165,7 +165,10 @@
 }
 
 .navbar-dark {
-	background-color: $default-secondary-bg-color;
+	&,
+	.navbar {
+		background-color: $default-secondary-bg-color;
+	}
 
 	.nav-link{
     	@include btn-variant($white, $default-secondary-bg-color, $yellow, $black);
