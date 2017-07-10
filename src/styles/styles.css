@@ -1855,57 +1855,66 @@ a.btn {
     position: absolute;
     right: 1em; }
 
-.navbar-dark {
+.navbar-dark,
+.navbar-dark .navbar {
   background-color: #222222; }
+
+.navbar-dark .nav-link {
+  background-color: #222222; }
+  .navbar-dark .nav-link:hover, .navbar-dark .nav-link:focus, .navbar-dark .nav-link[aria-expanded=true], .navbar-dark .nav-link.active {
+    background-color: #000; }
   .navbar-dark .nav-link {
-    background-color: #222222; }
-    .navbar-dark .nav-link:hover, .navbar-dark .nav-link:focus, .navbar-dark .nav-link[aria-expanded=true], .navbar-dark .nav-link.active {
-      background-color: #000; }
-    .navbar-dark .nav-link {
-      color: #fff; }
-    .navbar-dark .nav-link:hover, .navbar-dark .nav-link:focus, .navbar-dark .nav-link[aria-expanded=true], .navbar-dark .nav-link.active {
-      color: #ffcc00; }
-  .navbar-dark .nav-item-home .nav-link {
-    background-color: #121212; }
-    .navbar-dark .nav-item-home .nav-link:hover, .navbar-dark .nav-item-home .nav-link:focus, .navbar-dark .nav-item-home .nav-link[aria-expanded=true], .navbar-dark .nav-item-home .nav-link.active {
-      background-color: #000; }
-    .navbar-dark .nav-item-home .nav-link {
-      color: #ffcc00; }
-    .navbar-dark .nav-item-home .nav-link:hover, .navbar-dark .nav-item-home .nav-link:focus, .navbar-dark .nav-item-home .nav-link[aria-expanded=true], .navbar-dark .nav-item-home .nav-link.active {
-      color: #ffcc00; }
-  .navbar-dark .extended-child-navbar .child-section-title {
+    color: #fff; }
+  .navbar-dark .nav-link:hover, .navbar-dark .nav-link:focus, .navbar-dark .nav-link[aria-expanded=true], .navbar-dark .nav-link.active {
     color: #ffcc00; }
-  .navbar-dark .extended-child-navbar .extended-child-section + .extended-child-section::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 1px;
-    background-color: #666666;
-    z-index: 2000; }
-  .navbar-dark.navbar-mobile .nav-item + .nav-item {
-    border-top: 1px solid #333333; }
+
+.navbar-dark .nav-item-home .nav-link {
+  background-color: #121212; }
+  .navbar-dark .nav-item-home .nav-link:hover, .navbar-dark .nav-item-home .nav-link:focus, .navbar-dark .nav-item-home .nav-link[aria-expanded=true], .navbar-dark .nav-item-home .nav-link.active {
+    background-color: #000; }
+  .navbar-dark .nav-item-home .nav-link {
+    color: #ffcc00; }
+  .navbar-dark .nav-item-home .nav-link:hover, .navbar-dark .nav-item-home .nav-link:focus, .navbar-dark .nav-item-home .nav-link[aria-expanded=true], .navbar-dark .nav-item-home .nav-link.active {
+    color: #ffcc00; }
+
+.navbar-dark .extended-child-navbar .child-section-title {
+  color: #ffcc00; }
+
+.navbar-dark .extended-child-navbar .extended-child-section + .extended-child-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background-color: #666666;
+  z-index: 2000; }
+
+.navbar-dark.navbar-mobile .nav-item + .nav-item {
+  border-top: 1px solid #333333; }
+
+.navbar-dark.navbar-mobile .child-navbar .nav-link {
+  background-color: #f2f2f2; }
+  .navbar-dark.navbar-mobile .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .nav-link.active {
+    background-color: #333333; }
   .navbar-dark.navbar-mobile .child-navbar .nav-link {
-    background-color: #f2f2f2; }
-    .navbar-dark.navbar-mobile .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .nav-link.active {
-      background-color: #333333; }
-    .navbar-dark.navbar-mobile .child-navbar .nav-link {
-      color: #222222; }
-    .navbar-dark.navbar-mobile .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .nav-link.active {
-      color: #ffcc00; }
+    color: #222222; }
+  .navbar-dark.navbar-mobile .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .nav-link.active {
+    color: #ffcc00; }
+
+.navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link {
+  background-color: #fcfcfc; }
+  .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link.active {
+    background-color: #333333; }
   .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link {
-    background-color: #fcfcfc; }
-    .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link.active {
-      background-color: #333333; }
-    .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link {
-      color: #222222; }
-    .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link.active {
-      color: #ffcc00; }
-  .navbar-dark.navbar-mobile .nav-link.active {
-    -webkit-box-shadow: 1px 1px 1px #000;
-            box-shadow: 1px 1px 1px #000; }
+    color: #222222; }
+  .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:hover, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link:focus, .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link[aria-expanded=true], .navbar-dark.navbar-mobile .child-navbar .child-navbar .nav-link.active {
+    color: #ffcc00; }
+
+.navbar-dark.navbar-mobile .nav-link.active {
+  -webkit-box-shadow: 1px 1px 1px #000;
+          box-shadow: 1px 1px 1px #000; }
 
 .navbar-mobile,
 .navbar-mobile.active,

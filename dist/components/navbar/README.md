@@ -142,6 +142,78 @@ Example HTML markup for dropdown:
 </div>
 ```
 
+### Extended dropdown menu
+
+An extended dropdown menu has multiple columns under one link. This can be done by using nested `navbar` components with depth of 3, and adding class `extended-child-navbar` to the first `child-navbar` and `extended-child-section` to `nav-item` elements of this `navbar`.
+
+Example DOM structure:
+* `ul.navbar`
+  * `li.nav-item`
+    * `a.nav-link`
+    * `ul.navbar.child-navbar.extended-child-navbar`
+      * `li.nav-item.extended-child-section`
+        * `h5.child-section-title`
+        * `ul.navbar.child-navbar.navbar-vertical`
+          * `li.nav-item`
+          * `li.nav-item`
+          * `li.nav-item`
+        * `h5.child-section-title`
+        * `ul.navbar.child-navbar.navbar-vertical`
+          * `li.nav-item`
+          * `li.nav-item`
+          * `li.nav-item`
+        * `h5.child-section-title`
+        * `ul.navbar.child-navbar.navbar-vertical`
+          * `li.nav-item`
+          * `li.nav-item`
+          * `li.nav-item`
+  * `li.nav-item`
+    * `a.nav-link`
+  * `li.nav-item`
+    * `a.nav-link`
+  * `li.nav-item`
+    * `a.nav-link`
+
+Example HTML markup for the DOM given above:
+
+```html
+<div role="navigation">
+    <ul class="navbar navbar-dark">
+        <li class="nav-item">
+            <a class="nav-link" href="link1/">Link 1</a>
+            <ul class="navbar child-navbar extended-child-navbar">
+                <li class="nav-item extended-child-section">
+                    <h5 class="child-section-title">Section 1</h5>
+                    <ul class="navbar child-navbar navbar-vertical">
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item extended-child-section">
+                    <h5 class="child-section-title">Section 2</h5>
+                    <ul class="navbar child-navbar navbar-vertical">
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item extended-child-section">
+                    <h5 class="child-section-title">Section 3</h5>
+                    <ul class="navbar child-navbar navbar-vertical">
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="link3/">Link 4</a></li>
+    </ul>
+</div>
+```
 
 ## Mobile Navigation
 
