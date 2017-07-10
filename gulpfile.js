@@ -48,7 +48,7 @@ const config = {
             '!./node_modules/**/*'  
         ],
         "dest": {
-            "final": "./dist",
+            "final": "./docs",
         },
         "watch": [
             './src/**/*.html',
@@ -62,7 +62,7 @@ const config = {
             '!./node_modules/**/*'  
         ],
         "dest": {
-            "final": "./dist",
+            "final": "./docs",
         }
     },
     "scripts": {
@@ -89,7 +89,7 @@ const config = {
         ],
         "dest": {
             "dev": './src/scripts',
-            "final": "./dist/scripts"
+            "final": "./docs/scripts"
         },
         "watch": [
             './src/components/**/*.js',
@@ -111,7 +111,7 @@ const config = {
         ],
         "dest": {
             "dev": './src/styles',
-            "final": "./dist/styles"
+            "final": "./docs/styles"
         },
         "watch": [
             './src/components/**/*.scss',
