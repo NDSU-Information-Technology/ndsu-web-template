@@ -1,6 +1,13 @@
-# Navbar Component
+---
+title: Navbar Component
+---
+
 
 The `navbar` component is part of the minimal version.
+
+## Examples
+
+[Click here to view examples of this component](example.html).
 
 ## Basic Usage
 

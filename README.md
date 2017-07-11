@@ -1,7 +1,7 @@
 # NDSU Template
 *Work In Progress*
 
-If you are a user, [go to `dist` directory](/dist) for information on how to use the template.
+If you are a user, [go to `ndsu-web-template` Github Pages](https://ndsu-information-technology.github.io/ndsu-web-template/) for information on how to use the template.
 
 If you are a developer, [go to `src` directory](/src) for development guide.
 

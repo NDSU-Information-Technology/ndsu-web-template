@@ -1,4 +1,6 @@
-# NDSU Template Quick User Guide
+---
+title: NDSU Template Quick User Guide
+---
 
 This page covers a quick start guide on how to implement NDSU Template for your pages.
 
@@ -131,14 +133,14 @@ Example of mobile navigation components:
 </div>
 ```
 
-The mobile `navbar` starts empty, and will be filled based on other menus exisiting on the page. For more information on how to include menu items on a mobile navigation, please go to _Mobile Navigation_ section of the [`navbar` component](/dist/components/navbar) page.
+The mobile `navbar` starts empty, and will be filled based on other menus exisiting on the page. For more information on how to include menu items on a mobile navigation, please go to _Mobile Navigation_ section of the [`navbar` component](components/navbar) page.
 
 
 #### Desktop Navigation
-Visit the [`navbar` component](/dist/components/navbar) for more information on how to use the `navbar` component as desktop navigation.
+Visit the [`navbar` component](components/navbar) for more information on how to use the `navbar` component as desktop navigation.
 
 #### Sticky Components
-Visit the [`sticky-bar` component](/dist/components/sticky-bar) for more information on how to use the `sticky-bar` component for both desktop and mobile navigations.
+Visit the [`sticky-bar` component](components/sticky-bar) for more information on how to use the `sticky-bar` component for both desktop and mobile navigations.
 
 
 ### Main
@@ -184,7 +186,8 @@ Example:
 ```
 
 ---
- ## Minimal and Full Version Builds
+
+## Minimal and Full Version Builds
 
  There are two set of style and script that you can use on the page: minimal version (`minimal.css` and `minimal.js`) and full version (`style.css` and `script.js`).
 
@@ -204,5 +207,3 @@ Example:
     <link rel="stylesheet" type="text/css" href="https://static.ndsu.nodak.edu/styles/minimal.min.css" />
 </head>
  ```
-
----
