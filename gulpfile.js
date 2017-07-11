@@ -63,7 +63,7 @@ const config = {
     },
     "markdown": {
         "compile": [
-            './src/**/*.md',
+            './src/**/README.md',
             '!./src/README.md',
             '!./node_modules/**/*'  
         ],
@@ -211,6 +211,10 @@ gulp.task('copy:html', [], () => {
 
 gulp.task('copy:markdown', [], () => {
     return gulp.src(config.markdown.compile)
+        .pipe(rename({
+            basename: "index",
+            extname: ".md"
+        }))
         .pipe(gulp.dest(config.markdown.dest.docs));
 });
 
