@@ -1,4 +1,3 @@
-# Navbar Component
 
 The `navbar` component is part of the minimal version.
 
