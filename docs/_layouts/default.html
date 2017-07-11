@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-    <title>NDSU Web Templates</title>
+    <title>{{page.title | default: "NDSU Web Template"}}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="icon" href="https://static.ndsu.nodak.edu/favicon.ico" />
     <meta name="language" content="en-US" />
@@ -34,7 +34,7 @@
             </ul>
             <div class="page-title-bar">
                 <div class="container page-title-wrapper">
-                    <h2 class="page-title">{{page.title}}</h2>
+                    <h2 class="page-title">{{page.title | default: "NDSU Web Template"}}</h2>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
     </main>
     <footer class="footer-green">
         <section class="footer-address">
-            <img src="images/NDSU.twolines.gif" alt="North Dakota State University" />
+            <img src="/ndsu-web-template/images/NDSU.twolines.gif" alt="North Dakota State University" />
             <address>
                 <h6>University Relations</h6>
                 North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>

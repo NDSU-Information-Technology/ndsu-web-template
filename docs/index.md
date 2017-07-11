@@ -1,3 +1,6 @@
+---
+---
+
 This page covers a quick start guide on how to implement NDSU Template for your pages.
 
 ## Examples
