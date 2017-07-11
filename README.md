@@ -5,7 +5,8 @@ If you are a user, [go to `dist` directory](/dist) for information on how to use
 
 If you are a developer, [go to `src` directory](/src) for development guide.
 
-## Lisense
+## License
+[Creative Commons Attribution 4.0 International (CC BY 4.0)] (https://creativecommons.org/licenses/by/4.0/)
 
 ## NDSU Branding and Logo
 
