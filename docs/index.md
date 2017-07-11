@@ -1,238 +1,206 @@
-# Navbar Component
+This page covers a quick start guide on how to implement NDSU Template for your pages.
 
-The `navbar` component is part of the minimal version.
+## Examples
 
-## Basic Usage
+Click here to view working examples of NDSU Template. (_Insert link to hosted working pages here_)
 
-A basic `navbar` is composed of:
-* `ul` element with CSS class of `navbar`
-* A collection of `li` elements with a class of `nav-item` under parent `ul` element
-* A clickable `a` element with class of `nav-link` under each `li` element
+---
 
-Typical DOM structure:
-* `ul.navbar`
-  * `li.nav-item`
-    * `a.nav-link`
-  * `li.nav-item`
-    * `a.nav-link`
-  * `li.nav-item`
-    * `a.nav-link`
+## Minimum Requirements For A Page
 
-For accessibility reason, make sure that the `navbar` component is wrapped around an element with `role` attribute of `navigation`. If a `navbar` component is a child of another `navbar` component (e.g. dropdown menu), only the parent `navbar` requires to be wrapped around an element with `role` of `navigation`. See _Dropdown_ section below for example.
+Each NDSU page is required to have the following structure:
 
-Basic usage example:
+* Skip Navigation Links for screen reader
+* header
+  * NDSU green banner
+  * Mobile navigation
+  * Page title
+  * Desktop navigation
+* main
+  * _Content of the page goes here_
+* footer
+  * Address and contact info
+* Reference(s) to script
+
+
 ```html
-<div role="navigation">
-    <ul class="navbar">
-        <li class="nav-item"><a class="nav-link" href="link1/">Link 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
+<body>
+     <!--Skip Navigation Links-->
+    <section class="sr-navigation" role="navigation">
+    <!--...-->
+    </section>
+    <!--Header-->
+    <header>
+        <div class="navbar-mobile-container sticky-bar sticky-sm">
+            <!--NDSU Green Banner-->
+            <div class="green-bar">
+            <!--...-->
+            </div>
+            <!--Mobile Navigation-->
+            <ul class="navbar navbar-mobile navbar-vertical navbar-dark">
+            </ul>
+            <!--Page Title-->
+            <div class="page-title-bar">
+            <!--...-->
+            </div>
+        </div>
+        <!--Desktop Navigation-->
+        <div class="main-nav sticky-bar sticky-xl" role="navigation" id="mainNav" tabindex="-1">
+            <!--...-->
+        </div>
+    </header>
+    <!--Main-->
+    <main id="content" tabindex="-1">
+    <!--PAGE CONTENT GOES HERE-->
+    </main>
+    <!--Footer-->
+    <footer class="footer-green">
+        <!--Organizational/Departmental Address/Contact Info-->
+        <section class="footer-address">
+            <!--...-->
+        </section>
+    </footer>
+    <!--Referece(s) to script-->
+    <script type="text/javascript" src="https://static.ndsu.nodak.edu/scripts/minimal.min.js"></script>
+</body>
+```
+
+### Skip Navigation Links for screen reader
+
+These links should be the first elements inside body. [More information about Skip Navigation Links](http://webaim.org/techniques/skipnav/).
+
+Wrap the list of links in an element with CSS class `sr-navigation`. Each link should refer to a specific place in document and has CSS classes of `sr-only` and `sr-only-focusable`. A page with repetitive header should have at least a reference to the `id` of the main content of the page.
+
+```html
+<section class="sr-navigation" role="navigation">
+    <ul class="remove-list-style">
+        <li>
+            <a class="sr-only sr-only-focusable" href="#mainNav">Skip to main navigation</a>
+        </li>
+        <li>
+            <!--LINK TO MAIN CONTENT-->
+            <a class="sr-only sr-only-focusable" href="#content">Skip to page content</a>
+        </li>
+        <li>
+            <!--Link to a section with id of news-->
+            <a class="sr-only sr-only-focusable" href="#news">Skip to page news</a>
+        </li>
     </ul>
+</section>
+```
+
+Don't forget to put the `id` of referenced section and set the `tabindex` attribute to -1.
+
+```html
+<!--This section has id of news and tabindex of -1-->
+<section id="news" tabindex="-1">
+</section>
+```
+
+### Header
+
+The header of a page should have the following: _NDSU green banner, mobile navigation, page title, and desktop navigation_.
+
+#### Mobile Navigation
+For mobile accessibility,mobile navigation markup is required on every page. Three components are rqeuired for mobile navigation:
+
+* `Sticky-bar` mobile navigation wrapper with class `navbar-mobile-container`, `sticky-bar`, and `sticky-sm`
+* A button to open/close the navigation with class `navbar-toggle`
+* A `navbar` component (auto-filled) with class `navbar-mobile` and `navbar-vertical`
+
+Example of mobile navigation components:
+```html
+<!--Sticky-bar wrapper-->
+<div class="navbar-mobile-container sticky-bar sticky-sm">
+    <div class="green-bar">
+        <div class="container flex-container flex-middle" role="navigation">
+            <!--NDSU logo-->
+            <h1><img src="images/logo.png" alt="North Dakota State University" title="" height="35" width="73" /></h1>
+            <!--Mobile menu toggle button-->
+            <button type="button" class="btn btn-yellow navbar-toggle"><span class="sr-only">Mobile menu</span></button>
+        </div>
+    </div>
+    <!--Auto filled navbar component-->
+    <ul class="navbar navbar-mobile navbar-vertical navbar-dark">
+    </ul>
+    <!--Page title-->
+    <div class="page-title-bar">
+    </div>
 </div>
 ```
 
-## Styling
+The mobile `navbar` starts empty, and will be filled based on other menus exisiting on the page. For more information on how to include menu items on a mobile navigation, please go to _Mobile Navigation_ section of the [`navbar` component](/components/navbar) page.
 
-The navbar component inherits background color and link styling from its parent's styles. You can override the following styles with pre-defined classes.
 
-### Alignment
+#### Desktop Navigation
+Visit the [`navbar` component](/components/navbar) for more information on how to use the `navbar` component as desktop navigation.
 
-Available alignment classes:
-* `navbar-center` (default): Center the links
-* `navbar-justify`: Expand and justify the links
-* `navbar-left`: Left align the links
-* `navbar-right`: Right align the links
+#### Sticky Components
+Visit the [`sticky-bar` component](/components/sticky-bar) for more information on how to use the `sticky-bar` component for both desktop and mobile navigations.
 
-Justified links example:
+
+### Main
+
+This is where the page content goes.
+
 ```html
-<div role="navigation">
-    <ul class="navbar navbar-justify">
-        <li class="nav-item"><a class="nav-link" href="link1/">Link 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
-    </ul>
-</div>
-```
-Left-align links example:
-```html
-<div role="navigation">
-    <ul class="navbar navbar-left">
-        <li class="nav-item"><a class="nav-link" href="link1/">Link 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
-    </ul>
-</div>
+<main id="content" tabindex="-1">
+<!--PAGE CONTENT GOES HERE-->
+</main>
 ```
 
-### Color
+### Footer
 
-Available color classes: 
-* `navbar-dark`: Use dark background with light font color
+A footer with departmental/organization address is required for every page. The text version of the address should be wrapped in `address` HTML element.
+
+An example of footer with address:
+```html
+<!--footer wiith green background-->
+<footer class="footer-green">
+    <section class="footer-address">
+        <!--NDSU logo-->
+        <img src="/images/NDSU.twolines.gif" alt="North Dakota State University" />
+        <!--Wrap the address text in address element-->
+        <address>
+            <h6>University Relations</h6>
+            North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>
+            <br>
+            <a href="tel:17012311068"><span class="sr-only">Phone: </span>+1 (701) 231-1068</a><br>
+            <a href="fax:17012311989">Fax: +1 (701) 231-1068</a>
+        </address>
+    </section>
+</footer>
+```
+
+### Script
+Script files should go at the end of the `body` HTML element after footer. Make sure to include either minimal or full version build of the script, depending on your needs.
 
 Example:
 ```html
-<div role="navigation">
-    <ul class="navbar navbar-dark">
-        <li class="nav-item"><a class="nav-link" href="link1/">Link 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
-    </ul>
-</div>
+<!--Minimal version of script-->
+<script type="text/javascript" src="https://static.ndsu.nodak.edu/scripts/minimal.min.js"></script>
 ```
 
+---
+ ## Minimal and Full Version Builds
 
-### Direction
+ There are two set of style and script that you can use on the page: minimal version (`minimal.css` and `minimal.js`) and full version (`style.css` and `script.js`).
 
-Available direction classes:
-* `navbar-horizontal` (default): Horizontal navigation, with center-aligned text
-* `navbar-vertical`: Vertical navigation, with left-aligned text
+ Minimal version has the essential styles/scripts and basic components needed to create a simple page, e.g. navigation bars, buttons, etc. These following components are included in the minimal version:
 
-`navbar-vertical` example:
-```html
-<div role="navigation">
-    <ul class="navbar navbar-vertical">
-        <li class="nav-item"><a class="nav-link" href="link1/">Link 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
-    </ul>
-</div>
-```
+ * _List of minimal components_
 
+ Some components are not included in the minimal version, thus requiring the page to use the full version of styles/scripts. The following components require the use of full version:
 
-## Dropdown/Nested Menu
+ * _List of full version components_
 
-To create a dropdown menu, add another `navbar` element with additional class `child-navbar` under a `nav-item` parent element next to `nav-link` element. Since a typical child `navbar` is usually a vertically-oriented navigation, you may want to add the class `navbar-vertical` to the child `navbar` element.
+ Reference the style of the version inside the `head` element
 
-Example DOM structure for dropdown:
-* `ul.navbar`
-  * `li.nav-item`
-    * `a.nav-link`
-    * `ul.navbar.navbar-vertical.child-navbar`
-      * `li.nav-item`
-        * `a.nav-link`
-      * `li.nav-item`
-        * `a.nav-link`
-  * `li.nav-item`
-    * `a.nav-link`
-  * `li.nav-item`
-    * `a.nav-link`
+ ```html
+<head>
+    <!--...-->
+    <link rel="stylesheet" type="text/css" href="https://static.ndsu.nodak.edu/styles/minimal.min.css" />
+</head>
+ ```
 
-
-Example HTML markup for dropdown:
-```html
-<div role="navigation">
-    <ul class="navbar navbar-dark">
-        <li class="nav-item">
-            <a class="nav-link" href="link1/">Link 1</a>
-            <ul class="navbar navbar-vertical child-navbar">
-                <li class="nav-item">
-                    <a class="nav-link" href="link1/">Sub-Menu 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="link1/">Sub-Menu 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="link1/">Sub-Menu 3</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
-    </ul>
-</div>
-```
-
-### Extended dropdown menu
-
-An extended dropdown menu has multiple columns under one link. This can be done by using nested `navbar` components with depth of 3, and adding class `extended-child-navbar` to the first `child-navbar` and `extended-child-section` to `nav-item` elements of this `navbar`.
-
-Example DOM structure:
-* `ul.navbar`
-  * `li.nav-item`
-    * `a.nav-link`
-    * `ul.navbar.child-navbar.extended-child-navbar`
-      * `li.nav-item.extended-child-section`
-        * `h5.child-section-title`
-        * `ul.navbar.child-navbar.navbar-vertical`
-          * `li.nav-item`
-          * `li.nav-item`
-          * `li.nav-item`
-        * `h5.child-section-title`
-        * `ul.navbar.child-navbar.navbar-vertical`
-          * `li.nav-item`
-          * `li.nav-item`
-          * `li.nav-item`
-        * `h5.child-section-title`
-        * `ul.navbar.child-navbar.navbar-vertical`
-          * `li.nav-item`
-          * `li.nav-item`
-          * `li.nav-item`
-  * `li.nav-item`
-    * `a.nav-link`
-  * `li.nav-item`
-    * `a.nav-link`
-  * `li.nav-item`
-    * `a.nav-link`
-
-Example HTML markup for the DOM given above:
-
-```html
-<div role="navigation">
-    <ul class="navbar navbar-dark">
-        <li class="nav-item">
-            <a class="nav-link" href="link1/">Link 1</a>
-            <ul class="navbar child-navbar extended-child-navbar">
-                <li class="nav-item extended-child-section">
-                    <h5 class="child-section-title">Section 1</h5>
-                    <ul class="navbar child-navbar navbar-vertical">
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 3</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item extended-child-section">
-                    <h5 class="child-section-title">Section 2</h5>
-                    <ul class="navbar child-navbar navbar-vertical">
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 3</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item extended-child-section">
-                    <h5 class="child-section-title">Section 3</h5>
-                    <ul class="navbar child-navbar navbar-vertical">
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="link2/">Sub-Link 3</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="link2/">Link 2</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 4</a></li>
-    </ul>
-</div>
-```
-
-## Mobile Navigation
-
-By default, links in `navbar` will not be included in a mobile navigation. To add a `navbar` component into mobile navigation, add the CSS class `navbar-mobilize`. To exclude a `nav-item` from being exported into mobile navigation, add the class `nav-item-mobile-hide`.
-
-Example:
-
-```html
-<div role="navigation">
-    <!--This navbar will be included in mobile navigation-->
-    <ul class="navbar navbar-mobilize">
-        <li class="nav-item"><a class="nav-link" href="link1/">Link 1</a></li>
-        <!--This nav-item will be excluded from mobile navigation-->
-        <li class="nav-item nav-item-mobile-hide">
-            <a class="nav-link" href="link2/">Link 2</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="link3/">Link 3</a></li>
-    </ul>
-</div>
-```
-
-A child `navbar` component will also be included in mobile navigation if its parent is included.
+---

@@ -3,5 +3,4 @@
 .svn/
 
 node_modules/
-dist/scripts/
-dist/styles/
+docs/_site
