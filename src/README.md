@@ -5,12 +5,12 @@
 The source files (`src` directory) are divided into two groups: `essentials` and `components`. The script and style files from the source will be concatenated into one single file each for script and sytle. The sample _.html_ and _.md_ files will be copied into `dist` directory for end-users to refer to.
 
 * Root
-  * dist
+  * docs
     * components
       * component name
         * _README.md, example.html_
         * _no script files_
-    * README.md for `dist` directory
+    * README.md for `docs` directory
     * _sample basic layouts/templates (e.g. template.html, two-column.html)_
   * src
     * components
@@ -78,7 +78,7 @@ The style definition for each version is located under `src` directory (`minimal
 ## The README.md file
 Each component should have a _README.md_ file that gives at least brief description on how to use the component. This also includes an example markup for each usage. 
 
-Please edit the _README.md_ file located in the `src` directory. Every component's _README.md_ file will be copied to the `dist` directory for end user's use by executing one of the following gulp tasks:
+Please edit the _README.md_ file located in the `src` directory. Every component's _README.md_ file will be copied to the `docs` directory for end user's use by executing one of the following gulp tasks:
 
 ```bash
 gulp build

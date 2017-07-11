@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>NDSU Web Templates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="https://static.ndsu.nodak.edu/favicon.ico" />
+    <meta name="language" content="en-US" />
+     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/markdown.css" />
+</head>
+
+<body>
+    <section class="sr-navigation" role="navigation">
+        <ul class="remove-list-style">
+            <li>
+                <a class="sr-only sr-only-focusable" href="#mainNav">Skip to main navigation</a>
+            </li>
+            <li>
+                <a class="sr-only sr-only-focusable" href="#content">Skip to page content</a>
+            </li>
+        </ul>
+    </section>
+    <header>
+        <div class="navbar-mobile-container sticky-bar sticky-sm">
+            <div class="green-bar">
+                <div class="container flex-container flex-middle" role="navigation">
+                    <h1><img src="/images/logo.png" alt="North Dakota State University" title="" height="35" width="73" /></h1>
+                    <button type="button" class="btn btn-yellow navbar-toggle"><span class="sr-only">Mobile menu</span></button>
+                </div>
+            </div>
+            <ul class="navbar navbar-mobile navbar-vertical navbar-dark">
+            </ul>
+            <div class="page-title-bar">
+                <div class="container page-title-wrapper">
+                    <h2 class="page-title">Navbar Component</h2>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav sticky-bar sticky-xl" role="navigation" id="mainNav" tabindex="-1">
+            <div class="container">
+                <ul class="navbar navbar-left navbar-mobilize navbar-dark">
+                    <li class="nav-item nav-item-mobile-hide nav-item-home"><a class="nav-link" href="/"><span class="sr-only">Home</span>&#8962;</a></li>
+                    <li class="nav-item"><a class="nav-link" href="link1/">Layouts</a></li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Components</a>
+                        <ul class="navbar navbar-vertical child-navbar">
+                            <li class="nav-item">
+                                <a class="nav-link" href="components/navbar/">Generic Content</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components/navbar/">Navbar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="content" class="container markdown-body" tabindex="-1">
+        <p>The <code class="highlighter-rouge">navbar</code> component is part of the minimal version.</p>
+
+<h2 id="examples">Examples</h2>
+
+<p><a href="/components/navbar/example.html">Click here to view examples of this component</a>.</p>
+
+<h2 id="basic-usage">Basic Usage</h2>
+
+<p>A basic <code class="highlighter-rouge">navbar</code> is composed of:</p>
+<ul>
+  <li><code class="highlighter-rouge">ul</code> element with CSS class of <code class="highlighter-rouge">navbar</code></li>
+  <li>A collection of <code class="highlighter-rouge">li</code> elements with a class of <code class="highlighter-rouge">nav-item</code> under parent <code class="highlighter-rouge">ul</code> element</li>
+  <li>A clickable <code class="highlighter-rouge">a</code> element with class of <code class="highlighter-rouge">nav-link</code> under each <code class="highlighter-rouge">li</code> element</li>
+</ul>
+
+<p>Typical DOM structure:</p>
+<ul>
+  <li><code class="highlighter-rouge">ul.navbar</code>
+    <ul>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>For accessibility reason, make sure that the <code class="highlighter-rouge">navbar</code> component is wrapped around an element with <code class="highlighter-rouge">role</code> attribute of <code class="highlighter-rouge">navigation</code>. If a <code class="highlighter-rouge">navbar</code> component is a child of another <code class="highlighter-rouge">navbar</code> component (e.g. dropdown menu), only the parent <code class="highlighter-rouge">navbar</code> requires to be wrapped around an element with <code class="highlighter-rouge">role</code> of <code class="highlighter-rouge">navigation</code>. See <em>Dropdown</em> section below for example.</p>
+
+<p>Basic usage example:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="styling">Styling</h2>
+
+<p>The navbar component inherits background color and link styling from its parent’s styles. You can override the following styles with pre-defined classes.</p>
+
+<h3 id="alignment">Alignment</h3>
+
+<p>Available alignment classes:</p>
+<ul>
+  <li><code class="highlighter-rouge">navbar-center</code> (default): Center the links</li>
+  <li><code class="highlighter-rouge">navbar-justify</code>: Expand and justify the links</li>
+  <li><code class="highlighter-rouge">navbar-left</code>: Left align the links</li>
+  <li><code class="highlighter-rouge">navbar-right</code>: Right align the links</li>
+</ul>
+
+<p>Justified links example:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-justify"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+<p>Left-align links example:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="color">Color</h3>
+
+<p>Available color classes:</p>
+<ul>
+  <li><code class="highlighter-rouge">navbar-dark</code>: Use dark background with light font color</li>
+</ul>
+
+<p>Example:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-dark"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="direction">Direction</h3>
+
+<p>Available direction classes:</p>
+<ul>
+  <li><code class="highlighter-rouge">navbar-horizontal</code> (default): Horizontal navigation, with center-aligned text</li>
+  <li><code class="highlighter-rouge">navbar-vertical</code>: Vertical navigation, with left-aligned text</li>
+</ul>
+
+<p><code class="highlighter-rouge">navbar-vertical</code> example:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-vertical"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="dropdownnested-menu">Dropdown/Nested Menu</h2>
+
+<p>To create a dropdown menu, add another <code class="highlighter-rouge">navbar</code> element with additional class <code class="highlighter-rouge">child-navbar</code> under a <code class="highlighter-rouge">nav-item</code> parent element next to <code class="highlighter-rouge">nav-link</code> element. Since a typical child <code class="highlighter-rouge">navbar</code> is usually a vertically-oriented navigation, you may want to add the class <code class="highlighter-rouge">navbar-vertical</code> to the child <code class="highlighter-rouge">navbar</code> element.</p>
+
+<p>Example DOM structure for dropdown:</p>
+<ul>
+  <li><code class="highlighter-rouge">ul.navbar</code>
+    <ul>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+          <li><code class="highlighter-rouge">ul.navbar.navbar-vertical.child-navbar</code>
+            <ul>
+              <li><code class="highlighter-rouge">li.nav-item</code>
+                <ul>
+                  <li><code class="highlighter-rouge">a.nav-link</code></li>
+                </ul>
+              </li>
+              <li><code class="highlighter-rouge">li.nav-item</code>
+                <ul>
+                  <li><code class="highlighter-rouge">a.nav-link</code></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example HTML markup for dropdown:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-dark"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-vertical child-navbar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Sub-Menu 1<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Sub-Menu 2<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Sub-Menu 3<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="extended-dropdown-menu">Extended dropdown menu</h3>
+
+<p>An extended dropdown menu has multiple columns under one link. This can be done by using nested <code class="highlighter-rouge">navbar</code> components with depth of 3, and adding class <code class="highlighter-rouge">extended-child-navbar</code> to the first <code class="highlighter-rouge">child-navbar</code> and <code class="highlighter-rouge">extended-child-section</code> to <code class="highlighter-rouge">nav-item</code> elements of this <code class="highlighter-rouge">navbar</code>.</p>
+
+<p>Example DOM structure:</p>
+<ul>
+  <li><code class="highlighter-rouge">ul.navbar</code>
+    <ul>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+          <li><code class="highlighter-rouge">ul.navbar.child-navbar.extended-child-navbar</code>
+            <ul>
+              <li><code class="highlighter-rouge">li.nav-item.extended-child-section</code>
+                <ul>
+                  <li><code class="highlighter-rouge">h5.child-section-title</code></li>
+                  <li><code class="highlighter-rouge">ul.navbar.child-navbar.navbar-vertical</code>
+                    <ul>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                    </ul>
+                  </li>
+                  <li><code class="highlighter-rouge">h5.child-section-title</code></li>
+                  <li><code class="highlighter-rouge">ul.navbar.child-navbar.navbar-vertical</code>
+                    <ul>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                    </ul>
+                  </li>
+                  <li><code class="highlighter-rouge">h5.child-section-title</code></li>
+                  <li><code class="highlighter-rouge">ul.navbar.child-navbar.navbar-vertical</code>
+                    <ul>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                      <li><code class="highlighter-rouge">li.nav-item</code></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">li.nav-item</code>
+        <ul>
+          <li><code class="highlighter-rouge">a.nav-link</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example HTML markup for the DOM given above:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-dark"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar child-navbar extended-child-navbar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item extended-child-section"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"child-section-title"</span><span class="nt">&gt;</span>Section 1<span class="nt">&lt;/h5&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar child-navbar navbar-vertical"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item extended-child-section"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"child-section-title"</span><span class="nt">&gt;</span>Section 2<span class="nt">&lt;/h5&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar child-navbar navbar-vertical"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item extended-child-section"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"child-section-title"</span><span class="nt">&gt;</span>Section 3<span class="nt">&lt;/h5&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar child-navbar navbar-vertical"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Sub-Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="mobile-navigation">Mobile Navigation</h2>
+
+<p>By default, links in <code class="highlighter-rouge">navbar</code> will not be included in a mobile navigation. To add a <code class="highlighter-rouge">navbar</code> component into mobile navigation, add the CSS class <code class="highlighter-rouge">navbar-mobilize</code>. To exclude a <code class="highlighter-rouge">nav-item</code> from being exported into mobile navigation, add the class <code class="highlighter-rouge">nav-item-mobile-hide</code>.</p>
+
+<p>Example:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--This navbar will be included in mobile navigation--&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar navbar-mobilize"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link1/"</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="c">&lt;!--This nav-item will be excluded from mobile navigation--&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item nav-item-mobile-hide"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link2/"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"link3/"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>A child <code class="highlighter-rouge">navbar</code> component will also be included in mobile navigation if its parent is included.</p>
+
+    </main>
+    <footer class="footer-green">
+        <section class="footer-address">
+            <img src="images/NDSU.twolines.gif" alt="North Dakota State University" />
+            <address>
+                <h6>University Relations</h6>
+                North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>
+                <br>
+                <a href="tel:17012311068"><span class="sr-only">Phone: </span>+1 (701) 231-1068</a><br>
+                <a href="fax:17012311989">Fax: +1 (701) 231-1068</a>
+            </address>
+        </section>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/script.min.js"></script>
+</body>
+
+</html>

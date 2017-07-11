@@ -6,7 +6,8 @@ let currentPackageVersion = p.version;
 
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
-const browserSync = require('browser-sync').create();
+const browserSyncDev = require('browser-sync').create('dev-server');
+const browserSyncDocs = require('browser-sync').create('docs-server');
 const concat = require('gulp-concat');
 const fs = require('fs');
 const gutil = require('gulp-util');
@@ -45,15 +46,20 @@ const config = {
     "html": {
         "compile": [
             './src/**/*.html',
-            '!./node_modules/**/*'  
+            '!./node_modules/**/*',
+            '!./src/index.html',
         ],
         "dest": {
-            "final": "./docs",
+            "docs": "./docs",
         },
-        "watch": [
-            './src/**/*.html',
-            '!./node_modules/**/*.html'  
-        ]
+        "watch": {
+            "devs": [
+                './src/**/*.html'
+            ],
+            "docs": [
+                './docs/**/*.html'
+            ]
+        }
     },
     "markdown": {
         "compile": [
@@ -62,7 +68,7 @@ const config = {
             '!./node_modules/**/*'  
         ],
         "dest": {
-            "final": "./docs",
+            "docs": "./docs",
         }
     },
     "scripts": {
@@ -88,35 +94,45 @@ const config = {
             },
         ],
         "dest": {
-            "dev": './src/scripts',
-            "final": "./docs/scripts"
+            "dev": './src/assets/js',
+            "docs": "./docs/assets/js"
         },
-        "watch": [
-            './src/components/**/*.js',
-            './src/essentials/scripts/**/*.js'
-        ],
+        "watch": {
+            "devs": [
+                './src/components/**/*.js',
+                './src/essentials/scripts/**/*.js'
+            ],
+            "docs": [
+                './docs/assets/js/**/*.js'
+            ]
+        }
     },
     "styles": {
         "compile": [
             {
                 "name": "minimal",
                 "destFileName": "minimal",
-                "sourceFiles": ['./src/styles/minimal.scss']
+                "sourceFiles": ['./src/assets/scss/minimal.scss']
             },
             {
                 "name": "full",
                 "destFileName": "styles",
-                "sourceFiles": ['./src/styles/full.scss']
+                "sourceFiles": ['./src/assets/scss/full.scss']
             }
         ],
         "dest": {
-            "dev": './src/styles',
-            "final": "./docs/styles"
+            "dev": './src/assets/css',
+            "docs": "./docs/assets/css"
         },
-        "watch": [
-            './src/components/**/*.scss',
-            './src/essentials/**/*.scss'
-        ]
+        "watch": {
+            "devs": [
+                './src/components/**/*.scss',
+                './src/essentials/**/*.scss'
+            ],
+            "docs": [
+                './docs/assets/css/**/*.css'
+            ]
+        }
     }
 };
 
@@ -131,11 +147,11 @@ const generateStyleTask = (sc) => {
             .pipe(rename(sc.destFileName + '.css'))
             .pipe(autoprefixer())
             .pipe(gulp.dest(config.styles.dest.dev))
-            .pipe(browserSync.stream())
+            .pipe(browserSyncDev.stream())
             .pipe(rename({suffix: '.min'}))
             .pipe(sass({outputStyle: 'compressed'}))
             .pipe(gulp.dest(config.styles.dest.dev))
-            .pipe(browserSync.stream());
+            .pipe(browserSyncDev.stream());
     });
     return taskName;
 };
@@ -184,64 +200,105 @@ gulp.task('scripts', () => {
     });
 });
 
-gulp.task('watch:html', () => {
-    gulp.watch(config.html.watch).on('change', browserSync.reload);
-});
-gulp.task('watch:scripts', () => {
-    gulp.watch(config.scripts.watch).on('change', () => {
-        gulp.start('scripts', browserSync.reload);
-    });
-});
-gulp.task('watch:styles', () => {
-    gulp.watch(config.styles.watch, ['styles']);
-});
 
-gulp.task('watch', ['watch:html','watch:scripts', 'watch:styles']);
+// COPY TASKS -------------------------------------------
 
 gulp.task('copy:html', [], () => {
     return gulp.src(config.html.compile)
         .pipe(replace(/(href|src)(=")(http:\/\/localhost:3000\/)(.*)(")/gi, "$1$2https://static.ndsu.nodak.edu/$4$5"))
-        .pipe(gulp.dest(config.html.dest.final));
+        .pipe(gulp.dest(config.html.dest.docs));
 });
 
 gulp.task('copy:markdown', [], () => {
     return gulp.src(config.markdown.compile)
-        .pipe(gulp.dest(config.markdown.dest.final));
+        .pipe(gulp.dest(config.markdown.dest.docs));
 });
 
-gulp.task('copy:scripts', ['scripts'], () => {
-    let versionDir = config.scripts.dest.final + '/' + currentPackageVersion;
+gulp.task('copy:scripts', [], () => {
+    return gulp.src(config.scripts.dest.dev + '/**/*.js')
+        .pipe(gulp.dest(config.scripts.dest.docs));
+});
+
+
+gulp.task('copy:styles', [], () => {
+    return gulp.src(config.styles.dest.dev + '/**/*.css')
+        .pipe(gulp.dest(config.styles.dest.docs));
+});
+
+gulp.task('copy:scripts:versioned', [], () => {
+    let versionDir = config.scripts.dest.docs + '/' + currentPackageVersion;
     if (!fs.existsSync(versionDir)){
         mkdirp.sync(versionDir);
     }
 
     return gulp.src(config.scripts.dest.dev + '/**/*.js')
-        .pipe(gulp.dest(config.scripts.dest.final))
         .pipe(rename({suffix: '-' + currentPackageVersion}))
         .pipe(gulp.dest(versionDir));
 });
-
-gulp.task('copy:styles', ['styles'], () => {
-    let versionDir = config.styles.dest.final + '/' + currentPackageVersion;
+gulp.task('copy:styles:versioned', [], () => {
+    let versionDir = config.styles.dest.docs + '/' + currentPackageVersion;
     if (!fs.existsSync(versionDir)){
         mkdirp.sync(versionDir);
     }
 
     return gulp.src(config.styles.dest.dev + '/**/*.css')
-        .pipe(gulp.dest(config.styles.dest.final))
         .pipe(rename({suffix: '-' + currentPackageVersion}))
         .pipe(gulp.dest(versionDir));
 });
 
-gulp.task('copy', ['copy:html', 'copy:markdown']);
-gulp.task('build', ['copy']);
+gulp.task('copy', ['copy:html', 'copy:markdown', 'copy:scripts', 'copy:styles']);
 
-gulp.task('serve', ['scripts', 'styles'], () => {
-    browserSync.init({
+// WATCH TASKS ---------------------------
+
+gulp.task('watch:dev:html', () => {
+    gulp.watch(config.html.watch.devs).on('change', browserSyncDev.reload);
+});
+gulp.task('watch:docs:html', () => {
+    gulp.watch(config.html.watch.docs).on('change', browserSyncDocs.reload);
+});
+
+gulp.task('watch:dev:scripts', () => {
+    gulp.watch(config.scripts.watch.dev).on('change', () => {
+        gulp.start('scripts', browserSyncDev.reload);
+    });
+});
+
+gulp.task('watch:dev:styles', () => {
+    gulp.watch(config.styles.watch.dev, ['styles']);
+});
+
+gulp.task('watch:dev', ['watch:dev:html','watch:dev:scripts', 'watch:dev:styles']);
+gulp.task('watch:docs', ['watch:docs:html']);
+gulp.task('watch', ['watch:dev', 'watch:docs']);
+
+// SERVE TASKS --------------------------------------
+
+gulp.task('serve:dev', ['scripts', 'styles'], () => {
+    browserSyncDev.init({
         server: {
             baseDir: './src',
-            index: "template.html"
+            index: "index.html"
+        },
+        port: 3000,
+        ui: {
+            port: 3001
         }
     });
-    gulp.start('watch');
+    gulp.start('watch:dev');
 });
+
+gulp.task('serve:docs', ['copy'], () => {
+    browserSyncDocs.init({
+        server: {
+            baseDir: './docs',
+            index: "index.html"
+        },
+        port: 13000,
+        ui: {
+            port: 13001
+        }
+    });
+    gulp.start('watch:docs');
+});
+
+gulp.task('serve', ['serve:dev', 'serve:docs']);
