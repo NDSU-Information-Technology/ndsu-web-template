@@ -1673,6 +1673,9 @@ a.btn {
   -webkit-box-shadow: 1px 1px 1px #000;
           box-shadow: 1px 1px 1px #000; }
 
+ul.navbar {
+  padding: 0 !important; }
+
 .navbar-mobile,
 .navbar-mobile.active,
 .navbar-toggle {

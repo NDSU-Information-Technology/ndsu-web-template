@@ -3,12 +3,6 @@
 
 This page covers a quick start guide on how to implement NDSU Template for your pages.
 
-## Examples
-
-Click here to view working examples of NDSU Template. (_Insert link to hosted working pages here_)
-
----
-
 ## Minimum Requirements For A Page
 
 Each NDSU page is required to have the following structure:
@@ -162,7 +156,7 @@ An example of footer with address:
 <footer class="footer-green">
     <section class="footer-address">
         <!--NDSU logo-->
-        <img src="/images/NDSU.twolines.gif" alt="North Dakota State University" />
+        <img src="https://static.ndsu.nodak.edu/images/NDSU.twolines.gif" alt="North Dakota State University" />
         <!--Wrap the address text in address element-->
         <address>
             <h6>University Relations</h6>
@@ -184,8 +178,7 @@ Example:
 <script type="text/javascript" src="https://static.ndsu.nodak.edu/scripts/minimal.min.js"></script>
 ```
 
----
- ## Minimal and Full Version Builds
+## Minimal and Full Version Builds
 
  There are two set of style and script that you can use on the page: minimal version (`minimal.css` and `minimal.js`) and full version (`style.css` and `script.js`).
 

@@ -210,6 +210,10 @@
 	}
 }
 
+ul.navbar {
+	padding: 0 !important;
+}
+
 @include media-xl() {
 	.navbar-mobile,
 	.navbar-mobile.active,
@@ -242,3 +246,4 @@
 		flex-wrap: nowrap;
 	}
 }
+
