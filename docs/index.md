@@ -198,5 +198,3 @@ Example:
     <link rel="stylesheet" type="text/css" href="https://static.ndsu.nodak.edu/styles/minimal.min.css" />
 </head>
  ```
-
----
