@@ -66,6 +66,13 @@ const config = {
         ],
         "dest": {
             "docs": "./docs",
+        },
+        "watch": {
+            "dev": [
+                './src/**/README.md',
+                '!./src/README.md',
+                '!./node_modules/**/*'  
+            ]
         }
     },
     "scripts": {
@@ -255,6 +262,10 @@ gulp.task('watch:dev:html', () => {
     gulp.watch(config.html.watch.dev).on('change', browserSyncDev.reload);
 });
 
+gulp.task('watch:dev:markdown', () => {
+    gulp.watch(config.markdown.watch.dev, ['copy:markdown']);
+});
+
 gulp.task('watch:dev:scripts', () => {
     gulp.watch(config.scripts.watch.dev).on('change', () => {
         runSequence('scripts', 'copy:scripts');
@@ -267,7 +278,7 @@ gulp.task('watch:dev:styles', () => {
     });;
 });
 
-gulp.task('watch:dev', ['watch:dev:html','watch:dev:scripts', 'watch:dev:styles']);
+gulp.task('watch:dev', ['watch:dev:html', 'watch:dev:markdown','watch:dev:scripts', 'watch:dev:styles']);
 gulp.task('watch', ['watch:dev']);
 
 // SERVE TASKS --------------------------------------
