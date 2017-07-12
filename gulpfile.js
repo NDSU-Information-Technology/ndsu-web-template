@@ -55,9 +55,6 @@ const config = {
         "watch": {
             "dev": [
                 './src/**/*.html'
-            ],
-            "docs": [
-                './docs/**/*.html'
             ]
         }
     },
@@ -185,7 +182,7 @@ let styleTasks = config.styles.compile.map(generateStyleTask);
 let scriptTasks = config.scripts.compile.map(generateScriptTask);
 
 gulp.task('styles', () => {
-    runSequence(styleTasks, (error) => {
+    return runSequence(styleTasks, (error) => {
         if (error) {
             console.log(error);
         }
@@ -193,7 +190,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
-    runSequence(scriptTasks, (error) => {
+    return runSequence(scriptTasks, (error) => {
         if (error) {
             console.log(error);
         }
@@ -257,9 +254,6 @@ gulp.task('copy', ['copy:html', 'copy:markdown', 'copy:scripts', 'copy:styles'])
 gulp.task('watch:dev:html', () => {
     gulp.watch(config.html.watch.dev).on('change', browserSyncDev.reload);
 });
-gulp.task('watch:docs:html', () => {
-    gulp.watch(config.html.watch.docs).on('change', browserSyncDocs.reload);
-});
 
 gulp.task('watch:dev:scripts', () => {
     gulp.watch(config.scripts.watch.dev).on('change', () => {
@@ -274,8 +268,7 @@ gulp.task('watch:dev:styles', () => {
 });
 
 gulp.task('watch:dev', ['watch:dev:html','watch:dev:scripts', 'watch:dev:styles']);
-gulp.task('watch:docs', ['watch:docs:html']);
-gulp.task('watch', ['watch:dev', 'watch:docs']);
+gulp.task('watch', ['watch:dev']);
 
 // SERVE TASKS --------------------------------------
 
@@ -293,18 +286,4 @@ gulp.task('serve:dev', ['scripts', 'styles'], () => {
     gulp.start('watch:dev');
 });
 
-gulp.task('serve:docs', ['copy'], () => {
-    browserSyncDocs.init({
-        server: {
-            baseDir: './docs',
-            index: "index.html"
-        },
-        port: 13000,
-        ui: {
-            port: 13001
-        }
-    });
-    gulp.start('watch:docs');
-});
-
-gulp.task('serve', ['serve:dev', 'serve:docs']);
+gulp.task('serve', ['serve:dev']);
