@@ -182,7 +182,7 @@ let styleTasks = config.styles.compile.map(generateStyleTask);
 let scriptTasks = config.scripts.compile.map(generateScriptTask);
 
 gulp.task('styles', () => {
-    return runSequence(styleTasks, (error) => {
+    runSequence(styleTasks, (error) => {
         if (error) {
             console.log(error);
         }
@@ -190,7 +190,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
-    return runSequence(scriptTasks, (error) => {
+    runSequence(scriptTasks, (error) => {
         if (error) {
             console.log(error);
         }
@@ -276,7 +276,7 @@ gulp.task('serve:dev', ['scripts', 'styles'], () => {
     browserSyncDev.init({
         server: {
             baseDir: './src',
-            index: "index.html"
+            index: "templates/minimal.html"
         },
         port: 3000,
         ui: {

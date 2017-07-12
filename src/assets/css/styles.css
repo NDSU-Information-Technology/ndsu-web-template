@@ -523,7 +523,7 @@ a:hover, a:focus, a[aria-expanded=true], a.active {
   color: #999999; }
 
 a {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:hover, a:focus, a[aria-expanded=true], a.active {
   text-decoration: underline; }
@@ -2284,7 +2284,7 @@ a.social-media-icon.linkedin::before {
     color: #ffcc00; }
 
 a {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:hover, a:focus, a[aria-expanded=true], a.active {
   text-decoration: underline; }
@@ -2298,7 +2298,7 @@ a:hover, a:focus, a[aria-expanded=true], a.active {
     color: #ffcc00; }
 
 a {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:hover, a:focus, a[aria-expanded=true], a.active {
   text-decoration: underline; }

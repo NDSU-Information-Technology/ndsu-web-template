@@ -6,7 +6,7 @@
 // Standardize link color and underline style
 a {
 	@include linkColor();
-	@include linkUnderline();
+	@include linkUnderline(2);
 }
 
 body {
