@@ -523,7 +523,7 @@ a:hover, a:focus, a[aria-expanded=true], a.active {
   color: #999999; }
 
 a {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:hover, a:focus, a[aria-expanded=true], a.active {
   text-decoration: underline; }

@@ -3,6 +3,9 @@
 
 This page covers a quick start guide on how to implement NDSU Template for your pages.
 
+## Download
+Go to [Templates page](/ndsu-web-template/templates) to view and download currently available HTML template files.
+
 ## Minimum Requirements For A Page
 
 Each NDSU page is required to have the following structure:
