@@ -72,5 +72,5 @@ This template divides part of the page into two columns: one smaller column/side
 ```
 
 View the templates:
-* [Click here to view two-column-left.html template](two-column-left.html){:target="_blank"}.
-* [Click here to view two-column-right.html template](two-column-right.html){:target="_blank"}.
+* [Click here to view `two-column-left.html` template](two-column-left.html){:target="_blank"}.
+* [Click here to view `two-column-right.html` template](two-column-right.html){:target="_blank"}.
