@@ -178,7 +178,7 @@ Example DOM structure:
   * `li.nav-item`
     * `a.nav-link`
 
-Example HTML markup for the DOM given above:
+Example HTML markup for the DOM structure given above:
 
 ```html
 <div role="navigation">

@@ -67,7 +67,7 @@ Each NDSU page is required to have the following structure:
 
 ### Skip Navigation Links for screen reader
 
-These links should be the first elements inside body. [More information about Skip Navigation Links](http://webaim.org/techniques/skipnav/).
+These links should be the first elements inside body. [More information about Skip Navigation Links](http://webaim.org/techniques/skipnav/){:target="_blank"}.
 
 Wrap the list of links in an element with CSS class `sr-navigation`. Each link should refer to a specific place in document and has CSS classes of `sr-only` and `sr-only-focusable`. A page with repetitive header should have at least a reference to the `id` of the main content of the page.
 
@@ -89,7 +89,7 @@ Wrap the list of links in an element with CSS class `sr-navigation`. Each link s
 </section>
 ```
 
-Don't forget to put the `id` of referenced section and set the `tabindex` attribute to -1.
+Don't forget to assign the `id` of referenced section and set the `tabindex` attribute to -1.
 
 ```html
 <!--This section has id of news and tabindex of -1-->
