@@ -43,7 +43,6 @@
                 <ul class="navbar navbar-left navbar-mobilize navbar-dark">
                     <li class="nav-item nav-item-mobile-hide nav-item-home"><a class="nav-link" href="/ndsu-web-template/"><span class="sr-only">Home</span>&#8962;</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Layouts</a></li>
-                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Components</a>
                         <ul class="navbar navbar-vertical child-navbar">
@@ -55,6 +54,12 @@
                             </li>
                         </ul>
                     </li>
+                    {% for nav in page.additionalNavs %}
+                        <li class="nav-item"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>
+                    {% endfor %}
+                    {% for nav in layout.additionalNavs %}
+                        <li class="nav-item"><a class="nav-link" href="{{ nav.url }}">{{ nav.text }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -75,7 +80,7 @@
         </section>
     </footer>
 
-    <script type="text/javascript" src="/ndsu-web-template/assets/js/script.min.js"></script>
+    <script type="text/javascript" src="/ndsu-web-template/assets/js/script.js"></script>
 </body>
 
 </html>

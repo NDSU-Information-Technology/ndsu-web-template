@@ -53,7 +53,7 @@ const config = {
             "docs": "./docs",
         },
         "watch": {
-            "devs": [
+            "dev": [
                 './src/**/*.html'
             ],
             "docs": [
@@ -98,7 +98,7 @@ const config = {
             "docs": "./docs/assets/js"
         },
         "watch": {
-            "devs": [
+            "dev": [
                 './src/components/**/*.js',
                 './src/essentials/scripts/**/*.js'
             ],
@@ -125,7 +125,7 @@ const config = {
             "docs": "./docs/assets/css"
         },
         "watch": {
-            "devs": [
+            "dev": [
                 './src/components/**/*.scss',
                 './src/essentials/**/*.scss'
             ],
@@ -255,7 +255,7 @@ gulp.task('copy', ['copy:html', 'copy:markdown', 'copy:scripts', 'copy:styles'])
 // WATCH TASKS ---------------------------
 
 gulp.task('watch:dev:html', () => {
-    gulp.watch(config.html.watch.devs).on('change', browserSyncDev.reload);
+    gulp.watch(config.html.watch.dev).on('change', browserSyncDev.reload);
 });
 gulp.task('watch:docs:html', () => {
     gulp.watch(config.html.watch.docs).on('change', browserSyncDocs.reload);
@@ -263,12 +263,14 @@ gulp.task('watch:docs:html', () => {
 
 gulp.task('watch:dev:scripts', () => {
     gulp.watch(config.scripts.watch.dev).on('change', () => {
-        gulp.start('scripts', browserSyncDev.reload);
+        runSequence('scripts', 'copy:scripts');
     });
 });
 
 gulp.task('watch:dev:styles', () => {
-    gulp.watch(config.styles.watch.dev, ['styles']);
+    gulp.watch(config.styles.watch.dev).on('change', () => {
+        runSequence('styles', 'copy:styles');
+    });;
 });
 
 gulp.task('watch:dev', ['watch:dev:html','watch:dev:scripts', 'watch:dev:styles']);

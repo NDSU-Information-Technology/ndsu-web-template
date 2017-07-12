@@ -239,4 +239,6 @@ Example:
 </div>
 ```
 
+Resize browser window to a mobile page's width, and notice that the links specified have been added to the mobile navigation.
+
 A child `navbar` component will also be included in mobile navigation if its parent is included.

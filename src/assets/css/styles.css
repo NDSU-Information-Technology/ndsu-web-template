@@ -954,6 +954,12 @@ a.btn {
   .code-example.large .code-result {
     min-height: 225px; }
 
+.language-html .code-result {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999; }
+
 .container {
   margin: 0 auto;
   padding: 0 3em;
@@ -1914,6 +1920,9 @@ a.btn {
 .navbar-dark.navbar-mobile .nav-link.active {
   -webkit-box-shadow: 1px 1px 1px #000;
           box-shadow: 1px 1px 1px #000; }
+
+ul.navbar {
+  padding: 0 !important; }
 
 .navbar-mobile,
 .navbar-mobile.active,
