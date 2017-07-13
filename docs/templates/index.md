@@ -14,7 +14,9 @@ This template is a blank barebone template. Insert your content under the `main`
     </main>
 ```
 
-[Click here to view blank.html template](blank.html){:target="_blank"}.
+[View blank.html template](blank.html){:target="_blank"} or [Download blank.html template](blank.html){:download="blank.html" target="_blank"}.
+
+**IE User**: Right click the download link above and click _Save As_.
 
 
 ## Two-Column
@@ -72,5 +74,8 @@ This template divides part of the page into two columns: one smaller column/side
 ```
 
 View the templates:
-* [Click here to view `two-column-left.html` template](two-column-left.html){:target="_blank"}.
-* [Click here to view `two-column-right.html` template](two-column-right.html){:target="_blank"}.
+* [View `two-column-left.html` template](two-column-left.html){:target="_blank"} or [Download `two-column-left.html` template](two-column-left.html){:download="two-column-left.html" target="_blank"}.
+* [View `two-column-right.html` template](two-column-right.html){:target="_blank"} or [Download `two-column-right.html` template](two-column-right.html){:download="two-column-right.html" target="_blank"}.
+
+
+**IE User**: Right click the download link above and click _Save As_.
