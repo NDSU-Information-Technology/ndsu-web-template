@@ -111,7 +111,6 @@
 
     a.close-button{
         @include buttonify();
-
         @include btn-variant($white, $transparent, $yellow, $transparent);
 
         position: absolute;

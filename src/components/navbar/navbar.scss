@@ -196,13 +196,13 @@
 
 	&.navbar-mobile {
 		.nav-item + .nav-item {
-			border-top: 1px solid $mineshaft;
+			border-top: 1px solid $gray20;
 		}
 		.child-navbar .nav-link {
-			@include btn-variant($logcabin, $gray95, $yellow, $mineshaft);
+			@include btn-variant($gray13, $gray95, $yellow, $gray20);
 		}
 		.child-navbar .child-navbar .nav-link {
-			@include btn-variant($logcabin, $gray99, $yellow, $mineshaft);
+			@include btn-variant($gray13, $gray99, $yellow, $gray20);
 		}
 		.nav-link.active {
 			box-shadow: 1px 1px 1px $black;
