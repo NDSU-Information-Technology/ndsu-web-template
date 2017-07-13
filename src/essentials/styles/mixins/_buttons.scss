@@ -10,7 +10,6 @@
     vertical-align: middle;
     user-select: none;
     cursor: pointer;
-    border: 0;
 
     @if ($btnBlock){
         display: block;
@@ -48,5 +47,18 @@
     @include linkColor($main-color, $active-color);
     @if ($underline-mode > -1) {
         @include linkUnderline($underline-mode);
+    }
+}
+
+@mixin btn-border($main-color: $gray64, $active-color: $gray60, $width: 1px) {
+    border-width: $width;
+    border-style: solid;
+    border-color: $main-color;
+
+    &:hover,
+    &:focus,
+    &[aria-expanded=true],
+    &.active {
+        border-color: $active-color;
     }
 }

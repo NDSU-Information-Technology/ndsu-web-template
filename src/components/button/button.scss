@@ -1,24 +1,30 @@
 .btn {
     transition: all 0.3s ease-out;
     @include buttonify();
+    @include btn-border();
 }
 a.btn {
     @include linkUnderline(-1);
 }
 
 .btn-yellow {
-    @include btn-variant($logcabin, $yellow, $white, lighten($yellow,10%));
+    @include btn-variant($gray13, $yellow, $gray2, lighten($yellow,10%));
 }
-.btn-darkgray {
-    @include btn-variant($white, $logcabin, $yellow, $black);
-}
-.btn-clear-yellow {
-    @include btn-variant($yellow, transparent, $logcabin, $yellow);
-}
-.btn-darkgray-yellow {
-    @include btn-variant($white, $mineshaft, $mineshaft, $yellow);
+.btn-green {
+    @include btn-variant($gray90, $green, $gray95, darken($green, 5%));
 }
 
+.btn-darkgray {
+    @include btn-variant($white, $gray13, $yellow, $gray2);
+}
+.btn-darkgray-yellow {
+    @include btn-variant($white, $gray20, $gray20, $yellow);
+}
+
+
+.btn-clear-yellow {
+    @include btn-variant($yellow, transparent, $gray13, $yellow);
+}
 .btn-clear-yellow-white {
     @include btn-variant($yellow, transparent, $white, transparent);
 }

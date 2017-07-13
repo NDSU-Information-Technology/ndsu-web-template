@@ -762,9 +762,11 @@ footer {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  border: 0;
   display: inline-block;
-  padding: 1.75em 1.75em; }
+  padding: 1.75em 1.75em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #a3a3a3; }
   @media (max-width: 1199px) {
     .btn {
       padding: 1.5em 1.5em; } }
@@ -777,6 +779,8 @@ footer {
   @media (max-width: 574px) {
     .btn {
       padding: 1.25em 1.25em; } }
+  .btn:hover, .btn:focus, .btn[aria-expanded=true], .btn.active {
+    border-color: #999999; }
 
 a.btn {
   text-decoration: none; }
@@ -791,25 +795,25 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .btn-yellow {
     color: #222222; }
   .btn-yellow:hover, .btn-yellow:focus, .btn-yellow[aria-expanded=true], .btn-yellow.active {
-    color: #fff; }
+    color: #050505; }
+
+.btn-green {
+  background-color: #002119; }
+  .btn-green:hover, .btn-green:focus, .btn-green[aria-expanded=true], .btn-green.active {
+    background-color: #000806; }
+  .btn-green {
+    color: #e5e5e5; }
+  .btn-green:hover, .btn-green:focus, .btn-green[aria-expanded=true], .btn-green.active {
+    color: #fcfcfc; }
 
 .btn-darkgray {
   background-color: #222222; }
   .btn-darkgray:hover, .btn-darkgray:focus, .btn-darkgray[aria-expanded=true], .btn-darkgray.active {
-    background-color: #000; }
+    background-color: #050505; }
   .btn-darkgray {
     color: #fff; }
   .btn-darkgray:hover, .btn-darkgray:focus, .btn-darkgray[aria-expanded=true], .btn-darkgray.active {
     color: #ffcc00; }
-
-.btn-clear-yellow {
-  background-color: transparent; }
-  .btn-clear-yellow:hover, .btn-clear-yellow:focus, .btn-clear-yellow[aria-expanded=true], .btn-clear-yellow.active {
-    background-color: #ffcc00; }
-  .btn-clear-yellow {
-    color: #ffcc00; }
-  .btn-clear-yellow:hover, .btn-clear-yellow:focus, .btn-clear-yellow[aria-expanded=true], .btn-clear-yellow.active {
-    color: #222222; }
 
 .btn-darkgray-yellow {
   background-color: #333333; }
@@ -819,6 +823,15 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     color: #fff; }
   .btn-darkgray-yellow:hover, .btn-darkgray-yellow:focus, .btn-darkgray-yellow[aria-expanded=true], .btn-darkgray-yellow.active {
     color: #333333; }
+
+.btn-clear-yellow {
+  background-color: transparent; }
+  .btn-clear-yellow:hover, .btn-clear-yellow:focus, .btn-clear-yellow[aria-expanded=true], .btn-clear-yellow.active {
+    background-color: #ffcc00; }
+  .btn-clear-yellow {
+    color: #ffcc00; }
+  .btn-clear-yellow:hover, .btn-clear-yellow:focus, .btn-clear-yellow[aria-expanded=true], .btn-clear-yellow.active {
+    color: #222222; }
 
 .btn-clear-yellow-white {
   background-color: transparent; }
@@ -1397,7 +1410,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;
-    border: 0;
     display: inline-block;
     padding: 1.75em 1.75em;
     background-color: transparent;
@@ -1731,7 +1743,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;
-    border: 0;
     display: block;
     padding: 1.75em 1.75em; }
     .navbar .nav-link {

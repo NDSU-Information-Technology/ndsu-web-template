@@ -12,19 +12,19 @@
 	}
 
 	input:-ms-input-placeholder {
-		color: $logcabin;
+		color: $gray13;
 	}
 	input:focus:-ms-input-placeholder {
 		color: $davegray;
 	}
 	input::-webkit-input-placeholder {
-		color: $logcabin;
+		color: $gray13;
 	}
 	input:focus::-webkit-input-placeholder {
 		color: $davegray;
 	}
 	input::-moz-placeholder {
-		color:$logcabin;
+		color:$gray13;
 	}
 	input:focus::-moz-placeholder {
 		color: $davegray;

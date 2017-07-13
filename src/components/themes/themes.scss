@@ -3,7 +3,7 @@
         @include linkUnderline(2);
     }
 }
-@include createTheme('gray', $logcabin, $white, $white, $yellow) {
+@include createTheme('gray', $gray13, $white, $white, $yellow) {
     a {
         @include linkUnderline(2);
     }
