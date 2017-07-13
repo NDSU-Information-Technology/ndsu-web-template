@@ -3,14 +3,14 @@
     @include buttonify();
 }
 a.btn {
-    text-decoration: none;
+    @include linkUnderline(-1);
 }
 
 .btn-yellow {
     @include btn-variant($logcabin, $yellow, $white, lighten($yellow,10%));
 }
 .btn-darkgray {
-    @include btn-variant($white, $mineshaft, $mineshaft, $silverchalice);
+    @include btn-variant($white, $logcabin, $yellow, $black);
 }
 .btn-clear-yellow {
     @include btn-variant($yellow, transparent, $logcabin, $yellow);

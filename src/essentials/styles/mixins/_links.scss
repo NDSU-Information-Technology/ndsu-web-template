@@ -47,5 +47,11 @@
         #{$selector} {
             text-decoration: none;
         }
+        #{$selector}:hover, 
+        #{$selector}:focus,
+        #{$selector}[aria-expanded=true],
+        #{$selector}.active {
+            text-decoration: none;
+        }
     }
 }

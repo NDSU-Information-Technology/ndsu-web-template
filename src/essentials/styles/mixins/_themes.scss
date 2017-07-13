@@ -6,9 +6,10 @@
         a {
             @include linkColor($linkColor, $linkActiveColor);
         }
-    }
 
-    @content;
+
+        @content;
+    }
 }
 
 @mixin extendTheme($name, $selector: ''){
