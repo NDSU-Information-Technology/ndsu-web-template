@@ -744,7 +744,7 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .btn-green {
     color: #e5e5e5; }
   .btn-green:hover, .btn-green:focus, .btn-green[aria-expanded=true], .btn-green.active {
-    color: #fcfcfc; }
+    color: #f2f2f2; }
 
 .btn-darkgray {
   background-color: #222222; }
