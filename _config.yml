@@ -1,0 +1,7 @@
+ encoding: UTF-8
+ source: docs
+ destination: _site
+ kramdown:
+   input: GFM
+   hard_wrap: false
+ baseurl: /ndsu-web-template

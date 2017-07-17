@@ -1,0 +1,61 @@
+{{#> _base headTitle="NDSU Web Template"}}
+    {{#*inline "head-block"}}
+    <link rel="stylesheet" type="text/css" href="/ndsu-web-template/assets/css/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/ndsu-web-template/assets/css/markdown.css" />
+    {{/inline}}
+    {{#*inline "page-title"}}
+        \{{ title | default: "NDSU Web Template" }}
+    {{/inline}}
+    {{#*inline "main-nav"}}
+        {{#getJsonContext '{
+        "additionalClasses": [
+            "navbar-left",
+            "navbar-mobilize",
+            "navbar-dark"
+        ],
+        "links": [
+            {
+            "url": "/ndsu-web-template/",
+            "home": true
+            },
+            {
+            "url": "/ndsu-web-template/templates",
+            "text": "Templates"
+            },
+            {
+            "url": "/ndsu-web-template/components",
+            "text": "Components",
+            "childNavbar": {
+                "additionalClasses": [
+                "navbar-vertical"
+                ],
+                "links": [
+                {
+                    "url": "/ndsu-web-template/components/generic-content",
+                    "text": "Generic Content"
+                },
+                {
+                    "url": "/ndsu-web-template/components/navbar",
+                    "text": "Navbar"
+                }
+                ]
+            }
+            }
+        ]
+        }'}}
+        {{> _navbar-main this }}
+        {{/getJsonContext}}
+    {{/inline}}
+    {{#*inline "content-block"}}
+        {{#> pre-content-block}}
+        {{/pre-content-block }}
+        <div class="container markdown-body">
+            \{{content}}
+        </div>
+    {{/inline}}
+    {{#* inline "script-block" }}
+    <script type="text/javascript" src="/ndsu-web-template/assets/js/script.js"></script>
+    {{#> additional-script-block}}
+    {{/additional-script-block}}
+    {{/inline }}
+{{/_base }}

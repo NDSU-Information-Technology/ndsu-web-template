@@ -1,0 +1,14 @@
+{{#if link.home}}
+<li class="nav-item nav-item-mobile-hide nav-item-home"><a class="nav-link" href="{{link.url}}"><span class="sr-only">Home</span>&#8962;</a></li>
+{{else}}
+<li class="nav-item{{#if link.hideMobile}} nav-item-mobile-hide{{/if}}{{#if link.extendedChildSection }} extended-child-section{{/if}}">
+    {{#if link.url }}
+    <a class="nav-link" href="{{ link.url }}">{{link.text}}</a>
+    {{else}}
+    <h5 class="child-section-title">{{link.text}}</h5>
+    {{/if}}
+    {{#if link.childNavbar}}
+    {{> _navbar-main link.childNavbar childNavbar=true}}
+    {{/if}}
+</li>
+{{/if}}

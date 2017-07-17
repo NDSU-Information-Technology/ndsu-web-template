@@ -1,0 +1,34 @@
+<header>
+    <div class="navbar-mobile-container sticky-bar sticky-sm" role="navigation">
+        {{> _green-bar }}
+        {{#getJsonContext '{"additionalClasses": ["navbar-mobile", "navbar-vertical", "navbar-dark"]}'}}
+        {{> _navbar-main this}}
+        {{/getJsonContext}}
+        {{> _page-title-bar pageTitle=pageTitle }}
+    </div>
+    <div class="main-nav sticky-bar sticky-xl" role="navigation" id="mainNav" tabindex="-1">
+        <div class="container">
+            {{#> main-nav }}
+                {{#getJsonContext '{
+                    "additionalClasses": [
+                        "navbar-left",
+                        "navbar-mobilize",
+                        "navbar-dark"
+                    ],
+                    "links": [
+                        {
+                            "url": "/",
+                            "home": true
+                        },
+                        {
+                            "url": "Link1",
+                            "text": "Link 1"
+                        }
+                    ]
+                }'}}
+                {{> _navbar-main this }}
+                {{/getJsonContext}}
+            {{/main-nav}}
+        </div>
+    </div>
+</header>
