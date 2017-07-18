@@ -1,36 +1,34 @@
 {{#> _default-pub }}
-    {{#*inline "content-block"}}
-        <div class="layout">
-            <section class="nav-col">
-                <section class=" hide-sm-down" role="navigation">
-                    <h5 class="sub-nav-title"><a href="quick-nav/">Quick Navigation</a></h5>
-                    {{#getJsonContext '{
-                    "additionalClasses": [
-                        "navbar-vertical",
-                        "navbar-mobilize"
-                    ],
-                    "links": [
-                        {
-                        "url": "#",
-                        "text": "Side Link 1"
-                        },
-                        {
-                        "url": "#",
-                        "text": "Side Link 2"
-                        },
-                        {
-                        "url": "#",
-                        "text": "Side Link 3"
-                        }
-                    ]
-                    }'}}
-                    {{> _navbar-main this }}
-                    {{/getJsonContext}}
-                </section>
+    <div class="layout">
+        <section class="nav-col">
+            <section class=" hide-sm-down" role="navigation">
+                <h5 class="sub-nav-title"><a href="quick-nav/">Quick Navigation</a></h5>
+                {{#getJsonContext '{
+                "additionalClasses": [
+                    "navbar-vertical",
+                    "navbar-mobilize"
+                ],
+                "links": [
+                    {
+                    "url": "#",
+                    "text": "Side Link 1"
+                    },
+                    {
+                    "url": "#",
+                    "text": "Side Link 2"
+                    },
+                    {
+                    "url": "#",
+                    "text": "Side Link 3"
+                    }
+                ]
+                }'}}
+                {{> _navbar-main this }}
+                {{/getJsonContext}}
             </section>
-            <div class="main-col">
+        </section>
+        <div class="main-col">
 
-            </div>
         </div>
-    {{/inline}}
+    </div>
 {{/_default-pub }}

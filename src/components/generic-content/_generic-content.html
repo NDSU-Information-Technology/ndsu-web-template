@@ -1,0 +1,65 @@
+<section class="generic-content{{#if bgColor}} {{bgColor}}{{/if}}">
+    {{#unless quickPicture}}
+    {{#if h4}}
+    <h4>{{title}}</h4>
+    {{else}}
+    {{#if h5}}
+    <h5>{{title}}</h5>
+    {{else}}
+    <h3>{{title}}</h3>
+    {{/if}}
+    {{/if}}
+    {{#if subtitle}}
+    <p class="subtitle">Subhead - Donec scelerisque massa et quam cursus, vitae pellentesque nisi sodales.</p>
+    {{/if}}
+    {{/unless}}
+    {{#if multiColumns}}
+    <div class="text-column-{{multiColumns}}">
+        {{> @partial-block}}
+    </div>
+    {{else}}
+    {{#if multiSections}}
+    <div class="multi-sections">
+        {{#each multiSections }}
+        <section class="sub-section">
+            {{#if this.title}}
+            <h6>{{this.title}}</h6>
+            {{/if}}
+            {{ this.content }}
+        </section>
+        {{/each}}
+        {{> @partial-block}}
+    </div>
+    {{else}}
+    {{#if quickPicture}}
+    <div class="quick-picture-container">
+        {{#unless quickPicture.reverse }}
+        <div class="description">
+            <h4>{{title}}</h4>
+            {{> @partial-block}}
+        </div>
+        {{/unless}}
+        <figure class="picture">
+            <div class="full-size-frame">
+                <div class="full-size-picture">
+                    <img src="{{quickPicture.src}}" alt="{{quickPicture.alt}}" />
+                </div>
+            </div>
+            <figcaption>
+                <h5>{{quickPicture.headline}}</h5>
+                <p>{{quickPicture.caption}}</p>
+            </figcaption>
+        </figure>
+        {{#if quickPicture.reverse }}
+        <div class="description">
+            <h4>{{title}}</h4>
+            {{> @partial-block}}
+        </div>
+        {{/if}}
+    </div>
+    {{else}}
+    {{> @partial-block}}
+    {{/if}}
+    {{/if}}
+    {{/if}}
+</section>

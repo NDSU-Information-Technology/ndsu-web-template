@@ -46,16 +46,13 @@
         {{> _navbar-main this }}
         {{/getJsonContext}}
     {{/inline}}
-    {{#*inline "content-block"}}
-        {{#> pre-content-block}}
-        {{/pre-content-block }}
-        <div class="container markdown-body">
-            \{{content}}
-        </div>
-    {{/inline}}
     {{#* inline "script-block" }}
     <script type="text/javascript" src="/ndsu-web-template/assets/js/script.js"></script>
     {{#> additional-script-block}}
     {{/additional-script-block}}
     {{/inline }}
+
+    <div class="container markdown-body">
+        {{> @partial-block}}
+    </div>
 {{/_base }}
