@@ -209,6 +209,9 @@ gulp.task('handlebars', () => {
             getJsonContext: (data, opt) => {
                 return opt.fn(JSON.parse(data));
             }
+        },
+        compile: {
+            noEscape: true
         }
     };
     
