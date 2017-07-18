@@ -1,0 +1,81 @@
+---
+title: Basic Templates
+---
+
+## Currently Available Templates
+
+### Blank
+
+This template is a blank barebone template. Insert your content under the `main` tag.
+
+```html
+    <main id="content" tabindex="-1">
+        <!--PAGE CONTENT GOES HERE-->
+    </main>
+```
+
+[View blank.html template](blank.html){:target="_blank"} or [Download blank.html template](blank.html){:download="blank.html" target="_blank"}.
+
+**IE User**: Right click the download link above and click _Save As_.
+
+
+## Two-Column
+
+This template divides part of the page into two columns: one smaller column/sidebar and one bigger column where your main content will go. There are two versions of the template, `two-column-left.html` and `two-column-right.html`, where the sidebar is located on left and right side of the page, respectively.
+
+`two-column-left.html`:
+```html
+    <main id="content" tabindex="-1">
+        <!--THIS PART IS STILL IN ONE COLUMN LAYOUT-->
+        <div class="layout">
+            <!--SMALL COLUMN-->
+            <section class="nav-col">
+                <section class=" hide-sm-down" role="navigation">
+                    <h5 class="sub-nav-title"><a href="admission/" title="Office of Admission" id="homelink">Quick Navigation</a></h5>
+                    <ul class="navbar navbar-vertical navbar-mobilize">
+                        <li class="nav-item"><a class="nav-link" href="#">Side Link 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Side Link 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Side Link 3</a></li>
+                    </ul>
+                </section>
+            </section>
+            <!--MAIN COLUMN-->
+            <div class="main-col">
+                <!--MAIN CONTENT FOR TWO-COLUMN LAYOUT GOES HERE-->
+            </div>
+        </div>
+        <!--THIS PART IS BACK TO ONE COLUMN LAYOUT-->
+    </main>
+```
+
+`two-column-right.html`:
+```html
+    <main id="content" tabindex="-1">
+        <!--THIS PART IS STILL IN ONE COLUMN LAYOUT-->
+        <div class="layout">
+            <!--MAIN COLUMN-->
+            <div class="main-col">
+                <!--MAIN CONTENT FOR TWO-COLUMN LAYOUT GOES HERE-->
+            </div>
+            <!--SMALL COLUMN-->
+            <section class="nav-col">
+                <section class=" hide-sm-down" role="navigation">
+                    <h5 class="sub-nav-title"><a href="admission/" title="Office of Admission" id="homelink">Quick Navigation</a></h5>
+                    <ul class="navbar navbar-vertical navbar-mobilize">
+                        <li class="nav-item"><a class="nav-link" href="#">Side Link 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Side Link 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Side Link 3</a></li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+        <!--THIS PART IS BACK TO ONE COLUMN LAYOUT-->
+    </main>
+```
+
+View the templates:
+* [View `two-column-left.html` template](two-column-left.html){:target="_blank"} or [Download `two-column-left.html` template](two-column-left.html){:download="two-column-left.html" target="_blank"}.
+* [View `two-column-right.html` template](two-column-right.html){:target="_blank"} or [Download `two-column-right.html` template](two-column-right.html){:download="two-column-right.html" target="_blank"}.
+
+
+**IE User**: Right click the download link above and click _Save As_.

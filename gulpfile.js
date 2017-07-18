@@ -1,25 +1,25 @@
 'use strict';
 
-const gulp = require('gulp');
-const through = require('through2');
 const p = require('./package.json');
 let currentPackageVersion = p.version;
+
+const gulp = require('gulp');
 
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const fs = require('fs');
+const filter = require('gulp-filter');
+const glob = require('glob');
+const globArray = require('glob-array');
 const gutil = require('gulp-util');
+const handlebars = require('gulp-compile-handlebars');
 const mkdirp = require('mkdirp');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
-
-const handlebars = require('gulp-compile-handlebars');
-const glob = require('glob');
-const globArray = require('glob-array');
 
 // TODO: change this to get from package.json, referring to actual github url
 const repositoryUrl = '';
@@ -49,8 +49,10 @@ const config = {
     "handlebars": {
         "compile": [
             './src/**/index.md',
-            './src/**/[^_]*.html'],
+            './src/**/[^_]*.html'
+        ],
         "dest": {
+            "dev": "./src",
             "docs": "./docs",
         },
         "partials": [
@@ -59,8 +61,7 @@ const config = {
         "watch": {
             "dev": [
                 './src/**/index.md',
-                './src/**/*.html',
-                '!./node_modules/**/*'  
+                './src/**/*.html'
             ]
         }
     },
@@ -217,21 +218,24 @@ gulp.task('handlebars', () => {
     
     return gulp.src(config.handlebars.compile)
         .pipe(handlebars({}, options))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest(config.handlebars.dest.docs))
+        .pipe(filter(['**/index.md']))
+        .pipe(rename({basename: 'README'}))
+        .pipe(gulp.dest(config.handlebars.dest.dev));
 });
 
-gulp.task('copy:scripts', [], () => {
+gulp.task('copy:scripts', ['scripts'], () => {
     return gulp.src(config.scripts.dest.dev + '/**/*.js')
         .pipe(gulp.dest(config.scripts.dest.docs));
 });
 
 
-gulp.task('copy:styles', [], () => {
+gulp.task('copy:styles', ['styles'], () => {
     return gulp.src(config.styles.dest.dev + '/**/*.css')
         .pipe(gulp.dest(config.styles.dest.docs));
 });
 
-gulp.task('copy:scripts:versioned', [], () => {
+gulp.task('copy:scripts:versioned', ['scripts'], () => {
     let versionDir = config.scripts.dest.docs + '/' + currentPackageVersion;
     if (!fs.existsSync(versionDir)){
         mkdirp.sync(versionDir);
@@ -241,7 +245,7 @@ gulp.task('copy:scripts:versioned', [], () => {
         .pipe(rename({suffix: '-' + currentPackageVersion}))
         .pipe(gulp.dest(versionDir));
 });
-gulp.task('copy:styles:versioned', [], () => {
+gulp.task('copy:styles:versioned', ['styles'], () => {
     let versionDir = config.styles.dest.docs + '/' + currentPackageVersion;
     if (!fs.existsSync(versionDir)){
         mkdirp.sync(versionDir);
@@ -261,15 +265,11 @@ gulp.task('watch:handlebars', () => {
 });
 
 gulp.task('watch:scripts', () => {
-    gulp.watch(config.scripts.watch.dev).on('change', () => {
-        runSequence('scripts', 'copy:scripts');
-    });
+    gulp.watch(config.scripts.watch.dev, ['copy:scripts']);
 });
 
 gulp.task('watch:styles', () => {
-    gulp.watch(config.styles.watch.dev).on('change', () => {
-        runSequence('styles', 'copy:styles');
-    });;
+    gulp.watch(config.styles.watch.dev, ['copy:styles']);
 });
 
 gulp.task('watch', ['watch:handlebars', 'watch:scripts', 'watch:styles']);
