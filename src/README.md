@@ -138,7 +138,6 @@ gulp watch
  gulp handlebars
  ```
 
- *** Specific Tasks
  **Script Task**
  Build and uglify script files:
  ```bash
@@ -156,3 +155,8 @@ gulp watch
   ```bash
  gulp copy
  ```
+
+## Jekyll
+The end-user documentation located under `docs` directory is hosted on github pages [https://ndsu-information-technology.github.io/ndsu-web-template/](https://ndsu-information-technology.github.io/ndsu-web-template/). Github Pages compile the static files using `jekyll`. Optionally, you can also run jekyll on your local machine to preview the documentation.
+
+Note: `Ruby` is required to generate static files using Jekyll. 
