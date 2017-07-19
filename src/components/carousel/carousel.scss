@@ -73,7 +73,7 @@
 			position: absolute;
 			right:0;top:0;left:0;bottom: 0;
 			transition: opacity 0.3s;
-			background-color:$white;
+			background-color:$color-white;
 			opacity: 0;
 		}
 
@@ -105,7 +105,7 @@
 		top: 50%;
 		margin-top: -2.5em;
 		border:0;
-		background: rgba($white,0.6);
+		background: rgba($color-white,0.6);
 		font-size: 2em;
 		padding: 5px;
 		transition: padding .4s ease-out;
@@ -146,20 +146,20 @@
 		font-weight: bold;
 		font-size: 1em;
 		height: 1.5em;
-		color: $black;
-		background-color: rgba($white, 0.5);
+		color: $color-black;
+		background-color: rgba($color-white, 0.5);
 		border: none;
 		padding: 0 0.5em;
 		transition: background .3s ease-out;
 	}
 
 	.slidenav button.current {
-		background-color: rgba($yellow, 0.5);
-		color: $white;
+		background-color: rgba($color-yellow, 0.5);
+		color: $color-white;
 	}
 	.slidenav button:hover,
 	.slidenav button:focus{
-		background-color: rgba($white, 0.9);
+		background-color: rgba($color-white, 0.9);
 	}
 }
 

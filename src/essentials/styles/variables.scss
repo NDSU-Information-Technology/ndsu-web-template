@@ -17,33 +17,31 @@ $max-size-sm: $min-size-md - 1;
 $max-size-xs: $min-size-sm - 1;
 
 // Color Definitions
-$green: #002119;
-$yellow: #ffcc00;
-$black: #000;
-$white: #fff;
-$gray1: #030303;
-$gray2: #050505;
-$gray7: #121212;
-$gray60: #999999;
-$gray64: #a3a3a3;
-$gray90: #e5e5e5;
-$gray95: 	#f2f2f2;
-$gray99: #fcfcfc;
-$gray13: #222222;
-$gray20: #333333;
-$stormdust: #666666;
-$silverchalice: #aaaaaa;
-$celeste: #cccccc;
+$color-green: #002119;
+$color-yellow: #ffcc00;
+$color-black: #000;
+$color-white: #fff;
+$color-gray1: #030303;
+$color-gray2: #050505;
+$color-gray7: #121212;
+$color-gray13: #222222;
+$color-gray20: #333333;
+$color-gray25: #404040;
+$color-gray39: #636363;
+$color-gray40: #666666;
+$color-gray60: #999999;
+$color-gray64: #a3a3a3;
+$color-gray67: #ababab;
+$color-gray80: #cccccc;
+$color-gray90: #e5e5e5;
+$color-gray95: 	#f2f2f2;
+$color-gray99: #fcfcfc;
 $transparent: rgba(0,0 ,0, 0);
-$zeus: #231f20;
-$capecod: #404041;
-$davegray: #6d6e71;
-$blazeOrange: #ff6600;
 
-$default-secondary-bg-color: $gray13;
+$default-secondary-bg-color: $color-gray13;
 
-$gradient-green: radial-gradient(ellipse at center 60%, $green 45%, $black 90%);
-$gradient-yellow: radial-gradient(ellipse at center, $yellow 70%, $gray2 150%);
+$gradient-green: radial-gradient(ellipse at center 60%, $color-green 45%, $color-black 90%);
+$gradient-yellow: radial-gradient(ellipse at center, $color-yellow 70%, $color-gray2 150%);
 
 $sans-serif: "Lucida Grande",Arial,Helvetica,sans-serif;
 $serif: Georgia, serif;

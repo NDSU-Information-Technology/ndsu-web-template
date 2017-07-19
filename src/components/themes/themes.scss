@@ -1,9 +1,9 @@
-@include createTheme('dark', $black, $silverchalice, $white, $yellow) {
+@include createTheme('dark', $color-black, $color-gray67, $color-white, $color-yellow) {
     a {
         @include linkUnderline(2);
     }
 }
-@include createTheme('gray', $gray13, $white, $white, $yellow) {
+@include createTheme('gray', $color-gray13, $color-white, $color-white, $color-yellow) {
     a {
         @include linkUnderline(2);
     }

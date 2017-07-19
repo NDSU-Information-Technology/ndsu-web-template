@@ -1244,17 +1244,17 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .search-form input:-ms-input-placeholder {
     color: #222222; }
   .search-form input:focus:-ms-input-placeholder {
-    color: #6d6e71; }
+    color: #636363; }
   .search-form input::-webkit-input-placeholder {
     color: #222222; }
   .search-form input:focus::-webkit-input-placeholder {
-    color: #6d6e71; }
+    color: #636363; }
   .search-form input::-moz-placeholder {
     color: #222222; }
   .search-form input:focus::-moz-placeholder {
-    color: #6d6e71; }
+    color: #636363; }
   .search-form .search-term {
-    background: #6d6e71;
+    background: #636363;
     border-radius: 0.8em;
     width: 100%;
     color: #000;
@@ -2316,7 +2316,7 @@ a.social-media-icon.linkedin::before {
 
 .theme-dark {
   background-color: #000;
-  color: #aaaaaa; }
+  color: #ababab; }
   .theme-dark a {
     color: #fff; }
   .theme-dark a:hover, .theme-dark a:focus, .theme-dark a[aria-expanded=true], .theme-dark a.active {

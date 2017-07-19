@@ -8,7 +8,7 @@
         margin-bottom: 1em;
     }
     a{
-        @include linkColor($green, $black);
+        @include linkColor($color-green, $color-black);
         @include linkUnderline(2);
         font-size: 1em;
         text-transform: none;
@@ -38,7 +38,7 @@
         flex-basis: 30%;
         flex-shrink: 0;
         padding: 0.25em;
-        border-color: $black;
+        border-color: $color-black;
     }
     .full-size-picture{
         padding-bottom: 80%;
@@ -51,10 +51,10 @@
         margin-bottom: 2em;
     }
     .event-date {
-        color: $gray13;
+        color: $color-gray13;
     }
     .event-location {
-        color: $black;
+        color: $color-black;
     }
 
     @include media-xl {

@@ -20,22 +20,22 @@
     }
 
     &.green-quote{
-        background-color: $green;
+        background-color: $color-green;
         background: $gradient-green;
 
         .quote {
             text-transform: uppercase;
-            color: $yellow;
+            color: $color-yellow;
             font-size: 6em;
             line-height: 1.5em;
         }
         .byline {
-            color: $white;
+            color: $color-white;
         }
     }
 
     &.yellow-quote {
-        background-color: $yellow;
+        background-color: $color-yellow;
         font-family: $serif;
 
         .quote {

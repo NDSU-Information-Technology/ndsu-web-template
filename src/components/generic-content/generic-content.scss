@@ -19,7 +19,7 @@ $text-columns: (2, 3, 4);
     }
     h5 {
         font-size: 1.5em;
-        color: $green;
+        color: $color-green;
         text-transform: uppercase;
     }
     & > p,
@@ -35,7 +35,7 @@ $text-columns: (2, 3, 4);
     a {
         text-transform: uppercase;
         font-weight: bold;
-        @include linkColor($green, $green);
+        @include linkColor($color-green, $color-green);
     }
 
     .subtitle{
@@ -45,7 +45,7 @@ $text-columns: (2, 3, 4);
     }
 
     &.gray {
-        background-color: $gray90;
+        background-color: $color-gray90;
     }
 
     .multi-sections {
@@ -93,7 +93,7 @@ $text-columns: (2, 3, 4);
         }
 
         figcaption h5 {
-            color: $black;
+            color: $color-black;
             margin-bottom: 0;
         }
     }

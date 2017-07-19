@@ -3,7 +3,7 @@ $jumbotron-padding: 0rem;
 .jumbotron {
   @include content-padding();
   margin-bottom: $jumbotron-padding;
-  background-color: $yellow;
+  background-color: $color-yellow;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0%;

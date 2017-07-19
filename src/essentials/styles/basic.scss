@@ -25,14 +25,14 @@ body {
 
 header {
 	.green-bar{
-		background-color:$green;
+		background-color:$color-green;
 		background-image: url(https://static.ndsu.nodak.edu/templates/images/bg_header.jpg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: top left;
 
 		.navbar .nav-link{
-    		@include btn-variant($yellow, transparent, $white, transparent);
+    		@include btn-variant($color-yellow, transparent, $color-white, transparent);
 		}
 
 		h1 {
@@ -58,10 +58,10 @@ header {
 	}
 	@include media-sm() {
 		.page-title-wrapper {
-			background-color: $gray7;
-			color: $white;
+			background-color: $color-gray7;
+			color: $color-white;
 			padding: 0;
-			border-bottom: 1px solid $black;
+			border-bottom: 1px solid $color-black;
 		}
 		h2.page-title {
 			font-size: 1.25em;
@@ -131,17 +131,17 @@ footer {
 	}
 
 	.nav-box.white-box {
-		background-color: $white;
+		background-color: $color-white;
 		padding: 2em 0.5em 1em 0.5em;
 		.nav-item {
-			border-top: 1px solid $black;
+			border-top: 1px solid $color-black;
 		}
 		h5 {
 			padding-left: 0.25em;
 		}
 		.navbar .nav-link {
 			padding-left: 0.5em;
-			@include linkColor($black, $black);
+			@include linkColor($color-black, $color-black);
 			@include linkUnderline(0);
 		}
 	}
@@ -161,24 +161,24 @@ footer {
 
 	&.footer-dark,
 	&.footer-green {
-		color: $white;
+		color: $color-white;
 		h5, h6 {
-			color: $yellow;
+			color: $color-yellow;
 		}
 		a {
-			@include linkColor($white, $yellow);
+			@include linkColor($color-white, $color-yellow);
 		}
 	}
 	&.footer-dark {
-		background-color: $gray1;
+		background-color: $color-gray1;
 	}
 	&.footer-green {
-		background-color: $green;
+		background-color: $color-green;
 		background: $gradient-green;
 	}
 
 	&.footer-yellow {
-		background-color: $yellow;
+		background-color: $color-yellow;
 	}
 
 	@include media-sm {

@@ -8,25 +8,25 @@ a.btn {
 }
 
 .btn-yellow {
-    @include btn-variant($gray13, $yellow, $gray2, lighten($yellow,10%));
+    @include btn-variant($color-gray13, $color-yellow, $color-gray2, lighten($color-yellow,10%));
 }
 .btn-green {
-    @include btn-variant($gray90, $green, $gray95, darken($green, 5%));
+    @include btn-variant($color-gray90, $color-green, $color-gray95, darken($color-green, 5%));
 }
 
 .btn-darkgray {
-    @include btn-variant($white, $gray13, $yellow, $gray2);
+    @include btn-variant($color-white, $color-gray13, $color-yellow, $color-gray2);
 }
 .btn-darkgray-yellow {
-    @include btn-variant($white, $gray20, $gray20, $yellow);
+    @include btn-variant($color-white, $color-gray20, $color-gray20, $color-yellow);
 }
 
 
 .btn-clear-yellow {
-    @include btn-variant($yellow, transparent, $gray13, $yellow);
+    @include btn-variant($color-yellow, transparent, $color-gray13, $color-yellow);
 }
 .btn-clear-yellow-white {
-    @include btn-variant($yellow, transparent, $white, transparent);
+    @include btn-variant($color-yellow, transparent, $color-white, transparent);
 }
 
 .btn-large {

@@ -4,7 +4,7 @@
     line-height: 1.75em;
 
     h5{ 
-        color: $yellow;
+        color: $color-yellow;
         text-transform: uppercase;
         margin-bottom: 1em;
     }
@@ -18,13 +18,13 @@
     }
     li a{
         @include linkUnderline(2);
-        @include linkColor($black, $green);
+        @include linkColor($color-black, $color-green);
     }
 
     &.quick-links-yellow {
-        background-color: $yellow;
+        background-color: $color-yellow;
         h5 {
-            color: $green;
+            color: $color-green;
         }
     }
     

@@ -12,7 +12,7 @@
     }
 
     .code-result {
-        border: 1px solid $gray60;
+        border: 1px solid $color-gray60;
     }
 
     &.large .code-result{
@@ -25,7 +25,7 @@
     .code-result {
         width: 100%;
         padding: 0.5rem 0;
-        border-top: 1px solid $gray60;
-        border-bottom: 1px solid $gray60;
+        border-top: 1px solid $color-gray60;
+        border-bottom: 1px solid $color-gray60;
     }
 }
