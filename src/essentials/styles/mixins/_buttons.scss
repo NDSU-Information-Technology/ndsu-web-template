@@ -50,7 +50,7 @@
     }
 }
 
-@mixin btn-border($main-color: $gray64, $active-color: $gray60, $width: 1px) {
+@mixin btn-border($main-color: $color-gray64, $active-color: $color-gray60, $width: 1px) {
     border-width: $width;
     border-style: solid;
     border-color: $main-color;

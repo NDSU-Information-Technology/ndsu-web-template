@@ -12,27 +12,27 @@
 	}
 
 	input:-ms-input-placeholder {
-		color: $gray13;
+		color: $color-gray13;
 	}
 	input:focus:-ms-input-placeholder {
-		color: $davegray;
+		color: $color-gray39;
 	}
 	input::-webkit-input-placeholder {
-		color: $gray13;
+		color: $color-gray13;
 	}
 	input:focus::-webkit-input-placeholder {
-		color: $davegray;
+		color: $color-gray39;
 	}
 	input::-moz-placeholder {
-		color:$gray13;
+		color:$color-gray13;
 	}
 	input:focus::-moz-placeholder {
-		color: $davegray;
+		color: $color-gray39;
 	}
 	
 
 	.search-term {
-		background: $davegray;
+		background: $color-gray39;
 		border-radius: 0.8em;
 		width: 100%;
 		color: #000;

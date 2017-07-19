@@ -9,7 +9,7 @@
 		.sub-nav-title {
 			text-transform: uppercase;
 			text-align: center;
-			border: 1px solid $gray13;
+			border: 1px solid $color-gray13;
 
 			a {
 				display: block;
@@ -17,17 +17,17 @@
 			}
 		}
 		.navbar {
-			border-top: 1px solid $gray13;
+			border-top: 1px solid $color-gray13;
 		}
 		.navbar .nav-link {
 			padding: 1em;
 			white-space: pre-wrap;
-			border: 1px solid $gray13;
+			border: 1px solid $color-gray13;
 			border-top: none;
 		}
 		.sub-nav-title a,
 		.navbar .nav-link{
-			@include btn-variant($green, $transparent, $gray13, $yellow);
+			@include btn-variant($color-green, $transparent, $color-gray13, $color-yellow);
 		}
     }
     .main-col {

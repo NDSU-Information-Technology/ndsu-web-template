@@ -1,5 +1,5 @@
 /* LINKS */
-@mixin linkColor($primary: $green, $secondary: $gray60, $selector: '&'){
+@mixin linkColor($primary: $color-green, $secondary: $color-gray60, $selector: '&'){
     #{$selector} {
         color: $primary;
         @content;

@@ -38,7 +38,7 @@
 
     &.staff{
         .picture-container {
-            box-shadow: 1px 1px 6px $black;
+            box-shadow: 1px 1px 6px $color-black;
         }
     }
 
@@ -111,7 +111,7 @@
 
     a.close-button{
         @include buttonify();
-        @include btn-variant($white, $transparent, $yellow, $transparent);
+        @include btn-variant($color-white, $transparent, $color-yellow, $transparent);
 
         position: absolute;
         right: 0;

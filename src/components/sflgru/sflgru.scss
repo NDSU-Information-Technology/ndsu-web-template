@@ -2,14 +2,14 @@
     font-size: 1.5em;
     line-height: 1.5em;
     background: $gradient-green;
-    color: $white;
+    color: $color-white;
     .container {
         display: flex;
         @include content-padding();
     }
 
     h5 {
-        color: $yellow;
+        color: $color-yellow;
         text-transform: uppercase;
     }
     .sflgru-section {

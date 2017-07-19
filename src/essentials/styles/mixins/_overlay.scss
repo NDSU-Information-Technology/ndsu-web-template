@@ -3,7 +3,7 @@
 	content: "";
 	position: fixed;
 	top: 0; bottom: 0; right: 0; left: 0;
-	background-color: rgba($black, 0);
+	background-color: rgba($color-black, 0);
 	// Default Navbar z-index is 1001
 	// Mobile Navbar z-index is 2000
 	z-index: 1500;
@@ -13,6 +13,6 @@
 
 	&.active {
 		visibility: visible;
-		background-color: rgba($black, 0.75);
+		background-color: rgba($color-black, 0.75);
 	}
 }
