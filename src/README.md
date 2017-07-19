@@ -1,18 +1,36 @@
-# Developer Guide
+# Contributor Guide
 
 ## Project Structures
 
-The source files (`src` directory) are divided into two groups: `essentials` and `components`. The script and style files from the source will be concatenated into one single file each for script and sytle. The sample _.html_ and _.md_ files will be copied into `dist` directory for end-users to refer to.
+The source files (`src` directory) are divided into two groups: `essentials` and `components`. The script and style files from the source will be concatenated into one single file each for script and sytle. 
+
+The `docs` directory contain a source code for the [NDSU Web Template Github Pages](https://ndsu-information-technology.github.io/ndsu-web-template/). All the files in the directory are auto-generated and copied from the `src` directory, **except the _index.md_ file located directly under `docs` directory**.. If you wish to edit the documentation, please edit the related files in the `src` directory. 
 
 * Root
   * docs
+    * _layouts
+      * _layouts for Github Pages_
+    * assets
+      * css
+      * js
     * components
       * component name
-        * _README.md, example.html_
+        * _index.md_
         * _no script files_
-    * README.md for `docs` directory
-    * _sample basic layouts/templates (e.g. template.html, two-column.html)_
+    * images
+    * templates
+      * _sample basic layouts/templates (e.g. blank.html, two-column.html)_
+    * index.md (**Not auto-generated**)
   * src
+    * _includes
+      * _head partial, footer partial, etc._
+    * _layouts
+      * _base.html: base layout for all pages
+      * _layouts for Github Pages_
+    * assets
+      * css
+      * js
+      * scss
     * components
       * component name
         * _style, script, README.md, example.html_
@@ -46,9 +64,8 @@ _**NOTE**: A component may be a part of the minimal build version, e.g. containe
 Each component should have its own directory under `components` directory, and it should have the following under its directory:
 
 * All the `.scss` and `.js` files the component requires.
-* `README.md` file that describes what the component is for and how to use it. A developer guide may also be included here.
-* At least one `example.html` that contains working example of the component.
-* Any screenshot/image that may be useful.
+* Partial _.html_ or _.hbs_ files
+* `index.md` file that describes what the component is for and how to use it. A developer guide may also be included here.
 
 List of currently available components:
 * [bigquote](components/bigquote/)
@@ -75,27 +92,27 @@ Currently there are two build versions of styles and scripts: minimal and full. 
 
 The style definition for each version is located under `src` directory (`minimal.scss` and `full.css`). The sript definition is written into the config object in the `gulpfile.js` file. (_Perhaps a better way to manage a version? JSON file?_).
 
-## The README.md file
-Each component should have a _README.md_ file that gives at least brief description on how to use the component. This also includes an example markup for each usage. 
+## Handlebars
+The NDSU Web Template components and layouts are built using [`handlebars`](http://handlebarsjs.com/). Check out [partials tutorial](http://handlebarsjs.com/partials.html) and [helpers tutorial](http://handlebarsjs.com/builtin_helpers.html) as they are helpful in building templates.
 
-Please edit the _README.md_ file located in the `src` directory. Every component's _README.md_ file will be copied to the `docs` directory for end user's use by executing one of the following gulp tasks:
+## The index.md file
+Each component should have a _index.md_ file that gives at least brief description on how to use the component. This also includes an example markup for each usage. All _index.md_ files will be built and copied to the `docs` directory for end-user documentation.
 
-```bash
-gulp build
-```
-OR
+Please edit the _index.md_ file located in the `src` directory. Every component's _index.md_ file will be copied to the `docs` directory for end user's use by executing one of the following gulp tasks:
 
 ```bash
-gulp copy
+gulp handlebars
 ```
+
+Additionally, a compiled version of _index.md_ will be saved as _README.md_ in the same directory.
 
 Make sure to do this before you execute commit and/or push.
 
 ## Running gulp tasks for development
 
-Styles are written using SCSS preprocessor. `NodeJS` is required to compile SCSS to CSS. It is advised to use provided `gulp` tasks to automate build as well as to enable `browsersync`.
+`gulp` tasks are used to compile `scss` files and `handlebars` templates, to minify/uglyify `css` and `js` files, and to copy necessary files from `src` to `docs` for documentation.
 
-Make sure to have `gulp` installed globally on your machine.
+Make sure to have `node` and `gulp` installed globally on your machine.
 
 ```bash
 npm install gulp -g
@@ -107,12 +124,35 @@ In the directory, run the `install` command to install all dependencies.
 npm install
 ```
 
-And finally, run the task `serve` to begin `browsersync`.
-
+And finally, run the task `watch` to automatically compile files when you save.
 
 ```bash
-gulp serve
+gulp watch
 ```
 
-Your default browser should launch `localhost:3000` and open the default page for the development (*template.html*). All changes to *.html* and *.scss* will be refreshed automatically by `browsersync`.
- 
+### Specific Tasks
+
+  **Handlebars Task**
+ Compile handlebars partials in _.html_ and _index.md_ files and copy to `docs` directory.
+ ```bash
+ gulp handlebars
+ ```
+
+ *** Specific Tasks
+ **Script Task**
+ Build and uglify script files:
+ ```bash
+ gulp scripts
+ ```
+
+ **Style Task**
+ Compile `scss` files and minify resulting `css` files:
+ ```bash
+ gulp styles
+ ```
+
+ **Combined Task**
+ Run `gulp handlebars`, `gulp scripts`, `gulp styles`, then copy files to docs folder.
+  ```bash
+ gulp copy
+ ```

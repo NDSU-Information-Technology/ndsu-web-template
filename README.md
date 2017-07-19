@@ -3,7 +3,7 @@
 
 If you are a user, [go to `ndsu-web-template` Github Pages](https://ndsu-information-technology.github.io/ndsu-web-template/) for information on how to use the template.
 
-If you are a developer, [go to `src` directory](/src) for development guide.
+If you are a contributor, [go to `src` directory](/src) for development guide.
 
 ## License
 [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)

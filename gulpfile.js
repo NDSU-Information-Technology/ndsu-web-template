@@ -258,7 +258,7 @@ gulp.task('copy:styles:versioned', ['styles'], () => {
         .pipe(gulp.dest(versionDir));
 });
 
-gulp.task('copy', ['copy:scripts', 'copy:styles']);
+gulp.task('copy', ['copy:scripts', 'copy:styles', 'handlebars']);
 
 // WATCH TASKS ---------------------------
 
