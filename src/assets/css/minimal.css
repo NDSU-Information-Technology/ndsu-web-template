@@ -782,6 +782,9 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .btn-clear-yellow-white:hover, .btn-clear-yellow-white:focus, .btn-clear-yellow-white[aria-expanded=true], .btn-clear-yellow-white.active {
     color: #fff; }
 
+.btn-large {
+  padding: 2em; }
+
 .btn-tiny {
   padding: 0.25em 0.5em; }
 
