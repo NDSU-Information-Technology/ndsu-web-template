@@ -843,10 +843,13 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     color: #fff; }
 
 .btn-large {
-  padding: 2em; }
+  padding: 2em 3em; }
 
 .btn-tiny {
   padding: 0.25em 0.5em; }
+
+.btn-block {
+  display: block; }
 
 .carousel {
   position: relative;
