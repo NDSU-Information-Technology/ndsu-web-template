@@ -1,0 +1,14 @@
+<figure class="{{#if style}}picture-{{style}}{{/if}}{{#each additionalClasses}} this{{/each}}" style="{{#if width}} width: {{width}}px;{{/if}}">
+    {{> _picture this}}
+    {{#if primaryCaption}}
+    <figcaption>
+        {{#if secondaryCaption}}
+        <div class="caption-2">{{secondaryCaption}}</div>
+        {{/if}}
+        {{#if primaryCaption}}
+        <div class="caption-1">{{primaryCaption}}</div>
+        {{/if}}
+    </figcaption>
+    {{/if}}
+</figure>
+

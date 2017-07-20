@@ -1,0 +1,10 @@
+<section class="gallery gallery-{{size}}">
+    <h5>{{title}}</h5>
+    <ul class="gallery-collection" role="group">
+        {{#each pictures || picture}}
+        <li>
+            {{> _picture picture=picture}}
+        </li>
+        {{/each}}
+    </ul>
+</section>
