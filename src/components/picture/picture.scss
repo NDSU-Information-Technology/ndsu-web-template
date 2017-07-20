@@ -4,23 +4,41 @@ $picture-padding: 0.25em;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    display: block;
+    display: inline-block;
 
     img {
         display: block;
         position: absolute;
         top: 0; left: 0;
-        width: 100%;
     }
 }
 
-.full-size-frame {
+.picture-frame {
     position: relative;
     border: 1px solid;
     padding: $picture-padding;
 
     .full-size-picture {
-        width: 100%;
+        width: 100% !important;
         height: 0;
+    }
+}
+
+.picture-shadow{
+    .full-size-picture {
+        box-shadow: 1px 1px 6px $color-black;
+    }
+}
+
+figure figcaption {
+    margin-top: 0.25em;
+    .caption-1 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .caption-2 {
+        font-family: $serif;
+        line-height: 1em;
+        margin-bottom: 0.25em;
     }
 }

@@ -20,26 +20,13 @@
         box-sizing: border-box;
         padding: 0.125em 0.25em;
     }
-    .picture-container {
-	    padding-bottom: 66%;
-        z-index: 1;
-    }
-    figcaption {
+    .gallery-item {
         margin-top: 0.25em;
-        .caption-1 {
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 0.75em;
-        }
-        .caption-2 {
-            font-family: $serif;
-        }
     }
 
-    &.staff{
-        .picture-container {
-            box-shadow: 1px 1px 6px $color-black;
-        }
+    .gallery-item .full-size-picture {
+	    padding-bottom: 66%;
+        z-index: 1;
     }
 
     @include media-xl(){
