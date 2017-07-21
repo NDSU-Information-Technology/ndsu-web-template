@@ -1280,7 +1280,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   padding: 0 2em;
   max-width: 1220px;
   padding: 2em;
-  font-size: 2em;
   line-height: 1.25em; }
   @media (max-width: 1199px) {
     .gallery {
@@ -1318,40 +1317,41 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .gallery .gallery-collection {
     list-style: none;
     margin: 0;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: wrap;
         flex-flow: wrap; }
-  .gallery .gallery-collection li {
+  .gallery .gallery-collection .gallery-item {
     margin: 0.25em 0;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 0.125em 0.25em; }
-  .gallery .gallery-item {
-    margin-top: 0.25em; }
+    padding: 0.125em 0.25em;
+    width: 33%; }
   .gallery .gallery-item .full-size-picture {
     padding-bottom: 66%;
-    z-index: 1; }
-  .gallery.gallery-3 .gallery-collection li {
+    z-index: 1;
+    width: 100%; }
+  .gallery .gallery-collection li, .gallery.gallery-3 .gallery-collection li {
     width: 33%; }
   .gallery.gallery-5 .gallery-collection li {
     width: 20%; }
   @media (max-width: 991px) {
-    .gallery.gallery-3 .gallery-collection li {
+    .gallery .gallery-collection .gallery-item, .gallery.gallery-3 .gallery-collection .gallery-item {
       width: 50%; }
-    .gallery.gallery-5 .gallery-collection li {
+    .gallery.gallery-5 .gallery-collection .gallery-item {
       width: 25%; } }
   @media (max-width: 767px) {
-    .gallery.gallery-5 .gallery-collection li {
+    .gallery.gallery-5 .gallery-collection .gallery-item {
       width: 33%; } }
   @media (max-width: 574px) {
-    .gallery.gallery-3 .gallery-collection li {
+    .gallery .gallery-collection .gallery-item, .gallery.gallery-3 .gallery-collection .gallery-item {
       width: 100%; }
-    .gallery.gallery-5 .gallery-collection li {
+    .gallery.gallery-5 .gallery-collection .gallery-item {
       width: 50%; } }
 
 .layout .main-col .gallery {
