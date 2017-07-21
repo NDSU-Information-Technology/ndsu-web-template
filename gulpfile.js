@@ -7,6 +7,7 @@ const gulp = require('gulp');
 
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
+const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const fs = require('fs');
 const filter = require('gulp-filter');
@@ -243,7 +244,8 @@ gulp.task('copy:scripts', ['scripts'], () => {
 
 gulp.task('copy:styles', ['styles'], () => {
     return gulp.src(config.styles.dest.dev + '/**/*.css')
-        .pipe(gulp.dest(config.styles.dest.docs));
+        .pipe(gulp.dest(config.styles.dest.docs))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('copy:scripts:versioned', ['scripts'], () => {
@@ -284,3 +286,19 @@ gulp.task('watch:styles', () => {
 });
 
 gulp.task('watch', ['watch:handlebars', 'watch:scripts', 'watch:styles']);
+
+gulp.task('serve', ['copy', 'watch'], () => {
+    browserSync.init({
+        server: {
+            baseDir: '_site',
+            routes: {
+                "/ndsu-web-template": "_site"
+            }
+        },
+        startPath: '/ndsu-web-template',
+        ui: false
+    });
+
+    gulp.watch(['_site/**/*.css'], browserSync.stream);
+    gulp.watch(['_site/**/*.js', '_site/**/*.html'], browserSync.reload);
+});
