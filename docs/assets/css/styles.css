@@ -1216,34 +1216,58 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     .layout .main-col .generic-content {
       padding: 0.5em; } }
 
-.jumbotron {
+.hero-banner {
   padding: 2em;
-  margin-bottom: 0rem;
+  margin-bottom: 0em;
   background-color: #ffcc00;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  position: relative;
+  min-height: 25em; }
   @media (max-width: 1199px) {
-    .jumbotron {
+    .hero-banner {
       padding: 1.755em; } }
   @media (max-width: 991px) {
-    .jumbotron {
+    .hero-banner {
       padding: 1.5em; } }
   @media (max-width: 767px) {
-    .jumbotron {
+    .hero-banner {
       padding: 1.25em; } }
   @media (max-width: 574px) {
-    .jumbotron {
+    .hero-banner {
       padding: 1em; } }
+  .hero-banner.dim-black::before, .hero-banner.dim-green::before, .hero-banner.dim-yellow::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: ""; }
+  .hero-banner.dim-black::before {
+    background-color: rgba(0, 0, 0, 0.75); }
+  .hero-banner.dim-green::before {
+    background-color: rgba(0, 33, 25, 0.75); }
+  .hero-banner.dim-yellow::before {
+    background-color: rgba(255, 204, 0, 0.25); }
+  @media (max-width: 1199px) {
+    .hero-banner {
+      min-height: 22em; } }
+  @media (max-width: 991px) {
+    .hero-banner {
+      min-height: 20em; } }
+  @media (max-width: 767px) {
+    .hero-banner {
+      min-height: 18em; } }
+  @media (max-width: 574px) {
+    .hero-banner {
+      min-height: 16em; } }
 
-.jumbotron-fluid {
+.hero-banner-fluid {
   padding-right: 0;
   padding-left: 0; }
-
-.dept-intro {
-  min-height: 350px; }
 
 .layout {
   display: -webkit-box;

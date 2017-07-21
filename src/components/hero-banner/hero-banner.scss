@@ -1,0 +1,52 @@
+$jumbotron-padding: 0em;
+
+.hero-banner {
+  @include content-padding();
+  margin-bottom: $jumbotron-padding;
+  background-color: $color-yellow;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  box-sizing: border-box;
+
+  position: relative;
+
+  &.dim-black::before,
+  &.dim-green::before,
+  &.dim-yellow::before{
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    content: "";
+  }
+  
+  &.dim-black::before {
+    background-color: rgba($color-black, 0.75);
+  }
+  &.dim-green::before {
+    background-color: rgba($color-green, 0.75);
+  }
+  &.dim-yellow::before {
+    background-color: rgba($color-yellow, 0.25);
+  }
+
+  @include media-xl() {
+    min-height: 25em;
+  }
+  @include media-lg() {
+    min-height: 22em;
+  }
+  @include media-md() {
+    min-height: 20em;
+  }
+  @include media-sm() {
+    min-height: 18em;
+  }
+  @include media-xs() {
+    min-height: 16em;
+  }
+}
+
+.hero-banner-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
