@@ -209,7 +209,16 @@ gulp.task('handlebars', () => {
         partials: partials,
         helpers: {
             getJsonContext: (data, opt) => {
-                return opt.fn(JSON.parse(data));
+                try {
+                    return opt.fn(JSON.parse(data));
+                }
+                catch (err) {
+                    console.log(err);
+                    return undefined;
+                }
+            },
+            ifnull: (val1, val2) => {
+                return val1 || val2;
             }
         },
         compile: {
@@ -218,7 +227,7 @@ gulp.task('handlebars', () => {
     };
     
     return gulp.src(config.handlebars.compile)
-        .pipe(handlebars({}, options))
+        .pipe(handlebars({}, options).on('error', (err) => console.log(err.message)))
         .pipe(gulp.dest(config.handlebars.dest.docs))
         .pipe(filter(['**/index.md']))
         .pipe(rename({basename: 'README'}))
