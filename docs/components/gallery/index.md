@@ -172,10 +172,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -184,10 +180,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -196,10 +188,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -208,10 +196,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -220,10 +204,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -232,10 +212,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -244,10 +220,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -256,10 +228,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
@@ -268,10 +236,6 @@ Example of gallery with picture styling:
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
-                <figcaption>
-                    <div class="caption-2">FirstName LastName</div>
-                    <div class="caption-1">Title</div>
-                </figcaption>
             </figure>
             
         </li>
