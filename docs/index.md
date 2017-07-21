@@ -46,12 +46,12 @@ Each NDSU page is required to have the following structure:
             </div>
         </div>
         <!--Desktop Navigation-->
-        <div class="main-nav sticky-bar sticky-xl" role="navigation" id="mainNav" tabindex="-1">
+        <div class="main-nav sticky-bar sticky-xl" role="navigation" id="mainNav">
             <!--...-->
         </div>
     </header>
     <!--Main-->
-    <main id="content" tabindex="-1">
+    <main id="content">
     <!--PAGE CONTENT GOES HERE-->
     </main>
     <!--Footer-->
@@ -90,11 +90,11 @@ Wrap the list of links in an element with CSS class `sr-navigation`. Each link s
 </section>
 ```
 
-Don't forget to assign the `id` of referenced section and set the `tabindex` attribute to -1.
+Don't forget to assign the `id` of referenced section.
 
 ```html
-<!--This section has id of news and tabindex of -1-->
-<section id="news" tabindex="-1">
+<!--This section has id of news-->
+<section id="news">
 </section>
 ```
 
@@ -145,7 +145,7 @@ Visit the [`sticky-bar` component](/ndsu-web-template//components/sticky-bar) fo
 This is where the page content goes.
 
 ```html
-<main id="content" tabindex="-1">
+<main id="content">
 <!--PAGE CONTENT GOES HERE-->
 </main>
 ```
