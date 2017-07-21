@@ -365,7 +365,7 @@
   border: 0;
 }
 
-.markdown-body blockquote {
+.markdown-body blockquote:not('.big-quote') {
   padding: 0 1em;
   color: #6a737d;
   border-left: 0.25em solid #dfe2e5;

@@ -298,7 +298,7 @@ footer {
             flex-basis: auto; } }
 
 .bigquote {
-  padding: 8em 4em; }
+  padding: 6em 3em; }
   .bigquote .quote {
     text-align: center;
     margin-bottom: 0.5em; }
@@ -317,45 +317,45 @@ footer {
     .bigquote.green-quote .quote {
       text-transform: uppercase;
       color: #ffcc00;
-      font-size: 6em;
       line-height: 1.5em; }
     .bigquote.green-quote .byline {
       color: #fff; }
   .bigquote.yellow-quote {
     background-color: #ffcc00;
-    font-family: Georgia, serif; }
+    font-family: Georgia, serif;
+    color: #000; }
     .bigquote.yellow-quote .quote {
-      font-size: 9em; }
+      line-height: 1.25em; }
     .bigquote.yellow-quote .byline {
       font-style: italic; }
   .bigquote.smaller.green-quote .quote {
-    font-size: 4em; }
+    font-size: 2.5em; }
   .bigquote.smaller.yellow-quote .quote {
-    font-size: 6em; }
+    font-size: 4em; }
   .bigquote.green-quote .quote {
-    font-size: 6em; }
+    font-size: 4em; }
   .bigquote.yellow-quote .quote {
-    font-size: 9em; }
+    font-size: 6em; }
   @media (max-width: 1199px) {
-    .bigquote.green-quote .quote {
-      font-size: 5em; }
-    .bigquote.yellow-quote .quote {
-      font-size: 8em; } }
-  @media (max-width: 991px) {
-    .bigquote.green-quote .quote {
-      font-size: 4em; }
-    .bigquote.yellow-quote .quote {
-      font-size: 7em; } }
-  @media (max-width: 767px) {
     .bigquote.green-quote .quote {
       font-size: 3.5em; }
     .bigquote.yellow-quote .quote {
-      font-size: 6em; } }
-  @media (max-width: 574px) {
+      font-size: 5em; } }
+  @media (max-width: 991px) {
     .bigquote.green-quote .quote {
       font-size: 3em; }
     .bigquote.yellow-quote .quote {
-      font-size: 5em; } }
+      font-size: 4.5em; } }
+  @media (max-width: 767px) {
+    .bigquote.green-quote .quote {
+      font-size: 2.5em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 4em; } }
+  @media (max-width: 574px) {
+    .bigquote.green-quote .quote {
+      font-size: 2em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 3.5em; } }
 
 .btn {
   -webkit-transition: all 0.3s ease-out;

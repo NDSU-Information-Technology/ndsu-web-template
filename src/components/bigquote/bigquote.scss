@@ -1,5 +1,5 @@
 .bigquote {
-    padding: 8em 4em;
+    padding: 6em 3em;
     .quote {
         text-align: center;
         margin-bottom: 0.5em;
@@ -26,7 +26,6 @@
         .quote {
             text-transform: uppercase;
             color: $color-yellow;
-            font-size: 6em;
             line-height: 1.5em;
         }
         .byline {
@@ -37,9 +36,10 @@
     &.yellow-quote {
         background-color: $color-yellow;
         font-family: $serif;
+        color: $color-black;
 
         .quote {
-            font-size: 9em;
+            line-height: 1.25em;
         }
         .byline {
             font-style: italic;
@@ -48,51 +48,51 @@
 
     &.smaller {
         &.green-quote .quote {
-            font-size: 4em;
+            font-size: 2.5em;
         }
         &.yellow-quote .quote {
-            font-size: 6em;
+            font-size: 4em;
         }
     }
 
     @include media-xl {
         &.green-quote .quote {
-            font-size: 6em;
+            font-size: 4em;
         }
         &.yellow-quote .quote {
-            font-size: 9em;
+            font-size: 6em;
         }
     }
     @include media-lg {
         &.green-quote .quote {
-            font-size: 5em;
+            font-size: 3.5em;
         }
         &.yellow-quote .quote {
-            font-size: 8em;
+            font-size: 5em;
         }
     }
     @include media-md {
         &.green-quote .quote {
-            font-size: 4em;
+            font-size: 3em;
         }
         &.yellow-quote .quote {
-            font-size: 7em;
+            font-size: 4.5em;
         }
     }
     @include media-sm {
         &.green-quote .quote {
-            font-size: 3.5em;
+            font-size: 2.5em;
         }
         &.yellow-quote .quote {
-            font-size: 6em;
+            font-size: 4em;
         }
     }
     @include media-xs {
         &.green-quote .quote {
-            font-size: 3em;
+            font-size: 2em;
         }
         &.yellow-quote .quote {
-            font-size: 5em;
+            font-size: 3.5em;
         }
     }
 }
