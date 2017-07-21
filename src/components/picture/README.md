@@ -32,10 +32,6 @@ Example:
     <div class="full-size-picture" style=" width: 350px; height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
-    <figcaption>
-        <div class="caption-2">Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div class="caption-1">North Dakota State University</div>
-    </figcaption>
 </figure>
 
 ```
@@ -52,10 +48,6 @@ Example:
     <div class="full-size-picture" style=" width: 350px; height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
-    <figcaption>
-        <div class="caption-2">Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div class="caption-1">North Dakota State University</div>
-    </figcaption>
 </figure>
 
 ```
@@ -70,10 +62,6 @@ Example:
     <div class="full-size-picture" style=" width: 500px; height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
-    <figcaption>
-        <div class="caption-2">Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div class="caption-1">North Dakota State University</div>
-    </figcaption>
 </figure>
 
 ```

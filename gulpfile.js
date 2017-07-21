@@ -218,7 +218,7 @@ gulp.task('handlebars', () => {
                     return undefined;
                 }
             },
-            ifnull: (v1, v2v) => {
+            ifnull: (v1, v2) => {
                 return v1 || v2;
             },
             ifcond: (v1, operator, v2, options) => {
