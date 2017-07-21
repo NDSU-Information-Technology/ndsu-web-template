@@ -159,4 +159,17 @@ gulp watch
 ## Jekyll
 The end-user documentation located under `docs` directory is hosted on github pages [https://ndsu-information-technology.github.io/ndsu-web-template/](https://ndsu-information-technology.github.io/ndsu-web-template/). Github Pages compile the static files using `jekyll`. Optionally, you can also run jekyll on your local machine to preview the documentation.
 
-Note: `Ruby` is required to generate static files using Jekyll. 
+Note: `Ruby` is required to generate static files using Jekyll.
+
+Run jekyll on your local machine:
+
+```bash
+bundle exec jekyll serve
+``` 
+
+Jekyll ouputs the resulting static files in `_site` directory. The site can be accessed on `localhost:4000/ndsu-web-template`. Jekyll **does not** refresh the pages automatically when changes are made. However, you can run `browsersync` on your local machine by running the `gulp` task:
+
+```bash
+gulp serve
+```
+`browsersync` will run on `localhost:3000`.
