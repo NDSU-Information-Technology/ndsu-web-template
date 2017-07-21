@@ -63,7 +63,7 @@ By default, the background color of `generic-content` is white. You can change t
 
 Example:
 ```html
-{{#getJsonContext '{"title": "Second headline - h4", "h4": true, "color": "gray"}'}}
+{{#getJsonContext '{"title": "Second headline - h4", "h4": true, "bgColor": "gray"}'}}
 {{#> _generic-content this }}
 <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
     ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet

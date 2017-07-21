@@ -63,7 +63,7 @@ By default, the background color of `generic-content` is white. You can change t
 
 Example:
 ```html
-<section class="generic-content">
+<section class="generic-content gray">
     <h4>Second headline - h4</h4>
     <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
         ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet
