@@ -1,0 +1,37 @@
+---
+layout: component
+title: SGLGRU Component
+---
+
+## Basic Usage
+
+```html
+<div class="sflgru">
+    <div class="container">
+        <section class="sflgru-section">
+            <div class="sflgru-art sf"></div>
+            <h5>Student Focused</h5>
+            <ul>
+                <li>Teaching and research engage and invovle students in an immersive learning environment</li>
+                <li>Acacemically rigorous programs set in a rich, diverse, supportive community</li>
+            </ul>
+        </section>
+        <section class="sflgru-section">
+            <div class="sflgru-art lg"></div>
+            <h5>Land Grant</h5>
+            <ul>
+                <li>Combines access with affordability in academically rigorous, demanding environment</li>
+                <li>Creates solutions to ever-changing real-world problems</li>
+            </ul>
+        </section>
+        <section class="sflgru-section">
+            <div class="sflgru-art ru"></div>
+            <h5>Research University</h5>
+            <ul>
+                <li>Graduate and undergraduate students directly involved in world-class research</li>
+                <li>Top researchers in their disciplines teach students</li>
+            </ul>
+        </section>
+    </div>
+</div>
+```
