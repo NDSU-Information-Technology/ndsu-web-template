@@ -1226,7 +1226,7 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  min-height: 25em; }
+  min-height: 28em; }
   @media (max-width: 1199px) {
     .hero-banner {
       padding: 1.755em; } }
@@ -1239,6 +1239,8 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   @media (max-width: 574px) {
     .hero-banner {
       padding: 1em; } }
+  .hero-banner.hero-banner-middle {
+    background-position-y: 50%; }
   .hero-banner.dim-black::before, .hero-banner.dim-green::before, .hero-banner.dim-yellow::before {
     position: absolute;
     left: 0;
@@ -1254,13 +1256,13 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     background-color: rgba(255, 204, 0, 0.25); }
   @media (max-width: 1199px) {
     .hero-banner {
-      min-height: 22em; } }
+      min-height: 24em; } }
   @media (max-width: 991px) {
     .hero-banner {
-      min-height: 20em; } }
+      min-height: 22em; } }
   @media (max-width: 767px) {
     .hero-banner {
-      min-height: 18em; } }
+      min-height: 19em; } }
   @media (max-width: 574px) {
     .hero-banner {
       min-height: 16em; } }
@@ -1449,11 +1451,11 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
             justify-content: flex-end; }
     .navbar.navbar-right .nav-link {
       text-align: right; }
-  .navbar .nav-item.nav-item-haschild > .nav-link::after,
-  .navbar .nav-item.nav-item-haschild.nav-item-haschild-up > .nav-link.active::after {
+  .navbar .nav-item.nav-item-haschild:not(.extended-child-section) > .nav-link::after,
+  .navbar .nav-item.nav-item-haschild:not(.extended-child-section).nav-item-haschild-up > .nav-link.active::after {
     content: "\00a0\00a0\25BC"; }
-  .navbar .nav-item.nav-item-haschild > .nav-link.active::after,
-  .navbar .nav-item.nav-item-haschild.nav-item-haschild-up > .nav-link::after {
+  .navbar .nav-item.nav-item-haschild:not(.extended-child-section) > .nav-link.active::after,
+  .navbar .nav-item.nav-item-haschild:not(.extended-child-section).nav-item-haschild-down > .nav-link::after {
     content: "\00a0\00a0\25B2"; }
   .navbar .child-navbar {
     text-transform: none;
@@ -1476,16 +1478,30 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
       padding: 1em 1.5em; }
     .navbar .extended-child-navbar .nav-link {
       text-transform: none; }
-  .navbar .extended-child-navbar .child-navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative; }
+    .navbar .extended-child-navbar .child-navbar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative; }
   .navbar .extended-child-section {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     position: relative; }
+    .navbar .extended-child-section > a.nav-link {
+      background-color: transparent;
+      text-transform: none;
+      text-align: center; }
+      .navbar .extended-child-section > a.nav-link:hover, .navbar .extended-child-section > a.nav-link:focus, .navbar .extended-child-section > a.nav-link[aria-expanded=true], .navbar .extended-child-section > a.nav-link.active {
+        background-color: transparent; }
+      .navbar .extended-child-section > a.nav-link {
+        color: #ffcc00; }
+      .navbar .extended-child-section > a.nav-link:hover, .navbar .extended-child-section > a.nav-link:focus, .navbar .extended-child-section > a.nav-link[aria-expanded=true], .navbar .extended-child-section > a.nav-link.active {
+        color: #ffcc00; }
+      .navbar .extended-child-section > a.nav-link {
+        text-decoration: none; }
+      .navbar .extended-child-section > a.nav-link:hover, .navbar .extended-child-section > a.nav-link:focus, .navbar .extended-child-section > a.nav-link[aria-expanded=true], .navbar .extended-child-section > a.nav-link.active {
+        text-decoration: underline; }
 
 .navbar-toggle {
   font-weight: bold; }
@@ -1525,7 +1541,7 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .navbar.navbar-mobile .nav-item.nav-item-haschild > .nav-link::after {
+  .navbar.navbar-mobile .nav-item.nav-item-haschild:not(.extended-child-section) > .nav-link::after {
     position: absolute;
     right: 1em; }
 

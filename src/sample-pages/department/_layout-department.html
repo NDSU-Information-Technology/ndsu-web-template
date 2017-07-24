@@ -1,0 +1,216 @@
+{{#> _base headTitle="NDSU Computer Science"}}
+    {{#*inline "head-block"}}
+    <link rel="stylesheet" type="text/css" href="/ndsu-web-template/assets/css/styles.min.css" />
+    {{/inline}}
+
+    {{#*inline "page-title"}}
+        NDSU Ccomputer Science
+    {{/inline}}
+
+    {{#*inline "main-nav"}}
+        {{#getJsonContext '{
+        "additionalClasses": [
+            "navbar-left",
+            "navbar-mobilize",
+            "navbar-dark"
+        ],
+        "links": [
+            {
+                "url": "/ndsu-web-template/sample-pages/department/",
+                "home": true
+            },
+            {
+                "url": "#",
+                "text": "Degree Programs",
+                "childNavbar": {
+                    "additionalClasses": [
+                        "extended-child-navbar"
+                    ],
+                    "links": [
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/",
+                            "text": "Undergraduates",
+                            "extendedChildSection": true,
+                            "childNavbar": {
+                                "additionalClasses": [
+                                    "navbar-vertical"
+                                ],
+                                "links": [
+                                    {
+                                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/bs/",
+                                        "text": "Bachelor of Science"
+                                    },
+                                    {
+                                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/ba/",
+                                        "text": "Bachelor of Arts"
+                                    },
+                                    {
+                                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/double/",
+                                        "text": "Double Majors"
+                                    },
+                                    {
+                                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/minors/",
+                                        "text": "Minors"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/degrees/graduates/",
+                            "text": "Graduates",
+                            "extendedChildSection": true,
+                            "childNavbar": {
+                                "additionalClasses": [
+                                    "navbar-vertical"
+                                ],
+                                "links": [
+                                    {
+                                        "url": "https://bulletin.ndsu.edu/graduate/programs/computer-science/",
+                                        "text": "Computer Science",
+                                        "newWindow": true
+                                    },
+                                    {
+                                        "url": "https://bulletin.ndsu.edu/graduate/programs/software-engineering/",
+                                        "text": "Software Engineering",
+                                        "newWindow": true
+                                    },
+                                    {
+                                        "url": "https://bulletin.ndsu.edu/graduate/programs/software-engineering/",
+                                        "text": "Graduate Certificates",
+                                        "newWindow": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "#",
+                            "text": "International",
+                            "extendedChildSection": true,
+                            "childNavbar": {
+                                "additionalClasses": [
+                                    "navbar-vertical"
+                                ],
+                                "links": [
+                                    {
+                                        "url": "/ndsu-web-template/sample-pages/department/degrees/international/toefl-ielts-requirements/",
+                                        "text": "NDSU TOEFL/IELTS Requirements"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "/ndsu-web-template/sample-pages/department/students/",
+                "text": "Students",
+                "childNavbar": {
+                    "additionalClasses": [
+                        "navbar-vertical"
+                    ],
+                    "links": [
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/students/class-schedules/",
+                            "text": "Class Schedules"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/students/forms/",
+                            "text": "Forms"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/students/scholarships/",
+                            "text": "Scholarships"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/students/graduate-comprehensive-exam/",
+                            "text": "Graduate Comprehensive Exam"
+                        },
+                        {
+                            "url": "https://www.ndsu.edu/registrar/dates/",
+                            "text": "Dates &amp; Deadlines"
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "/ndsu-web-template/sample-pages/department/policies-information/",
+                "text": "Policies and Information",
+                "childNavbar": {
+                    "additionalClasses": [
+                        "navbar-vertical"
+                    ],
+                    "links": [
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/policies-information/assessment/",
+                            "text": "Assessment"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/policies-information/image/",
+                            "text": "Image"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/policies-information/department-positions",
+                            "text": "CS Department Positions"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/policies-information/annual-report",
+                            "text": "Annual Report"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/policies-information/bioinformatics",
+                            "text": "Bioinformatics"
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "/ndsu-web-template/sample-pages/department/about-us/",
+                "text": "About Us",
+                "childNavbar": {
+                    "additionalClasses": [
+                        "navbar-vertical"
+                    ],
+                    "links": [
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/about-us/news/",
+                            "text": "News"
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/faculty-staff/",
+                            "text": "Faculty and Staff"
+                        },
+                        {
+                            "url": "http://cs.ndsu.edu/stars",
+                            "text": "STARS",
+                            "newWindow": true
+                        },
+                        {
+                            "url": "http://ndacm.org/",
+                            "text": "ACM",
+                            "newWindow": true
+                        },
+
+                        {
+                            "url": "http://cs.ndsu.edu/upe/",
+                            "text": "UPE",
+                            "newWindow": true
+                        },
+                        {
+                            "url": "/ndsu-web-template/sample-pages/department/donate/",
+                            "text": "Donate"
+                        }
+                    ]
+                }
+            }
+        ]
+        }'}}
+        {{> _navbar-main this }}
+        {{/getJsonContext}}
+    {{/inline}}
+    {{#*inline "script-block"}}
+    <script type="text/javascript" src="/ndsu-web-template/assets/js/script.min.js"></script>
+    {{/inline}}
+    {{#if @partial-block}}
+    {{> @partial-block}}
+    {{/if}}
+{{/_base }}

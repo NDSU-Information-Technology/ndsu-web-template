@@ -9,6 +9,10 @@ $jumbotron-padding: 0em;
   background-position: 50% 0%;
   box-sizing: border-box;
 
+  &.hero-banner-middle {
+    background-position-y: 50%;
+  }
+
   position: relative;
 
   &.dim-black::before,
@@ -30,16 +34,16 @@ $jumbotron-padding: 0em;
   }
 
   @include media-xl() {
-    min-height: 25em;
+    min-height: 28em;
   }
   @include media-lg() {
-    min-height: 22em;
+    min-height: 24em;
   }
   @include media-md() {
-    min-height: 20em;
+    min-height: 22em;
   }
   @include media-sm() {
-    min-height: 18em;
+    min-height: 19em;
   }
   @include media-xs() {
     min-height: 16em;

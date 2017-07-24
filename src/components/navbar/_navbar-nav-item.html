@@ -1,9 +1,15 @@
 {{#if link.home}}
-<li class="nav-item nav-item-mobile-hide nav-item-home"><a class="nav-link" href="{{link.url}}"><span class="sr-only">Home</span>&#8962;</a></li>
+<li class="nav-item nav-item-mobile-hide nav-item-home"><a class="nav-link" href="{{link.url}}"{{#if newWindow}} target="_blank"{{/if}}/><span class="sr-only">Home</span>&#8962;</a></li>
 {{else}}
 <li class="nav-item{{#if link.hideMobile}} nav-item-mobile-hide{{/if}}{{#if link.extendedChildSection }} extended-child-section{{/if}}">
     {{#if link.url }}
-    <a class="nav-link" href="{{ link.url }}">{{link.text}}</a>
+    <a class="nav-link" href="{{ link.url }}"{{#if newWindow}} target="_blank"{{/if}}>
+        {{#if link.extendedChildSection}}
+        <h5>{{link.text}}</h5>
+        {{else}}
+        {{link.text}}
+        {{/if}}
+    </a>
     {{else}}
     <h5 class="child-section-title">{{link.text}}</h5>
     {{/if}}
