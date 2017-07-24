@@ -10,6 +10,7 @@
 	align-items: center;
 	text-align: center;
 	justify-content: center;
+	font-size: 0.875rem;
 
 	.nav-item{
 		flex: 0 0 auto;
@@ -93,11 +94,12 @@
 	}
 
 	.extended-child-navbar {
-		padding: 1em 0 2em;
+		padding: 0.75em 0 1.5em;
 		align-items: stretch;
 		
 		.child-section-title {
-			padding: 1em 1.5em;
+			padding: 0.75em 1.25em;
+			margin: 0;
 		}
 		.nav-link {
 			text-transform: none;

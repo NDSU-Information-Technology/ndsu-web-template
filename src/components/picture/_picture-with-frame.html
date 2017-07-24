@@ -1,12 +1,12 @@
 <figure class="{{#if style}}picture-{{style}}{{/if}}{{#if blockPicture}} picture-block{{/if}}{{#each additionalClasses}} this{{/each}}">
     {{> _picture this}}
-    {{#ifcond primaryCaption 'or' secondaryCaption}}
+    {{#ifcond primaryCaption '||' secondaryCaption}}
     <figcaption>
-        {{#if secondaryCaption}}
-        <div class="caption-2">{{secondaryCaption}}</div>
+        {{#if ../primaryCaption}}
+        <div class="caption-1">{{../primaryCaption}}</div>
         {{/if}}
-        {{#if primaryCaption}}
-        <div class="caption-1">{{primaryCaption}}</div>
+        {{#if ../secondaryCaption}}
+        <div class="caption-2">{{../secondaryCaption}}</div>
         {{/if}}
     </figcaption>
     {{/ifcond}}

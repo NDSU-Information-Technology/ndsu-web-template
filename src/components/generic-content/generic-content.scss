@@ -33,9 +33,8 @@ $text-columns: (2, 3, 4);
     }
 
     a {
-        text-transform: uppercase;
         font-weight: bold;
-        @include linkColor($color-green, $color-green);
+        @include linkColor($color-green, $color-black);
     }
 
     .subtitle{

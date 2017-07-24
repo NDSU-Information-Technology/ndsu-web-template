@@ -40,7 +40,7 @@ Add `picture-frame` class to the parent `figure` element to have picture frame.
 
 Example:
 ```html
-{{> _picture-with-frame src="/ndsu-web-template/images/sample.png" alt="Sample Image" width=350 height=300 style="frame" primaryCaption="North Dakota State University" secondaryCaption="Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit."}}
+{{> _picture-with-frame src="/ndsu-web-template/images/sample.png" alt="Sample Image" width=350 height=300 style="frame"}}
 ```
 
 ### Shadow

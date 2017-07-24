@@ -1,10 +1,10 @@
 <div class="news-events-container">
     <section class="news-box">
-        <h5>{{#ifnull newsTitle "News"}}{{/ifnull}}</h5>
+        <h3>{{#ifnull newsTitle "News"}}{{/ifnull}}</h3>
         <ul>
             {{#each newsItems}}
             <li class="news-item">
-                {{> _picture-with-frame src=imgSrc alt=imgAlt style="frame" blockPicture=true }}
+                {{> _picture-with-frame src=imgSrc alt=imgAlt style="frame" blockPicture=true forceRatio=true }}
                 <div class="news-content">
                     <a class="news-link" href="{{url}}">{{headline}}</a>
                     {{#if date}}
@@ -24,7 +24,7 @@
         {{/if}}
     </section>
     <section class="events-box">
-        <h5>{{#ifnull eventTitle "Events"}}{{/ifnull}}</h5>
+        <h3>{{#ifnull eventTitle "Events"}}{{/ifnull}}</h3>
         <ul>
             {{#each eventItems}}
             <li class="event-item">

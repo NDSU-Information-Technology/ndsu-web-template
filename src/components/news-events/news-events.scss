@@ -15,10 +15,10 @@
     }
     a.read-more-link {
         @include linkUnderline(0);
-        text-align: right;
+        margin-top: 1em;
         text-transform: uppercase;
         font-weight: bold;
-        display: block;
+        display: inline-block;
     }
     ul {
         list-style: none;
@@ -36,12 +36,14 @@
     .news-item {
         display: flex;
         align-items: flex-start;
+
     }
     .full-size-picture{
-        min-height: 10em;
     }
     .picture-block{
         flex-basis: 50%;
+        height: 0;
+        padding-bottom: 25%;
     }
     .news-content{
         padding-left: 1em;
@@ -67,7 +69,6 @@
         .events-box{
             margin-left: 3em;
             flex-grow: 3;
-            flex-basis: 37.5%;
         }
     }
     @include media-md {

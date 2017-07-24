@@ -8,11 +8,11 @@ title: News and Events Component
 ```html
 <div class="news-events-container">
     <section class="news-box">
-        <h5>News</h5>
+        <h3>News</h3>
         <ul>
             <li class="news-item">
                 <figure class="picture-frame picture-block">
-                    <div class="full-size-picture" style="">
+                    <div class="full-size-picture force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                     </div>
                 </figure>
@@ -24,7 +24,7 @@ title: News and Events Component
             </li>
             <li class="news-item">
                 <figure class="picture-frame picture-block">
-                    <div class="full-size-picture" style="">
+                    <div class="full-size-picture force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                     </div>
                 </figure>
@@ -35,7 +35,7 @@ title: News and Events Component
             </li>
             <li class="news-item">
                 <figure class="picture-frame picture-block">
-                    <div class="full-size-picture" style="">
+                    <div class="full-size-picture force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample2.jpg" alt="Sample Image" />
                     </div>
                 </figure>
@@ -50,7 +50,7 @@ title: News and Events Component
             </li>
             <li class="news-item">
                 <figure class="picture-frame picture-block">
-                    <div class="full-size-picture" style="">
+                    <div class="full-size-picture force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                     </div>
                 </figure>
@@ -63,7 +63,7 @@ title: News and Events Component
         <a href="#" class="read-more-link">Read More News</a>
     </section>
     <section class="events-box">
-        <h5>Events</h5>
+        <h3>Events</h3>
         <ul>
             <li class="event-item">
                 <a class="event-name" href="#">Non nos preius voloreum repeliq</a>
