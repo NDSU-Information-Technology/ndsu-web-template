@@ -1379,7 +1379,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style: none;
-  text-transform: uppercase;
   margin: 0;
   z-index: 1000;
   -webkit-box-align: center;
