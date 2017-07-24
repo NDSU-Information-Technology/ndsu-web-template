@@ -764,3 +764,6 @@
 .markdown-body ul.navbar {
   margin-bottom: 0;
 }
+.markdown-body .news-events-container ul {
+  padding-left: 0;
+}

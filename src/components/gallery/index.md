@@ -112,7 +112,7 @@ Example of gallery with picture styling:
 {{#getJsonContext '{
     "title": "Gallery",
     "size": 5,
-    "style": "shadow",
+    "style": "frame",
     "items": [
         {
         "src": "/ndsu-web-template/images/sample.png",

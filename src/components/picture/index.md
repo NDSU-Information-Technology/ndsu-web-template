@@ -23,6 +23,15 @@ Example:
 {{> _picture-with-frame src="/ndsu-web-template/images/sample.png" alt="Sample Image" width=350 height=300 primaryCaption="North Dakota State University" secondaryCaption="Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit."}}
 ```
 
+## Block Picture
+
+Add `picture-block` to `figure` element to have full width picture.
+
+Example:
+```html
+{{> _picture-with-frame src="/ndsu-web-template/images/sample.png" alt="Sample Image" height=300 blockPicture=true primaryCaption="North Dakota State University" secondaryCaption="Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit."}}
+```
+
 ## Styling
 
 ### Frame

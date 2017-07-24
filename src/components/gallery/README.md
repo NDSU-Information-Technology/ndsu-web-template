@@ -21,7 +21,7 @@ Example:
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -29,7 +29,7 @@ Example:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -37,7 +37,7 @@ Example:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -45,7 +45,7 @@ Example:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -53,7 +53,7 @@ Example:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -61,7 +61,7 @@ Example:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -84,7 +84,7 @@ Example of 5 columns:
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -92,7 +92,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -100,7 +100,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -108,7 +108,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -116,7 +116,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -124,7 +124,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -132,7 +132,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -140,7 +140,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -148,7 +148,7 @@ Example of 5 columns:
             
         </li>
         <li class="gallery-item">
-            <figure class="" style="">
+            <figure class=" picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -170,7 +170,7 @@ Example of gallery with picture styling:
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -178,7 +178,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -186,7 +186,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -194,7 +194,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -202,7 +202,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -210,7 +210,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -218,7 +218,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -226,7 +226,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
@@ -234,7 +234,7 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow" style="">
+            <figure class="picture-frame picture-block">
                 <div class="full-size-picture" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>

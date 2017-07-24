@@ -16,17 +16,32 @@ $picture-padding: 0.25em;
 .picture-frame {
     position: relative;
     border: 1px solid;
-    padding: $picture-padding;
+    overflow: hidden;
+    display: inline-block;
 
     .full-size-picture {
-        width: 100% !important;
-        height: 0;
+        width: 100%;
+        margin: $picture-padding;
+        display: block;
     }
 }
 
 .picture-shadow{
     .full-size-picture {
         box-shadow: 1px 1px 6px $color-black;
+    }
+}
+
+figure.picture-block {
+    width: 100%;
+    display: block;
+    margin: 0;
+    .full-size-picture {
+        width: 100%;
+    }
+
+    &.picture-frame .full-size-picture {
+        width: auto;
     }
 }
 

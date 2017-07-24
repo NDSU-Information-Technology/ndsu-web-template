@@ -26,8 +26,22 @@ Wrap elements in `figure` and use `figcaption` to contain the captions. `caption
 
 Example:
 ```html
-<figure class="" style=" width: 350px;">
+<figure class="">
     <div class="full-size-picture" style=" width: 350px; height: 300px;">
+        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+    </div>
+</figure>
+
+```
+
+## Block Picture
+
+Add `picture-block` to `figure` element to have full width picture.
+
+Example:
+```html
+<figure class=" picture-block">
+    <div class="full-size-picture" style=" height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
 </figure>
@@ -42,7 +56,7 @@ Add `picture-frame` class to the parent `figure` element to have picture frame.
 
 Example:
 ```html
-<figure class="picture-frame" style=" width: 350px;">
+<figure class="picture-frame">
     <div class="full-size-picture" style=" width: 350px; height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
@@ -56,7 +70,7 @@ Add `picture-shadow` class to the parent `figure` element.
 
 Example:
 ```html
-<figure class="picture-shadow" style=" width: 500px;">
+<figure class="picture-shadow">
     <div class="full-size-picture" style=" width: 500px; height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
