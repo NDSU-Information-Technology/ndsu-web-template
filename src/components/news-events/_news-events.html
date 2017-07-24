@@ -1,0 +1,25 @@
+<div class="news-events-container">
+    <section class="news-box">
+        <h5>News</h5>
+        <ul>
+            {{#each newsItems}}
+            <li class="news-item">
+                {{> _picture-with-frame src=imgSrc alt=imgAlt style="frame" blockPicture=true }}
+                <a class="news-link" href="{{newsUrl}}">{{newsHeadline}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section class="events-box">
+        <h5>Events</h5>
+        <ul>
+            {{#each eventItems}}
+            <li class="event-item">
+                <a class="event-name" href="{{url}}">{{name}}</a>
+                <div class="event-date">{{date}}</div>
+                <div class="event-location">{{location}}</div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</div>
