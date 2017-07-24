@@ -19,7 +19,10 @@ title: News and Events Component
                     </div>
                 </figure>
                 
-                <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                <div class="news-content">
+                    <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                    <div class="event-date">July 1, 2017</div>
+                </div>
             </li>
             <li class="news-item">
                 <figure class="picture-frame picture-block">
@@ -28,7 +31,9 @@ title: News and Events Component
                     </div>
                 </figure>
                 
-                <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                <div class="news-content">
+                    <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                </div>
             </li>
             <li class="news-item">
                 <figure class="picture-frame picture-block">
@@ -37,7 +42,13 @@ title: News and Events Component
                     </div>
                 </figure>
                 
-                <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                <div class="news-content">
+                    <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                    <div class="event-date">July 1, 2017</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet aliquet.
+                    </p>
+                </div>
             </li>
             <li class="news-item">
                 <figure class="picture-frame picture-block">
@@ -46,9 +57,12 @@ title: News and Events Component
                     </div>
                 </figure>
                 
-                <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                <div class="news-content">
+                    <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
+                </div>
             </li>
         </ul>
+        <a href="#" class="read-more-link">Read More News</a>
     </section>
     <section class="events-box">
         <h5>Events</h5>

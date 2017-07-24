@@ -7,28 +7,32 @@ title: News and Events Component
 
 ```html
 {{#getJsonContext '{
+    "newsPageLink": "#",
     "newsItems": [
         {
-            "newsHeadline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
-            "newsUrl": "#",
+            "headline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
+            "url": "#",
+            "date": "July 1, 2017",
             "imgSrc": "/ndsu-web-template/images/sample.png",
             "imgAlt": "Sample Image"
         },
         {
-            "newsHeadline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
-            "newsUrl": "#",
+            "headline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
+            "url": "#",
             "imgSrc": "/ndsu-web-template/images/sample.png",
             "imgAlt": "Sample Image"
         },
         {
-            "newsHeadline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
-            "newsUrl": "#",
+            "headline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
+            "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet aliquet.",
+            "date": "July 1, 2017",
+            "url": "#",
             "imgSrc": "/ndsu-web-template/images/sample2.jpg",
             "imgAlt": "Sample Image"
         },
         {
-            "newsHeadline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
-            "newsUrl": "#",
+            "headline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
+            "url": "#",
             "imgSrc": "/ndsu-web-template/images/sample.png",
             "imgAlt": "Sample Image"
         }
