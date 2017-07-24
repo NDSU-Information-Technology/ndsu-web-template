@@ -1,0 +1,48 @@
+{{#> _layout-department-two-column}}
+    {{#*inline "nav-col"}}
+        <section class=" hide-sm-down" role="navigation">
+            <h5 class="sub-nav-title"><a href="/ndsu-web-template/sample-pages/department/degrees/undergraduates/">Undergraduate Programs</a></h5>
+            {{#getJsonContext '{
+                "additionalClasses": [
+                    "navbar-vertical"
+                ],
+                "links": [
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/bs/",
+                        "text": "Bachelor of Science"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/ba/",
+                        "text": "Bachelor of Arts"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/double/",
+                        "text": "Double Majors"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/minors/",
+                        "text": "Minors"
+                    }
+                ]
+            }'}}
+            {{> _navbar-main this }}
+            {{/getJsonContext}}
+        </section>
+    {{/inline}}
+    <div class="container">
+        {{#getJsonContext '{"title": "Undergraduate Program"}'}}
+        {{#> _generic-content this }}
+        <p>The Computer Science Department offers the most comprehensive and varied Computer Science program in the region. In the core courses required of all computer science majors, students are offered an opportunity to study concepts, applications and implementation techniques which provide a broad and practical base both for further study and for a career in computing.</p>
+        <p>Through advanced undergraduate courses, students have an opportunity for in-depth study of topics such as software engineering, large systems, systems modeling, computer graphics, and emerging areas. The department has also expanded offerings in software engineering, data mining and bioinformatics.</p>
+        <p>Students are encouraged to choose courses from related areas such as business, economics, engineering, mathematics, operations research, and statistics to broaden their program of study. A senior capstone experience that integrates multiple areas in computer science is required and provides an opportunity to add maturity to the computer science skill set before graduation.</p>
+        <p>The Department of Computer Science and Operations Research offers both a 
+            <a href="/ndsu-web-template/sample-pages/department/degrees/undergraduates/bs/">Bachelor of Science</a> and a 
+            <a href="/ndsu-web-template/sample-pages/department/degrees/undergraduates/ba/">Bachelor of Arts</a> in computer science. 
+            In addition, we cooperate with the Department of Physics in offering a double major in Physics and Computer Science and with 
+            the Department of Mathematics in offering a double major in Mathematics and Computer Science. We also provide courses for the Management Information Systems (MIS) degree program. 
+            All of these programs represent a spectrum of options for students interested in a career involving computing.</p>
+        <p>For more information about the Undergraduate Computer Science Program, check out the <a href="https://www.ndsu.edu/majors/compsci/">NDSU CS Majors Fact Sheet.</a></p>
+        {{/ _generic-content}}
+        {{/getJsonContext}}
+    </div>
+{{/_layout-department-two-column}}

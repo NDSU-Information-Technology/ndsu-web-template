@@ -1,4 +1,7 @@
 <section class="generic-content{{#if bgColor}} {{bgColor}}{{/if}}">
+    {{#if container}}
+    <div class="container">
+    {{/if}}
     {{#unless quickPicture}}
     {{#if h4}}
     <h4>{{title}}</h4>
@@ -61,5 +64,8 @@
     {{> @partial-block}}
     {{/if}}
     {{/if}}
+    {{/if}}
+    {{#if container}}
+    </div>
     {{/if}}
 </section>
