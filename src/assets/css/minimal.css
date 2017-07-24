@@ -1384,14 +1384,25 @@ ul.navbar {
 .picture-frame {
   position: relative;
   border: 1px solid;
-  padding: 0.25em; }
+  overflow: hidden;
+  display: inline-block; }
   .picture-frame .full-size-picture {
-    width: 100% !important;
-    height: 0; }
+    width: 100%;
+    margin: 0.25em;
+    display: block; }
 
 .picture-shadow .full-size-picture {
   -webkit-box-shadow: 1px 1px 6px #000;
           box-shadow: 1px 1px 6px #000; }
+
+figure.picture-block {
+  width: 100%;
+  display: block;
+  margin: 0; }
+  figure.picture-block .full-size-picture {
+    width: 100%; }
+  figure.picture-block.picture-frame .full-size-picture {
+    width: auto; }
 
 figure figcaption {
   margin-top: 0.25em; }

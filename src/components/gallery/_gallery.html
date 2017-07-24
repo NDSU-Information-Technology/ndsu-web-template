@@ -3,7 +3,7 @@
     <ul class="gallery-collection" role="group">
         {{# each items}}
         <li class="gallery-item">
-            {{> _picture-with-frame src=src alt=alt style=(ifnull style ../style) primaryCaption=primaryCaption secondaryCaption=secondaryCaption}}
+            {{> _picture-with-frame src=src alt=alt style=(ifnull style ../style) primaryCaption=primaryCaption secondaryCaption=secondaryCaption blockPicture=true}}
         </li>
         {{/each}}
     </ul>
