@@ -28,6 +28,14 @@
 .sr-navigation {
 	position: absolute;
 	z-index: $z-index-popup;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        @include linkColor($color-white, $color-yellow);
+        background-color: rgba($color-black, 0.5);
+    }
 }
 
 // Hidden classes
