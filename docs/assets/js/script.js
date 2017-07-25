@@ -1036,6 +1036,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('full-size-picture'
         var imgParent = img.parentElement;
 
         var imgRatio = img.naturalWidth / img.naturalHeight;
+
         if (imgParent.clientHeight == 0 && imgParent.clientWidth == 0) {
             imgParent.style.height = img.naturalHeight + 'px';
             imgParent.style.width = img.naturalWidth + 'px';
