@@ -171,17 +171,16 @@ Example from DOM structure above:
 ```html
 <section class="generic-content">
     <div class="quick-picture-container">
-        <figure class="picture">
-            <div class="full-size-frame">
-                <div class="full-size-picture">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
-                </div>
+        <figure class="">
+            <div class="full-size-picture" style="">
+                <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
             </div>
             <figcaption>
-                <h5>Photo Headline</h5>
-                <p>Photo caption - vitae bibendum lacinia. Phasellus interdum vitae bibendum lacinia.</p>
+                <div class="caption-1">Photo Headline</div>
+                <div class="caption-2">Photo caption - vitae bibendum lacinia. Phasellus interdum vitae bibendum lacinia.</div>
             </figcaption>
         </figure>
+        
         <div class="description">
             <h4>Second headline - h4</h4>
             <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt
@@ -209,17 +208,16 @@ To have the picture on the right side, swap the order of `description` and `figu
                 metus ut aliquet aliquet. Fusce facilisis lorem non rutrum facilisis.</p>
             <a href="#">Read More</a>
         </div>
-        <figure class="picture">
-            <div class="full-size-frame">
-                <div class="full-size-picture">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
-                </div>
+        <figure class="">
+            <div class="full-size-picture" style="">
+                <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
             </div>
             <figcaption>
-                <h5>Photo Headline</h5>
-                <p>Photo caption - vitae bibendum lacinia. Phasellus interdum vitae bibendum lacinia.</p>
+                <div class="caption-1">Photo Headline</div>
+                <div class="caption-2">Photo caption - vitae bibendum lacinia. Phasellus interdum vitae bibendum lacinia.</div>
             </figcaption>
         </figure>
+        
     </div>
 </section>
 ```

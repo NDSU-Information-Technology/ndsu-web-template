@@ -42,17 +42,7 @@
             {{> @partial-block}}
         </div>
         {{/unless}}
-        <figure class="picture">
-            <div class="full-size-frame">
-                <div class="full-size-picture">
-                    <img src="{{quickPicture.src}}" alt="{{quickPicture.alt}}" />
-                </div>
-            </div>
-            <figcaption>
-                <h5>{{quickPicture.headline}}</h5>
-                <p>{{quickPicture.caption}}</p>
-            </figcaption>
-        </figure>
+        {{> _picture-with-frame src=quickPicture.src alt=quickPicture.alt primaryCaption=quickPicture.headline secondaryCaption=quickPicture.caption}}
         {{#if quickPicture.reverse }}
         <div class="description">
             <h4>{{title}}</h4>
