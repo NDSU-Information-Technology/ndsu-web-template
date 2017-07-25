@@ -1401,7 +1401,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .navbar .nav-item.nav-item-haschild:not(.extended-child-section).nav-item-haschild-down > .nav-link::after {
     content: "\00a0\00a0\25B2"; }
   .navbar .child-navbar {
-    text-transform: none;
     z-index: 1000;
     position: absolute;
     left: 0;
@@ -1420,8 +1419,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     .navbar .extended-child-navbar .child-section-title {
       padding: 0.75em 1.25em;
       margin: 0; }
-    .navbar .extended-child-navbar .nav-link {
-      text-transform: none; }
     .navbar .extended-child-navbar .child-navbar {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1434,7 +1431,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     position: relative; }
     .navbar .extended-child-section > a.nav-link {
       background-color: transparent;
-      text-transform: none;
       text-align: center; }
       .navbar .extended-child-section > a.nav-link:hover, .navbar .extended-child-section > a.nav-link:focus, .navbar .extended-child-section > a.nav-link[aria-expanded=true], .navbar .extended-child-section > a.nav-link.active {
         background-color: transparent; }
@@ -1446,6 +1442,8 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
         text-decoration: none; }
       .navbar .extended-child-section > a.nav-link:hover, .navbar .extended-child-section > a.nav-link:focus, .navbar .extended-child-section > a.nav-link[aria-expanded=true], .navbar .extended-child-section > a.nav-link.active {
         text-decoration: underline; }
+      .navbar .extended-child-section > a.nav-link h5 {
+        display: inline; }
 
 .navbar-toggle {
   font-weight: bold; }
@@ -1485,9 +1483,21 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .navbar.navbar-mobile .nav-item.nav-item-haschild > .nav-link::after,
+  .navbar.navbar-mobile .nav-item.nav-item-haschild.nav-item-haschild-up > .nav-link.active::after {
+    content: "\00a0\00a0\25BC"; }
+  .navbar.navbar-mobile .nav-item.nav-item-haschild > .nav-link.active::after,
+  .navbar.navbar-mobile .nav-item.nav-item-haschild.nav-item-haschild-down > .nav-link::after {
+    content: "\00a0\00a0\25B2"; }
   .navbar.navbar-mobile .nav-item.nav-item-haschild:not(.extended-child-section) > .nav-link::after {
     position: absolute;
     right: 1em; }
+  .navbar.navbar-mobile .extended-child-section > a.nav-link {
+    text-align: left; }
+    .navbar.navbar-mobile .extended-child-section > a.nav-link {
+      text-decoration: none; }
+    .navbar.navbar-mobile .extended-child-section > a.nav-link:hover, .navbar.navbar-mobile .extended-child-section > a.nav-link:focus, .navbar.navbar-mobile .extended-child-section > a.nav-link[aria-expanded=true], .navbar.navbar-mobile .extended-child-section > a.nav-link.active {
+      text-decoration: none; }
 
 .navbar-dark,
 .navbar-dark .navbar {
