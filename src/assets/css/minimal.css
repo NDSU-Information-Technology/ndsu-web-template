@@ -565,6 +565,38 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
         -ms-flex-positive: 9;
             flex-grow: 9; }
 
+.search-form {
+  position: relative; }
+  .search-form input, .search-form button {
+    font-size: 1em; }
+  .search-form input {
+    padding: 0.5em 4.5em 0.5em 1em;
+    border: 0;
+    width: 10em;
+    background-color: #e5e5e5;
+    -webkit-transition: 0.3s ease-out background-color;
+    transition: 0.3s ease-out background-color; }
+    .search-form input:active, .search-form input:focus {
+      background-color: #fcfcfc; }
+  .search-form button {
+    border: none;
+    background-color: rgba(0, 33, 25, 0.5);
+    border-left: 1px solid #999999;
+    padding: 0;
+    width: 4.5em;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1; }
+    .search-form button:hover, .search-form button:focus, .search-form button[aria-expanded=true], .search-form button.active {
+      background-color: rgba(102, 102, 102, 0.75); }
+    .search-form button {
+      color: #e5e5e5; }
+    .search-form button:hover, .search-form button:focus, .search-form button[aria-expanded=true], .search-form button.active {
+      color: #fff; }
+
 .gallery {
   margin: 0 auto;
   padding: 0 2em;
