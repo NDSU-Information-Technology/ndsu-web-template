@@ -19,7 +19,6 @@ const insert = require('gulp-insert');
 const mkdirp = require('mkdirp');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
-const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 
@@ -178,21 +177,9 @@ const generateScriptTask = (sc) => {
 let styleTasks = config.styles.compile.map(generateStyleTask);
 let scriptTasks = config.scripts.compile.map(generateScriptTask);
 
-gulp.task('styles', () => {
-    runSequence(styleTasks, (error) => {
-        if (error) {
-            console.log(error);
-        }
-    });
-});
+gulp.task('styles', styleTasks, () => {});
 
-gulp.task('scripts', () => {
-    runSequence(scriptTasks, (error) => {
-        if (error) {
-            console.log(error);
-        }
-    });
-});
+gulp.task('scripts', scriptTasks, () => {});
 
 
 // COPY TASKS -------------------------------------------
