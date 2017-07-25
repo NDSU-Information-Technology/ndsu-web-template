@@ -3,18 +3,18 @@
 	justify-content: space-between;
 
     .nav-col {
-		margin-top: 4em;
+		margin-top: 2em;
 		margin-left: 2em;
         flex: 0 0 200px;
 		.sub-nav-title {
-			border-top: 1px solid $color-gray80;
+			border-top: 4px solid $color-green;
 			border-bottom: 1px solid $color-gray80;
 			margin: 0;
 			a {
 				@include buttonify();
-				@include btn-variant($color-white, $color-green, $color-white, $color-gray7);
+				@include btn-variant($color-green, $color-clear, $color-gray13, $color-gray90);
 				text-align: left;
-				line-height: 1.5em;
+				line-height: 1.25em;
 				white-space: normal;
 				padding: 0.5em 0 0.5em 1em;
 			}
@@ -24,8 +24,7 @@
 		}
 		.navbar .nav-link {
 			padding: 1em;
-			border: 1px solid $color-gray90;
-			border-top: none;
+			border-bottom: 1px solid $color-gray80;
 			text-transform: none;
 		}
 		.navbar .nav-link{
