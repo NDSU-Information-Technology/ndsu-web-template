@@ -24,6 +24,9 @@
 	&.flex-center{
 		justify-content: center;
 	}
+	&.flex-right {
+		justify-content: flex-end;
+	}
 
 	&.flex-middle {
 		align-items: center;
@@ -37,19 +40,19 @@
 		.flex-item-size-#{$size} { flex-grow: $size; }
 	}
 
-    @each $size, $length in $spacers {
-        .flex-item-m-#{$size}  { margin:        $length !important; }
-        .flex-item-mt-#{$size} { margin-top:    $length !important; }
-        .flex-item-mr-#{$size} { margin-right:  $length !important; }
-        .flex-item-mb-#{$size} { margin-bottom: $length !important; }
-        .flex-item-ml-#{$size} { margin-left:   $length !important; }
-        .flex-item-mx-#{$size} {
-            margin-right: $length !important;
-            margin-left:  $length !important;
-        }
-        .flex-item-my-#{$size} {
-            margin-top:    $length !important;
-            margin-bottom: $length !important;
-        }
-    }
+    // @each $size, $length in $spacers {
+    //     .flex-item-m-#{$size}  { margin:        $length !important; }
+    //     .flex-item-mt-#{$size} { margin-top:    $length !important; }
+    //     .flex-item-mr-#{$size} { margin-right:  $length !important; }
+    //     .flex-item-mb-#{$size} { margin-bottom: $length !important; }
+    //     .flex-item-ml-#{$size} { margin-left:   $length !important; }
+    //     .flex-item-mx-#{$size} {
+    //         margin-right: $length !important;
+    //         margin-left:  $length !important;
+    //     }
+    //     .flex-item-my-#{$size} {
+    //         margin-top:    $length !important;
+    //         margin-bottom: $length !important;
+    //     }
+    // }
 }
