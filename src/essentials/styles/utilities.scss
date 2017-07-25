@@ -46,6 +46,14 @@
         }
     }
 }
+@each $size in $media-sizes {
+    .hide-#{$size}-up {
+        display: none !important;
+        @include media-size($size) {
+            display: block !important;
+        }
+    }
+}
 
 // Removing styles for list elements
 ul.remove-list-style{

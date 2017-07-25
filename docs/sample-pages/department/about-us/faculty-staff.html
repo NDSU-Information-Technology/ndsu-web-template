@@ -29,7 +29,7 @@
                     <button type="button" class="btn btn-yellow navbar-toggle"><span class="sr-only">Mobile menu</span></button>
             
                     <div role="navigation">
-                        <ul class="navbar">
+                        <ul class="navbar navbar-mobilize">
                             <li class="nav-item">
                                 <a class="nav-link" href="link1">
                                     Link 1
@@ -52,20 +52,28 @@
                             </li>
                         </ul>
                     </div>
-            
+                    <div class="hide-sm-down">
                     <form class="search-form" id="globalSearchForm" action="" method="GET">
                         <label for="globalSearchForm_input" class="sr-only">Search Term</label>
                         <input id="globalSearchForm_input" name="q" type="text"  placeholder="Keywords" />
                         <button type="submit" class="btn">Search</button>
-                    </form>    </div>
+                    </form>        </div>
+                </div>
             </div>
             <ul class="navbar navbar-mobile navbar-vertical navbar-dark">
             </ul>
             <div class="page-title-bar">
-                <div class="container page-title-wrapper">
+                <div class="container flex-container flex-left flex-middle page-title-wrapper">
                     <h2 class="page-title">
                     Computer Science
                     </h2>
+            
+                    <div class="hide-sm-up">
+                    <form class="search-form" id="globalSearchFormMobile" action="" method="GET">
+                        <label for="globalSearchFormMobile_input" class="sr-only">Search Term</label>
+                        <input id="globalSearchFormMobile_input" name="q" type="text"  placeholder="Keywords" />
+                        <button type="submit" class="btn">Search</button>
+                    </form>        </div>
                 </div>
             </div>
         </div>
