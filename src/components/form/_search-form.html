@@ -1,0 +1,5 @@
+<form class="search-form" id="{{formId}}" action="{{action}}" method="{{#ifnull method 'GET'}}{{/ifnull}}">
+    <label for="{{formId}}_input" class="sr-only">Search Term</label>
+    <input id="{{formId}}_input" name="{{inputName}}" type="text"  placeholder="{{#ifnull placeHolder 'Keywords'}}{{/ifnull}}" />
+    <button type="submit" class="btn">{{#ifnull searchText 'Search'}}{{/ifnull}}</button>
+</form>

@@ -25,7 +25,7 @@
     <header>
         <div class="navbar-mobile-container sticky-bar sticky-sm" role="navigation">
             <div class="green-bar">
-                <div class="container flex-container flex-middle">
+                <div class="container flex-container flex-middle flex-right">
                     <h1><a href="https://www.ndsu.edu"><img src="/ndsu-web-template/images/NDSU.twolines.gif" alt="North Dakota State University" title="" height="40" class="header-ndsu-logo" /></a></h1>
                     <button type="button" class="btn btn-yellow navbar-toggle"><span class="sr-only">Mobile menu</span></button>
             
@@ -53,7 +53,12 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+            
+                    <form class="search-form" id="globalSearchForm" action="" method="GET">
+                        <label for="globalSearchForm_input" class="sr-only">Search Term</label>
+                        <input id="globalSearchForm_input" name="q" type="text"  placeholder="Keywords" />
+                        <button type="submit" class="btn">Search</button>
+                    </form>    </div>
             </div>
             <ul class="navbar navbar-mobile navbar-vertical navbar-dark">
             </ul>
