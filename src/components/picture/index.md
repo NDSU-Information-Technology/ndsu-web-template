@@ -9,8 +9,8 @@ This component provides a consistent way to display a full size image in a conta
 
 Example:
 ```html
-{{> _picture src="/ndsu-web-template/images/sample.png" alt="Sample Image" width=350 height=300}}
-{{> _picture src="/ndsu-web-template/images/sample.png" alt="Sample Image" width=200 height=300}}
+{{> _picture src="/ndsu-web-template/images/sample.png" alt="Sample Image" hAlign="right" width=350 height=300}}
+{{> _picture src="/ndsu-web-template/images/sample.png" alt="Sample Image" hAlign="center" width=200 height=300}}
 {{> _picture src="/ndsu-web-template/images/sample.png" alt="Sample Image" width=500 height=300}}
 ```
 
@@ -29,7 +29,7 @@ Add `picture-block` to `figure` element to have full width picture.
 
 Example:
 ```html
-{{> _picture-with-frame src="/ndsu-web-template/images/sample.png" alt="Sample Image" height=300 blockPicture=true primaryCaption="North Dakota State University" secondaryCaption="Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit."}}
+{{> _picture-with-frame src="/ndsu-web-template/images/sample.png" alt="Sample Image" vAlign="middle" height=300 blockPicture=true primaryCaption="North Dakota State University" secondaryCaption="Photo Caption - Lorem ipsum dolor sit amet, consectetur adipiscing elit."}}
 ```
 
 ## Styling
