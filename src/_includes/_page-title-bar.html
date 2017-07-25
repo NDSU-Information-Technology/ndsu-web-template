@@ -1,9 +1,13 @@
 <div class="page-title-bar">
-    <div class="container page-title-wrapper">
+    <div class="container flex-container flex-left flex-middle page-title-wrapper">
         <h2 class="page-title">
             {{#> page-title }}
             North Dakota State University
             {{/page-title }}
         </h2>
+
+        <div class="hide-sm-up">
+        {{> _search-form formId="globalSearchFormMobile" inputName="q" }}
+        </div>
     </div>
 </div>

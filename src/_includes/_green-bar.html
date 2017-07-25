@@ -6,6 +6,7 @@
 
         {{#getJsonContext '{
         "additionalClasses": [
+            "navbar-mobilize"
         ],
         "links": [
             {
@@ -29,7 +30,8 @@
         {{> _navbar this }}
         {{/getJsonContext}}
         {{/if}}
-
+        <div class="hide-sm-down">
         {{> _search-form formId="globalSearchForm" inputName="q" }}
+        </div>
     </div>
 </div>
