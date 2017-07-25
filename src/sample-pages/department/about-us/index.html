@@ -2,7 +2,7 @@
 {{#> _hero-banner imgSrc="https://www.ndsu.edu/fileadmin/research/research_intro.jpg" dim="black"
 vAlign="middle"}} {{/_hero-banner}} 
 
-{{#getJsonContext '{"title": "About Us", "bgColor": "gray", "container": true}'}} 
+{{#getJsonContext '{"title": "About Us", "container": true}'}} 
 {{#>_generic-content this }}
 <p>The general computer science departmental objectives are:</p>
 <ol>
@@ -30,5 +30,6 @@ vAlign="middle"}} {{/_hero-banner}}
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The Department occupies 7,460 square feet of space on the first and second floors of the Quentin Burdick Building (QBB, formerly IACC, the Industrial Agriculture and Communications Center building) which was built in 1992.</p>
 
     {{/ _generic-content}}
-    {{/getJsonContext}} 
+    {{/getJsonContext}}
+    {{> _sflgru}}
 {{/_layout-department}}
