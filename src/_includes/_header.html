@@ -1,6 +1,6 @@
 <header>
     <div class="navbar-mobile-container sticky-bar sticky-sm" role="navigation">
-        {{> _green-bar }}
+        {{> _green-bar showGlobalLinks=true}}
         {{#getJsonContext '{"additionalClasses": ["navbar-mobile", "navbar-vertical", "navbar-dark"]}'}}
         {{> _navbar-main this}}
         {{/getJsonContext}}
