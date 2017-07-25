@@ -11,10 +11,10 @@ This component provides a consistent way to display a full size image in a conta
 
 Example:
 ```html
-<div class="full-size-picture" style=" width: 350px; height: 300px;">
+<div class="full-size-picture right-align" style=" width: 350px; height: 300px;">
     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
 </div>
-<div class="full-size-picture" style=" width: 200px; height: 300px;">
+<div class="full-size-picture center-align" style=" width: 200px; height: 300px;">
     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
 </div>
 <div class="full-size-picture" style=" width: 500px; height: 300px;">
@@ -47,7 +47,7 @@ Add `picture-block` to `figure` element to have full width picture.
 Example:
 ```html
 <figure class=" picture-block">
-    <div class="full-size-picture" style=" height: 300px;">
+    <div class="full-size-picture middle-align" style=" height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
     <figcaption>

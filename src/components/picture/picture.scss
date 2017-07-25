@@ -11,6 +11,22 @@ $picture-padding: 0.25em;
         position: absolute;
         top: 0; left: 0;
     }
+
+    &.left-align img {
+        left: 0%;
+    }
+    &.center-align img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &.right-align img {
+        left: auto;
+        right: 0;
+    }
+    &.middle-align img {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .picture-frame {

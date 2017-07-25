@@ -1439,6 +1439,19 @@ ul.navbar {
     position: absolute;
     top: 0;
     left: 0; }
+  .full-size-picture.left-align img {
+    left: 0%; }
+  .full-size-picture.center-align img {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .full-size-picture.right-align img {
+    left: auto;
+    right: 0; }
+  .full-size-picture.middle-align img {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 .picture-frame {
   position: relative;
