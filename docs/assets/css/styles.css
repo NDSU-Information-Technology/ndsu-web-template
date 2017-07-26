@@ -345,10 +345,12 @@ footer {
             flex-basis: auto; } }
 
 .bigquote {
-  padding: 6em 3em; }
+  padding: 3em 0;
+  margin: 0; }
   .bigquote .quote {
     text-align: center;
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.5em;
+    margin-top: 0; }
   .bigquote .quote::before {
     content: "\201C"; }
   .bigquote .quote::after {
@@ -380,29 +382,29 @@ footer {
   .bigquote.smaller.yellow-quote .quote {
     font-size: 4em; }
   .bigquote.green-quote .quote {
-    font-size: 4em; }
+    font-size: 3em; }
   .bigquote.yellow-quote .quote {
-    font-size: 6em; }
+    font-size: 5em; }
   @media (max-width: 1199px) {
-    .bigquote.green-quote .quote {
-      font-size: 3.5em; }
-    .bigquote.yellow-quote .quote {
-      font-size: 5em; } }
-  @media (max-width: 991px) {
-    .bigquote.green-quote .quote {
-      font-size: 3em; }
-    .bigquote.yellow-quote .quote {
-      font-size: 4.5em; } }
-  @media (max-width: 767px) {
     .bigquote.green-quote .quote {
       font-size: 2.5em; }
     .bigquote.yellow-quote .quote {
       font-size: 4em; } }
+  @media (max-width: 991px) {
+    .bigquote.green-quote .quote {
+      font-size: 2.25em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 3.5em; } }
+  @media (max-width: 767px) {
+    .bigquote.green-quote .quote {
+      font-size: 2.25em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 3.5em; } }
   @media (max-width: 574px) {
     .bigquote.green-quote .quote {
       font-size: 2em; }
     .bigquote.yellow-quote .quote {
-      font-size: 3.5em; } }
+      font-size: 3em; } }
 
 .btn {
   -webkit-transition: all 0.3s ease-out;

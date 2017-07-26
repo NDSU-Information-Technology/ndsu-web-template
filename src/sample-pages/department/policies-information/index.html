@@ -1,0 +1,49 @@
+{{#> _layout-department-two-column}}
+    {{#*inline "before-two-col"}}
+    {{#> _hero-banner imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/MU_HR.jpg" dim="black" vAlign="middle"}} 
+    {{/_hero-banner}}
+    {{/inline}}
+    {{#*inline "nav-col"}}
+        <section class=" hide-sm-down" role="navigation">
+            <h5 class="sub-nav-title"><a href="/ndsu-web-template/sample-pages/department/degrees/policies-information/">Policies and Information</a></h5>
+            {{#getJsonContext '{
+                "additionalClasses": [
+                    "navbar-vertical"
+                ],
+                "links": [
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/policies-information/assessments/",
+                        "text": "Assessments"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/policies-information/image/",
+                        "text": "Image"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/policies-information/department-positions/",
+                        "text": "CS Department Positions"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/policies-information/annual-report/",
+                        "text": "Annual Report"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/policies-information/bioinformatics/",
+                        "text": "Bioinformatics"
+                    }
+                ]
+            }'}}
+            {{> _navbar-main this }}
+            {{/getJsonContext}}
+        </section>
+    {{/inline}}
+    <div class="container">
+        {{#getJsonContext '{"title": "Policies and Information"}'}}
+        {{#> _generic-content this }}
+        <p>The Computer Science Department offers the most comprehensive and varied Computer Science program in the region. In the core courses required of all computer science majors, students are offered an opportunity to study concepts, applications and implementation techniques which provide a broad and practical base both for further study and for a career in computing.</p>
+        <p>Through advanced undergraduate courses, students have an opportunity for in-depth study of topics such as software engineering, large systems, systems modeling, computer graphics, and emerging areas. The department has also expanded offerings in software engineering, data mining and bioinformatics.</p>
+        <p>Students are encouraged to choose courses from related areas such as business, economics, engineering, mathematics, operations research, and statistics to broaden their program of study. A senior capstone experience that integrates multiple areas in computer science is required and provides an opportunity to add maturity to the computer science skill set before graduation.</p>
+        {{/ _generic-content}}
+        {{/getJsonContext}}
+    </div>
+{{/_layout-department-two-column}}
