@@ -213,8 +213,6 @@ header .green-bar {
     margin-right: auto; }
   header .green-bar .header-ndsu-logo {
     display: block; }
-  header .green-bar .search-form {
-    margin-left: 1em; }
 
 header .main-nav {
   background-color: #222222; }
@@ -227,21 +225,39 @@ header h2.page-title {
   margin-top: 0;
   margin-bottom: 0; }
 
+header .search-form {
+  margin-left: 1em;
+  width: 14em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+
+@media (max-width: 991px) {
+  header .search-form {
+    width: 12em; } }
+
 @media (max-width: 767px) {
   header .page-title-wrapper {
     background-color: #121212;
     color: #fff;
-    padding: 0;
-    border-bottom: 1px solid #000; }
+    border-bottom: 1px solid #000;
+    padding: 0.75em 1em; }
   header h2.page-title {
     font-size: 1.25em;
     font-weight: bold;
-    padding: 0.75em 1.25em; }
+    padding: 0.25em 0;
+    margin-right: 1em; }
   header .search-form {
     margin-left: 0;
-    margin-right: 1em; }
-    header .search-form input {
-      width: 6em; } }
+    width: 14em; } }
+
+@media (max-width: 574px) {
+  header .page-title-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  header .search-form {
+    width: auto; } }
 
 footer {
   margin-top: 3rem;
@@ -731,6 +747,13 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .flex-container.flex-stretch {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .flex-container.flex-wrap {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap; }
   .flex-container .flex-item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -779,10 +802,12 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .search-form input {
     padding: 0.5em 4.5em 0.5em 1em;
     border: 0;
-    width: 10em;
+    width: 100%;
     background-color: #e5e5e5;
     -webkit-transition: 0.3s ease-out background-color;
-    transition: 0.3s ease-out background-color; }
+    transition: 0.3s ease-out background-color;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
     .search-form input:active, .search-form input:focus {
       background-color: #fcfcfc; }
   .search-form button {

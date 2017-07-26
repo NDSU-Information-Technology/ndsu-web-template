@@ -31,6 +31,12 @@
 	&.flex-middle {
 		align-items: center;
 	}
+	&.flex-stretch{
+		align-items: stretch;
+	}
+	&.flex-wrap {
+		flex-flow: wrap;
+	}
 
 	.flex-item{
 		flex: 0 1 auto;
