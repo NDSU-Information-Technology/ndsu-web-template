@@ -252,13 +252,13 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 1.5em;
   line-height: 1.25em; }
   footer address {
     font-style: normal;
     margin-top: 2em; }
   footer h5, footer h6 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 1em auto; }
   footer h5 {
     font-size: 1.125em;
     padding: 0 0.75em 0.5em 0.75em; }
