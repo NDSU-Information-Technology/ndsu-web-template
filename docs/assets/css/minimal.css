@@ -251,11 +251,14 @@ header .search-form {
     width: 14em; } }
 
 @media (max-width: 574px) {
-  header .page-title-wrapper {
+  header .flex-container.page-title-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
   header .search-form {
     width: auto; } }
 
