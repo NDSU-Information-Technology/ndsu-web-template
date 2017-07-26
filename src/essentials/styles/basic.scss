@@ -94,8 +94,9 @@ header {
 		}
 	}
 	@include media-xs {
-		.page-title-wrapper {
+	.flex-container.page-title-wrapper {
 			flex-direction: column;
+			align-items: stretch;
 		}
 		.search-form {
 			width: auto;
