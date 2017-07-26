@@ -15,15 +15,19 @@ Available Types:
 `green-quote` example:
 ```html
 <blockquote class="bigquote green-quote">
-    <p class="quote">Pullquote or callout pullquote or callout</p>
-    <p class="byline">byline</p>
+    <div class="container">
+        <p class="quote">Pullquote or callout pullquote or callout</p>
+        <p class="byline">byline</p>
+    </div>
 </blockquote>
 ```
 
 `yellow-quote` example:
 ```html
 <blockquote class="bigquote yellow-quote">
-    <p class="quote">Pullquote or callout pullquote or callout</p>
-    <p class="byline">byline</p>
+    <div class="container">
+        <p class="quote">Pullquote or callout pullquote or callout</p>
+        <p class="byline">byline</p>
+    </div>
 </blockquote>
 ```
