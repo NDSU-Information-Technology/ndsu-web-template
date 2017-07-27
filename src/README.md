@@ -10,7 +10,7 @@ Content:
   * [Styles](#styles)
   * [Gulp Tasks](#gulp-tasks)
 * [Documentations](#documentations)
-  * [index.md files](#index.md-files)
+  * [index.md files](#indexmd-files)
   * [Jekyll](#jekyll)
   * [Sample Pages](#sample-pages)
 
