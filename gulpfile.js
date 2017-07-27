@@ -22,9 +22,6 @@ const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 
-// TODO: change this to get from package.json, referring to actual github url
-const repositoryUrl = '';
-
 const config = {
     "components": {
         "get": (componentName) => {
@@ -96,9 +93,6 @@ const config = {
             "dev": [
                 './src/components/**/*.js',
                 './src/essentials/scripts/**/*.js'
-            ],
-            "docs": [
-                './docs/assets/js/**/*.js'
             ]
         }
     },
@@ -122,10 +116,8 @@ const config = {
         "watch": {
             "dev": [
                 './src/components/**/*.scss',
-                './src/essentials/**/*.scss'
-            ],
-            "docs": [
-                './docs/assets/css/**/*.css'
+                './src/essentials/**/*.scss',
+                './src/assets/**/*.scss'
             ]
         }
     }
