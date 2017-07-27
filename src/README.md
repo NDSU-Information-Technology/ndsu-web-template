@@ -219,7 +219,7 @@ gulp watch
 
 Beside the [`index.md`](docs/index.md) located directly underneath `docs` folder, all the files are auto generated. Do not edit all other files in the `docs` directly. Instead, go to the corresponding copy in the `src` folder to edit a file.
 
-### index.md file
+### index.md files
 Each component should have a _index.md_ file that gives at least brief description on how to use the component. This also includes an example markup for each usage. All _index.md_ files will be built and copied to the `docs` directory for end-user documentation.
 
 Please edit the _index.md_ file located in the `src` directory. Every component's _index.md_ file will be copied to the `docs` directory for end user's use by executing one of the following gulp tasks:
