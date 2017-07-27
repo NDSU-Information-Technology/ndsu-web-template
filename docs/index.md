@@ -160,7 +160,7 @@ An example of footer with address:
 <footer class="footer-green">
     <section class="footer-address">
         <!--NDSU logo-->
-        <img src="https://static.ndsu.nodak.edu/images/NDSU.twolines.gif" alt="North Dakota State University" />
+        <img src="https://static.ndsu.nodak.edu/images/NDSU.twolines.png" alt="North Dakota State University" />
         <!--Wrap the address text in address element-->
         <address>
             <h6>University Relations</h6>
