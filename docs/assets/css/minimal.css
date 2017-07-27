@@ -983,9 +983,9 @@ footer {
     bottom: 0;
     content: ""; }
   .hero-banner.dim-black::before {
-    background-color: rgba(0, 0, 0, 0.75); }
+    background-color: rgba(0, 0, 0, 0.5); }
   .hero-banner.dim-green::before {
-    background-color: rgba(0, 33, 25, 0.75); }
+    background-color: rgba(0, 33, 25, 0.5); }
   .hero-banner.dim-yellow::before {
     background-color: rgba(255, 204, 0, 0.25); }
   @media (max-width: 1199px) {

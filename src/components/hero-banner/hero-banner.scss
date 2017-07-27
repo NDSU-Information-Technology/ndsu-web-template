@@ -24,10 +24,10 @@ $jumbotron-padding: 0em;
   }
   
   &.dim-black::before {
-    background-color: rgba($color-black, 0.75);
+    background-color: rgba($color-black, 0.5);
   }
   &.dim-green::before {
-    background-color: rgba($color-green, 0.75);
+    background-color: rgba($color-green, 0.5);
   }
   &.dim-yellow::before {
     background-color: rgba($color-yellow, 0.25);
