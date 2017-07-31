@@ -1529,7 +1529,8 @@ figure figcaption {
       margin: 1em auto; } }
 
 a.social-media-icon {
-  position: relative; }
+  position: relative;
+  display: inline-block; }
 
 a.social-media-icon::before {
   content: "";
