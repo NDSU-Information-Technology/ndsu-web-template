@@ -3,4 +3,19 @@
         <img src="/ndsu-web-template/images/NDSU-twolines-small.png" alt="North Dakota State University" />
         {{> @partial-block }}
     </section>
+    {{#if sideNavbar}}
+    <div class="footer-links">
+        <div class="nav-box">
+            <h5>{{#ifnull ideNavbarTitle 'Quick Links'}}{{/ifnull}}</h5>
+            {{#> sideNavbarContent}}
+            <ul class="navbar navbar-left navbar-vertical">
+                <li class="nav-item"><a class="nav-link" href="link1/" title="NDSU at a glance">Link 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="link2/" title="Academic programs (majors)">Link 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="link3/" title="Office of Admission">Link 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="link4/" title="Bison Athletics">Link 4</a></li>
+            </ul>
+            {{/ sideNavbarContent}}
+        </div>
+    </div>
+    {{/if}}
 </footer>

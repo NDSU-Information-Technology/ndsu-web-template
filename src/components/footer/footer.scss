@@ -46,12 +46,16 @@ footer {
 
 	.nav-box {
 		margin-bottom: 2em;
+		h5 {
+			margin: 0;
+		}
 	}
 
 
-	.nav-box.clear-box {
+	&.footer-dark .nav-box {
 		h5 {
 			padding-left: 0;
+			margin: 0;
 		}
 		.navbar .nav-link {
 			padding-left: 0;
@@ -59,9 +63,9 @@ footer {
 		}
 	}
 
-	.nav-box.white-box {
+	&.footer-green .nav-box {
 		background-color: $color-white;
-		padding: 2em 0.5em 1em 0.5em;
+		padding: 1em 0.5em;
 		.nav-item {
 			border-top: 1px solid $color-black;
 		}
