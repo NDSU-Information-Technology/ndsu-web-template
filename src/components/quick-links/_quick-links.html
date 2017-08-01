@@ -1,0 +1,8 @@
+<section class="quick-links {{#if color}}quick-links-{{color}}{{/if}}" role="navigation">
+    <h5>Quick links or section of lots of links</h5>
+    <ul class="quick-links-{{#ifnull columns '3'}}{{/ifnull}}">
+        {{#each links}}
+        <li><a href="{{url}}"{{#if newWindow}} target="_blank"{{/if}}>{{text}}</a></li>
+        {{/each}}
+    </ul>
+</section>

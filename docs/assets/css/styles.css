@@ -1805,7 +1805,6 @@ figure figcaption {
 
 .quick-links {
   padding: 2em;
-  font-size: 2em;
   line-height: 1.75em; }
   @media (max-width: 1199px) {
     .quick-links {
