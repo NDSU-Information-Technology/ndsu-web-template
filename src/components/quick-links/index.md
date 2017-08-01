@@ -66,7 +66,7 @@ title: Quick Links Component
 {{/getJsonContext}}
 ```
 
-## Column Counts
+## Columns Count
 
 ```html
 {{#getJsonContext '{
