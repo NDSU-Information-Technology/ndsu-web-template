@@ -71,8 +71,6 @@ Each component should have its own directory under `components` directory, and i
 List of currently available components:
 * [bigquote](components/bigquote/)
 * [button](components/button/)
-* [carousel](components/carousel/)
-* [container](components/container/)
 * [form](components/form/)
 * [footer](components/footer/)
 * [gallery](components/gallery/)
@@ -85,8 +83,6 @@ List of currently available components:
 * [quicklinks](components/quicklinks/)
 * [sflgru](components/sflgru/)
 * [social-media](components/social-media/)
-* [sticky-bar](components/sticky-bar/)
-* [themes](components/themes/)
 
 ## Template Build Versions
 
