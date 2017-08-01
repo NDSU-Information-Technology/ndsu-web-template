@@ -25,7 +25,7 @@ title: Quick Links Component
 </section>
 ```
 
-## Column Counts
+## Columns Count
 
 ```html
 <section class="quick-links " role="navigation">
