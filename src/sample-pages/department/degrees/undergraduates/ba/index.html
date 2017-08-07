@@ -1,0 +1,83 @@
+{{#> _layout-department-two-column}}
+    {{#*inline "nav-col"}}
+        <section class=" hide-sm-down" role="navigation">
+            <h5 class="sub-nav-title"><a href="/ndsu-web-template/sample-pages/department/degrees/undergraduates/">Undergraduate Programs</a></h5>
+            {{#getJsonContext '{
+                "additionalClasses": [
+                    "navbar-vertical"
+                ],
+                "links": [
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/bs/",
+                        "text": "Bachelor of Science"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/ba/",
+                        "text": "Bachelor of Arts"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/double/",
+                        "text": "Double Majors"
+                    },
+                    {
+                        "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/minors/",
+                        "text": "Minors"
+                    }
+                ]
+            }'}}
+            {{> _navbar-main this }}
+            {{/getJsonContext}}
+        </section>
+    {{/inline}}
+    <div class="container">
+        {{#getJsonContext '{"title": "Bachelor of Arts"}'}}
+        {{#> _generic-content this }}
+        <p>The Bachelor of Science provides the best all-around preparation for someone intending to make a career in the computing areas.</p>
+        {{/ _generic-content}}
+        {{/getJsonContext}}
+
+        {{#getJsonContext '{"title": "Overall B.S. Learning Goals", "h5": true}'}}
+        {{#> _generic-content this }}
+        <ol>
+            <li>
+                <div>Apply Knowledge</div>
+                <p>An ability to apply knowledge of computer and mathematics appropriate to the discipline;</p>
+            </li>
+            <li>
+                <div>Analyze Problems</div>
+                <p>An ability to analyze a problem, and identify and define the computing requirements appropriate to its solution;</p>
+            </li>
+            <li>
+                <div>Develop Solutions</div>
+                <p>An ability to design, implement, and evaluate a computer-based system, process, component, or program to meet desired needs;</p>
+            </li>
+            <li>
+                <div>Work in Teams</div>
+                <p>An ability to function effectively on teams to accomplish a common goal;</p>
+            </li>
+            <li>
+                <div>Understand Issues</div>
+                <p>An understanding of professional, ethical, legal, security, and social issues and responsibilities;</p>
+            </li>
+            <li>
+                <div>Analyze Impact</div>
+                <p>An ability to analyze the local and global impact of computing on individuals, organizations and society;</p>
+            </li>
+            <li>
+                <div>Use Current Methods and Tools</div>
+                <p>An ability to use current techniques, skills, and tools necessary for computing practices;</p>
+            </li>
+            <li>
+                <div>Understand Trade-offs</div>
+                <p>An ability to apply mathematical foundations, algorithmic principles, and computer science theory in the modeling and design of computer-based systems in a way that demonstrates comprehension of the trade-offs involved in design choices;</p>
+            </li>
+        </ol>
+        {{/_generic-content}}
+        {{/getJsonContext}}
+    </div>
+
+    {{#*inline "after-two-col"}}
+    {{> _bigquote color="yellow" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex." source="John Doe"}}
+    {{/inline}}
+
+{{/_layout-department-two-column}}
