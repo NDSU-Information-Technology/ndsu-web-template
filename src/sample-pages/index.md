@@ -12,3 +12,8 @@ Available pages:
 * [Policies and Information page](/ndsu-web-template/sample-pages/department/policies-information/){:target="_blank"}
 * [About Us page](/ndsu-web-template/sample-pages/department/about-us/){:target="_blank"}
 * [Faculty and Staff page](/ndsu-web-template/sample-pages/department/about-us/faculty-staff.html){:target="_blank"}
+
+
+## Provost Sample Site
+
+* [Home page](/ndsu-web-template/sample-pages/provost/){:target="_blank"}
