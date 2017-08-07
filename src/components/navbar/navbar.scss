@@ -240,6 +240,10 @@ ul.navbar {
 }
 
 @include media-xl() {
+	.navbar .nav-link {
+		padding: 1.5em;
+	}
+
 	.navbar-mobile,
 	.navbar-mobile.active,
 	.navbar-toggle  {
@@ -250,10 +254,19 @@ ul.navbar {
 	}
 }
 @include media-lg() {
+	.navbar .nav-link {
+		padding: 1.25em;
+	}
 }
 @include media-md() {
+	.navbar .nav-link {
+		padding: 1.125em;
+	}
 }
 @include media-sm() {
+	.navbar .nav-link {
+		padding: 1.25em;
+	}
 	.navbar-mobilize{
 		display: none;
 	}
@@ -267,6 +280,9 @@ ul.navbar {
 	
 }
 @include media-sm() {
+	.navbar .nav-link {
+		padding: 1.125em;
+	}
 	.navbar-mobile {
 		flex-wrap: nowrap;
 	}

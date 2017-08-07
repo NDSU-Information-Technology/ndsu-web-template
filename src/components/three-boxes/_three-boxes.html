@@ -1,0 +1,11 @@
+
+<div class="three-boxes">
+    {{#each boxes}}
+        <section class="{{bgColor}}">
+            {{#if title}}<h5>{{title}}</h5>{{/if}}
+            {{#if subtitle}}<div class="subtitle">{{subtitle}}</div>{{/if}}
+            {{#if content}}<p class="content">{{content}}</p>{{/if}}
+            {{#if linkText}}{{#> _button url="{{linkUrl}}" block="true"}}{{linkText}}{{/_button}}{{/if}}
+        </section>
+    {{/each}}
+</div>

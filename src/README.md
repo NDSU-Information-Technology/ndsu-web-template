@@ -83,6 +83,7 @@ List of currently available components:
 * [quicklinks](components/quicklinks/)
 * [sflgru](components/sflgru/)
 * [social-media](components/social-media/)
+* [three-boxes](components/three-boxes/)
 
 ## Template Build Versions
 

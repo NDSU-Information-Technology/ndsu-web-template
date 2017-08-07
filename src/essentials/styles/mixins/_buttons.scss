@@ -16,22 +16,8 @@
     } @else {
         display: inline-block;
     }
-    
-    @include media-xl() {
-        padding: 1.5em 1.5em;
-    }
-    @include media-lg() {
-        padding: 1.25em 1.25em;
-    }
-    @include media-md() {
-        padding: 1.125em 1.125em;
-    }
-    @include media-sm() {
-        padding: 1.25em 1.25em;
-    }
-    @include media-xs() {
-        padding: 1.125em 1.125em;
-    }
+
+    padding: 1em;
 }
 
 @mixin btn-variant($main-color, $main-bg, $active-color, $active-bg, $underline-mode: -1){
