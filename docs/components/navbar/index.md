@@ -223,7 +223,7 @@ Example HTML markup for dropdown:
 </div>
 ```
 
-### Extended dropdown menu
+<!--### Extended dropdown menu
 
 An extended dropdown menu has multiple columns under one link. This can be done by using nested `navbar` components with depth of 3, and adding class `extended-child-navbar` to the first `child-navbar` and `extended-child-section` to `nav-item` elements of this `navbar`.
 
@@ -344,7 +344,7 @@ Example HTML markup for the DOM structure given above:
         </li>
     </ul>
 </div>
-```
+```-->
 
 ## Mobile Navigation
 
