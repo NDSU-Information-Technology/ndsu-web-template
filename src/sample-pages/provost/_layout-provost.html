@@ -1,0 +1,38 @@
+{{#> _base headTitle="NDSU Computer Science"}}
+    {{#*inline "head-block"}}
+    <link rel="stylesheet" type="text/css" href="/ndsu-web-template/assets/css/styles.min.css" />
+    {{/inline}}
+
+    {{#*inline "page-title"}}
+        Provost
+    {{/inline}}
+
+    {{#*inline "main-nav"}}
+        {{#getJsonContext '{
+        "additionalClasses": [
+            "navbar-left",
+            "navbar-mobilize",
+            "navbar-dark"
+        ],
+        "links": [
+            {
+                "url": "/ndsu-web-template/sample-pages/provost/",
+                "home": true
+            },
+            {
+                "url": "/ndsu-web-template/sample-pages/provost/about/",
+                "text": "About"
+            }
+        ]
+        }'}}
+        {{> _navbar-main this }}
+        {{/getJsonContext}}
+    {{/inline}}
+
+    {{#*inline "script-block"}}
+    <script type="text/javascript" src="/ndsu-web-template/assets/js/script.min.js"></script>
+    {{/inline}}
+    {{#if @partial-block}}
+    {{> @partial-block}}
+    {{/if}}
+{{/_base }}
