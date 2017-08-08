@@ -46,25 +46,34 @@ function onYtPlayerReady(e) {
 
 function onYtPlayerStateChange(e) {
     if (e.data === YT.PlayerState.PLAYING) {
-        e.target.getIframe().style.opacity = "1";
+        let iframeElement = e.target.getIframe();
+        iframeElement.style.opacity = "1";
+        iframeElement.style.zIndex = "15";
     } else if (e.data === YT.PlayerState.ENDED){
-        e.target.getIframe().style.opacity = "0";
-        e.target.destroy();
+        let ytPlayer = e.target;
+        ytPlayer.seekTo(ytPlayer.getDuration() - 0.08);
+        ytPlayer.pauseVideo();
     }
 };
 
 function onYouTubeIframeAPIReady() {
     NDSU.ytPlayers = Array.prototype.map.call(heroBannerElements, (heroBanner) => {
         let videoId = heroBanner.getAttribute('data-video-id');
+        let videoPosterUrl = heroBanner.getAttribute('data-video-poster');
 
         let playerContainer = document.createElement('div');
         playerContainer.className = 'yt-player';
-        let playerElement = document.createElement('div');
 
+        let posterElement = document.createElement('div');
+        posterElement.className = 'poster';
+        posterElement.style.backgroundImage = 'url(' + videoPosterUrl + ')';
+
+        let playerElement = document.createElement('div');
         let playerElementId = 'ytPlayer_' + Math.random().toString(36).substr(2, 10);
         playerElement.id = playerElementId;
 
         heroBanner.appendChild(playerContainer);
+        playerContainer.appendChild(posterElement);
         playerContainer.appendChild(playerElement);
 
         return new YT.Player(playerElementId, {
