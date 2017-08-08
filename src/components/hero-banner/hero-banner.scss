@@ -1,6 +1,7 @@
 $jumbotron-padding: 0em;
 $z-index-hero-banner-content: 100;
-$z-index-hero-banner-video-cover: 10;
+$z-index-hero-banner-video-cover: 20;
+$z-index-hero-banner-video-poster: 10;
 $z-index-hero-banner-video: 1;
 
 .hero-banner {
@@ -108,18 +109,25 @@ $z-index-hero-banner-video: 1;
         z-index: $z-index-hero-banner-video-cover;
       }
 
-      iframe {
+      .poster, iframe {
         width: 177.78vh !important;
         height: 100% !important;
         min-width: 100%;
         min-height: 69.94vw;
-        z-index: $z-index-hero-banner-video;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, - 50%);
+      }
+      .poster {
+        background-size: contain;
+        background-position: 50% 50%;
+        z-index: $z-index-hero-banner-video-poster;
+      }
+      iframe {
         opacity: 0;
-        transition: opacity 1s ease-out;
+        transition: opacity 0.5s ease-out;
+        z-index: $z-index-hero-banner-video;
       }
     }
 

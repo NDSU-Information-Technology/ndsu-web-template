@@ -1043,21 +1043,26 @@ footer {
       left: 0;
       bottom: 0;
       right: 0;
-      z-index: 10; }
-    .hero-banner .yt-player iframe {
+      z-index: 20; }
+    .hero-banner .yt-player .poster, .hero-banner .yt-player iframe {
       width: 177.78vh !important;
       height: 100% !important;
       min-width: 100%;
       min-height: 69.94vw;
-      z-index: 1;
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    .hero-banner .yt-player .poster {
+      background-size: contain;
+      background-position: 50% 50%;
+      z-index: 10; }
+    .hero-banner .yt-player iframe {
       opacity: 0;
-      -webkit-transition: opacity 1s ease-out;
-      transition: opacity 1s ease-out; }
+      -webkit-transition: opacity 0.5s ease-out;
+      transition: opacity 0.5s ease-out;
+      z-index: 1; }
   @media (max-width: 1199px) {
     .hero-banner {
       min-height: 24em; }
