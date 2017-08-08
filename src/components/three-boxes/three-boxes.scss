@@ -34,7 +34,7 @@
             background-color: $color-green;
             color: $color-gray95;
             a.btn {
-                @include btn-variant($color-yellow, transparent, $color-white, transparent);
+                @include btn-variant($color-yellow, transparent, $color-white, rgba($color-white, 0.10));
             }
         }
     }

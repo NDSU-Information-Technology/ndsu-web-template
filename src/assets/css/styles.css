@@ -2018,7 +2018,7 @@ a.social-media-icon.linkedin::before {
       .three-boxes section.green a.btn {
         background-color: transparent; }
         .three-boxes section.green a.btn:hover, .three-boxes section.green a.btn:focus, .three-boxes section.green a.btn[aria-expanded=true], .three-boxes section.green a.btn.active {
-          background-color: transparent; }
+          background-color: rgba(255, 255, 255, 0.1); }
         .three-boxes section.green a.btn {
           color: #ffcc00; }
         .three-boxes section.green a.btn:hover, .three-boxes section.green a.btn:focus, .three-boxes section.green a.btn[aria-expanded=true], .three-boxes section.green a.btn.active {
