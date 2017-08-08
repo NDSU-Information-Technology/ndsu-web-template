@@ -8,12 +8,11 @@ $jumbotron-padding: 0em;
   background-repeat: no-repeat;
   background-position: 50% 0%;
   box-sizing: border-box;
+  position: relative;
 
   &.hero-banner-middle {
     background-position-y: 50%;
   }
-
-  position: relative;
 
   &.dim-black::before,
   &.dim-green::before,
@@ -33,32 +32,102 @@ $jumbotron-padding: 0em;
     background-color: rgba($color-yellow, 0.25);
   }
 
+  section {
+    color: $color-white;
+    .btn, h2, h3, h4, p {
+      float: left;
+      clear: both;
+    }
+    h2, h3, h4, p  {
+      box-sizing: border-box;
+      border-radius: 0.125em;
+      line-height: 1.5em;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      background-color: rgba($color-black, 0.75);
+      padding: 16px 24px;
+    }
+  }
+
+  &.dim-black,
+  &.dim-green {
+    section {
+      h2, p {
+        background-color: rgba($color-black, 0.6);
+      }
+    }
+  }
+
   @include media-xl() {
     min-height: 28em;
 
     &.hero-banner-large {
-      min-height: 42em;
+      min-height: 38em;
+    }
+
+    section {
+      left: 3em;
+      top: 2em;
+      bottom: auto;
+      position: absolute;
+      h2, h3, h4, p {
+        width: 450px;
+      }
+      &:after {
+          content: '';
+          display: block;
+          clear: both;
+      }
+    }
+    section.bottom {
+      top: auto;
+      bottom: 2em;
+    }
+    section.wide {
+      h2, h3, h4, p {
+        width: 800px;
+      }
     }
   }
   @include media-lg() {
     min-height: 24em;
 
     &.hero-banner-large {
-      min-height: 36em;
+      min-height: 35em;
     }
   }
   @include media-md() {
     min-height: 22em;
     
     &.hero-banner-large {
-      min-height: 30em;
+      min-height: 32em;
+    }
+
+    section.wide {
+      h2, h3, h4, p {
+        max-width: 600px;
+      }
     }
   }
   @include media-sm() {
     min-height: 19em;
     
     &.hero-banner-large {
-      min-height: 26em;
+      min-height: 28em;
+    }
+
+    section,
+    section.wide,
+    section.bottom {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      padding: 1em;
+      h2, h3, h4, p {
+        width: auto;
+        max-width: 450px;
+      }
     }
   }
   @include media-xs() {
@@ -68,6 +137,9 @@ $jumbotron-padding: 0em;
       min-height: 24em;
     }
   }
+    section {
+      padding: 0.5em;
+    }
 }
 
 .hero-banner-fluid {

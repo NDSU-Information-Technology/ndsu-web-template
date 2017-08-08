@@ -8,10 +8,12 @@ a.btn {
 }
 
 .btn-yellow {
-    @include btn-variant($color-gray13, $color-yellow, $color-gray2, lighten($color-yellow,10%));
+    @include btn-variant($color-gray7, $color-yellow, $color-gray20, lighten($color-yellow,10%));
+    @include btn-border(transparent, transparent);
 }
 .btn-green {
-    @include btn-variant($color-gray90, $color-green, $color-gray95, darken($color-green, 5%));
+    @include btn-variant($color-gray90, $color-green, $color-gray95, lighten($color-green, 5%));
+    @include btn-border(transparent, transparent);
 }
 
 .btn-darkgray {
@@ -24,6 +26,7 @@ a.btn {
 
 .btn-clear-yellow {
     @include btn-variant($color-yellow, transparent, $color-gray13, $color-yellow);
+    @include btn-border($active-color: $color-yellow);
 }
 .btn-clear-yellow-white {
     @include btn-variant($color-yellow, transparent, $color-white, transparent);

@@ -309,22 +309,32 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   text-decoration: none; }
 
 .btn-yellow {
-  background-color: #ffcc00; }
+  background-color: #ffcc00;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent; }
   .btn-yellow:hover, .btn-yellow:focus, .btn-yellow[aria-expanded=true], .btn-yellow.active {
     background-color: #ffd633; }
   .btn-yellow {
-    color: #222222; }
+    color: #121212; }
   .btn-yellow:hover, .btn-yellow:focus, .btn-yellow[aria-expanded=true], .btn-yellow.active {
-    color: #050505; }
+    color: #333333; }
+  .btn-yellow:hover, .btn-yellow:focus, .btn-yellow[aria-expanded=true], .btn-yellow.active {
+    border-color: transparent; }
 
 .btn-green {
-  background-color: #002119; }
+  background-color: #002119;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent; }
   .btn-green:hover, .btn-green:focus, .btn-green[aria-expanded=true], .btn-green.active {
-    background-color: #000806; }
+    background-color: #003b2c; }
   .btn-green {
     color: #e5e5e5; }
   .btn-green:hover, .btn-green:focus, .btn-green[aria-expanded=true], .btn-green.active {
     color: #f2f2f2; }
+  .btn-green:hover, .btn-green:focus, .btn-green[aria-expanded=true], .btn-green.active {
+    border-color: transparent; }
 
 .btn-darkgray {
   background-color: #222222; }
@@ -345,13 +355,18 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     color: #333333; }
 
 .btn-clear-yellow {
-  background-color: transparent; }
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #a3a3a3; }
   .btn-clear-yellow:hover, .btn-clear-yellow:focus, .btn-clear-yellow[aria-expanded=true], .btn-clear-yellow.active {
     background-color: #ffcc00; }
   .btn-clear-yellow {
     color: #ffcc00; }
   .btn-clear-yellow:hover, .btn-clear-yellow:focus, .btn-clear-yellow[aria-expanded=true], .btn-clear-yellow.active {
     color: #222222; }
+  .btn-clear-yellow:hover, .btn-clear-yellow:focus, .btn-clear-yellow[aria-expanded=true], .btn-clear-yellow.active {
+    border-color: #ffcc00; }
 
 .btn-clear-yellow-white {
   background-color: transparent; }
@@ -979,28 +994,83 @@ footer {
     background-color: rgba(0, 33, 25, 0.5); }
   .hero-banner.dim-yellow::before {
     background-color: rgba(255, 204, 0, 0.25); }
+  .hero-banner section {
+    color: #fff; }
+    .hero-banner section .btn, .hero-banner section h2, .hero-banner section h3, .hero-banner section h4, .hero-banner section p {
+      float: left;
+      clear: both; }
+    .hero-banner section h2, .hero-banner section h3, .hero-banner section h4, .hero-banner section p {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 0.125em;
+      line-height: 1.5em;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 16px 24px; }
+  .hero-banner.dim-black section h2, .hero-banner.dim-black section p, .hero-banner.dim-green section h2, .hero-banner.dim-green section p {
+    background-color: rgba(0, 0, 0, 0.6); }
   .hero-banner.hero-banner-large {
-    min-height: 42em; }
+    min-height: 38em; }
+  .hero-banner section {
+    left: 3em;
+    top: 2em;
+    bottom: auto;
+    position: absolute; }
+    .hero-banner section h2, .hero-banner section h3, .hero-banner section h4, .hero-banner section p {
+      width: 450px; }
+    .hero-banner section:after {
+      content: '';
+      display: block;
+      clear: both; }
+  .hero-banner section.bottom {
+    top: auto;
+    bottom: 2em; }
+  .hero-banner section.wide h2, .hero-banner section.wide h3, .hero-banner section.wide h4, .hero-banner section.wide p {
+    width: 800px; }
   @media (max-width: 1199px) {
     .hero-banner {
       min-height: 24em; }
       .hero-banner.hero-banner-large {
-        min-height: 36em; } }
+        min-height: 35em; } }
   @media (max-width: 991px) {
     .hero-banner {
       min-height: 22em; }
       .hero-banner.hero-banner-large {
-        min-height: 30em; } }
+        min-height: 32em; }
+      .hero-banner section.wide h2, .hero-banner section.wide h3, .hero-banner section.wide h4, .hero-banner section.wide p {
+        max-width: 600px; } }
   @media (max-width: 767px) {
     .hero-banner {
       min-height: 19em; }
       .hero-banner.hero-banner-large {
-        min-height: 26em; } }
+        min-height: 28em; }
+      .hero-banner section,
+      .hero-banner section.wide,
+      .hero-banner section.bottom {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        padding: 1em; }
+        .hero-banner section h2, .hero-banner section h3, .hero-banner section h4, .hero-banner section p,
+        .hero-banner section.wide h2,
+        .hero-banner section.wide h3,
+        .hero-banner section.wide h4,
+        .hero-banner section.wide p,
+        .hero-banner section.bottom h2,
+        .hero-banner section.bottom h3,
+        .hero-banner section.bottom h4,
+        .hero-banner section.bottom p {
+          width: auto;
+          max-width: 450px; } }
   @media (max-width: 574px) {
     .hero-banner {
       min-height: 16em; }
       .hero-banner.hero-banner-large {
         min-height: 24em; } }
+  .hero-banner section {
+    padding: 0.5em; }
 
 .hero-banner-fluid {
   padding-right: 0;
