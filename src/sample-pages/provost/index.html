@@ -1,7 +1,7 @@
 {{#> _layout-provost}}
     {{#> _hero-banner imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/QBB_HR.jpg" dim="black" vAlign="middle"}}
     {{/_hero-banner}}
-    <section class="container">
+    <div class="container">
         <h3 class="text-center">Welcome to Provost's Office</h3>
         {{#getJsonContext '{
             "title": "Welcome to Provost\'s Office",
@@ -33,7 +33,7 @@
         }'}}
         {{> _three-boxes this}}
         {{/getJsonContext}}
-    </section>
+    </div>
 
     {{> _sflgru }}
 {{/_layout-provost}}
