@@ -1213,10 +1213,10 @@ footer {
       line-height: 1.5em;
       margin-top: 0;
       margin-bottom: 0.5em;
-      background-color: rgba(0, 0, 0, 0.75);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 16px 24px; }
-  .hero-banner.dim-black section h2, .hero-banner.dim-black section p, .hero-banner.dim-green section h2, .hero-banner.dim-green section p {
-    background-color: rgba(0, 0, 0, 0.6); }
+  .hero-banner.dim-black section h2, .hero-banner.dim-black section h3, .hero-banner.dim-black section h4, .hero-banner.dim-black section p, .hero-banner.dim-green section h2, .hero-banner.dim-green section h3, .hero-banner.dim-green section h4, .hero-banner.dim-green section p {
+    background-color: rgba(0, 0, 0, 0.55); }
   .hero-banner.hero-banner-large {
     min-height: 38em; }
   .hero-banner section {
