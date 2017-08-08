@@ -1,3 +1,7 @@
-<section class="hero-banner{{#if dim}} dim-{{dim}}{{/if}}{{#if vAlign}} hero-banner-{{vAlign}}{{/if}}{{#if size}} hero-banner-{{size}}{{/if}}" style="background-image:url({{imgSrc}})">
-    {{> @partial-block}}
-</section>
+<div class="hero-banner{{#if dim}} dim-{{dim}}{{/if}}{{#if vAlign}} hero-banner-{{vAlign}}{{/if}}{{#if size}} hero-banner-{{size}}{{/if}}" style="background-image:url({{imgSrc}})">
+    {{#if @partial-block}}
+    <section class="{{#if contentPos}}{{contentPos}}{{/if}}{{#if contentSize}} {{contentSize}}{{/if}}">
+        {{> @partial-block}}
+    </section>
+    {{/if}}
+</div>
