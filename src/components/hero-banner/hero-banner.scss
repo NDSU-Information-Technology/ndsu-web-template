@@ -44,7 +44,7 @@ $jumbotron-padding: 0em;
       line-height: 1.5em;
       margin-top: 0;
       margin-bottom: 0.5em;
-      background-color: rgba($color-black, 0.75);
+      background-color: rgba($color-black, 0.7);
       padding: 16px 24px;
     }
   }
@@ -52,8 +52,8 @@ $jumbotron-padding: 0em;
   &.dim-black,
   &.dim-green {
     section {
-      h2, p {
-        background-color: rgba($color-black, 0.6);
+      h2, h3, h4, p  {
+        background-color: rgba($color-black, 0.55);
       }
     }
   }
