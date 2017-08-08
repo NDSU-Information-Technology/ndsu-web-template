@@ -1166,7 +1166,7 @@ footer {
 .hero-banner {
   padding: 2em;
   margin-bottom: 0em;
-  background-color: #ffcc00;
+  background-color: #002119;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -1223,7 +1223,8 @@ footer {
     left: 3em;
     top: 2em;
     bottom: auto;
-    position: absolute; }
+    position: absolute;
+    z-index: 100; }
     .hero-banner section h2, .hero-banner section h3, .hero-banner section h4, .hero-banner section p {
       width: 450px; }
     .hero-banner section:after {
@@ -1235,6 +1236,35 @@ footer {
     bottom: 2em; }
   .hero-banner section.wide h2, .hero-banner section.wide h3, .hero-banner section.wide h4, .hero-banner section.wide p {
     width: 800px; }
+  .hero-banner .yt-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden; }
+    .hero-banner .yt-player:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 10; }
+    .hero-banner .yt-player iframe {
+      width: 177.78vh !important;
+      height: 100% !important;
+      min-width: 100%;
+      min-height: 69.94vw;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      opacity: 0;
+      -webkit-transition: opacity 1s ease-out;
+      transition: opacity 1s ease-out; }
   @media (max-width: 1199px) {
     .hero-banner {
       min-height: 24em; }
