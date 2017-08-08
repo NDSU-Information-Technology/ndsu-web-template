@@ -979,18 +979,28 @@ footer {
     background-color: rgba(0, 33, 25, 0.5); }
   .hero-banner.dim-yellow::before {
     background-color: rgba(255, 204, 0, 0.25); }
+  .hero-banner.hero-banner-large {
+    min-height: 42em; }
   @media (max-width: 1199px) {
     .hero-banner {
-      min-height: 24em; } }
+      min-height: 24em; }
+      .hero-banner.hero-banner-large {
+        min-height: 36em; } }
   @media (max-width: 991px) {
     .hero-banner {
-      min-height: 22em; } }
+      min-height: 22em; }
+      .hero-banner.hero-banner-large {
+        min-height: 30em; } }
   @media (max-width: 767px) {
     .hero-banner {
-      min-height: 19em; } }
+      min-height: 19em; }
+      .hero-banner.hero-banner-large {
+        min-height: 26em; } }
   @media (max-width: 574px) {
     .hero-banner {
-      min-height: 16em; } }
+      min-height: 16em; }
+      .hero-banner.hero-banner-large {
+        min-height: 24em; } }
 
 .hero-banner-fluid {
   padding-right: 0;

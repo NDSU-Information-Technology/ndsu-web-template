@@ -35,18 +35,38 @@ $jumbotron-padding: 0em;
 
   @include media-xl() {
     min-height: 28em;
+
+    &.hero-banner-large {
+      min-height: 42em;
+    }
   }
   @include media-lg() {
     min-height: 24em;
+
+    &.hero-banner-large {
+      min-height: 36em;
+    }
   }
   @include media-md() {
     min-height: 22em;
+    
+    &.hero-banner-large {
+      min-height: 30em;
+    }
   }
   @include media-sm() {
     min-height: 19em;
+    
+    &.hero-banner-large {
+      min-height: 26em;
+    }
   }
   @include media-xs() {
     min-height: 16em;
+    
+    &.hero-banner-large {
+      min-height: 24em;
+    }
   }
 }
 

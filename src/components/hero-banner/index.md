@@ -26,3 +26,10 @@ Available filters:
 {{#> _hero-banner dim="yellow" imgSrc="https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg"}}
 {{/_hero-banner}}
 ```
+
+## Size
+
+```html
+{{#> _hero-banner size="large" imgSrc="https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg"}}
+{{/_hero-banner}}
+```
