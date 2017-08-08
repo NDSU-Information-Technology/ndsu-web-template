@@ -1,9 +1,12 @@
 $jumbotron-padding: 0em;
+$z-index-hero-banner-content: 100;
+$z-index-hero-banner-video-cover: 10;
+$z-index-hero-banner-video: 1;
 
 .hero-banner {
   @include content-padding();
   margin-bottom: $jumbotron-padding;
-  background-color: $color-yellow;
+  background-color: $color-green;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -70,6 +73,7 @@ $jumbotron-padding: 0em;
       top: 2em;
       bottom: auto;
       position: absolute;
+      z-index: $z-index-hero-banner-content;
       h2, h3, h4, p {
         width: 450px;
       }
@@ -88,6 +92,37 @@ $jumbotron-padding: 0em;
         width: 800px;
       }
     }
+
+    .yt-player {
+      position: absolute;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right:0;
+      overflow: hidden;
+
+      &:after{
+        content: "";
+        position: absolute;
+        top: 0; left:0; bottom: 0; right: 0;
+        z-index: $z-index-hero-banner-video-cover;
+      }
+
+      iframe {
+        width: 177.78vh !important;
+        height: 100% !important;
+        min-width: 100%;
+        min-height: 69.94vw;
+        z-index: $z-index-hero-banner-video;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, - 50%);
+        opacity: 0;
+        transition: opacity 1s ease-out;
+      }
+    }
+
   }
   @include media-lg() {
     min-height: 24em;
