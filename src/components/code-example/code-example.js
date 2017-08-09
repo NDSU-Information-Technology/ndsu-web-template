@@ -1,16 +1,16 @@
 
 if (typeof enableCodeExample !== 'undefined' && enableCodeExample) {
     Array.prototype.forEach.call(document.querySelectorAll('.code-example, .language-html'), (element) => {
-        var elementId = element.getAttribute('id');
+        let elementId = element.getAttribute('id');
         if (!elementId) {
             elementId = 'codeExample_' + Math.random().toString(36).substr(2, 10);
             element.setAttribute('id', elementId);
         }
 
-        var sourceCodeElement = element.querySelector('.code-source, pre.highlight');
+        let sourceCodeElement = element.querySelector('.code-source, pre.highlight');
         if (!sourceCodeElement) return;
 
-        var sourceCode;
+        let sourceCode;
         if (sourceCodeElement.nodeName === 'TEXTAREA'){
             sourceCode = sourceCodeElement.value;
         }
@@ -19,21 +19,21 @@ if (typeof enableCodeExample !== 'undefined' && enableCodeExample) {
         }
 
         if (!sourceCode) return;
-        var sourceCodeElementId = sourceCodeElement.getAttribute('id');
+        let sourceCodeElementId = sourceCodeElement.getAttribute('id');
         if (!sourceCodeElementId) {
             sourceCodeElementId = elementId + '_sourceCode';
             sourceCodeElement.setAttribute('id', sourceCodeElementId);
         }
         sourceCodeElement.style.height = sourceCodeElement.scrollHeight + 'px';
-        var sourceCodeLabel = document.createElement('h5');
+        let sourceCodeLabel = document.createElement('h5');
         sourceCodeLabel.innerText = 'Source Code';
 
-        var resultElement = document.createElement('div');
-        var resultElementId = elementId + '_result';
+        let resultElement = document.createElement('div');
+        let resultElementId = elementId + '_result';
         resultElement.setAttribute('id', resultElementId);
         resultElement.className = 'code-result';
         resultElement.innerHTML = sourceCode;
-        var resultLabel = document.createElement('h5');
+        let resultLabel = document.createElement('h5');
         resultLabel.innerText = 'Result';
         
         element.insertBefore(sourceCodeLabel, sourceCodeElement);
