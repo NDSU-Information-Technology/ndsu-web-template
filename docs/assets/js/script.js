@@ -630,7 +630,7 @@ function onYtPlayerStateChange(e) {
 function onYouTubeIframeAPIReady() {
     NDSU.ytPlayers = Array.prototype.map.call(heroBannerElements, function (heroBanner) {
         var videoId = heroBanner.getAttribute('data-video-id');
-        var videoPosterUrl = heroBanner.getAttribute('data-video-poster');
+        // let videoPosterUrl = heroBanner.getAttribute('data-video-poster');
 
         var playerContainer = document.createElement('div');
         playerContainer.className = 'yt-player';

@@ -37,40 +37,53 @@ Available filters:
 ## Content
 
 ```html
-    {{#> _hero-banner size="large" vAlign="middle" 
-    imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg" }}
-        <h2>Welcome to the Provost's Office</h2>
-        <p>
-            The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
-        </p>
-        {{#> _button url="#" color="green" size="normal"}}Read More{{/_button}}
-    {{/_hero-banner}}
+{{#> _hero-banner size="large" vAlign="middle" 
+imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg" }}
+    <h2>Welcome to the Provost's Office</h2>
+    <p>
+        The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+    </p>
+    {{#> _button url="#" color="green" size="normal"}}Read More{{/_button}}
+{{/_hero-banner}}
 ```
 
 ### Location
 
 ```html
-    {{#> _hero-banner size="large" vAlign="middle" contentPos="bottom"
-    imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg" }}
-        <h2>Welcome to the Provost's Office</h2>
-        <p>
-            The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
-        </p>
-        {{#> _button url="#" color="green" size="normal"}}Read More{{/_button}}
-    {{/_hero-banner}}
+{{#> _hero-banner size="large" vAlign="middle" contentPos="bottom"
+imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg" }}
+    <h2>Welcome to the Provost's Office</h2>
+    <p>
+        The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+    </p>
+    {{#> _button url="#" color="green" size="normal"}}Read More{{/_button}}
+{{/_hero-banner}}
 ```
 
 ### Size
 
+```html
+{{#> _hero-banner size="large" vAlign="middle" contentPos="bottom" contentSize="wide"
+imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg" }}
+    <h2>Welcome to the Provost's Office</h2>
+    <p>
+        The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+    </p>
+    {{#> _button url="#" color="green" size="normal"}}Read More{{/_button}}
+{{/_hero-banner}}
+```
 
+## Youtube Video Background
 
 ```html
-    {{#> _hero-banner size="large" vAlign="middle" contentPos="bottom" contentSize="wide"
-    imgSrc="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg" }}
-        <h2>Welcome to the Provost's Office</h2>
-        <p>
-            The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
-        </p>
-        {{#> _button url="#" color="green" size="normal"}}Read More{{/_button}}
-    {{/_hero-banner}}
+{{#> _hero-banner size="large" vAlign="middle" 
+imgSrc="/ndsu-web-template/images/ndsu-poster.png" 
+videoId="FbFT2UyqX5M"
+}}
+    <h2>Welcome to the Provost's Office</h2>
+    <p>
+        The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+    </p>
+    {{#> _button url="#" color="green" size="normal"}}Read More{{/_button}}
+{{/_hero-banner}}
 ```
