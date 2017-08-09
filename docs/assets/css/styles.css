@@ -998,7 +998,7 @@ footer {
   .full-overlay .gallery-full-size a.close-button::before {
     content: "\2716"; }
   .full-overlay .gallery-full-size a.close-button {
-    font-size: 3em; }
+    font-size: 1.5em; }
   @media (max-width: 767px) {
     .full-overlay .gallery-full-size {
       top: 1em;
@@ -1006,7 +1006,7 @@ footer {
       bottom: 1em;
       left: 1em; }
       .full-overlay .gallery-full-size a.close-button {
-        font-size: 1.5em; } }
+        top: 4.5em; } }
 
 .generic-content {
   padding: 2em;

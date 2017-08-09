@@ -1,5 +1,11 @@
 'use strict';
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 window.NDSU = {};
@@ -462,115 +468,131 @@ var myCarousel = function myCarousel() {
     };
 };
 
-function GalleryBaseObj(baseElement) {
+var GalleryBaseObj = function GalleryBaseObj(baseElement) {
+    _classCallCheck(this, GalleryBaseObj);
+
     this.element = baseElement;
 };
 
-function Gallery(galleryElement) {
-    GalleryBaseObj.call(this, galleryElement);
+;
 
-    this.pictureLinks = this._getPictureLinks(this);
-};
-Gallery.prototype = Object.create(GalleryBaseObj.prototype);
-Gallery.prototype.constructor = Gallery;
+var Gallery = function (_GalleryBaseObj) {
+    _inherits(Gallery, _GalleryBaseObj);
 
-Gallery.prototype._getPictureLinks = function (inst) {
-    return Array.from(inst.element.querySelectorAll('.picture-container')).map(function (link) {
-        return new GalleryPictureLink(link);
-    });
-};
+    function Gallery(galleryElement) {
+        _classCallCheck(this, Gallery);
 
-function GalleryPictureLink(pictureLinkElement) {
-    var _this2 = this;
+        var _this2 = _possibleConstructorReturn(this, (Gallery.__proto__ || Object.getPrototypeOf(Gallery)).call(this, galleryElement));
 
-    GalleryBaseObj.call(this, pictureLinkElement);
-
-    this.openPopup = function () {
-        return _this2._openPopup(_this2);
-    };
-    this.closePopup = function () {
-        return _this2._closePopup(_this2);
-    };
-
-    this.imageElement = this._getImageElement(this);
-    this.imageSrc = this.imageElement.getAttribute('src');
-    this.imageDesc = this.imageElement.getAttribute('alt');
-
-    this.element.setAttribute('aria-haspopup', true);
-    this._setEvents(this);
-};
-
-GalleryPictureLink.prototype = Object.create(GalleryBaseObj.prototype);
-GalleryPictureLink.prototype.constructor = GalleryPictureLink;
-
-GalleryPictureLink.prototype._getImageElement = function (inst) {
-    return inst.element.querySelector('img');
-};
-GalleryPictureLink.prototype._openPopup = function (inst) {
-    NDSU.showOverlay();
-    var el = NDSU.fullOverlayElement;
-    var containerEl = el.querySelector('.gallery-full-size');
-    var imgEl = el.querySelector('.gallery-full-size img');
-    var closeEl = el.querySelector('.gallery-full-size .close-button');
-    if (!containerEl) {
-        var containerEl = document.createElement('div');
-        containerEl.className = 'gallery-full-size';
-        containerEl.setAttribute('role', 'dialog');
-        imgEl = document.createElement('img');
-
-        var closeEl = document.createElement('a');
-        closeEl.setAttribute('href', '#');
-        closeEl.className = 'close-button';
-        var closeTextEl = document.createElement('span');
-        closeTextEl.className = 'sr-only';
-        closeTextEl.innerText = 'Close full size image';
-        closeEl.appendChild(closeTextEl);
-        closeEl.addEventListener('click', function (event) {
-            event.preventDefault();
-            inst.closePopup();
+        _this2.pictureLinks = Array.from(_this2.element.querySelectorAll('.gallery-item')).map(function (link) {
+            return new GalleryPictureLink(link);
         });
-
-        containerEl.appendChild(closeEl);
-        containerEl.appendChild(imgEl);
-        el.appendChild(containerEl);
-    };
-
-    imgEl.setAttribute('src', inst.imageSrc);
-    imgEl.setAttribute('alt', inst.imageDesc);
-
-    var elId = inst.element.getAttribute('id');
-    if (!elId) {
-        elId = 'parentLink_' + Math.random().toString(36).substr(2, 10);
-        inst.element.setAttribute('id', elId);
+        return _this2;
     }
 
-    containerEl.classList.add('active');
-    closeEl.setAttribute('data-parent-control', elId);
-    closeEl.focus();
-};
-GalleryPictureLink.prototype._closePopup = function (inst) {
-    NDSU.hideOverlay();
-    var el = NDSU.fullOverlayElement;
-    var containerEl = el.querySelector('.gallery-full-size');
-    var closeEl = el.querySelector('.gallery-full-size .close-button');
-    if (containerEl) {
-        containerEl.classList.remove('active');
-    }
-    if (closeEl) {
-        var parentId = closeEl.getAttribute('data-parent-control');
-        var parentEl = document.getElementById(parentId);
-        if (parentEl) parentEl.focus();
-    }
-};
-GalleryPictureLink.prototype._setEvents = function (inst) {
-    inst.element.addEventListener('click', function (event) {
-        event.preventDefault();
-        inst.openPopup();
-    });
-    NDSU.fullOverlayElement.addEventListener('click', inst.closePopup);
-};
+    return Gallery;
+}(GalleryBaseObj);
 
-NDSU.galleries = Array.from(document.querySelectorAll('.gallery.photo')).map(function (galleryElement) {
+;
+
+var GalleryPictureLink = function (_GalleryBaseObj2) {
+    _inherits(GalleryPictureLink, _GalleryBaseObj2);
+
+    _createClass(GalleryPictureLink, [{
+        key: 'openPopup',
+        value: function openPopup() {
+            var _this4 = this;
+
+            NDSU.showOverlay();
+            var el = NDSU.fullOverlayElement;
+            var containerEl = el.querySelector('.gallery-full-size');
+            var imgEl = el.querySelector('.gallery-full-size img');
+            var closeEl = el.querySelector('.gallery-full-size .close-button');
+            if (!containerEl) {
+                containerEl = document.createElement('div');
+                containerEl.className = 'gallery-full-size';
+                containerEl.setAttribute('role', 'dialog');
+                imgEl = document.createElement('img');
+
+                closeEl = document.createElement('a');
+                closeEl.setAttribute('href', '#');
+                closeEl.className = 'close-button';
+                var closeTextEl = document.createElement('span');
+                closeTextEl.className = 'sr-only';
+                closeTextEl.innerText = 'Close full size image';
+                closeEl.appendChild(closeTextEl);
+                closeEl.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    _this4.closePopup();
+                });
+
+                containerEl.appendChild(closeEl);
+                containerEl.appendChild(imgEl);
+                el.appendChild(containerEl);
+            };
+
+            imgEl.setAttribute('src', this.imageSrc);
+            imgEl.setAttribute('alt', this.imageDesc);
+
+            var elId = this.element.getAttribute('id');
+
+            if (!elId) {
+                elId = 'parentLink_' + Math.random().toString(36).substr(2, 10);
+                this.element.setAttribute('id', elId);
+            }
+
+            containerEl.classList.add('active');
+            closeEl.setAttribute('data-parent-control', elId);
+            closeEl.focus();
+        }
+    }, {
+        key: 'closePopup',
+        value: function closePopup() {
+            NDSU.hideOverlay();
+            var el = NDSU.fullOverlayElement;
+            var containerEl = el.querySelector('.gallery-full-size');
+            var closeEl = el.querySelector('.gallery-full-size .close-button');
+            if (containerEl) {
+                containerEl.classList.remove('active');
+            }
+            if (closeEl) {
+                var parentId = closeEl.getAttribute('data-parent-control');
+                var parentEl = document.getElementById(parentId);
+                if (parentEl) parentEl.focus();
+            }
+        }
+    }], [{
+        key: 'setEvents',
+        value: function setEvents(inst) {
+            inst.element.addEventListener('click', function (event) {
+                event.preventDefault();
+                inst.openPopup();
+            });
+            NDSU.fullOverlayElement.addEventListener('click', inst.closePopup);
+        }
+    }]);
+
+    function GalleryPictureLink(pictureLinkElement) {
+        _classCallCheck(this, GalleryPictureLink);
+
+        var _this3 = _possibleConstructorReturn(this, (GalleryPictureLink.__proto__ || Object.getPrototypeOf(GalleryPictureLink)).call(this, pictureLinkElement));
+
+        _this3.imageElement = _this3.element.querySelector('img');
+
+        _this3.imageSrc = _this3.imageElement.getAttribute('src');
+        _this3.imageDesc = _this3.imageElement.getAttribute('alt');
+
+        _this3.element.setAttribute('aria-haspopup', true);
+        GalleryPictureLink.setEvents(_this3);
+        return _this3;
+    }
+
+    return GalleryPictureLink;
+}(GalleryBaseObj);
+
+;
+
+NDSU.galleries = Array.from(document.querySelectorAll('.gallery')).map(function (galleryElement) {
     return new Gallery(galleryElement);
 });
 
@@ -674,12 +696,12 @@ function onYouTubeIframeAPIReady() {
     });
 };
 function NavBaseObj(baseElement) {
-    var _this3 = this;
+    var _this5 = this;
 
     this.element = baseElement;
 
     this.setRole = function (value) {
-        return _this3._setRole(_this3, value);
+        return _this5._setRole(_this5, value);
     };
 };
 NavBaseObj.prototype._setRole = function (inst, value) {
@@ -687,21 +709,21 @@ NavBaseObj.prototype._setRole = function (inst, value) {
 };
 
 function Navbar(navbarElement, parentNavItem) {
-    var _this4 = this;
+    var _this6 = this;
 
     NavBaseObj.call(this, navbarElement);
 
     this.getNavItems = function () {
-        return _this4._getNavItems(_this4);
+        return _this6._getNavItems(_this6);
     };
     this.getPreviousNavItem = function (currentNavItem) {
-        return _this4._getNextNavItem(_this4, currentNavItem, -1);
+        return _this6._getNextNavItem(_this6, currentNavItem, -1);
     };
     this.getNextNavItem = function (currentNavItem) {
-        return _this4._getNextNavItem(_this4, currentNavItem, 1);
+        return _this6._getNextNavItem(_this6, currentNavItem, 1);
     };
     this.setOffset = function () {
-        return _this4._setOffset(_this4);
+        return _this6._setOffset(_this6);
     };
 
     var isVerticalNavbar = navbarElement.classList.contains('navbar-vertical');
@@ -780,7 +802,7 @@ Navbar.prototype._getNextNavItem = function (inst, currentNavItem, increment) {
 };
 
 function MobileNavbar(navbarElement, parentNavItem, navbarContainerElement, navbarToggleElement) {
-    var _this5 = this;
+    var _this7 = this;
 
     Navbar.call(this, navbarElement, parentNavItem);
 
@@ -788,18 +810,18 @@ function MobileNavbar(navbarElement, parentNavItem, navbarContainerElement, navb
     this.toggleElement = navbarToggleElement;
 
     this.openMenu = function () {
-        return _this5._openMobileMenu(_this5);
+        return _this7._openMobileMenu(_this7);
     };
     this.closeMenu = function () {
-        return _this5._closeMobileMenu(_this5);
+        return _this7._closeMobileMenu(_this7);
     };
     this.clickEvent = function (e) {
         e.preventDefault();
 
-        if (_this5.element.offsetHeight === 0) {
-            _this5.openMenu();
+        if (_this7.element.offsetHeight === 0) {
+            _this7.openMenu();
         } else {
-            _this5.closeMenu();
+            _this7.closeMenu();
         }
         e.stopPropagation();
     };
@@ -857,31 +879,31 @@ MobileNavbar.prototype._closeMobileMenu = function (inst) {
 };
 
 function NavItem(navItemElement, parentNavbar) {
-    var _this6 = this;
+    var _this8 = this;
 
     NavBaseObj.call(this, navItemElement);
 
     this.focus = function () {
-        return _this6._focus(_this6);
+        return _this8._focus(_this8);
     };
     this.getChildNavbar = function () {
-        return _this6._getChildNavbar(_this6);
+        return _this8._getChildNavbar(_this8);
     };
     this.getLinkElement = function () {
-        return _this6._getLinkElement(_this6);
+        return _this8._getLinkElement(_this8);
     };
 
     this.open = function () {
-        return _this6._open(_this6);
+        return _this8._open(_this8);
     };
     this.openChild = function () {
-        return _this6._open(_this6.childNavbar);
+        return _this8._open(_this8.childNavbar);
     };
     this.close = function () {
-        return _this6._close(_this6);
+        return _this8._close(_this8);
     };
     this.closeChild = function () {
-        return _this6._close(_this6.childNavbar);
+        return _this8._close(_this8.childNavbar);
     };
 
     this.linkElement = this.getLinkElement();
@@ -892,20 +914,20 @@ function NavItem(navItemElement, parentNavbar) {
 
     this.leftNeighbor = function () {
         var neighbor;
-        if (!_this6.parentNavbar.isVerticalNavbar) {
-            neighbor = _this6._previousNavItem(_this6);
-        } else if (_this6._parentNavItem(_this6)) {
-            var parentItem = _this6._parentNavItem(_this6);
+        if (!_this8.parentNavbar.isVerticalNavbar) {
+            neighbor = _this8._previousNavItem(_this8);
+        } else if (_this8._parentNavItem(_this8)) {
+            var parentItem = _this8._parentNavItem(_this8);
             neighbor = parentItem.parentNavbar.getPreviousNavItem(parentItem) || parentItem;
         }
         return neighbor;
     };
     this.rightNeighbor = function () {
         var neighbor;
-        if (!_this6.parentNavbar.isVerticalNavbar) {
-            neighbor = _this6._nextNavItem(_this6);
-        } else if (_this6._parentNavItem(_this6)) {
-            var parentItem = _this6._parentNavItem(_this6);
+        if (!_this8.parentNavbar.isVerticalNavbar) {
+            neighbor = _this8._nextNavItem(_this8);
+        } else if (_this8._parentNavItem(_this8)) {
+            var parentItem = _this8._parentNavItem(_this8);
             neighbor = parentItem.parentNavbar.getNextNavItem(parentItem) || parentItem;
         }
 
@@ -913,44 +935,44 @@ function NavItem(navItemElement, parentNavbar) {
     };
     this.downNeighbor = function () {
         var neighbor;
-        if (_this6.parentNavbar.isVerticalNavbar) {
-            if (_this6.parentNavbar.isDropUp) {
-                neighbor = _this6._nextNavItem(_this6) || _this6._parentNavItem;
+        if (_this8.parentNavbar.isVerticalNavbar) {
+            if (_this8.parentNavbar.isDropUp) {
+                neighbor = _this8._nextNavItem(_this8) || _this8._parentNavItem;
             } else {
-                neighbor = _this6._nextNavItem(_this6);
+                neighbor = _this8._nextNavItem(_this8);
             }
         } else {
-            neighbor = _this6._firstChildNavItem(_this6);
+            neighbor = _this8._firstChildNavItem(_this8);
         }
         return neighbor;
     };
     this.upNeighbor = function () {
         var neighbor;
-        if (_this6.parentNavbar.isVerticalNavbar) {
-            if (_this6.parentNavbar.isDropUp) {
-                neighbor = _this6._previousNavItem(_this6);
+        if (_this8.parentNavbar.isVerticalNavbar) {
+            if (_this8.parentNavbar.isDropUp) {
+                neighbor = _this8._previousNavItem(_this8);
             } else {
-                neighbor = _this6._previousNavItem(_this6) || _this6._parentNavItem;
+                neighbor = _this8._previousNavItem(_this8) || _this8._parentNavItem;
             }
-        } else if (_this6.parentNavbar.isExtendedChildNavbar && !_this6.parentNavbar.isDropUp) {
-            neighbor = _this6._parentNavItem(_this6);
+        } else if (_this8.parentNavbar.isExtendedChildNavbar && !_this8.parentNavbar.isDropUp) {
+            neighbor = _this8._parentNavItem(_this8);
         }
         return neighbor;
     };
 
     this.focusInListener = function (e) {
-        if (_this6.parentNavbar.options.autoCollapse) {
-            _this6._focusInEvent(e, _this6);
+        if (_this8.parentNavbar.options.autoCollapse) {
+            _this8._focusInEvent(e, _this8);
         }
     };
     this.mouseInListener = function (e) {
-        return _this6._focusInEvent(e, _this6);
+        return _this8._focusInEvent(e, _this8);
     };
     this.focusOutListener = function (e) {
-        return _this6._focusOutEvent(e, _this6);
+        return _this8._focusOutEvent(e, _this8);
     };
     this.keysListener = function (e) {
-        _this6._arrowKeysHandler(e, _this6);
+        _this8._arrowKeysHandler(e, _this8);
     };
 
     this._setEventListeners(this);
@@ -1164,7 +1186,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('full-size-picture'
 });
 
 var StickyBar = function StickyBar(baseElement) {
-    var _this7 = this;
+    var _this9 = this;
 
     _classCallCheck(this, StickyBar);
 
@@ -1174,10 +1196,10 @@ var StickyBar = function StickyBar(baseElement) {
     window.addEventListener('scroll', function (event) {
         var currentY = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
 
-        if (currentY > _this7.offsetTop) {
-            _this7.element.classList.add('sticky-bar-on');
+        if (currentY > _this9.offsetTop) {
+            _this9.element.classList.add('sticky-bar-on');
         } else {
-            _this7.element.classList.remove('sticky-bar-on');
+            _this9.element.classList.remove('sticky-bar-on');
         }
     });
 };

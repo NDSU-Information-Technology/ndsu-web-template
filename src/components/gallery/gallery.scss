@@ -114,13 +114,13 @@
     @include media-xl {
         top: 5em; right: 5em; bottom: 5em; left: 5em;
         a.close-button {
-            font-size: 3em;
+            font-size: 1.5em;
         }
     }
     @include media-sm {
         top: 1em; right: 1em; bottom: 1em; left: 1em;
         a.close-button {
-            font-size: 1.5em;
+            top: 4.5em;
         }
     }
 }
