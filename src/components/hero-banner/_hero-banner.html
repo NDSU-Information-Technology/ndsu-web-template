@@ -1,6 +1,6 @@
 <div class="hero-banner{{#if dim}} dim-{{dim}}{{/if}}{{#if vAlign}} hero-banner-{{vAlign}}{{/if}}{{#if size}} hero-banner-{{size}}{{/if}}" 
     style="background-image:url({{imgSrc}})"
-    {{#if videoId}}data-video-id="{{videoId}}" data-video-poster="{{#ifnull videoPoster imgSrc}}{{/ifnull}}{{/if}}">
+    {{#if videoId}}data-video-id="{{videoId}}"{{/if}}>
     {{#if @partial-block}}
     <section class="{{#if contentPos}}{{contentPos}}{{/if}}{{#if contentSize}} {{contentSize}}{{/if}}">
         {{> @partial-block}}

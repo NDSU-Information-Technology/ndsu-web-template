@@ -8,7 +8,7 @@ title: Hero Banner Component
 ```html
 <div class="hero-banner" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg)"
-    ">
+    >
 </div>
 ```
 
@@ -23,15 +23,15 @@ Available filters:
 ```html
 <div class="hero-banner dim-black" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg)"
-    ">
+    >
 </div>
 <div class="hero-banner dim-green" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg)"
-    ">
+    >
 </div>
 <div class="hero-banner dim-yellow" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg)"
-    ">
+    >
 </div>
 ```
 
@@ -40,7 +40,7 @@ Available filters:
 ```html
 <div class="hero-banner hero-banner-large" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/admission/Photos/graphics/about1.jpg)"
-    ">
+    >
 </div>
 ```
 
@@ -49,13 +49,13 @@ Available filters:
 ```html
 <div class="hero-banner hero-banner-middle hero-banner-large" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg)"
-    ">
+    >
     <section class="">
-                <h2>Welcome to the Provost's Office</h2>
-                <p>
-                    The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
-                </p>
-                <a href="#" class="btn btn-green btn-normal">
+            <h2>Welcome to the Provost's Office</h2>
+            <p>
+                The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+            </p>
+            <a href="#" class="btn btn-green btn-normal">
             Read More
         </a>
     </section>
@@ -67,13 +67,13 @@ Available filters:
 ```html
 <div class="hero-banner hero-banner-middle hero-banner-large" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg)"
-    ">
+    >
     <section class="bottom">
-                <h2>Welcome to the Provost's Office</h2>
-                <p>
-                    The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
-                </p>
-                <a href="#" class="btn btn-green btn-normal">
+            <h2>Welcome to the Provost's Office</h2>
+            <p>
+                The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+            </p>
+            <a href="#" class="btn btn-green btn-normal">
             Read More
         </a>
     </section>
@@ -82,18 +82,34 @@ Available filters:
 
 ### Size
 
-
-
 ```html
 <div class="hero-banner hero-banner-middle hero-banner-large" 
     style="background-image:url(https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg)"
-    ">
+    >
     <section class="bottom wide">
-                <h2>Welcome to the Provost's Office</h2>
-                <p>
-                    The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
-                </p>
-                <a href="#" class="btn btn-green btn-normal">
+            <h2>Welcome to the Provost's Office</h2>
+            <p>
+                The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+            </p>
+            <a href="#" class="btn btn-green btn-normal">
+            Read More
+        </a>
+    </section>
+</div>
+```
+
+## Youtube Video Background
+
+```html
+<div class="hero-banner hero-banner-middle hero-banner-large" 
+    style="background-image:url(/ndsu-web-template/images/ndsu-poster.png)"
+    data-video-id="FbFT2UyqX5M">
+    <section class="">
+            <h2>Welcome to the Provost's Office</h2>
+            <p>
+                The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+            </p>
+            <a href="#" class="btn btn-green btn-normal">
             Read More
         </a>
     </section>
