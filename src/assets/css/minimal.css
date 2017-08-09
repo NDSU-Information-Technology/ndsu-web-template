@@ -959,7 +959,7 @@ footer {
 .hero-banner {
   padding: 2em;
   margin-bottom: 0em;
-  background-color: #002119;
+  background-color: #121212;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -1035,7 +1035,8 @@ footer {
     left: 0;
     bottom: 0;
     right: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #121212; }
     .hero-banner .yt-player:after {
       content: "";
       position: absolute;

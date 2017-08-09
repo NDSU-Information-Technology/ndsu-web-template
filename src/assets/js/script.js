@@ -620,7 +620,6 @@ function onYtPlayerStateChange(e) {
     if (e.data === YT.PlayerState.PLAYING) {
         var iframeElement = e.target.getIframe();
         iframeElement.style.opacity = "1";
-        iframeElement.style.zIndex = "15";
     } else if (e.data === YT.PlayerState.ENDED) {
         var ytPlayer = e.target;
         ytPlayer.seekTo(ytPlayer.getDuration() - 0.08);
@@ -636,16 +635,16 @@ function onYouTubeIframeAPIReady() {
         var playerContainer = document.createElement('div');
         playerContainer.className = 'yt-player';
 
-        var posterElement = document.createElement('div');
-        posterElement.className = 'poster';
-        posterElement.style.backgroundImage = 'url(' + videoPosterUrl + ')';
+        // let posterElement = document.createElement('div');
+        // posterElement.className = 'poster';
+        // posterElement.style.backgroundImage = 'url(' + videoPosterUrl + ')';
 
         var playerElement = document.createElement('div');
         var playerElementId = 'ytPlayer_' + Math.random().toString(36).substr(2, 10);
         playerElement.id = playerElementId;
 
         heroBanner.appendChild(playerContainer);
-        playerContainer.appendChild(posterElement);
+        // playerContainer.appendChild(posterElement);
         playerContainer.appendChild(playerElement);
 
         return new YT.Player(playerElementId, {

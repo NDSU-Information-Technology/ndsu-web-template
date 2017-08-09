@@ -7,7 +7,7 @@ $z-index-hero-banner-video: 1;
 .hero-banner {
   @include content-padding();
   margin-bottom: $jumbotron-padding;
-  background-color: $color-green;
+  background-color: $color-gray7;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -101,6 +101,7 @@ $z-index-hero-banner-video: 1;
       bottom: 0;
       right:0;
       overflow: hidden;
+      background-color: $color-gray7;
 
       &:after{
         content: "";
