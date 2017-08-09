@@ -1003,6 +1003,7 @@ footer {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       border-radius: 0.125em;
+      border-width: 0;
       line-height: 1.5em;
       margin-top: 0;
       margin-bottom: 0.5em;

@@ -43,3 +43,59 @@ Available filters:
     ">
 </div>
 ```
+
+## Content
+
+```html
+<div class="hero-banner hero-banner-middle hero-banner-large" 
+    style="background-image:url(https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg)"
+    ">
+    <section class="">
+                <h2>Welcome to the Provost's Office</h2>
+                <p>
+                    The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+                </p>
+                <a href="#" class="btn btn-green btn-normal">
+            Read More
+        </a>
+    </section>
+</div>
+```
+
+### Location
+
+```html
+<div class="hero-banner hero-banner-middle hero-banner-large" 
+    style="background-image:url(https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg)"
+    ">
+    <section class="bottom">
+                <h2>Welcome to the Provost's Office</h2>
+                <p>
+                    The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+                </p>
+                <a href="#" class="btn btn-green btn-normal">
+            Read More
+        </a>
+    </section>
+</div>
+```
+
+### Size
+
+
+
+```html
+<div class="hero-banner hero-banner-middle hero-banner-large" 
+    style="background-image:url(https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/OldMain2_HR.jpg)"
+    ">
+    <section class="bottom wide">
+                <h2>Welcome to the Provost's Office</h2>
+                <p>
+                    The Provost's Office oversees the eight academic colleges, graduate school, library, institutional programs, institutional research and analysis, accreditation and assessment, and the Upper Great Plains Transportation Institute.
+                </p>
+                <a href="#" class="btn btn-green btn-normal">
+            Read More
+        </a>
+    </section>
+</div>
+```
