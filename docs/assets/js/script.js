@@ -44,7 +44,7 @@ if (typeof enableCodeExample !== 'undefined' && enableCodeExample) {
         var sourceCodeElement = element.querySelector('.code-source, pre.highlight');
         if (!sourceCodeElement) return;
 
-        var sourceCode;
+        var sourceCode = void 0;
         if (sourceCodeElement.nodeName === 'TEXTAREA') {
             sourceCode = sourceCodeElement.value;
         } else if (sourceCodeElement.nodeName === 'PRE') {
