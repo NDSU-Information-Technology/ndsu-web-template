@@ -1,5 +1,7 @@
 'use strict';
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 window.NDSU = {};
 
 if (!NDSU.fullOverlayElement) {
@@ -480,12 +482,14 @@ NDSU.navbars = Array.prototype.map.call(document.querySelectorAll('.navbar:not(.
     return new Navbar(navbar);
 });
 
-function StickyBar(baseElement) {
+var StickyBar = function StickyBar(baseElement) {
     var _this5 = this;
 
-    this.element = baseElement;
+    _classCallCheck(this, StickyBar);
 
+    this.element = baseElement;
     this.offsetTop = this.element.offsetTop;
+
     window.addEventListener('scroll', function (event) {
         var currentY = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -496,6 +500,8 @@ function StickyBar(baseElement) {
         }
     });
 };
+
+;
 
 NDSU.stickyBars = Array.prototype.map.call(document.querySelectorAll('.sticky-bar'), function (stickyBar) {
     return new StickyBar(stickyBar);
