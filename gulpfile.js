@@ -123,6 +123,11 @@ const config = {
     }
 };
 
+function continueOnError(err) {
+    gutil.log(err.toString());
+    this.end();
+};
+
 const flatten = arr => arr.reduce(
   (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []
 );
@@ -233,7 +238,7 @@ gulp.task('handlebars', () => {
     };
     
     return gulp.src(config.handlebars.compile)
-        .pipe(handlebars({}, options).on('error', (err) => console.log(err.message)))
+        .pipe(handlebars({}, options).on('error', continueOnError))
         .pipe(gulp.dest(config.handlebars.dest.docs))
         .pipe(filter(['**/index.md']))
         .pipe(rename({basename: 'README'}))
