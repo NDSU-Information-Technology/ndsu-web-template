@@ -1303,6 +1303,7 @@ var setPictureComponentSize = function setPictureComponentSize(img) {
         img.style.height = '100%';
     }
 };
+
 Array.prototype.forEach.call(document.getElementsByClassName('full-size-picture'), function (picWrapper) {
     // if (picWrapper.offsetHeight > 0) return;
     var picImg = picWrapper.querySelector('img');
