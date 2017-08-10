@@ -619,24 +619,35 @@ NDSU.navbars = Array.prototype.map.call(document.querySelectorAll('.navbar:not(.
     return new Navbar(navbar);
 });
 
-var StickyBar = function StickyBar(baseElement) {
-    var _this9 = this;
+var StickyBar = function () {
+    _createClass(StickyBar, null, [{
+        key: '_scrollEvent',
+        value: function _scrollEvent(e, obj) {
+            var currentY = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
 
-    _classCallCheck(this, StickyBar);
-
-    this.element = baseElement;
-    this.offsetTop = this.element.offsetTop;
-
-    window.addEventListener('scroll', function (event) {
-        var currentY = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (currentY > _this9.offsetTop) {
-            _this9.element.classList.add('sticky-bar-on');
-        } else {
-            _this9.element.classList.remove('sticky-bar-on');
+            if (currentY > obj.offsetTop) {
+                obj.element.classList.add('sticky-bar-on');
+            } else {
+                obj.element.classList.remove('sticky-bar-on');
+            }
         }
-    });
-};
+    }]);
+
+    function StickyBar(baseElement) {
+        var _this9 = this;
+
+        _classCallCheck(this, StickyBar);
+
+        this.element = baseElement;
+        this.offsetTop = this.element.offsetTop;
+
+        window.addEventListener('scroll', function (e) {
+            return StickyBar._scrollEvent(e, _this9);
+        });
+    }
+
+    return StickyBar;
+}();
 
 ;
 
