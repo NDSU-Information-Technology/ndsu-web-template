@@ -1,4 +1,4 @@
-class NavBaseinst {
+class NavBaseClass {
     setRole(value) {
         this.element.setAttribute('role', value);
     }
@@ -8,7 +8,7 @@ class NavBaseinst {
     }
 };
 
-class Navbar extends NavBaseinst {
+class Navbar extends NavBaseClass {
 
     _setRoles() {
         if (this.parentNavItem) {
@@ -181,7 +181,7 @@ class MobileNavbar extends Navbar {
 };
 
 
-class NavItem extends NavBaseinst {
+class NavItem extends NavBaseClass {
     
     static _open(inst) {
         if (!inst || !inst.element) return;
