@@ -1,8 +1,8 @@
 
-var setPictureComponentSize = (img) => {
-    var imgParent = img.parentElement;
+const setPictureComponentSize = (img) => {
+    let imgParent = img.parentElement;
     
-    var imgRatio = img.naturalWidth/img.naturalHeight;
+    let imgRatio = img.naturalWidth/img.naturalHeight;
     
     if (imgParent.clientHeight == 0 && imgParent.clientWidth == 0) {
         imgParent.style.height = img.naturalHeight + 'px';
@@ -13,16 +13,17 @@ var setPictureComponentSize = (img) => {
         imgParent.style.width = (imgParent.clientHeight / imgRatio) + 'px';
     } 
 
-    var parentRatio = imgParent.clientWidth/imgParent.clientHeight;
+    let parentRatio = imgParent.clientWidth/imgParent.clientHeight;
     if (parentRatio >= imgRatio) {
         img.style.width = '100%';
     } else {
         img.style.height = '100%';
     }
 }
+
 Array.prototype.forEach.call(document.getElementsByClassName('full-size-picture'), picWrapper => {
     // if (picWrapper.offsetHeight > 0) return;
-    var picImg = picWrapper.querySelector('img');
+    let picImg = picWrapper.querySelector('img');
     if (!picImg) return;
     if (picImg.complete) {
         setPictureComponentSize(picImg);  
