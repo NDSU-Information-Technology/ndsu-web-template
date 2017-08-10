@@ -696,27 +696,27 @@ function onYouTubeIframeAPIReady() {
     });
 };
 
-var NavBaseinst = function () {
-    _createClass(NavBaseinst, [{
+var NavBaseClass = function () {
+    _createClass(NavBaseClass, [{
         key: 'setRole',
         value: function setRole(value) {
             this.element.setAttribute('role', value);
         }
     }]);
 
-    function NavBaseinst(baseElement) {
-        _classCallCheck(this, NavBaseinst);
+    function NavBaseClass(baseElement) {
+        _classCallCheck(this, NavBaseClass);
 
         this.element = baseElement;
     }
 
-    return NavBaseinst;
+    return NavBaseClass;
 }();
 
 ;
 
-var Navbar = function (_NavBaseinst) {
-    _inherits(Navbar, _NavBaseinst);
+var Navbar = function (_NavBaseClass) {
+    _inherits(Navbar, _NavBaseClass);
 
     _createClass(Navbar, [{
         key: '_setRoles',
@@ -831,7 +831,7 @@ var Navbar = function (_NavBaseinst) {
     }
 
     return Navbar;
-}(NavBaseinst);
+}(NavBaseClass);
 
 ;
 
@@ -935,8 +935,8 @@ var MobileNavbar = function (_Navbar) {
 
 ;
 
-var NavItem = function (_NavBaseinst2) {
-    _inherits(NavItem, _NavBaseinst2);
+var NavItem = function (_NavBaseClass2) {
+    _inherits(NavItem, _NavBaseClass2);
 
     _createClass(NavItem, [{
         key: '_getChildNavbar',
@@ -1197,7 +1197,7 @@ var NavItem = function (_NavBaseinst2) {
     }
 
     return NavItem;
-}(NavBaseinst);
+}(NavBaseClass);
 
 var MobileNavItem = function (_NavItem) {
     _inherits(MobileNavItem, _NavItem);
