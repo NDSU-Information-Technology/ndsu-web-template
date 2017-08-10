@@ -1317,24 +1317,35 @@ Array.prototype.forEach.call(document.getElementsByClassName('full-size-picture'
     }
 });
 
-var StickyBar = function StickyBar(baseElement) {
-    var _this13 = this;
+var StickyBar = function () {
+    _createClass(StickyBar, null, [{
+        key: '_scrollEvent',
+        value: function _scrollEvent(e, obj) {
+            var currentY = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
 
-    _classCallCheck(this, StickyBar);
-
-    this.element = baseElement;
-    this.offsetTop = this.element.offsetTop;
-
-    window.addEventListener('scroll', function (event) {
-        var currentY = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (currentY > _this13.offsetTop) {
-            _this13.element.classList.add('sticky-bar-on');
-        } else {
-            _this13.element.classList.remove('sticky-bar-on');
+            if (currentY > obj.offsetTop) {
+                obj.element.classList.add('sticky-bar-on');
+            } else {
+                obj.element.classList.remove('sticky-bar-on');
+            }
         }
-    });
-};
+    }]);
+
+    function StickyBar(baseElement) {
+        var _this13 = this;
+
+        _classCallCheck(this, StickyBar);
+
+        this.element = baseElement;
+        this.offsetTop = this.element.offsetTop;
+
+        window.addEventListener('scroll', function (e) {
+            return StickyBar._scrollEvent(e, _this13);
+        });
+    }
+
+    return StickyBar;
+}();
 
 ;
 
