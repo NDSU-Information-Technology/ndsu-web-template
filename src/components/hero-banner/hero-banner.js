@@ -27,35 +27,25 @@ const detectAutoPlay = (callbackFn) => {
     }
 };
 
-
 let heroBannerElements = document.querySelectorAll('.hero-banner[data-video-id]');
 
-detectAutoPlay(function() {
-    if (AUTOPLAY && heroBannerElements.length) {
-        let tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/player_api";
-        let firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    };
-});
-
-function onYtPlayerReady(e) {
-    e.target.setVolume(0);
-    e.target.mute();
-};
-
-function onYtPlayerStateChange(e) {
-    if (e.data === YT.PlayerState.PLAYING) {
-        let iframeElement = e.target.getIframe();
-        iframeElement.style.opacity = "1";
-    } else if (e.data === YT.PlayerState.ENDED){
-        let ytPlayer = e.target;
-        ytPlayer.seekTo(ytPlayer.getDuration() - 0.08);
-        ytPlayer.pauseVideo();
-    }
-};
-
 function onYouTubeIframeAPIReady() {
+    let onYtPlayerReady = (e) => {
+        e.target.setVolume(0);
+        e.target.mute();
+    };
+
+    let onYtPlayerStateChange = (e) => {
+        if (e.data === YT.PlayerState.PLAYING) {
+            let iframeElement = e.target.getIframe();
+            iframeElement.style.opacity = "1";
+        } else if (e.data === YT.PlayerState.ENDED){
+            let ytPlayer = e.target;
+            ytPlayer.seekTo(ytPlayer.getDuration() - 0.08);
+            ytPlayer.pauseVideo();
+        }
+    };
+
     NDSU.ytPlayers = Array.prototype.map.call(heroBannerElements, (heroBanner) => {
         let videoId = heroBanner.getAttribute('data-video-id');
         // let videoPosterUrl = heroBanner.getAttribute('data-video-poster');
@@ -99,3 +89,12 @@ function onYouTubeIframeAPIReady() {
         });
     });
 };
+
+detectAutoPlay(function() {
+    if (AUTOPLAY && heroBannerElements.length) {
+        let tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        let firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    };
+});
