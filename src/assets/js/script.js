@@ -626,32 +626,23 @@ var detectAutoPlay = function detectAutoPlay(callbackFn) {
 
 var heroBannerElements = document.querySelectorAll('.hero-banner[data-video-id]');
 
-detectAutoPlay(function () {
-    if (AUTOPLAY && heroBannerElements.length) {
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/player_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    };
-});
-
-function onYtPlayerReady(e) {
-    e.target.setVolume(0);
-    e.target.mute();
-};
-
-function onYtPlayerStateChange(e) {
-    if (e.data === YT.PlayerState.PLAYING) {
-        var iframeElement = e.target.getIframe();
-        iframeElement.style.opacity = "1";
-    } else if (e.data === YT.PlayerState.ENDED) {
-        var ytPlayer = e.target;
-        ytPlayer.seekTo(ytPlayer.getDuration() - 0.08);
-        ytPlayer.pauseVideo();
-    }
-};
-
 function onYouTubeIframeAPIReady() {
+    var onYtPlayerReady = function onYtPlayerReady(e) {
+        e.target.setVolume(0);
+        e.target.mute();
+    };
+
+    var onYtPlayerStateChange = function onYtPlayerStateChange(e) {
+        if (e.data === YT.PlayerState.PLAYING) {
+            var iframeElement = e.target.getIframe();
+            iframeElement.style.opacity = "1";
+        } else if (e.data === YT.PlayerState.ENDED) {
+            var ytPlayer = e.target;
+            ytPlayer.seekTo(ytPlayer.getDuration() - 0.08);
+            ytPlayer.pauseVideo();
+        }
+    };
+
     NDSU.ytPlayers = Array.prototype.map.call(heroBannerElements, function (heroBanner) {
         var videoId = heroBanner.getAttribute('data-video-id');
         // let videoPosterUrl = heroBanner.getAttribute('data-video-poster');
@@ -695,6 +686,15 @@ function onYouTubeIframeAPIReady() {
         });
     });
 };
+
+detectAutoPlay(function () {
+    if (AUTOPLAY && heroBannerElements.length) {
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    };
+});
 
 var NavBaseClass = function () {
     _createClass(NavBaseClass, [{
