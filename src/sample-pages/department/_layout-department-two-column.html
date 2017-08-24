@@ -1,7 +1,7 @@
 {{#> _layout-department}}
 {{#> before-two-col}}
 {{/before-two-col}}
-<div class="layout container">
+<div class="layout {{#unless noContainer}}container{{/unless}}">
     {{#if reverse }}
     <div class="main-col">
         {{> @partial-block}}
