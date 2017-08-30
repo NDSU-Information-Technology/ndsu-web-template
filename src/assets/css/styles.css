@@ -1404,7 +1404,8 @@ footer {
       .layout .nav-col {
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
-        margin-top: 2em; } }
+        margin-top: 2em;
+        margin-right: 2em; } }
 
 .container .nav-col {
   margin-left: 0; }
