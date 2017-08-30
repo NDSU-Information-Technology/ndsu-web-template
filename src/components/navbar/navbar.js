@@ -451,6 +451,21 @@ class MobileNavItem extends NavItem {
 
     constructor(navItemElement, parentNavbar) {
         super(navItemElement, parentNavbar);
+
+        if (navItemElement.classList.contains('nav-item-home')) {
+            this.linkElement.innerHTML = this.linkElement.innerText;
+        }
+
+        if (this.childNavbar) {
+            let cloneElement = navItemElement.cloneNode();
+            cloneElement.classList.remove('nav-item-haschild');
+
+            let cloneLink = this.linkElement.cloneNode(true);
+            cloneLink.setAttribute('id', '');
+            cloneElement.appendChild(cloneLink);
+            
+            this.childNavbar.element.insertBefore(cloneElement, this.childNavbar.element.firstChild);
+        }
     }
 }
 

@@ -1276,7 +1276,23 @@ var MobileNavItem = function (_NavItem) {
     function MobileNavItem(navItemElement, parentNavbar) {
         _classCallCheck(this, MobileNavItem);
 
-        return _possibleConstructorReturn(this, (MobileNavItem.__proto__ || Object.getPrototypeOf(MobileNavItem)).call(this, navItemElement, parentNavbar));
+        var _this11 = _possibleConstructorReturn(this, (MobileNavItem.__proto__ || Object.getPrototypeOf(MobileNavItem)).call(this, navItemElement, parentNavbar));
+
+        if (navItemElement.classList.contains('nav-item-home')) {
+            _this11.linkElement.innerHTML = _this11.linkElement.innerText;
+        }
+
+        if (_this11.childNavbar) {
+            var cloneElement = navItemElement.cloneNode();
+            cloneElement.classList.remove('nav-item-haschild');
+
+            var cloneLink = _this11.linkElement.cloneNode(true);
+            cloneLink.setAttribute('id', '');
+            cloneElement.appendChild(cloneLink);
+
+            _this11.childNavbar.element.insertBefore(cloneElement, _this11.childNavbar.element.firstChild);
+        }
+        return _this11;
     }
 
     return MobileNavItem;
