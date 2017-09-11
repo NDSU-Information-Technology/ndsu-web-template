@@ -802,7 +802,25 @@ footer {
         top: 4.5em; } }
 
 .generic-content {
+  padding-top: 2em;
+  padding-bottom: 2em;
   line-height: 1.5em; }
+  @media (max-width: 1199px) {
+    .generic-content {
+      padding-top: 1.755em;
+      padding-bottom: 1.755em; } }
+  @media (max-width: 991px) {
+    .generic-content {
+      padding-top: 1.5em;
+      padding-bottom: 1.755em; } }
+  @media (max-width: 767px) {
+    .generic-content {
+      padding-top: 1.25em;
+      padding-bottom: 1.755em; } }
+  @media (max-width: 574px) {
+    .generic-content {
+      padding-top: 1em;
+      padding-bottom: 1.755em; } }
   .generic-content h3, .generic-content h4, .generic-content h5 {
     margin-top: 0;
     margin-bottom: 0.5em; }
@@ -927,6 +945,26 @@ footer {
     .generic-content .picture {
       -ms-flex-item-align: stretch;
           align-self: stretch; } }
+
+.layout .main-col .generic-content {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  @media (max-width: 1199px) {
+    .layout .main-col .generic-content {
+      padding-top: 0.8775em;
+      padding-bottom: 0.8775em; } }
+  @media (max-width: 991px) {
+    .layout .main-col .generic-content {
+      padding-top: 0.75em;
+      padding-bottom: 0.8775em; } }
+  @media (max-width: 767px) {
+    .layout .main-col .generic-content {
+      padding-top: 0.625em;
+      padding-bottom: 0.8775em; } }
+  @media (max-width: 574px) {
+    .layout .main-col .generic-content {
+      padding-top: 0.5em;
+      padding-bottom: 0.8775em; } }
 
 .hero-banner {
   padding: 2em;

@@ -16,38 +16,62 @@
 	}
 }
 
-@mixin container-padding() {
+@mixin container-padding($factor: 1) {
 	@include media-xl {
-		padding: 0 $content-padding-xl;
+		padding: 0 ($content-padding-xl * $factor);
 	}
 	@include media-lg {
-		padding: 0 $content-padding-lg;
+		padding: 0 ($content-padding-lg * $factor);
 	}
 	@include media-md {
-		padding: 0 $content-padding-md;
+		padding: 0 ($content-padding-md * $factor);
 	}
 	@include media-sm {
-		padding: 0 $content-padding-sm;
+		padding: 0 ($content-padding-sm * $factor);
 	}
 	@include media-xs {
-		padding: 0 $content-padding-xs;
+		padding: 0 ($content-padding-xs * $factor);
 	}
 }
 
-@mixin content-padding($factor: 1) {
-	@include media-xl {
-		padding: $content-padding-xl * $factor;
+@mixin content-padding($factor: 1, $padSide: true) {
+	@if ($padSide) {
+		@include media-xl {
+			padding: $content-padding-xl * $factor;
+		}
+		@include media-lg {
+			padding: $content-padding-lg * $factor;
+		}
+		@include media-md {
+			padding: $content-padding-md * $factor;
+		}
+		@include media-sm {
+			padding: $content-padding-sm * $factor;
+		}
+		@include media-xs {
+			padding: $content-padding-xs * $factor;
+		}
 	}
-	@include media-lg {
-		padding: $content-padding-lg * $factor;
-	}
-	@include media-md {
-		padding: $content-padding-md * $factor;
-	}
-	@include media-sm {
-		padding: $content-padding-sm * $factor;
-	}
-	@include media-xs {
-		padding: $content-padding-xs * $factor;
+	@else {
+		@include media-xl {
+			padding-top: $content-padding-xl * $factor;
+			padding-bottom: $content-padding-xl * $factor;
+		}
+		@include media-lg {
+			padding-top: $content-padding-lg * $factor;
+			padding-bottom: $content-padding-lg * $factor;
+		}
+		@include media-md {
+			padding-top: $content-padding-md * $factor;
+			padding-bottom: $content-padding-lg * $factor;
+		}
+		@include media-sm {
+			padding-top: $content-padding-sm * $factor;
+			padding-bottom: $content-padding-lg * $factor;
+		}
+		@include media-xs {
+			padding-top: $content-padding-xs * $factor;
+			padding-bottom: $content-padding-lg * $factor;
+		}
 	}
 }
