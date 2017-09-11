@@ -1,7 +1,7 @@
 $text-columns: (2, 3, 4);
 
 .generic-content{
-    @include content-padding();
+    // @include content-padding();
 
     line-height: 1.5em;
     h3, h4, h5 {
@@ -142,5 +142,5 @@ $text-columns: (2, 3, 4);
 }
 
 .layout .main-col .generic-content {
-    @include content-padding(1/2);
+    // @include content-padding(1/2);
 }
