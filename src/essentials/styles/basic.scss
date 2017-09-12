@@ -53,7 +53,7 @@ header {
 
 	@include media-xl {
 
-		h2.page-title{
+		h1.page-title{
 			font-size: 2em;
 			font-weight: 100;
 			padding-top: 0.75em;
@@ -81,7 +81,7 @@ header {
 			border-bottom: 1px solid $color-black;
 			padding: 0.75em 1em;
 		}
-		h2.page-title {
+		h1.page-title {
 			font-size: 1.25em;
 			font-weight: bold;
 			padding: 0.25em 0;

@@ -229,7 +229,7 @@ header .green-bar {
 header .main-nav {
   background-color: #222222; }
 
-header h2.page-title {
+header h1.page-title {
   font-size: 2em;
   font-weight: 100;
   padding-top: 0.75em;
@@ -253,7 +253,7 @@ header .search-form {
     color: #fff;
     border-bottom: 1px solid #000;
     padding: 0.75em 1em; }
-  header h2.page-title {
+  header h1.page-title {
     font-size: 1.25em;
     font-weight: bold;
     padding: 0.25em 0;
@@ -1028,13 +1028,15 @@ footer {
     .generic-content {
       padding-top: 1em;
       padding-bottom: 1.755em; } }
-  .generic-content h3, .generic-content h4, .generic-content h5 {
+  .generic-content h2, .generic-content h3, .generic-content h4, .generic-content h5 {
     margin-top: 0;
     margin-bottom: 0.5em; }
-  .generic-content h3, .generic-content h4 {
+  .generic-content h2, .generic-content h3, .generic-content h4 {
     font-family: Georgia, serif; }
+  .generic-content h2 {
+    font-size: 2.75em; }
   .generic-content h3 {
-    font-size: 2.5em; }
+    font-size: 2.25em; }
   .generic-content h4 {
     font-size: 2em; }
   .generic-content h5 {
