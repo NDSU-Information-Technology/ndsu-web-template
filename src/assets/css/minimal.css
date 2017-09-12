@@ -827,7 +827,10 @@ footer {
   .generic-content h2, .generic-content h3, .generic-content h4 {
     font-family: Georgia, serif; }
   .generic-content h2 {
-    font-size: 2.75em; }
+    font-size: 2.75em;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid #e5e5e5; }
   .generic-content h3 {
     font-size: 2.25em; }
   .generic-content h4 {
