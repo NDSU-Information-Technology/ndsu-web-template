@@ -14,12 +14,27 @@
         display: flex;
         flex-flow: wrap;
     }
-    .gallery-collection .gallery-item {
+    .gallery-item  {
         margin: 0.25em 0;
         flex: 0 1 auto;
         box-sizing: border-box;
-        padding: 0.125em 0.25em;
-        width: 33%;
+        cursor: pointer;
+    }
+
+    &,
+    &.gallery-1 {
+        .gallery-item {
+            padding: 0.5em 1em;
+        }
+    }
+
+    &.gallery-2,
+    &.gallery-3,
+    &.gallery-4,
+    &.gallery-5 {
+        .gallery-item {
+            padding: 0.125em 0.25em;
+        }
     }
 
     .gallery-item .full-size-picture {
@@ -30,46 +45,69 @@
 
     @include media-xl(){
         &,
+        &.gallery-1 {
+            .gallery-item  {
+                width: 100%;
+            }
+        }
+        &.gallery-2 {
+            .gallery-item  {
+                width: 50%;
+            }
+        }
         &.gallery-3 {
-            .gallery-collection li {
+            .gallery-item  {
                 width: 33%;
             }
         }
+        &.gallery-4 {
+            .gallery-item  {
+                width: 25%;
+            }
+        }
         &.gallery-5 {
-            .gallery-collection li {
+            .gallery-item  {
                 width: 20%;
             }
         }
     }
     @include media-md(){
         &,
+        &.gallery-1,
+        &.gallery-2,
         &.gallery-3 {
-            .gallery-collection .gallery-item {
+            .gallery-item {
                 width: 50%;
             }
         }
+        
+        &.gallery-4,
         &.gallery-5 {
-            .gallery-collection .gallery-item {
+            .gallery-item {
                 width: 25%;
             }
         }
     }
     @include media-sm(){
+        &.gallery-4,
         &.gallery-5 {
-            .gallery-collection .gallery-item {
+            .gallery-item {
                 width: 33%;
             }
         }
     }
     @include media-xs(){
         &,
+        &.gallery-1,
+        &.gallery-2,
         &.gallery-3 {
-            .gallery-collection .gallery-item {
+            .gallery-item {
                 width: 100%;
             }
         }
+        &.gallery-4,
         &.gallery-5 {
-            .gallery-collection .gallery-item {
+            .gallery-item {
                 width: 50%;
             }
         }
