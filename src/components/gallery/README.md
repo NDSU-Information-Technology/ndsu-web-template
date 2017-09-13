@@ -71,7 +71,10 @@ Example:
 ## Size
 
 Available sizes:
-* `gallery-3`: 3 columns (default)
+* `gallery-1`: 1 columns (default)
+* `gallery-2`: 2 columns
+* `gallery-3`: 3 columns
+* `gallery-4`: 4 columns
 * `gallery-5`: 5 columns
 
 Example of 5 columns:
@@ -162,7 +165,7 @@ Refer to [`picture` component](/ndsu-web-template/components/picture) on how to 
 Example of gallery with picture styling:
 
 ```html
-<section class="gallery gallery-5">
+<section class="gallery gallery-4">
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
