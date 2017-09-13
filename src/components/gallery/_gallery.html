@@ -1,4 +1,4 @@
-<section class="gallery gallery-{{size}}">
+<section class="gallery{{#if size}} gallery-{{size}}{{/if}}">
     <h5>{{title}}</h5>
     <ul class="gallery-collection" role="group">
         {{# each items}}
