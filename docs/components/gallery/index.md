@@ -15,7 +15,7 @@ NOTE: This component depends on the [`picture` component](/ndsu-web-template/com
 
 Example:
 ```html
-<section class="gallery gallery-">
+<section class="gallery">
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
