@@ -709,7 +709,8 @@ footer {
   .gallery.gallery-2 .gallery-item, .gallery.gallery-3 .gallery-item, .gallery.gallery-4 .gallery-item, .gallery.gallery-5 .gallery-item {
     padding: 0.125em 0.25em; }
   .gallery .gallery-item .full-size-picture {
-    z-index: 1; }
+    z-index: 1;
+    padding-bottom: 66%; }
   .gallery .gallery-item, .gallery.gallery-1 .gallery-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
