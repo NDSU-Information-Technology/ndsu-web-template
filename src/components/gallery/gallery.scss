@@ -42,9 +42,7 @@
     }
 
     .gallery-item .full-size-picture {
-	    padding-bottom: 66%;
         z-index: 1;
-        width: 100%;
     }
 
     @include media-xl(){
@@ -121,19 +119,17 @@
         }
     }
     @include media-md(){
-        &,
-        &.gallery-1,
         &.gallery-2,
         &.gallery-3 {
             .gallery-item {
-                flex-basis: 50%;
+                max-width: 50%;
             }
         }
         
         &.gallery-4,
         &.gallery-5 {
             .gallery-item {
-                flex-basis: 25%;
+                max-width: 25%;
             }
         }
     }
@@ -141,7 +137,7 @@
         &.gallery-4,
         &.gallery-5 {
             .gallery-item {
-                flex-basis: 33%;
+                max-width: 33%;
             }
         }
     }
@@ -151,13 +147,13 @@
         &.gallery-2,
         &.gallery-3 {
             .gallery-item {
-                flex-basis: 100%;
+                max-width: 100%;
             }
         }
         &.gallery-4,
         &.gallery-5 {
             .gallery-item {
-                flex-basis: 50%;
+                max-width: 50%;
             }
         }
     }
