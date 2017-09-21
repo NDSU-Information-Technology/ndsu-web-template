@@ -55,11 +55,13 @@ Example of 5 columns:
     "items": [
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "270"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
