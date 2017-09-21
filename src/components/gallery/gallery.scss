@@ -43,6 +43,7 @@
 
     .gallery-item .full-size-picture {
         z-index: 1;
+        padding-bottom: 66%;
     }
 
     @include media-xl(){
