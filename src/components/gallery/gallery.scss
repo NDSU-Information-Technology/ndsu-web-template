@@ -17,8 +17,6 @@
     .gallery-item  {
         margin-top: 0.25em;
         margin-bottom: 0.25em;
-        margin-left: auto;
-        margin-right: auto;
         flex-grow: 0;
         flex-shrink: 1;
         box-sizing: border-box;
@@ -28,6 +26,8 @@
     &.gallery-1 {
         .gallery-item {
             padding: 0.5em 1em;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -37,6 +37,8 @@
     &.gallery-5 {
         .gallery-item {
             padding: 0.125em 0.25em;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 
@@ -95,7 +97,6 @@
         &.gallery-3 {
             .gallery-item {
                 max-width: 33%;
-                flex-basis: 33%;
             }
         }
         &.gallery-4 {
