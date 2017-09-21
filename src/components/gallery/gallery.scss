@@ -40,6 +40,9 @@
         }
     }
 
+    .gallery-item .picture-block{
+        overflow: hidden;
+    }
     .gallery-item .full-size-picture {
         z-index: 1;
         cursor: pointer;
@@ -52,69 +55,56 @@
                 flex-basis: 100%;
             }
         }
+
         &.gallery-2,
         &.gallery-3,
         &.gallery-4,
         &.gallery-5 {
-            .gallery-item {
-                margin-left: 0;
-                margin-right: 0;
-            }
             .gallery-item:last-child {
                 margin-right: auto;
             }
         }
 
-        &.gallery-2 {
-            .gallery-item:nth-child(n)  {
-                max-width: 50%;
-            }
-            .gallery-item:nth-child(2n+1)  {
+        &.gallery-2 .gallery-item:nth-child(2n+1),
+        &.gallery-3 .gallery-item:nth-child(3n+1),
+        &.gallery-4 .gallery-item:nth-child(4n+1),
+        &.gallery-5 .gallery-item:nth-child(5n+1) {
+            flex-basis: 100%;
+            margin-left: auto;
+            .picture-block {
                 margin-left: auto;
-                flex-basis: 100%;
             }
-            .gallery-item:nth-child(2n)  {
+        }
+
+        &.gallery-2 .gallery-item:nth-child(2n),
+        &.gallery-3 .gallery-item:nth-child(3n),
+        &.gallery-4 .gallery-item:nth-child(4n),
+        &.gallery-5 .gallery-item:nth-child(5n) {
+            flex-basis: 100%;
+            margin-right: auto;
+            .picture-block {
                 margin-right: auto;
-                flex-basis: 100%;
+            }
+        }
+        &.gallery-2 {
+            .gallery-item  {
+                max-width: 50%;
             }
         }
         &.gallery-3 {
             .gallery-item {
                 max-width: 33%;
-            }
-            .gallery-item:nth-child(3n+1) {
-                margin-left: auto;
-                flex-basis: 100%;
-            }
-            .gallery-item:nth-child(3n) {
-                margin-right: auto;
-                flex-basis: 100%;
+                flex-basis: 33%;
             }
         }
         &.gallery-4 {
             .gallery-item {
                 max-width: 25%;
             }
-            .gallery-item:nth-child(4n+1)  {
-                margin-left: auto;
-                flex-basis: 100%;
-            }
-            .gallery-item:nth-child(4n)  {
-                margin-right: auto;
-                flex-basis: 100%;
-            }
         }
         &.gallery-5 {
             .gallery-item {
                 max-width: 20%;
-            }
-            .gallery-item:nth-child(5n+1)  {
-                margin-left: auto;
-                flex-basis: 100%;
-            }
-            .gallery-item:nth-child(5n)  {
-                margin-right: auto;
-                flex-basis: 100%;
             }
         }
     }
