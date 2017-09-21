@@ -60,7 +60,8 @@
         &.gallery-3,
         &.gallery-4,
         &.gallery-5 {
-            .gallery-item:last-child {
+            .gallery-item:last-child,
+            .gallery-item:last-child .picture-block {
                 margin-right: auto;
             }
         }
