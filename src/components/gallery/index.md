@@ -51,10 +51,14 @@ Example of 5 columns:
 ```html
 {{#getJsonContext '{
     "title": "Gallery",
-    "size": 2,
+    "size": 3,
     "items": [
         {
-        "src": "http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/2/0/csm_Gate2_web_dc2e601435.jpg",
+        "src": "/ndsu-web-template/images/sample.png",
+        "alt": "Sample Image"
+        },
+        {
+        "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image"
         },
         {
@@ -66,11 +70,7 @@ Example of 5 columns:
         "alt": "Sample Image"
         },
         {
-        "src": "http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/2/0/csm_Gate2_web_dc2e601435.jpg",
-        "alt": "Sample Image"
-        },
-        {
-        "src": "http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/c/9/csm_Equine_web_8a1202e7e7.jpg",
+        "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image"
         },
         {
@@ -78,11 +78,11 @@ Example of 5 columns:
         "alt": "Sample Image"
         },
         {
-        "src": "http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/2/0/csm_Gate2_web_dc2e601435.jpg",
+        "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image"
         },
         {
-        "src": "http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/c/9/csm_Equine_web_8a1202e7e7.jpg",
+        "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image"
         },
         {
