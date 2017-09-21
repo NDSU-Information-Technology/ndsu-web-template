@@ -15,6 +15,7 @@ NOTE: This component depends on the [`picture` component](/ndsu-web-template/com
 
 Example:
 ```html
+<div style="max-width: 600px; margin: 0 auto;">
 <section class="gallery">
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
@@ -42,32 +43,9 @@ Example:
             </figure>
             
         </li>
-        <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
-                </div>
-            </figure>
-            
-        </li>
-        <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
-                </div>
-            </figure>
-            
-        </li>
-        <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
-                </div>
-            </figure>
-            
-        </li>
     </ul>
 </section>
+</div>
 ```
 
 ## Size

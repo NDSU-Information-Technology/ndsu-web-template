@@ -15,21 +15,10 @@ NOTE: This component depends on the [`picture` component](/ndsu-web-template/com
 
 Example:
 ```html
+<div style="max-width: 600px; margin: 0 auto;">
 {{#getJsonContext '{
     "title": "Gallery",
     "items": [
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
-        },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image"
@@ -46,6 +35,7 @@ Example:
 }'}}
 {{> _gallery this }}
 {{/getJsonContext}}
+</div>
 ```
 
 ## Size
