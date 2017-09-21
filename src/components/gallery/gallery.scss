@@ -22,7 +22,6 @@
         flex-grow: 0;
         flex-shrink: 1;
         box-sizing: border-box;
-        cursor: pointer;
     }
 
     &,
@@ -44,6 +43,7 @@
     .gallery-item .full-size-picture {
         z-index: 1;
         padding-bottom: 66%;
+        cursor: pointer;
     }
 
     @include media-xl(){

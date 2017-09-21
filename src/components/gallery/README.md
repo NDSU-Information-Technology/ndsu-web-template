@@ -62,7 +62,7 @@ Example of 5 columns:
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
             <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+                <div class="full-size-picture" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
@@ -70,7 +70,7 @@ Example of 5 columns:
         </li>
         <li class="gallery-item">
             <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+                <div class="full-size-picture" style=" width: 270px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
