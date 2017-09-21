@@ -15,8 +15,12 @@
         flex-flow: wrap;
     }
     .gallery-item  {
-        margin: 0.25em 0;
-        flex: 0 1 auto;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        margin-left: auto;
+        margin-right: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
         box-sizing: border-box;
         cursor: pointer;
     }
@@ -47,27 +51,72 @@
         &,
         &.gallery-1 {
             .gallery-item  {
-                width: 100%;
+                flex-basis: 100%;
             }
         }
+        &.gallery-2,
+        &.gallery-3,
+        &.gallery-4,
+        &.gallery-5 {
+            .gallery-item {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .gallery-item:last-child {
+                margin-right: auto;
+            }
+        }
+
         &.gallery-2 {
-            .gallery-item  {
-                width: 50%;
+            .gallery-item:nth-child(n)  {
+                max-width: 50%;
+            }
+            .gallery-item:nth-child(2n+1)  {
+                margin-left: auto;
+                flex-basis: 100%;
+            }
+            .gallery-item:nth-child(2n)  {
+                margin-right: auto;
+                flex-basis: 100%;
             }
         }
         &.gallery-3 {
-            .gallery-item  {
-                width: 33%;
+            .gallery-item {
+                max-width: 33%;
+            }
+            .gallery-item:nth-child(3n+1) {
+                margin-left: auto;
+                flex-basis: 100%;
+            }
+            .gallery-item:nth-child(3n) {
+                margin-right: auto;
+                flex-basis: 100%;
             }
         }
         &.gallery-4 {
-            .gallery-item  {
-                width: 25%;
+            .gallery-item {
+                max-width: 25%;
+            }
+            .gallery-item:nth-child(4n+1)  {
+                margin-left: auto;
+                flex-basis: 100%;
+            }
+            .gallery-item:nth-child(4n)  {
+                margin-right: auto;
+                flex-basis: 100%;
             }
         }
         &.gallery-5 {
-            .gallery-item  {
-                width: 20%;
+            .gallery-item {
+                max-width: 20%;
+            }
+            .gallery-item:nth-child(5n+1)  {
+                margin-left: auto;
+                flex-basis: 100%;
+            }
+            .gallery-item:nth-child(5n)  {
+                margin-right: auto;
+                flex-basis: 100%;
             }
         }
     }
@@ -77,14 +126,14 @@
         &.gallery-2,
         &.gallery-3 {
             .gallery-item {
-                width: 50%;
+                flex-basis: 50%;
             }
         }
         
         &.gallery-4,
         &.gallery-5 {
             .gallery-item {
-                width: 25%;
+                flex-basis: 25%;
             }
         }
     }
@@ -92,7 +141,7 @@
         &.gallery-4,
         &.gallery-5 {
             .gallery-item {
-                width: 33%;
+                flex-basis: 33%;
             }
         }
     }
@@ -102,13 +151,13 @@
         &.gallery-2,
         &.gallery-3 {
             .gallery-item {
-                width: 100%;
+                flex-basis: 100%;
             }
         }
         &.gallery-4,
         &.gallery-5 {
             .gallery-item {
-                width: 50%;
+                flex-basis: 50%;
             }
         }
     }
