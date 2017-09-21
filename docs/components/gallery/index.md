@@ -59,13 +59,21 @@ Available sizes:
 
 Example of 5 columns:
 ```html
-<section class="gallery gallery-2">
+<section class="gallery gallery-3">
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
             <figure class=" picture-block">
                 <div class="full-size-picture" style="">
-                    <img src="http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/2/0/csm_Gate2_web_dc2e601435.jpg" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                </div>
+            </figure>
+            
+        </li>
+        <li class="gallery-item">
+            <figure class=" picture-block">
+                <div class="full-size-picture" style="">
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
@@ -89,15 +97,7 @@ Example of 5 columns:
         <li class="gallery-item">
             <figure class=" picture-block">
                 <div class="full-size-picture" style="">
-                    <img src="http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/2/0/csm_Gate2_web_dc2e601435.jpg" alt="Sample Image" />
-                </div>
-            </figure>
-            
-        </li>
-        <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
-                    <img src="http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/c/9/csm_Equine_web_8a1202e7e7.jpg" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
@@ -113,7 +113,7 @@ Example of 5 columns:
         <li class="gallery-item">
             <figure class=" picture-block">
                 <div class="full-size-picture" style="">
-                    <img src="http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/2/0/csm_Gate2_web_dc2e601435.jpg" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
@@ -121,7 +121,7 @@ Example of 5 columns:
         <li class="gallery-item">
             <figure class=" picture-block">
                 <div class="full-size-picture" style="">
-                    <img src="http://heisenberg.ndsu.nodak.edu:443/fileadmin/_processed_/c/9/csm_Equine_web_8a1202e7e7.jpg" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
