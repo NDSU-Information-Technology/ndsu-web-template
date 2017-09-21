@@ -709,7 +709,6 @@ footer {
     padding: 0.125em 0.25em; }
   .gallery .gallery-item .full-size-picture {
     z-index: 1;
-    padding-bottom: 66%;
     cursor: pointer; }
   .gallery .gallery-item, .gallery.gallery-1 .gallery-item {
     -ms-flex-preferred-size: 100%;
