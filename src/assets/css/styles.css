@@ -922,7 +922,11 @@ footer {
   .gallery .gallery-item, .gallery.gallery-1 .gallery-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
-  .gallery.gallery-2 .gallery-item:last-child, .gallery.gallery-3 .gallery-item:last-child, .gallery.gallery-4 .gallery-item:last-child, .gallery.gallery-5 .gallery-item:last-child {
+  .gallery.gallery-2 .gallery-item:last-child,
+  .gallery.gallery-2 .gallery-item:last-child .picture-block, .gallery.gallery-3 .gallery-item:last-child,
+  .gallery.gallery-3 .gallery-item:last-child .picture-block, .gallery.gallery-4 .gallery-item:last-child,
+  .gallery.gallery-4 .gallery-item:last-child .picture-block, .gallery.gallery-5 .gallery-item:last-child,
+  .gallery.gallery-5 .gallery-item:last-child .picture-block {
     margin-right: auto; }
   .gallery.gallery-2 .gallery-item:nth-child(2n+1),
   .gallery.gallery-3 .gallery-item:nth-child(3n+1),
