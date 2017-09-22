@@ -582,6 +582,8 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
         _this3.imageSrc = _this3.imageElement.getAttribute('src');
         _this3.imageDesc = _this3.imageElement.getAttribute('alt');
 
+        if (_this3.element.querySelector('a')) return _possibleConstructorReturn(_this3);
+
         _this3.element.setAttribute('aria-haspopup', true);
         GalleryPictureLink.setEvents(_this3);
         return _this3;
@@ -1336,7 +1338,7 @@ var setPictureComponentSize = function setPictureComponentSize(img) {
     } else if (imgParent.clientHeight == 0) {
         imgParent.style.height = imgParent.clientWidth / imgRatio + 'px';
     } else if (imgParent.clientWidth == 0) {
-        imgParent.style.width = imgParent.clientHeight / imgRatio + 'px';
+        imgParent.style.width = imgParent.clientHeight * imgRatio + 'px';
     }
 
     var parentRatio = imgParent.clientWidth / imgParent.clientHeight;

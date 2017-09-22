@@ -85,6 +85,8 @@ class GalleryPictureLink extends GalleryBaseObj {
         this.imageSrc = this.imageElement.getAttribute('src');
         this.imageDesc = this.imageElement.getAttribute('alt');
 
+        if (this.element.querySelector('a')) return;
+
         this.element.setAttribute('aria-haspopup', true);
         GalleryPictureLink.setEvents(this);
     }

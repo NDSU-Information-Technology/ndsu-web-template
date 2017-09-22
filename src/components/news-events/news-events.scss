@@ -38,12 +38,8 @@
         align-items: flex-start;
 
     }
-    .full-size-picture{
-    }
-    .picture-block{
-        flex-basis: 50%;
-        height: 0;
-        padding-bottom: 25%;
+    .img-block{
+        max-width: 50%;
     }
     .news-content{
         padding-left: 1em;
