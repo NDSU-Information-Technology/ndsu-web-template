@@ -1,5 +1,11 @@
 
 const setPictureComponentSize = (img) => {
+    if (img.style.width) {
+        img.style.width = "";
+    }
+    if (img.style.height) {
+        img.style.height = "";
+    }
     let imgParent = img.parentElement;
     
     let imgRatio = img.naturalWidth/img.naturalHeight;
@@ -21,7 +27,7 @@ const setPictureComponentSize = (img) => {
     }
 }
 
-Array.prototype.forEach.call(document.getElementsByClassName('full-size-picture'), picWrapper => {
+Array.prototype.forEach.call(document.querySelectorAll('.img-wrapper.full-size-img'), picWrapper => {
     // if (picWrapper.offsetHeight > 0) return;
     let picImg = picWrapper.querySelector('img');
     if (!picImg) return;

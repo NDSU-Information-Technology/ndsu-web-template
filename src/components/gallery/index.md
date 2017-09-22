@@ -61,35 +61,42 @@ Example of 5 columns:
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
-        "width": "270"
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": "250"
         }
     ]
 }'}}
@@ -112,54 +119,63 @@ Example of gallery with picture styling:
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
+        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         }

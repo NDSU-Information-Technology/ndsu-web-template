@@ -1320,6 +1320,12 @@ NDSU.navbars = Array.prototype.map.call(document.querySelectorAll('.navbar:not(.
 });
 
 var setPictureComponentSize = function setPictureComponentSize(img) {
+    if (img.style.width) {
+        img.style.width = "";
+    }
+    if (img.style.height) {
+        img.style.height = "";
+    }
     var imgParent = img.parentElement;
 
     var imgRatio = img.naturalWidth / img.naturalHeight;
@@ -1341,7 +1347,7 @@ var setPictureComponentSize = function setPictureComponentSize(img) {
     }
 };
 
-Array.prototype.forEach.call(document.getElementsByClassName('full-size-picture'), function (picWrapper) {
+Array.prototype.forEach.call(document.querySelectorAll('.img-wrapper.full-size-img'), function (picWrapper) {
     // if (picWrapper.offsetHeight > 0) return;
     var picImg = picWrapper.querySelector('img');
     if (!picImg) return;

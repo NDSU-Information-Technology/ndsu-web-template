@@ -4,18 +4,19 @@ title: Picture Component
 ---
 
 This component provides a consistent way to display a full size image in a container with defined width and/or height.
+Add `full-size-img` to resize the image to the size `img-wrapper` container.
 
 ## Basic Usage
 
 Example:
 ```html
-<div class="full-size-picture right-align" style=" width: 350px; height: 300px;">
+<div class="img-wrapper" style="">
     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
 </div>
-<div class="full-size-picture center-align" style=" width: 200px; height: 300px;">
+<div class="img-wrapper full-size-img right-align" style=" width: 350px; height: 250px;">
     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
 </div>
-<div class="full-size-picture" style=" width: 500px; height: 300px;">
+<div class="img-wrapper full-size-img center-align" style=" width: 200px; height: 300px;">
     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
 </div>
 ```
@@ -26,8 +27,8 @@ Wrap elements in `figure` and use `figcaption` to contain the captions. `caption
 
 Example:
 ```html
-<figure class="">
-    <div class="full-size-picture" style=" width: 350px; height: 300px;">
+<figure class="" style=" width: 350px;">
+    <div class="img-wrapper" style=" width: 350px; height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
     <figcaption>
@@ -40,12 +41,12 @@ Example:
 
 ## Block Picture
 
-Add `picture-block` to `figure` element to have full width picture.
+Add `img-block` to `figure` element to have full width picture.
 
 Example:
 ```html
-<figure class=" picture-block">
-    <div class="full-size-picture middle-align" style=" height: 300px;">
+<figure class=" img-block" style="">
+    <div class="img-wrapper full-size-img middle-align" style=" height: 300px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
     <figcaption>
@@ -60,12 +61,12 @@ Example:
 
 ### Frame
 
-Add `picture-frame` class to the parent `figure` element to have picture frame.
+Add `img-frame` class to the parent `figure` element to have picture frame.
 
 Example:
 ```html
-<figure class="picture-frame">
-    <div class="full-size-picture" style=" width: 350px; height: 300px;">
+<figure class="" style=" width: 400px;">
+    <div class="img-wrapper img-frame" style=" width: 400px;">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
 </figure>
@@ -74,12 +75,12 @@ Example:
 
 ### Shadow
 
-Add `picture-shadow` class to the parent `figure` element.
+Add `img-shadow` class to the parent `figure` element.
 
 Example:
 ```html
-<figure class="picture-shadow">
-    <div class="full-size-picture" style=" width: 500px; height: 300px;">
+<figure class="" style="">
+    <div class="img-wrapper img-shadow" style="">
         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
     </div>
     <figcaption>

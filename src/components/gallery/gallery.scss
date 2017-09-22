@@ -62,9 +62,16 @@
         &.gallery-3,
         &.gallery-4,
         &.gallery-5 {
-            .gallery-item:last-child,
-            .gallery-item:last-child .picture-block {
+            .gallery-item {
+                flex-basis: auto;
+            }
+            .gallery-item:last-child,{
+                flex-basis: 100%;
                 margin-right: auto;
+
+                .picture-block {
+                    margin-right: 0;
+                }
             }
         }
 
