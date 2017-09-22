@@ -15,20 +15,35 @@ NOTE: This component depends on the [`picture` component](/ndsu-web-template/com
 
 Example:
 ```html
-<div style="max-width: 600px; margin: 0 auto;">
+<div style="max-width: 800px; margin: 0 auto;">
 {{#getJsonContext '{
     "title": "Gallery",
+    "rowHeight": 300,
     "items": [
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image"
         },
         {
-        "src": "/ndsu-web-template/images/sample.png",
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
+        "alt": "Sample Image",
+        "link": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
+        "newWindow": true
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
         "alt": "Sample Image"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
+        "alt": "Sample Image"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
+        "alt": "Sample Image"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
         "alt": "Sample Image"
         }
     ]
@@ -41,62 +56,61 @@ Example:
 ## Size
 
 Available sizes:
-* `gallery-1`: 1 columns (default)
-* `gallery-2`: 2 columns
+* `gallery-1`: 1 columns
+* `gallery-2`: 2 columns (default)
 * `gallery-3`: 3 columns
 * `gallery-4`: 4 columns
 * `gallery-5`: 5 columns
 
-Example of 5 columns:
+Example of 3 columns:
 ```html
 {{#getJsonContext '{
     "title": "Gallery",
+    "rowHeight": 300,
+    "style": "frame",
     "size": 3,
     "items": [
         {
         "src": "/ndsu-web-template/images/sample.png",
+        "alt": "Sample Image"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
         "alt": "Sample Image",
-        "width": "250"
+        "link": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
+        "newWindow": true
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
+        "alt": "Sample Image"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
+        "alt": "Sample Image"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "alt": "Sample Image"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
+        "alt": "Sample Image"
         },
         {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
+        "alt": "Sample Image"
         },
         {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250"
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "alt": "Sample Image"
         }
     ]
 }'}}
@@ -113,69 +127,61 @@ Example of gallery with picture styling:
 ```html
 {{#getJsonContext '{
     "title": "Gallery",
-    "size": 4,
+    "rowHeight": 250,
     "style": "shadow",
+    "size": 5,
     "items": [
         {
-        "src": "/ndsu-web-template/images/sample.png",
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
         "alt": "Sample Image",
-        "width": "250",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "alt": "Sample Image",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
-        "width": "250",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
+        "alt": "Sample Image",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
         "alt": "Sample Image",
-        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         },
         {
-        "src": "/ndsu-web-template/images/sample.png",
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
         "alt": "Sample Image",
-        "width": "250",
-        "primaryCaption": "Title",
-        "secondaryCaption": "FirstName LastName"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250",
-        "primaryCaption": "Title",
-        "secondaryCaption": "FirstName LastName"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250",
-        "primaryCaption": "Title",
-        "secondaryCaption": "FirstName LastName"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250",
-        "primaryCaption": "Title",
-        "secondaryCaption": "FirstName LastName"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250",
-        "primaryCaption": "Title",
-        "secondaryCaption": "FirstName LastName"
-        },
-        {
-        "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image",
-        "width": "250",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
         }

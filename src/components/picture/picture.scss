@@ -17,7 +17,6 @@ $frame-width: 0.25em;
 
     img {
         display: block;
-        position: absolute;
         top: 0; left: 0;
     }
 
@@ -52,6 +51,7 @@ $frame-width: 0.25em;
         bottom: 0;
         left: 0;
         border: $frame-width solid $color-white;
+        z-index: 1;
     }
 }
 
@@ -64,6 +64,9 @@ figure.img-block {
     width: 100%;
     display: block;
     margin: 0;
+    .img-wrapper {
+        display: block;
+    }
     .full-size-img {
         width: 100%;
     }

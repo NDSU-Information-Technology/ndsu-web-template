@@ -16,7 +16,7 @@ const setPictureComponentSize = (img) => {
     } else if (imgParent.clientHeight == 0) {
         imgParent.style.height = (imgParent.clientWidth / imgRatio) + 'px';
     } else if (imgParent.clientWidth == 0) {
-        imgParent.style.width = (imgParent.clientHeight / imgRatio) + 'px';
+        imgParent.style.width = (imgParent.clientHeight * imgRatio) + 'px';
     } 
 
     let parentRatio = imgParent.clientWidth/imgParent.clientHeight;
