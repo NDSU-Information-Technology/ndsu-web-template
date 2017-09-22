@@ -1,4 +1,4 @@
-<figure class="{{#if style}}picture-{{style}}{{/if}}{{#if blockPicture}} picture-block{{/if}}{{#each additionalClasses}} this{{/each}}">
+<figure class="{{#if blockPicture}} img-block{{/if}}{{#each additionalClasses}} this{{/each}}" style="{{#if width}} width: {{width}}px;{{/if}}">
     {{> _picture this}}
     {{#ifcond primaryCaption '||' secondaryCaption}}
     <figcaption>

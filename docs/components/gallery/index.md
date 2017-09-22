@@ -20,24 +20,24 @@ Example:
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper" style="">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
@@ -63,72 +63,72 @@ Example of 5 columns:
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style=" width: 250px;">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style=" width: 270px;">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item">
-            <figure class=" picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
@@ -149,8 +149,8 @@ Example of gallery with picture styling:
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -161,8 +161,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -173,8 +173,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -185,8 +185,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -197,8 +197,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -209,8 +209,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -221,8 +221,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -233,8 +233,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>
@@ -245,8 +245,8 @@ Example of gallery with picture styling:
             
         </li>
         <li class="gallery-item">
-            <figure class="picture-shadow picture-block">
-                <div class="full-size-picture" style="">
+            <figure class=" img-block" style=" width: 250px;">
+                <div class="img-wrapper img-shadow" style=" width: 250px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
                 <figcaption>

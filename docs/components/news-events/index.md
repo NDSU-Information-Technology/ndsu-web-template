@@ -11,8 +11,8 @@ title: News and Events Component
         <h3>News</h3>
         <ul>
             <li class="news-item">
-                <figure class="picture-frame picture-block">
-                    <div class="full-size-picture force-ratio" style="">
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                     </div>
                 </figure>
@@ -23,8 +23,8 @@ title: News and Events Component
                 </div>
             </li>
             <li class="news-item">
-                <figure class="picture-frame picture-block">
-                    <div class="full-size-picture force-ratio" style="">
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                     </div>
                 </figure>
@@ -34,8 +34,8 @@ title: News and Events Component
                 </div>
             </li>
             <li class="news-item">
-                <figure class="picture-frame picture-block">
-                    <div class="full-size-picture force-ratio" style="">
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample2.jpg" alt="Sample Image" />
                     </div>
                 </figure>
@@ -49,8 +49,8 @@ title: News and Events Component
                 </div>
             </li>
             <li class="news-item">
-                <figure class="picture-frame picture-block">
-                    <div class="full-size-picture force-ratio" style="">
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame force-ratio" style="">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                     </div>
                 </figure>

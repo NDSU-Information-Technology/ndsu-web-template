@@ -171,8 +171,8 @@ Example from DOM structure above:
 ```html
 <section class="generic-content">
     <div class="quick-picture-container">
-        <figure class="">
-            <div class="full-size-picture" style="">
+        <figure class="" style="">
+            <div class="img-wrapper" style="">
                 <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
             </div>
             <figcaption>
@@ -208,8 +208,8 @@ To have the picture on the right side, swap the order of `description` and `figu
                 metus ut aliquet aliquet. Fusce facilisis lorem non rutrum facilisis.</p>
             <a href="#">Read More</a>
         </div>
-        <figure class="">
-            <div class="full-size-picture" style="">
+        <figure class="" style="">
+            <div class="img-wrapper" style="">
                 <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
             </div>
             <figcaption>
