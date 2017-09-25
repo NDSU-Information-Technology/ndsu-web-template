@@ -109,6 +109,10 @@
         }
 
         &.gallery-center {
+            & .gallery-collection {
+                justify-content: center;
+            }
+            
             &.gallery-1 .gallery-item{
                 @include gallery-item-center();
             }
@@ -130,6 +134,10 @@
         }
 
         &.gallery-left {
+            & .gallery-collection {
+                justify-content: flex-start;
+            }
+
             &.gallery-1 .gallery-item:nth-child(1n),
             &.gallery-2 .gallery-item:nth-child(2n),
             &.gallery-3 .gallery-item:nth-child(3n),
@@ -140,6 +148,10 @@
         }
 
         &.gallery-right {
+            & .gallery-collection {
+                justify-content: flex-end;
+            }
+
             &.gallery-1 .gallery-item:nth-child(1n),
             &.gallery-2 .gallery-item:nth-child(2n+1),
             &.gallery-3 .gallery-item:nth-child(3n+1),
