@@ -190,3 +190,146 @@ Example of gallery with picture styling:
 {{> _gallery this }}
 {{/getJsonContext}}
 ```
+
+## Alignment
+
+Available alignments:
+* `gallery-left` (default)
+* `gallery-center`
+* `gallery-right`
+
+```html
+{{#getJsonContext '{
+    "title": "Gallery",
+    "rowHeight": 250,
+    "style": "shadow",
+    "size": 5,
+    "align": "center",
+    "items": [
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "/ndsu-web-template/images/sample.png",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "/ndsu-web-template/images/sample.png",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        }
+    ]
+}'}}
+{{> _gallery this }}
+{{/getJsonContext}}
+```
+
+```html
+{{#getJsonContext '{
+    "title": "Gallery",
+    "rowHeight": 250,
+    "style": "shadow",
+    "size": 5,
+    "align": "right",
+    "items": [
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "/ndsu-web-template/images/sample.png",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "/ndsu-web-template/images/sample.png",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        },
+        {
+        "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
+        "alt": "Sample Image",
+        "primaryCaption": "Title",
+        "secondaryCaption": "FirstName LastName"
+        }
+    ]
+}'}}
+{{> _gallery this }}
+{{/getJsonContext}}
+```

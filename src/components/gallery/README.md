@@ -289,3 +289,242 @@ Example of gallery with picture styling:
     </ul>
 </section>
 ```
+
+## Alignment
+
+Available alignments:
+* `gallery-left` (default)
+* `gallery-center`
+* `gallery-right`
+
+```html
+<section class="gallery gallery-5 gallery-center">
+    <h5>Gallery</h5>
+    <ul class="gallery-collection" role="group">
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+    </ul>
+</section>
+```
+
+```html
+<section class="gallery gallery-5 gallery-right">
+    <h5>Gallery</h5>
+    <ul class="gallery-collection" role="group">
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+        <li class="gallery-item" style="">
+            <figure class=" img-block" style="">
+                <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                </div>
+                <figcaption>
+                    <div class="caption-1">Title</div>
+                    <div class="caption-2">FirstName LastName</div>
+                </figcaption>
+            </figure>
+            
+        </li>
+    </ul>
+</section>
+```
