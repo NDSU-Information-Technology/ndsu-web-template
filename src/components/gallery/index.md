@@ -57,7 +57,7 @@ Example:
 
 Available sizes:
 * `gallery-1`: 1 columns
-* `gallery-2`: 2 columns (default)
+* `gallery-2`: 2 columns
 * `gallery-3`: 3 columns
 * `gallery-4`: 4 columns
 * `gallery-5`: 5 columns
@@ -66,51 +66,61 @@ Example of 3 columns:
 ```html
 {{#getJsonContext '{
     "title": "Gallery",
-    "rowHeight": 300,
+    "rowHeight": 200,
     "style": "frame",
     "size": 3,
     "items": [
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
         "alt": "Sample Image",
         "link": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg",
-        "newWindow": true
+        "newWindow": true,
+        "width": 200
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "/ndsu-web-template/images/sample.png",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
-        "alt": "Sample Image"
+        "alt": "Sample Image",
+        "width": 200
         }
     ]
 }'}}
