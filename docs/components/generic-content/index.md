@@ -173,7 +173,7 @@ Example from DOM structure above:
     <div class="quick-picture-container">
         <figure class="" style="">
             <div class="img-wrapper" style="">
-                <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
             </div>
             <figcaption>
                 <div class="caption-1">Photo Headline</div>
@@ -210,7 +210,7 @@ To have the picture on the right side, swap the order of `description` and `figu
         </div>
         <figure class="" style="">
             <div class="img-wrapper" style="">
-                <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
             </div>
             <figcaption>
                 <div class="caption-1">Photo Headline</div>

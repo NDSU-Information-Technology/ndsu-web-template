@@ -531,7 +531,7 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
                 el.appendChild(containerEl);
             };
 
-            imgEl.setAttribute('src', this.imageSrc);
+            imgEl.setAttribute('src', this.fullSizeImageSrc);
             imgEl.setAttribute('alt', this.imageDesc);
 
             var elId = this.element.getAttribute('id');
@@ -581,6 +581,7 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
 
         _this3.imageSrc = _this3.imageElement.getAttribute('src');
         _this3.imageDesc = _this3.imageElement.getAttribute('alt');
+        _this3.fullSizeImageSrc = _this3.imageElement.getAttribute('data-full-size-src') || _this3.imageSrc;
 
         if (_this3.element.querySelector('a')) return _possibleConstructorReturn(_this3);
 

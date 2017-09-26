@@ -20,7 +20,7 @@ Example:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper full-size-img" style=" height: 300px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -28,7 +28,7 @@ Example:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <a href="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" target="_blank" class="img-wrapper full-size-img" style=" height: 300px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image"  />
                 </a>
             </figure>
             
@@ -36,7 +36,7 @@ Example:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper full-size-img" style=" height: 300px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -44,7 +44,7 @@ Example:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper full-size-img" style=" height: 300px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -52,7 +52,7 @@ Example:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper full-size-img" style=" height: 300px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -60,7 +60,7 @@ Example:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper full-size-img" style=" height: 300px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -87,7 +87,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -95,7 +95,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <a href="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" target="_blank" class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image"  />
                 </a>
             </figure>
             
@@ -103,7 +103,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -111,7 +111,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -119,7 +119,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -127,7 +127,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  data-full-size-src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_HR.jpg" />
                 </div>
             </figure>
             
@@ -135,7 +135,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -143,7 +143,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -151,7 +151,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image"  />
                 </div>
             </figure>
             
@@ -159,7 +159,7 @@ Example of 3 columns:
         <li class="gallery-item" style="">
             <figure class=" img-block" style=" width: 200px;">
                 <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  data-full-size-src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_HR.jpg" />
                 </div>
             </figure>
             
@@ -181,7 +181,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  data-full-size-src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_HR.jpg" />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -193,7 +193,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -205,7 +205,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -217,7 +217,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -229,7 +229,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -241,7 +241,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -253,7 +253,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -265,7 +265,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -277,7 +277,7 @@ Example of gallery with picture styling:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -304,7 +304,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -316,7 +316,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -328,7 +328,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -340,7 +340,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -352,7 +352,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -364,7 +364,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -376,7 +376,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -388,7 +388,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -400,7 +400,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -420,7 +420,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -432,7 +432,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -444,7 +444,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -456,7 +456,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -468,7 +468,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -480,7 +480,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -492,7 +492,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -504,7 +504,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+                    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>
@@ -516,7 +516,7 @@ Available alignments:
         <li class="gallery-item" style="">
             <figure class=" img-block" style="">
                 <div class="img-wrapper img-shadow full-size-img" style=" height: 250px;">
-                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
+                    <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image"  />
                 </div>
                 <figcaption>
                     <div class="caption-1">Title</div>

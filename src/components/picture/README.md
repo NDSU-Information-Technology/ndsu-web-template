@@ -9,13 +9,13 @@ Add `full-size-img` to resize the image to the size `img-wrapper` container.
 Example:
 ```html
 <div class="img-wrapper" style="">
-    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
 </div>
 <div class="img-wrapper full-size-img right-align" style=" width: 350px; height: 250px;">
-    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
 </div>
 <div class="img-wrapper full-size-img center-align" style=" width: 200px; height: 300px;">
-    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+    <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
 </div>
 ```
 
@@ -27,7 +27,7 @@ Example:
 ```html
 <figure class="" style=" width: 350px;">
     <div class="img-wrapper" style=" width: 350px; height: 300px;">
-        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
     </div>
     <figcaption>
         <div class="caption-1">North Dakota State University</div>
@@ -45,7 +45,7 @@ Example:
 ```html
 <figure class=" img-block" style="">
     <div class="img-wrapper full-size-img middle-align" style=" height: 300px;">
-        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
     </div>
     <figcaption>
         <div class="caption-1">North Dakota State University</div>
@@ -65,7 +65,7 @@ Example:
 ```html
 <figure class="" style=" width: 400px;">
     <div class="img-wrapper img-frame" style=" width: 400px;">
-        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
     </div>
 </figure>
 
@@ -79,7 +79,7 @@ Example:
 ```html
 <figure class="" style="">
     <div class="img-wrapper img-shadow" style="">
-        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
+        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
     </div>
     <figcaption>
         <div class="caption-1">North Dakota State University</div>
