@@ -76,7 +76,7 @@ Example:
 
 Available sizes:
 * `gallery-1`: 1 columns
-* `gallery-2`: 2 columns (default)
+* `gallery-2`: 2 columns
 * `gallery-3`: 3 columns
 * `gallery-4`: 4 columns
 * `gallery-5`: 5 columns
@@ -87,80 +87,80 @@ Example of 3 columns:
     <h5>Gallery</h5>
     <ul class="gallery-collection" role="group">
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <a href="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" target="_blank" class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <a href="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" target="_blank" class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Business_web.jpg" alt="Sample Image" />
                 </a>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/CoupleFamilyTherapy_web.jpg" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="/ndsu-web-template/images/sample.png" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/Hospitality_web.jpg" alt="Sample Image" />
                 </div>
             </figure>
             
         </li>
         <li class="gallery-item" style="">
-            <figure class=" img-block" style="">
-                <div class="img-wrapper img-frame full-size-img" style=" height: 300px;">
+            <figure class=" img-block" style=" width: 200px;">
+                <div class="img-wrapper img-frame full-size-img" style=" width: 200px; height: 200px;">
                     <img src="https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg" alt="Sample Image" />
                 </div>
             </figure>
