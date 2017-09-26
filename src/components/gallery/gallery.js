@@ -48,7 +48,7 @@ class GalleryPictureLink extends GalleryBaseObj {
             el.appendChild(containerEl);
         };
 
-        imgEl.setAttribute('src', this.imageSrc);
+        imgEl.setAttribute('src', this.fullSizeImageSrc);
         imgEl.setAttribute('alt', this.imageDesc);
 
         let elId = this.element.getAttribute('id');
@@ -84,6 +84,7 @@ class GalleryPictureLink extends GalleryBaseObj {
         
         this.imageSrc = this.imageElement.getAttribute('src');
         this.imageDesc = this.imageElement.getAttribute('alt');
+        this.fullSizeImageSrc = this.imageElement.getAttribute('data-full-size-src') || this.imageSrc;
 
         if (this.element.querySelector('a')) return;
 

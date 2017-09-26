@@ -100,6 +100,7 @@ Example of 3 columns:
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
         "alt": "Sample Image",
+        "fullSizeSrc": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_HR.jpg",
         "width": 200
         },
         {
@@ -119,6 +120,7 @@ Example of 3 columns:
         },
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "fullSizeSrc": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_HR.jpg",
         "alt": "Sample Image",
         "width": 200
         }
@@ -143,6 +145,7 @@ Example of gallery with picture styling:
     "items": [
         {
         "src": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_web.jpg",
+        "fullSizeSrc": "https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Academics/SoilScience_HR.jpg",
         "alt": "Sample Image",
         "primaryCaption": "Title",
         "secondaryCaption": "FirstName LastName"
