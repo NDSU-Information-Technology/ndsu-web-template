@@ -3,6 +3,10 @@ body {
 	font-size: 100%;
 }
 
+button, input, table, td, th {
+	font-family: inherit;
+}
+
 
 @include media-xl {
 	h1 { font-size: 2em; }
