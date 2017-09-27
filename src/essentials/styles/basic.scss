@@ -14,15 +14,21 @@ body {
 	font-size: 1rem;
 	line-height: 1;
 	min-height: 100vh;
-
-	h1, h2, h3, h4, h5 {
-		margin-top: 1em;
-		margin-bottom: 0.75em;
-		line-height: 1.25em;
-		font-weight: 600;
-	}
 }
 
+h1, h2, h3, h4, h5 {
+	font-family: $ndsu-serif;
+	margin-top: 1em;
+	margin-bottom: 0.75em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+
+footer,
+header {
+	font-family: $ndsu-serif;
+	font-weight: 500;
+}
 header {
 	.green-bar{
 		background-color:$color-green;
