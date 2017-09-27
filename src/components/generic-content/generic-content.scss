@@ -23,7 +23,6 @@ $text-columns: (2, 3, 4);
     h5 {
         font-size: 1.5em;
         color: $color-green;
-        text-transform: uppercase;
     }
     & > p,
     [class*='text-column-'],
