@@ -4,7 +4,7 @@
         <ul>
             {{#each newsItems}}
             <li class="news-item">
-                {{> _picture-with-frame src=imgSrc alt=imgAlt style="frame" height=imgHeight blockPicture=true fullSize=true }}
+                {{> _picture-with-frame src=imgSrc alt=imgAlt style="frame" height=imgHeight width=imgWidth blockPicture=true fullSize=true }}
                 <div class="news-content">
                     <a class="news-link" href="{{url}}">{{headline}}</a>
                     {{#if date}}
