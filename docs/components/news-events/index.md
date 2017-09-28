@@ -12,7 +12,7 @@ title: News and Events Component
         <ul>
             <li class="news-item">
                 <figure class=" img-block" style="">
-                    <div class="img-wrapper img-frame full-size-img" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                     </div>
                 </figure>
@@ -24,7 +24,7 @@ title: News and Events Component
             </li>
             <li class="news-item">
                 <figure class=" img-block" style="">
-                    <div class="img-wrapper img-frame full-size-img" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                     </div>
                 </figure>
@@ -35,7 +35,7 @@ title: News and Events Component
             </li>
             <li class="news-item">
                 <figure class=" img-block" style="">
-                    <div class="img-wrapper img-frame full-size-img" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample2.jpg" alt="Sample Image"  />
                     </div>
                 </figure>
@@ -50,7 +50,7 @@ title: News and Events Component
             </li>
             <li class="news-item">
                 <figure class=" img-block" style="">
-                    <div class="img-wrapper img-frame full-size-img" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                     </div>
                 </figure>

@@ -891,8 +891,6 @@ footer {
   .generic-content h2, .generic-content h3, .generic-content h4, .generic-content h5 {
     margin-top: 0;
     margin-bottom: 0.5em; }
-  .generic-content h2, .generic-content h3, .generic-content h4 {
-    font-family: Georgia, serif; }
   .generic-content h2 {
     font-size: 2.75em;
     margin-bottom: 0.25em;
@@ -904,8 +902,7 @@ footer {
     font-size: 2em; }
   .generic-content h5 {
     font-size: 1.5em;
-    color: #002119;
-    text-transform: uppercase; }
+    color: #002119; }
   .generic-content > p,
   .generic-content [class*='text-column-'],
   .generic-content .multi-sections {
