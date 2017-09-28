@@ -924,7 +924,8 @@ footer {
     padding: 0 0.25em;
     overflow: hidden; }
   .gallery .gallery-item .img-block {
-    height: 100%; }
+    height: 100%;
+    max-width: 100%; }
   .gallery .gallery-item .img-wrapper {
     height: inherit; }
   .gallery .gallery-item .img-wrapper {
