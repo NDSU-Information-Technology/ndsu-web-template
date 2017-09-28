@@ -11,35 +11,62 @@ title: News and Events Component
         <h3>News</h3>
         <ul>
             <li class="news-item">
+<<<<<<< HEAD
                 <figure class=" img-block" style="">
                     <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                     </div>
                 </figure>
                 
+=======
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
+                        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
+                    </div>
+                </figure>
+                
+>>>>>>> 5721830d687a117fc2357dfacbc376bb09cd6e34
                 <div class="news-content">
                     <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
                     <div class="event-date">July 1, 2017</div>
                 </div>
             </li>
             <li class="news-item">
+<<<<<<< HEAD
                 <figure class=" img-block" style="">
                     <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                     </div>
                 </figure>
                 
+=======
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
+                        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
+                    </div>
+                </figure>
+                
+>>>>>>> 5721830d687a117fc2357dfacbc376bb09cd6e34
                 <div class="news-content">
                     <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
                 </div>
             </li>
             <li class="news-item">
+<<<<<<< HEAD
                 <figure class=" img-block" style="">
                     <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample2.jpg" alt="Sample Image"  />
                     </div>
                 </figure>
                 
+=======
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
+                        <img src="/ndsu-web-template/images/sample2.jpg" alt="Sample Image"  />
+                    </div>
+                </figure>
+                
+>>>>>>> 5721830d687a117fc2357dfacbc376bb09cd6e34
                 <div class="news-content">
                     <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
                     <div class="event-date">July 1, 2017</div>
@@ -49,12 +76,21 @@ title: News and Events Component
                 </div>
             </li>
             <li class="news-item">
+<<<<<<< HEAD
                 <figure class=" img-block" style="">
                     <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
                         <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
                     </div>
                 </figure>
                 
+=======
+                <figure class=" img-block" style="">
+                    <div class="img-wrapper img-frame full-size-img" style=" height: 400px;">
+                        <img src="/ndsu-web-template/images/sample.png" alt="Sample Image"  />
+                    </div>
+                </figure>
+                
+>>>>>>> 5721830d687a117fc2357dfacbc376bb09cd6e34
                 <div class="news-content">
                     <a class="news-link" href="#">Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.</a>
                 </div>

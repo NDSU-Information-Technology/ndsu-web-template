@@ -1909,7 +1909,12 @@ ul.navbar {
         -ms-flex-positive: 5;
             flex-grow: 5;
     -ms-flex-preferred-size: 62.5%;
+<<<<<<< HEAD
         flex-basis: 62.5%; }
+=======
+        flex-basis: 62.5%;
+    width: 62.5%; }
+>>>>>>> 5721830d687a117fc2357dfacbc376bb09cd6e34
   .news-events-container .events-box {
     margin-left: 3em;
     -webkit-box-flex: 3;
