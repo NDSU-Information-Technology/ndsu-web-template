@@ -14,13 +14,15 @@ title: News and Events Component
             "url": "#",
             "date": "July 1, 2017",
             "imgSrc": "/ndsu-web-template/images/sample.png",
-            "imgAlt": "Sample Image"
+            "imgAlt": "Sample Image",
+            "imgHeight": 400
         },
         {
             "headline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
             "url": "#",
             "imgSrc": "/ndsu-web-template/images/sample.png",
-            "imgAlt": "Sample Image"
+            "imgAlt": "Sample Image",
+            "imgHeight": 400
         },
         {
             "headline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
@@ -28,13 +30,15 @@ title: News and Events Component
             "date": "July 1, 2017",
             "url": "#",
             "imgSrc": "/ndsu-web-template/images/sample2.jpg",
-            "imgAlt": "Sample Image"
+            "imgAlt": "Sample Image",
+            "imgHeight": 400
         },
         {
             "headline": "Curabitur arcu arcu, tincidunt eget ante ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia.",
             "url": "#",
             "imgSrc": "/ndsu-web-template/images/sample.png",
-            "imgAlt": "Sample Image"
+            "imgAlt": "Sample Image",
+            "imgHeight": 400
         }
     ],
     "eventItems": [
