@@ -1537,6 +1537,9 @@ footer {
   margin-left: 0;
   margin-right: 0; }
 
+.layout .container {
+  padding: 0; }
+
 .navbar {
   position: relative;
   display: -webkit-box;

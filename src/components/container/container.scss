@@ -6,6 +6,7 @@
 	@include container-padding();
 }
 
+// TODO: Consolidate this with layout
 .flex-container {
 	display: flex;
 	justify-content: space-between;
