@@ -1,3 +1,10 @@
+
+@mixin flex-size($n) {
+	.flex-#{$n} {
+		flex: $n 1 (100%/$flex-base*$n);
+	}
+}
+
 .layout {
 	display: flex;
 	justify-content: space-between;
@@ -41,34 +48,12 @@
 		flex-basis: 200px;
 	}
 	.side-col {
-        flex: 1 1 auto;
 	}
     .main-col {
-        flex: 1 1 auto;
 	}
 	
-	.main-col, .side-col, .nav-col {
-		&.flex-1 {
-			flex-grow: 1;
-		}
-		&.flex-2 {
-			flex-grow: 2;
-		}
-		&.flex-3 {
-			flex-grow: 3;
-		}
-		&.flex-4 {
-			flex-grow: 4;
-		}
-		&.flex-5 {
-			flex-grow: 5;
-		}
-		&.flex-6 {
-			flex-grow: 6;
-		}
-		&.flex-7 {
-			flex-grow: 7;
-		}
+	@each $size in $flex-sizes {
+		@include flex-size($size);
 	}
 
 	@include media-xl {
