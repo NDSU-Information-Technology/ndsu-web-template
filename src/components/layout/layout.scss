@@ -41,7 +41,7 @@
 		flex-basis: 200px;
 	}
 	.side-col {
-		flex-grow: 1;
+        flex: 1 1 auto;
 	}
     .main-col {
         flex: 1 1 auto;
@@ -67,7 +67,7 @@
 			flex-grow: 6;
 		}
 		&.flex-7 {
-			flex-grow: 9;
+			flex-grow: 7;
 		}
 	}
 

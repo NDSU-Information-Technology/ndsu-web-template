@@ -1268,8 +1268,8 @@ footer {
         flex-basis: 200px; }
   .layout .side-col {
     -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
   .layout .main-col {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
@@ -1299,9 +1299,9 @@ footer {
         -ms-flex-positive: 6;
             flex-grow: 6; }
   .layout .main-col.flex-7, .layout .side-col.flex-7, .layout .nav-col.flex-7 {
-    -webkit-box-flex: 9;
-        -ms-flex-positive: 9;
-            flex-grow: 9; }
+    -webkit-box-flex: 7;
+        -ms-flex-positive: 7;
+            flex-grow: 7; }
   @media (max-width: 767px) {
     .layout {
       -webkit-box-orient: vertical;
