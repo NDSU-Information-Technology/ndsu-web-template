@@ -1371,8 +1371,10 @@ var StickyBar = function () {
 
             if (currentY > obj.offsetTop) {
                 obj.element.classList.add('sticky-bar-on');
-            } else {
+                obj.bufferElement.style.height = obj.element.offsetHeight + 'px';
+            } else if (currentY <= obj.offsetTop - obj.element.offsetHeight) {
                 obj.element.classList.remove('sticky-bar-on');
+                obj.bufferElement.style.height = 0;
             }
         }
     }]);
@@ -1384,6 +1386,16 @@ var StickyBar = function () {
 
         this.element = baseElement;
         this.offsetTop = this.element.offsetTop;
+
+        this.bufferElement = document.createElement('div');
+        this.bufferElement.classList.add('sticky-buffer');
+
+        var sizes = ['xl, lg', 'md', 'sm', 'xs'];
+        sizes.forEach(function (size) {
+            var stickyClass = 'sticky-' + size;
+            if (_this13.element.classList.contains(stickyClass)) _this13.bufferElement.classList.add(stickyClass);
+        });
+        this.element.parentElement.insertBefore(this.bufferElement, this.element);
 
         window.addEventListener('scroll', function (e) {
             return StickyBar._scrollEvent(e, _this13);

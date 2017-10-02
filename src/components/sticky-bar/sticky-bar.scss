@@ -1,10 +1,17 @@
+.sticky-buffer {
+    display: none;
+}
+
 @each $size in $media-sizes {
-    .sticky-bar-on.sticky-#{$size} {
-        @include media-size($size) {
+    @include media-size($size) {
+        .sticky-bar-on.sticky-#{$size} {
 			position: fixed;
 			top: 0; left: 0;right: 0;
 			z-index: $z-index-mobile-menu;
 			box-shadow: 1px 1px 2px $default-secondary-bg-color;
+        }
+        .sticky-buffer.sticky-#{$size} {
+            display: block;
         }
     }
 }
