@@ -19,7 +19,7 @@ class StickyBar {
         this.bufferElement = document.createElement('div');
         this.bufferElement.classList.add('sticky-buffer');
 
-        let sizes = ['xl, lg', 'md', 'sm', 'xs'];
+        let sizes = ['xl', 'lg', 'md', 'sm', 'xs'];
         sizes.forEach((size) => {
             let stickyClass = 'sticky-' + size;
             if (this.element.classList.contains(stickyClass))

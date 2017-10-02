@@ -662,7 +662,7 @@ var StickyBar = function () {
         this.bufferElement = document.createElement('div');
         this.bufferElement.classList.add('sticky-buffer');
 
-        var sizes = ['xl, lg', 'md', 'sm', 'xs'];
+        var sizes = ['xl', 'lg', 'md', 'sm', 'xs'];
         sizes.forEach(function (size) {
             var stickyClass = 'sticky-' + size;
             if (_this9.element.classList.contains(stickyClass)) _this9.bufferElement.classList.add(stickyClass);
