@@ -1556,6 +1556,10 @@ footer {
             justify-content: flex-end; }
     .navbar.navbar-right .nav-link {
       text-align: right; }
+  .navbar .nav-item.nav-item-haschild:not(.extended-child-section) > .nav-link::after {
+    content: "\00a0\00a0\25BC"; }
+  .navbar .nav-item.nav-item-haschild:not(.extended-child-section).nav-item-haschild-down > .nav-link::after {
+    content: "\00a0\00a0\25B2"; }
   .navbar .child-navbar {
     z-index: 1000;
     position: absolute;
