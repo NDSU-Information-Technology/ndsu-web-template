@@ -81,6 +81,18 @@
             text-align: center;
         }
     }
+    
+    @include media-sm {
+        .news-item {
+            flex-direction: column;
+        }
+        .img-block {
+            max-width: 100%;
+        }
+        .news-content {
+            margin-top: 1em;
+        }
+    }
 }
 
 .layout .main-col .news-events-container {

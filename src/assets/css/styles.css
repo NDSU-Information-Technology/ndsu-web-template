@@ -1953,6 +1953,16 @@ ul.navbar {
             flex-basis: auto; }
       .news-events-container a.read-more-link {
         text-align: center; } }
+  @media (max-width: 767px) {
+    .news-events-container .news-item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .news-events-container .img-block {
+      max-width: 100%; }
+    .news-events-container .news-content {
+      margin-top: 1em; } }
 
 .layout .main-col .news-events-container {
   padding: 1em; }
