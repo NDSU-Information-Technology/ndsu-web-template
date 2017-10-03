@@ -1,5 +1,5 @@
 /* LINKS */
-@mixin linkColor($primary: $color-green, $secondary: $color-gray60, $selector: '&'){
+@mixin linkColor($primary: $color-green, $secondary: $color-gray60, $ternary: '', $selector: '&'){
     #{$selector} {
         color: $primary;
         @content;
@@ -9,6 +9,17 @@
     #{$selector}[aria-expanded=true],
     #{$selector}.active  {
         color: $secondary;
+    }
+    @if ($ternary) {
+        #{$selector}.active-branch {
+            color: $ternary;
+        }
+        #{$selector}.active-branch:hover, 
+        #{$selector}.active-branch:focus,
+        #{$selector}.active-branch[aria-expanded=true],
+        #{$selector}.active-branch.active  {
+            color: $secondary;
+        }
     }
 }
 

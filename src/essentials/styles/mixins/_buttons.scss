@@ -18,9 +18,13 @@
     }
 
     padding: 1em;
+
+    &.active {
+        cursor: auto;
+    }
 }
 
-@mixin btn-variant($main-color, $main-bg, $active-color, $active-bg, $underline-mode: -1){
+@mixin btn-variant($main-color, $main-bg, $active-color, $active-bg, $ternary-color: '', $ternary-bg: '', $underline-mode: -1){
     background-color: $main-bg;
     
     &:hover,
@@ -29,8 +33,19 @@
     &.active {
         background-color: $active-bg;
     }
+    @if ($ternary-bg) {
+        &.active-branch {
+            background-color: $ternary-bg;
+        }
+        &.active-branch:hover,
+        &.active-branch:focus,
+        &.active-branch[aria-expanded=true],
+        &.active-branch.active {
+            background-color: $active-bg;
+        }
+    }
     
-    @include linkColor($main-color, $active-color);
+    @include linkColor($main-color, $active-color, $ternary-color);
     @if ($underline-mode > -1) {
         @include linkUnderline($underline-mode);
     }

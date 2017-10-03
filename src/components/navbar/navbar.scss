@@ -196,11 +196,11 @@
 	}
 
 	.nav-link{
-    	@include btn-variant($color-white, $default-secondary-bg-color, $color-yellow, $color-black);
+    	@include btn-variant($color-white, $default-secondary-bg-color, $color-yellow, $color-black, $color-yellow, $color-gray7);
 	}
-	.nav-item-home .nav-link{
-    	@include btn-variant($color-yellow, $color-gray7, $color-yellow, $color-black);
-	}
+	// .nav-item-home .nav-link{
+    // 	@include btn-variant($color-yellow, $color-gray7, $color-yellow, $color-black);
+	// }
 
 	.extended-child-navbar {
 		.child-section-title {
@@ -224,10 +224,10 @@
 			border-top: 1px solid $color-gray20;
 		}
 		.child-navbar .nav-link {
-			@include btn-variant($color-gray13, $color-gray95, $color-yellow, $color-gray20);
+			@include btn-variant($color-gray13, $color-gray95, $color-yellow, $color-gray20, $color-yellow, $color-gray7);
 		}
 		.child-navbar .child-navbar .nav-link {
-			@include btn-variant($color-gray13, $color-gray99, $color-yellow, $color-gray20);
+			@include btn-variant($color-gray13, $color-gray99, $color-yellow, $color-gray20, $color-yellow, $color-gray7);
 		}
 		.nav-link.active {
 			box-shadow: 1px 1px 1px $color-black;

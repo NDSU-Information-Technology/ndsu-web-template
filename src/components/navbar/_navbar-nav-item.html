@@ -1,15 +1,11 @@
 {{#if link.home}}
-<li class="nav-item{{#if link.hideMobile}} nav-item-mobile-hide{{/if}} nav-item-home"><a class="nav-link" href="{{link.url}}"{{#if newWindow}} target="_blank"{{/if}}/><span class="sr-only">{{#ifnull link.text 'Home'}}{{/ifnull}} </span>&#8962;</a></li>
+<li class="nav-item{{#if link.hideMobile}} nav-item-mobile-hide{{/if}} nav-item-home">
+    <{{#if link.active}}div{{else}}a{{/if}} class="nav-link{{#if link.active}} active{{else}}{{#if link.activeBranch}} active-branch{{/if}}{{/if}} {{#unless link.active}}"href="{{link.url}}"{{#if newWindow}} target="_blank"{{/if}}{{/unless}}><span class="sr-only">{{#ifnull link.text 'Home'}}{{/ifnull}} </span>&#8962;</{{#if link.active}}div{{else}}a{{/if}}>
+</li>
 {{else}}
 <li class="nav-item{{#if link.hideMobile}} nav-item-mobile-hide{{/if}}{{#if link.extendedChildSection }} extended-child-section{{/if}}">
     {{#if link.url }}
-    <a class="nav-link" href="{{ link.url }}"{{#if newWindow}} target="_blank"{{/if}}>
-        {{#if link.extendedChildSection}}
-        <h5>{{link.text}}</h5>
-        {{else}}
-        {{link.text}}
-        {{/if}}
-    </a>
+    {{> _navbar-nav-link link=this}}
     {{else}}
     <h5 class="child-section-title">{{link.text}}</h5>
     {{/if}}

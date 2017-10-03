@@ -332,3 +332,60 @@ Example:
 Resize browser window to a mobile page's width, and notice that the links specified have been added to the mobile navigation.
 
 A child `navbar` component will also be included in mobile navigation if its parent is included.
+
+
+## Indicating current page and branch
+
+Use the css class `active-branch` to indicate that the item is in the current active branch. Use the class `active` to indicate that the link is the current page the user is on. It is **recommended** to use `div` instead of `a` element for current page to disable the link.
+
+Example below shows a navigation for a page with breadcrumb Home > Link 1 > Sub-Menu 2
+
+```html
+{{#getJsonContext '{
+  "additionalClasses": [
+    "navbar-dark"
+  ],
+  "links": [
+    {
+      "url": "home",
+      "home": true,
+      "activeBranch": true
+    },
+    {
+      "url": "link1",
+      "text": "Link 1",
+      "activeBranch": true,
+      "childNavbar": {
+        "additionalClasses": [
+          "navbar-vertical"
+        ],
+        "links": [
+          {
+            "url": "submenu1",
+            "text": "Sub-Menu 1"
+          },
+          {
+            "url": "submenu2",
+            "text": "Sub-Menu 2",
+            "active": true
+          },
+          {
+            "url": "submenu3",
+            "text": "Sub-Menu 3"
+          }
+        ]
+      }
+    },
+    {
+      "url": "link2",
+      "text": "Link 2"
+    },
+    {
+      "url": "link3",
+      "text": "Link 3"
+    }
+  ]
+}'}}
+{{> _navbar this }}
+{{/getJsonContext}}
+```

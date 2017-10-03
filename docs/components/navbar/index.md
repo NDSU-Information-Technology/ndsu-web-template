@@ -28,17 +28,17 @@ Basic usage example:
 <div role="navigation">
     <ul class="navbar">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
@@ -63,17 +63,17 @@ Justified links example:
 <div role="navigation">
     <ul class="navbar navbar-justify">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
@@ -86,17 +86,17 @@ Left-align links example:
 <div role="navigation">
     <ul class="navbar navbar-left">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
@@ -115,17 +115,17 @@ Example:
 <div role="navigation">
     <ul class="navbar navbar-dark">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
@@ -145,17 +145,17 @@ Available direction classes:
 <div role="navigation">
     <ul class="navbar navbar-vertical">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
@@ -188,34 +188,34 @@ Example HTML markup for dropdown:
 <div role="navigation">
     <ul class="navbar navbar-dark">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
             <ul class="navbar navbar-vertical child-navbar">
                 <li class="nav-item">
-                    <a class="nav-link" href="submenu1">
+                    <a class="nav-link " href="submenu1">
                         Sub-Menu 1
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="submenu2">
+                    <a class="nav-link " href="submenu2">
                         Sub-Menu 2
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="submenu3">
+                    <a class="nav-link " href="submenu3">
                         Sub-Menu 3
                     </a>
                 </li>
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
@@ -261,7 +261,7 @@ Example HTML markup for the DOM structure given above:
 <div role="navigation">
     <ul class="navbar navbar-dark">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
             <ul class="navbar extended-child-navbar child-navbar">
@@ -269,17 +269,17 @@ Example HTML markup for the DOM structure given above:
                     <h5 class="child-section-title">Section 1</h5>
                     <ul class="navbar navbar-vertical child-navbar">
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu1">
+                            <a class="nav-link " href="submenu1">
                                 Sub-Menu 1
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu2">
+                            <a class="nav-link " href="submenu2">
                                 Sub-Menu 2
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu3">
+                            <a class="nav-link " href="submenu3">
                                 Sub-Menu 3
                             </a>
                         </li>
@@ -289,17 +289,17 @@ Example HTML markup for the DOM structure given above:
                     <h5 class="child-section-title">Section 2</h5>
                     <ul class="navbar navbar-vertical child-navbar">
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu4">
+                            <a class="nav-link " href="submenu4">
                                 Sub-Menu 4
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu5">
+                            <a class="nav-link " href="submenu5">
                                 Sub-Menu 5
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu6">
+                            <a class="nav-link " href="submenu6">
                                 Sub-Menu 6
                             </a>
                         </li>
@@ -309,17 +309,17 @@ Example HTML markup for the DOM structure given above:
                     <h5 class="child-section-title">Section 3</h5>
                     <ul class="navbar navbar-vertical child-navbar">
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu7">
+                            <a class="nav-link " href="submenu7">
                                 Sub-Menu 7
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu8">
+                            <a class="nav-link " href="submenu8">
                                 Sub-Menu 8
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="submenu9">
+                            <a class="nav-link " href="submenu9">
                                 Sub-Menu 9
                             </a>
                         </li>
@@ -328,17 +328,17 @@ Example HTML markup for the DOM structure given above:
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link4">
+            <a class="nav-link " href="link4">
                 Link 4
             </a>
         </li>
@@ -370,17 +370,17 @@ Example:
 <div role="navigation">
     <ul class="navbar navbar-mobilize">
         <li class="nav-item">
-            <a class="nav-link" href="link1">
+            <a class="nav-link " href="link1">
                 Link 1
             </a>
         </li>
         <li class="nav-item nav-item-mobile-hide">
-            <a class="nav-link" href="link2">
+            <a class="nav-link " href="link2">
                 Link 2
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="link3">
+            <a class="nav-link " href="link3">
                 Link 3
             </a>
         </li>
@@ -391,3 +391,53 @@ Example:
 Resize browser window to a mobile page's width, and notice that the links specified have been added to the mobile navigation.
 
 A child `navbar` component will also be included in mobile navigation if its parent is included.
+
+
+## Indicating current page and branch
+
+Use the css class `active-branch` to indicate that the item is in the current active branch. Use the class `active` to indicate that the link is the current page the user is on. It is **recommended** to use `div` instead of `a` element for current page to disable the link.
+
+Example below shows a navigation for a page with breadcrumb Home > Link 1 > Sub-Menu 2
+
+```html
+<div role="navigation">
+    <ul class="navbar navbar-dark">
+        <li class="nav-item nav-item-home">
+            <a class="nav-link active-branch "href="home"><span class="sr-only">Home </span>&#8962;</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  active-branch" href="link1">
+                Link 1
+            </a>
+            <ul class="navbar navbar-vertical child-navbar">
+                <li class="nav-item">
+                    <a class="nav-link " href="submenu1">
+                        Sub-Menu 1
+                    </a>
+                </li>
+                <li class="nav-item">
+                    
+                    <div class="nav-link active">
+                        Sub-Menu 2
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="submenu3">
+                        Sub-Menu 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="link2">
+                Link 2
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="link3">
+                Link 3
+            </a>
+        </li>
+    </ul>
+</div>
+```

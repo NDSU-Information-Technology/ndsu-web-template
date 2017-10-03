@@ -1,0 +1,17 @@
+{{#if link.active}}{{#if link.activeBranch}} active-branch{{/if}}
+<div class="nav-link active">
+    {{#if link.extendedChildSection}}
+    <h5>{{link.text}}</h5>
+    {{else}}
+    {{link.text}}
+    {{/if}}
+</div>
+{{else}}
+<a class="nav-link {{#if link.activeBranch}} active-branch{{/if}}" href="{{ link.url }}"{{#if newWindow}} target="_blank"{{/if}}>
+    {{#if link.extendedChildSection}}
+    <h5>{{link.text}}</h5>
+    {{else}}
+    {{link.text}}
+    {{/if}}
+</a>
+{{/if}}

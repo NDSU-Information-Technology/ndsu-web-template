@@ -760,3 +760,7 @@
 .markdown-body .news-events-container ul {
   padding-left: 0;
 }
+
+.markdown-body .navbar li+li {
+  margin-top: 0;
+}
