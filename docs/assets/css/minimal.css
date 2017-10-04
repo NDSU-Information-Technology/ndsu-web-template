@@ -1814,7 +1814,8 @@ ul.navbar {
           box-sizing: border-box; }
   .img-wrapper.full-size-img img {
     top: 0;
-    left: 0; }
+    left: 0;
+    width: auto; }
   .img-wrapper.full-size-img.left-align img {
     left: 0%; }
   .img-wrapper.full-size-img.center-align img {
