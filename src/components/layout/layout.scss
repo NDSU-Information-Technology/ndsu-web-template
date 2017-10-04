@@ -50,6 +50,7 @@
 	.side-col {
 	}
     .main-col {
+		flex-grow: 1;
 	}
 	
 	@each $size in $flex-sizes {

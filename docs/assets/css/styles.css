@@ -1590,6 +1590,10 @@ footer {
         flex-shrink: 0;
     -ms-flex-preferred-size: 200px;
         flex-basis: 200px; }
+  .layout .main-col {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
   .layout .flex-1 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 8.33333%;
