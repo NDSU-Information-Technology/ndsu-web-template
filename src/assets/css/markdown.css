@@ -321,10 +321,6 @@
   content: "";
 }
 
-.markdown-body>*:first-child {
-  margin-top: 20px !important;
-}
-
 .markdown-body>*:last-child {
   margin-bottom: 0 !important;
 }
@@ -421,28 +417,6 @@
   visibility: visible;
 }
 
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #eaecef;
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #eaecef;
-}
-
-.markdown-body h3 {
-}
-
-.markdown-body h4 {
-}
-
-.markdown-body h5 {
-}
-
-.markdown-body h6 {
-  color: #6a737d;
-}
 
 .markdown-body ul,
 .markdown-body ol {

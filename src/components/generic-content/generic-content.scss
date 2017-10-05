@@ -1,28 +1,20 @@
 $text-columns: (2, 3, 4);
 
-.generic-content{
-    @include content-padding($padSide: false);
+body {
 
-    line-height: 1.5em;
     h2, h3, h4, h5 {
 		margin-top: 0;
         margin-bottom: 0.5em;
 	}
     h2 {
-        font-size: 2.75em;
         margin-bottom: 0.25em;
         padding-bottom: 0.25em;
         border-bottom: 1px solid $color-gray90;
     }
-    h3{
-        font-size: 2.25em;
-    }
-    h4{
-        font-size: 2em;
-    }
+
     h5 {
-        font-size: 1.5em;
         color: $color-green;
+        text-transform: uppercase;
     }
     & > p,
     [class*='text-column-'],
@@ -143,6 +135,6 @@ $text-columns: (2, 3, 4);
     }
 }
 
-.layout .main-col .generic-content {
-    @include content-padding($factor: 1/2, $padSide: false);
+main >*:first-child {
+    margin-top: 1.5em;
 }

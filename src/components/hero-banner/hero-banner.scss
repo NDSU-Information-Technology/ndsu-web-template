@@ -1,4 +1,3 @@
-$jumbotron-padding: 0em;
 $z-index-hero-banner-content: 100;
 $z-index-hero-banner-video-cover: 20;
 $z-index-hero-banner-video-poster: 10;
@@ -6,7 +5,8 @@ $z-index-hero-banner-video: 1;
 
 .hero-banner {
   @include content-padding();
-  margin-bottom: $jumbotron-padding;
+  margin-top: 0 !important;
+  margin-bottom: 1.5em;
   background-color: $color-gray7;
   background-size: cover;
   background-repeat: no-repeat;

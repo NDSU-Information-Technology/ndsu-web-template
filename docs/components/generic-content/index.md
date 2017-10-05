@@ -3,10 +3,6 @@ layout: component
 title: Generic Content Component
 ---
 
-The `generic-content` component is part of the minimal version.
-
-This component provides a boilerplate template for a basic/generic content.
-
 ## Basic Usage
 
 Each component must have the CSS class `generic-content`. It is recommended to use the HTML element `section`. Under each component, it is **highly recommended** that you have a title. You can add title by using either the HTML element `h3`, `h4`, or `h5`.
@@ -18,7 +14,7 @@ Basic DOM Structure:
 
 Example:
 ```html
-<section class="generic-content">
+<section class="">
     <h3>Big Headline - h3</h3>
     <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
         ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet
@@ -31,7 +27,7 @@ Example:
 Using `h4` or `h5` element as title will result in a smaller title.
 
 ```html
-<section class="generic-content">
+<section class="">
     <h5>Third headline - h5</h5>
     <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
         ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet
@@ -44,7 +40,7 @@ Using `h4` or `h5` element as title will result in a smaller title.
 Optionally, you can add a subtitle after the title by inserting an HTML element with class `subtitle`.
 
 ```html
-<section class="generic-content">
+<section class="">
     <h4>Second headline - h4</h4>
     <p class="subtitle">Subhead - Donec scelerisque massa et quam cursus, vitae pellentesque nisi sodales.</p>
     <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
@@ -61,7 +57,7 @@ By default, the background color of `generic-content` is white. You can change t
 
 Example:
 ```html
-<section class="generic-content gray">
+<section class=" gray">
     <h4>Second headline - h4</h4>
     <p>Intro text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu arcu, tincidunt eget ante
         ac, tempus iaculis ex. Pellentesque convallis justo vitae bibendum lacinia. Phasellus interdum metus ut aliquet
@@ -76,7 +72,7 @@ Add CSS class `text-column-_count_` to the content element to divide **single co
 
 Example of three columns:
 ```html
-<section class="generic-content">
+<section class="">
     <h3>Big headline - h3</h3>
     <div class="text-column-3">
         <p>Donec ut lobortis nisi, posuere egestas mauris. Nulla non quam sed dui faucibus interdum. Vivamus finibus
@@ -116,7 +112,7 @@ Sample DOM Structure
 Example `multi-sections` with five `sub-section`:
 
 ```html
-<section class="generic-content">
+<section class="">
     <h4>Second headline - h4</h4>
     <p class="subtitle">Subhead - Donec scelerisque massa et quam cursus, vitae pellentesque nisi sodales.</p>
     <div class="multi-sections">
@@ -169,7 +165,7 @@ The `full-size-frame` and `full-size-picture` structure is required in order to 
 Example from DOM structure above:
 
 ```html
-<section class="generic-content">
+<section class="">
     <div class="quick-picture-container">
         <figure class="" style="">
             <div class="img-wrapper" style="">
@@ -199,7 +195,7 @@ Example from DOM structure above:
 To have the picture on the right side, swap the order of `description` and `figure` elements.
 
 ```html
-<section class="generic-content">
+<section class="">
     <div class="quick-picture-container">
         <div class="description">
             <h4>Second headline - h4</h4>

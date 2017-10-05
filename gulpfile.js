@@ -117,7 +117,8 @@ const config = {
             "dev": [
                 './src/components/**/*.scss',
                 './src/essentials/**/*.scss',
-                './src/assets/**/*.scss'
+                './src/assets/**/*.scss',
+                './src/assets/css/markdown.css'
             ]
         }
     }
