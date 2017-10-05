@@ -47,6 +47,10 @@ header {
 			margin-right: auto;
 		}
 
+		h1 a{
+			@include linkColor($color-yellow, $color-white);
+		}
+
 		.header-ndsu-logo{
 			display: block;
 		}

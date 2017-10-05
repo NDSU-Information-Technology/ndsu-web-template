@@ -251,6 +251,14 @@ header .green-bar {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: auto; }
+  header .green-bar h1 a {
+    color: #ffcc00; }
+  header .green-bar h1 a:hover, header .green-bar h1 a:focus, header .green-bar h1 a[aria-expanded=true], header .green-bar h1 a.active {
+    color: #fff; }
+  header .green-bar h1 a.active-branch {
+    color: ""; }
+  header .green-bar h1 a.active-branch:hover, header .green-bar h1 a.active-branch:focus, header .green-bar h1 a.active-branch[aria-expanded=true], header .green-bar h1 a.active-branch.active {
+    color: #fff; }
   header .green-bar .header-ndsu-logo {
     display: block; }
 
