@@ -200,7 +200,7 @@
     	@include btn-variant($color-white, $default-secondary-bg-color, $color-yellow, $color-black, $color-gray85, $color-gray7);
 	}
 	.nav-item-home .nav-link{
-    	@include btn-variant($color-white, $default-secondary-bg-color, $color-yellow, $color-black, $color-yellow, $color-gray7);
+    	// @include btn-variant($color-white, $default-secondary-bg-color, $color-yellow, $color-black, $color-yellow, $color-gray7);
 	}
 
 	.extended-child-navbar {
