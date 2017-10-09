@@ -124,6 +124,20 @@
         &.gallery-5 .gallery-item{
             flex-basis: 50%;
         }
+        
+        &,
+        &.gallery-left,
+        &.gallery-right {
+            .gallery-collection {
+                justify-content: center;
+            }
+
+            .gallery-collection,
+            .img-block {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
     }
     @include media-xs(){
         &,
