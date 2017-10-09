@@ -1,11 +1,11 @@
 ---
 layout: component
-title: Generic Content Component
+title: Typography
 ---
 
 ## Basic Usage
 
-Each component must have the CSS class `generic-content`. It is recommended to use the HTML element `section`. Under each component, it is **highly recommended** that you have a title. You can add title by using either the HTML element `h3`, `h4`, or `h5`.
+ It is recommended to use the HTML element `section`. Under each component, it is **highly recommended** that you have a title. You can add title by using either the HTML element `h3`, `h4`, or `h5`.
 
 Basic DOM Structure:
 * `section.generic-content`
