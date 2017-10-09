@@ -1372,13 +1372,15 @@ main > *:first-child {
     .hero-banner section h2, .hero-banner section h3, .hero-banner section h4, .hero-banner section p {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
+      line-height: 1.125em;
       border-radius: 0.125em;
       border-width: 0;
-      line-height: 1.5em;
       margin-top: 0;
       margin-bottom: 0.5em;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 16px 24px; }
+    .hero-banner section p {
+      line-height: 1.5em; }
   .hero-banner.dim-black section h2, .hero-banner.dim-black section h3, .hero-banner.dim-black section h4, .hero-banner.dim-black section p, .hero-banner.dim-green section h2, .hero-banner.dim-green section h3, .hero-banner.dim-green section h4, .hero-banner.dim-green section p {
     background-color: rgba(0, 0, 0, 0.55); }
   .hero-banner.hero-banner-large {
