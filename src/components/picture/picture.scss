@@ -35,6 +35,9 @@ $frame-width: 0.25em;
         top: 50%;
         transform: translateY(-50%);
     }
+    &.middle-align.center-align img {
+        transform: translate(-50%, -50%);
+    }
 
 }
 

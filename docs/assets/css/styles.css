@@ -1964,6 +1964,9 @@ ul.navbar {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
+  .img-wrapper.full-size-img.middle-align.center-align img {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 .img-wrapper.img-frame {
   border: 1px solid;
