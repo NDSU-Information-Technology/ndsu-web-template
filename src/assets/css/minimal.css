@@ -903,6 +903,7 @@ footer {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
+  overflow: hidden;
   top: 3em;
   right: 3em;
   bottom: 3em;
@@ -920,10 +921,11 @@ footer {
   .full-overlay .gallery-full-size.active {
     opacity: 1; }
   .full-overlay .gallery-full-size a.close-button {
-    background-color: rgba(51, 51, 51, 0.25);
+    background-color: rgba(51, 51, 51, 0.5);
     position: absolute;
     right: 0;
-    top: 0; }
+    top: 0;
+    z-index: 1; }
     .full-overlay .gallery-full-size a.close-button:hover, .full-overlay .gallery-full-size a.close-button:focus, .full-overlay .gallery-full-size a.close-button[aria-expanded=true], .full-overlay .gallery-full-size a.close-button.active {
       background-color: rgba(51, 51, 51, 0.75); }
     .full-overlay .gallery-full-size a.close-button.active-branch {
@@ -940,12 +942,12 @@ footer {
       color: #ffcc00; }
   @media (max-width: 767px) {
     .full-overlay .gallery-full-size {
-      top: 1em;
-      right: 1em;
-      bottom: 1em;
-      left: 1em; }
+      top: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      left: 0.5em; }
       .full-overlay .gallery-full-size a.close-button {
-        top: 4.5em; } }
+        top: 3em; } }
 
 .hero-banner {
   padding: 2em;
