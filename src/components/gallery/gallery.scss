@@ -116,27 +116,22 @@
 
     @include media-md(){
         &.gallery-5 .gallery-item {
-            flex-basis: 25%;
+            flex-basis: 33%;
         }
     }
     @include media-sm(){
         &.gallery-4 .gallery-item,
         &.gallery-5 .gallery-item{
-            flex-basis: 33%;
+            flex-basis: 50%;
         }
     }
     @include media-xs(){
         &,
-        &.gallery-2 .gallery-item {
+        &.gallery-2 .gallery-item,
+        &.gallery-3 .gallery-item,
+        &.gallery-4 .gallery-item,
+        &.gallery-5 .gallery-item {
             flex-basis: 100%;
-        }
-
-        &.gallery-3,
-        &.gallery-4,
-        &.gallery-5 {
-            .gallery-item {
-                flex-basis: 50%;
-            }
         }
     }
 }
