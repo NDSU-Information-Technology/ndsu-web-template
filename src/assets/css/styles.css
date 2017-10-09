@@ -2346,7 +2346,7 @@ a.social-media-icon.linkedin::before {
   .theme-gray a:hover, .theme-gray a:focus, .theme-gray a[aria-expanded=true], .theme-gray a.active {
     text-decoration: underline; }
 
-body h2, body h3, body h4, body h5 {
+body h2, body h3, body h4, body h5, body h6 {
   margin-top: 0;
   margin-bottom: 0.5em; }
 
