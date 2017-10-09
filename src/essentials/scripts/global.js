@@ -14,11 +14,17 @@ if (!NDSU.fullOverlayElement) {
     document.body.appendChild(NDSU.fullOverlayElement);
 }
 
-NDSU.showOverlay = () => {
+NDSU.showOverlay = (overlayLevel) => {
     NDSU.fullOverlayElement.classList.add('active');
+    if (overlayLevel) {
+        NDSU.fullOverlayElement.classList.add(overlayLevel);
+    }
     document.body.style.overflow = 'hidden';
 };
-NDSU.hideOverlay = () => {
+NDSU.hideOverlay = (overlayLevel) => {
     NDSU.fullOverlayElement.classList.remove('active');
+    if (overlayLevel) {
+        NDSU.fullOverlayElement.classList.remove(overlayLevel);
+    }
     document.body.style.overflow = '';
 };

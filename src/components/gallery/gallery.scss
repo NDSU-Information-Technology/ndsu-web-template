@@ -170,23 +170,15 @@
     }
 
     a.close-button{
-        @include buttonify();
-        @include btn-variant($color-white, $color-clear, $color-yellow, $color-clear);
+        @include btn-variant($color-white, rgba($color-gray20, 0.25), $color-yellow, rgba($color-gray20, 0.75));
 
         position: absolute;
         right: 0;
         top: 0;
-        padding: 0;
-    }
-    a.close-button::before{
-        content: "\2716";
     }
 
     @include media-xl {
-        top: 5em; right: 5em; bottom: 5em; left: 5em;
-        a.close-button {
-            font-size: 1.5em;
-        }
+        top: 3em; right: 3em; bottom: 3em; left: 3em;
     }
     @include media-sm {
         top: 1em; right: 1em; bottom: 1em; left: 1em;

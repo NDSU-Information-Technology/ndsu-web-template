@@ -162,6 +162,8 @@ ul.inline-list {
   .full-overlay.active {
     visibility: visible;
     background-color: rgba(0, 0, 0, 0.75); }
+  .full-overlay.high {
+    z-index: 3000; }
 
 .m-auto {
   margin: auto !important; }
@@ -1108,10 +1110,10 @@ footer {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
-  top: 5em;
-  right: 5em;
-  bottom: 5em;
-  left: 5em; }
+  top: 3em;
+  right: 3em;
+  bottom: 3em;
+  left: 3em; }
   .full-overlay .gallery-full-size img {
     position: absolute;
     top: 50%;
@@ -1125,38 +1127,16 @@ footer {
   .full-overlay .gallery-full-size.active {
     opacity: 1; }
   .full-overlay .gallery-full-size a.close-button {
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
-    -webkit-transition-property: background, background-color, color, padding, width, height;
-    transition-property: background, background-color, color, padding, width, height;
-    text-decoration: none;
-    font-weight: 600;
-    line-height: 1em;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    cursor: pointer;
-    display: inline-block;
-    padding: 1em;
-    background-color: transparent;
+    background-color: rgba(51, 51, 51, 0.25);
     position: absolute;
     right: 0;
-    top: 0;
-    padding: 0; }
-    .full-overlay .gallery-full-size a.close-button.active {
-      cursor: auto; }
+    top: 0; }
     .full-overlay .gallery-full-size a.close-button:hover, .full-overlay .gallery-full-size a.close-button:focus, .full-overlay .gallery-full-size a.close-button[aria-expanded=true], .full-overlay .gallery-full-size a.close-button.active {
-      background-color: transparent; }
+      background-color: rgba(51, 51, 51, 0.75); }
     .full-overlay .gallery-full-size a.close-button.active-branch {
       background-color: ""; }
     .full-overlay .gallery-full-size a.close-button.active-branch:hover, .full-overlay .gallery-full-size a.close-button.active-branch:focus, .full-overlay .gallery-full-size a.close-button.active-branch[aria-expanded=true], .full-overlay .gallery-full-size a.close-button.active-branch.active {
-      background-color: transparent; }
+      background-color: rgba(51, 51, 51, 0.75); }
     .full-overlay .gallery-full-size a.close-button {
       color: #fff; }
     .full-overlay .gallery-full-size a.close-button:hover, .full-overlay .gallery-full-size a.close-button:focus, .full-overlay .gallery-full-size a.close-button[aria-expanded=true], .full-overlay .gallery-full-size a.close-button.active {
@@ -1165,10 +1145,6 @@ footer {
       color: ""; }
     .full-overlay .gallery-full-size a.close-button.active-branch:hover, .full-overlay .gallery-full-size a.close-button.active-branch:focus, .full-overlay .gallery-full-size a.close-button.active-branch[aria-expanded=true], .full-overlay .gallery-full-size a.close-button.active-branch.active {
       color: #ffcc00; }
-  .full-overlay .gallery-full-size a.close-button::before {
-    content: "\2716"; }
-  .full-overlay .gallery-full-size a.close-button {
-    font-size: 1.5em; }
   @media (max-width: 767px) {
     .full-overlay .gallery-full-size {
       top: 1em;

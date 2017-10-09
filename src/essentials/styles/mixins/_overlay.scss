@@ -6,7 +6,7 @@
 	background-color: rgba($color-black, 0);
 	// Default Navbar z-index is 1001
 	// Mobile Navbar z-index is 2000
-	z-index: 1500;
+	z-index: $z-index-overlay;
 	transition: background-color 0.3s ease-out;
 	overflow: hidden;
 	padding: 3em;
@@ -14,5 +14,8 @@
 	&.active {
 		visibility: visible;
 		background-color: rgba($color-black, 0.75);
+	}
+	&.high {
+		z-index: $z-index-popup;
 	}
 }

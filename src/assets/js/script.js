@@ -24,12 +24,18 @@ if (!NDSU.fullOverlayElement) {
     document.body.appendChild(NDSU.fullOverlayElement);
 }
 
-NDSU.showOverlay = function () {
+NDSU.showOverlay = function (overlayLevel) {
     NDSU.fullOverlayElement.classList.add('active');
+    if (overlayLevel) {
+        NDSU.fullOverlayElement.classList.add(overlayLevel);
+    }
     document.body.style.overflow = 'hidden';
 };
-NDSU.hideOverlay = function () {
+NDSU.hideOverlay = function (overlayLevel) {
     NDSU.fullOverlayElement.classList.remove('active');
+    if (overlayLevel) {
+        NDSU.fullOverlayElement.classList.remove(overlayLevel);
+    }
     document.body.style.overflow = '';
 };
 
@@ -503,7 +509,7 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
         value: function openPopup() {
             var _this4 = this;
 
-            NDSU.showOverlay();
+            NDSU.showOverlay(this.overlayLevel);
             var el = NDSU.fullOverlayElement;
             var containerEl = el.querySelector('.gallery-full-size');
             var imgEl = el.querySelector('.gallery-full-size img');
@@ -516,11 +522,8 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
 
                 closeEl = document.createElement('a');
                 closeEl.setAttribute('href', '#');
-                closeEl.className = 'close-button';
-                var closeTextEl = document.createElement('span');
-                closeTextEl.className = 'sr-only';
-                closeTextEl.innerText = 'Close full size image';
-                closeEl.appendChild(closeTextEl);
+                closeEl.className = 'btn  btn-tiny close-button';
+                closeEl.innerText = 'Close';
                 closeEl.addEventListener('click', function (event) {
                     event.preventDefault();
                     _this4.closePopup();
@@ -548,7 +551,7 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
     }, {
         key: 'closePopup',
         value: function closePopup() {
-            NDSU.hideOverlay();
+            NDSU.hideOverlay(this.overlayLevel);
             var el = NDSU.fullOverlayElement;
             var containerEl = el.querySelector('.gallery-full-size');
             var closeEl = el.querySelector('.gallery-full-size .close-button');
@@ -582,6 +585,7 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
         _this3.imageSrc = _this3.imageElement.getAttribute('src');
         _this3.imageDesc = _this3.imageElement.getAttribute('alt');
         _this3.fullSizeImageSrc = _this3.imageElement.getAttribute('data-full-size-src') || _this3.imageSrc;
+        _this3.overlayLevel = 'high';
 
         if (_this3.element.querySelector('a')) return _possibleConstructorReturn(_this3);
 

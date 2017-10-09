@@ -20,7 +20,8 @@ class GalleryPictureLink extends GalleryBaseObj {
         NDSU.fullOverlayElement.addEventListener('click', inst.closePopup);
     }
 
-    openPopup() {NDSU.showOverlay();
+    openPopup() {
+        NDSU.showOverlay(this.overlayLevel);
         let el = NDSU.fullOverlayElement;
         let containerEl = el.querySelector('.gallery-full-size');
         let imgEl = el.querySelector('.gallery-full-size img');
@@ -33,11 +34,8 @@ class GalleryPictureLink extends GalleryBaseObj {
 
             closeEl = document.createElement('a');
             closeEl.setAttribute('href', '#');
-            closeEl.className = 'close-button';
-            let closeTextEl = document.createElement('span');
-            closeTextEl.className = 'sr-only';
-            closeTextEl.innerText = 'Close full size image';
-            closeEl.appendChild(closeTextEl);
+            closeEl.className = 'btn  btn-tiny close-button';
+            closeEl.innerText = 'Close';
             closeEl.addEventListener('click', (event) => {
                 event.preventDefault();
                 this.closePopup();
@@ -64,7 +62,7 @@ class GalleryPictureLink extends GalleryBaseObj {
     }
 
     closePopup() {
-        NDSU.hideOverlay();
+        NDSU.hideOverlay(this.overlayLevel);
         let el = NDSU.fullOverlayElement;
         let containerEl = el.querySelector('.gallery-full-size');
         let closeEl = el.querySelector('.gallery-full-size .close-button');
@@ -85,6 +83,7 @@ class GalleryPictureLink extends GalleryBaseObj {
         this.imageSrc = this.imageElement.getAttribute('src');
         this.imageDesc = this.imageElement.getAttribute('alt');
         this.fullSizeImageSrc = this.imageElement.getAttribute('data-full-size-src') || this.imageSrc;
+        this.overlayLevel = 'high';
 
         if (this.element.querySelector('a')) return;
 
