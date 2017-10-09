@@ -1479,7 +1479,13 @@ footer {
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
         margin-top: 2em;
-        margin-right: 2em; } }
+        margin-right: 2em; }
+      .layout .main-col + .main-col,
+      .layout .main-col + .side-col, .layout .side-col + .main-col,
+      .layout .side-col + .side-col, .layout .nav-col + .main-col,
+      .layout .nav-col + .side-col {
+        margin-left: 0;
+        margin-top: 2em; } }
 
 .container .nav-col {
   margin-left: 0;

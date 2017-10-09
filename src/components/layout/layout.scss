@@ -67,6 +67,14 @@
 			margin-top: 2em;
 			margin-right: 2em;
 		}
+
+		.main-col, .side-col, .nav-col {
+			& + .main-col,
+			& + .side-col {
+				margin-left: 0;
+				margin-top: 2em;
+			}
+		}
 	}
 }
 .container .nav-col {
