@@ -1211,7 +1211,7 @@ body a {
     color: #000; }
 
 body .subtitle {
-  font-size: 1.25em;
+  font-size: 1.125em;
   margin-top: 0.5em;
   margin-bottom: 0.5em; }
 
@@ -2433,6 +2433,8 @@ a.social-media-icon.linkedin::before {
     .three-boxes section.green {
       background-color: #002119;
       color: #f2f2f2; }
+      .three-boxes section.green h5 {
+        color: #f2f2f2; }
       .three-boxes section.green a.btn {
         background-color: transparent; }
         .three-boxes section.green a.btn:hover, .three-boxes section.green a.btn:focus, .three-boxes section.green a.btn[aria-expanded=true], .three-boxes section.green a.btn.active {
