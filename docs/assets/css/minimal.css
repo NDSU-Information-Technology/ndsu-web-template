@@ -914,10 +914,10 @@ footer {
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
   overflow: hidden;
-  top: 3em;
-  right: 3em;
-  bottom: 3em;
-  left: 3em; }
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em; }
   .full-overlay .gallery-full-size img {
     position: absolute;
     top: 50%;
