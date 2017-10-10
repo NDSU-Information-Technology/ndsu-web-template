@@ -4,7 +4,7 @@
 		font-size: 1em;
 	}
 	input {
-		padding: 0.5em 4.5em 0.5em 1em;
+		padding: 0.5em 2.5em 0.5em 1em;
 		border: 0;
 		width: 100%;
 		background-color: $color-gray90;
@@ -18,10 +18,9 @@
 	}
 	button {
 		border: none;
-		@include btn-variant($color-gray90, rgba($color-green, 0.5), $color-white, rgba($color-gray40, 0.75));
-		border-left: 1px solid $color-gray60;
+		@include btn-variant($color-gray90, $color-clear, $color-white, rgba($color-gray80, 0.5));
 		padding: 0;
-		width: 4.5em;
+		width: 2em;
 		font-weight: normal;
 
 		position: absolute;
@@ -29,5 +28,9 @@
 		bottom: 0;
 		right: 0;
 		z-index: 1;
+
+		img.search-img {
+			width: 1em; height: 1em;
+		}
 	}
 }

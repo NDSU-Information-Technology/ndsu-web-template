@@ -1,5 +1,5 @@
 <form class="search-form{{#each additionalClasses}} this{{/each}}" id="{{formId}}" action="{{action}}" method="{{#ifnull method 'GET'}}{{/ifnull}}">
     <label for="{{formId}}_input" class="sr-only">Search Term</label>
     <input id="{{formId}}_input" name="{{inputName}}" type="text"  placeholder="{{#ifnull placeHolder 'Keywords'}}{{/ifnull}}" />
-    <button type="submit" class="btn">{{#ifnull searchText 'Search'}}{{/ifnull}}</button>
+    <button type="submit" class="btn"><img class="search-img" src="https://static.ndsu.nodak.edu/templates/images/search_glass.png" alt="{{#ifnull searchText 'Submit'}}{{/ifnull}}"/></button>
 </form>
