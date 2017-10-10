@@ -1,4 +1,92 @@
 <!DOCTYPE html>
+"text": "Components",
+"childNavbar": {
+    "additionalClasses": [
+    "navbar-vertical"
+    ],
+    "links": [
+    {
+        "url": "/ndsu-web-template/components/bigquote",
+        "text": "Big Quote"
+    },
+    {
+        "url": "/ndsu-web-template/components/button",
+        "text": "Button"
+    },
+    {
+        "url": "/ndsu-web-template/components/container",
+        "text": "Container"
+    },
+    {
+        "url": "/ndsu-web-template/components/footer",
+        "text": "Footer"
+    },
+    {
+        "url": "/ndsu-web-template/components/form",
+        "text": "Form"
+    },
+    {
+        "url": "/ndsu-web-template/components/gallery",
+        "text": "Gallery"
+    },
+    {
+        "url": "/ndsu-web-template/components/hero-banner",
+        "text": "Hero Banner"
+    },
+    {
+        "url": "/ndsu-web-template/components/navbar",
+        "text": "Navbar"
+    },
+    {
+        "url": "/ndsu-web-template/components/news-events",
+        "text": "News and Events"
+    },
+    {
+        "url": "/ndsu-web-template/components/picture",
+        "text": "Picture"
+    },
+    {
+        "url": "/ndsu-web-template/components/quick-links",
+        "text": "Quick Links"
+    },
+    {
+        "url": "/ndsu-web-template/components/sflgru",
+        "text": "SFLGRU"
+    },
+    {
+        "url": "/ndsu-web-template/components/social-media",
+        "text": "Social Media"
+    },
+    {
+        "url": "/ndsu-web-template/components/three-boxes",
+        "text": "Three Boxes"
+    },
+    {
+        "url": "/ndsu-web-template/components/typography",
+        "text": "Typography"
+    }
+    ]
+}
+},
+{
+"url": "/ndsu-web-template/sample-pages",
+"text": "Sample Pages"
+}
+]
+}'}}
+{{> _navbar-main this }}
+{{/getJsonContext}}
+{{/inline}}
+{{#* inline "script-block" }}
+<script type="text/javascript" src="/ndsu-web-template/assets/js/script.js"></script>
+{{#> additional-script-block}}
+{{/additional-script-block}}
+{{/inline }}
+
+<div class="container markdown-body">
+{{> @partial-block}}
+</div>
+{{/_base }}
 <html lang="en-US">
 
 <head>
@@ -24,7 +112,7 @@
     <header>
         <div class="navbar-mobile-container sticky-bar sticky-sm" role="navigation">
             <div class="green-bar">
-                <div class="container flex-container flex-middle flex-wrap flex-right">
+                <div class="container row flex-middle flex-wrap flex-right">
                     <h1><a href="https://www.ndsu.edu"><img src="/ndsu-web-template/images/NDSU-twolines-small.png" alt="North Dakota State University" title="" height="25" class="header-ndsu-logo" /></a></h1>
                     <button type="button" class="btn btn-yellow navbar-toggle"><span class="sr-only">Mobile menu</span></button>
             
@@ -64,7 +152,7 @@
             <ul class="navbar navbar-mobile navbar-vertical navbar-dark">
             </ul>
             <div class="page-title-bar">
-                <div class="container flex-container flex-left flex-middle flex-wrap page-title-wrapper">
+                <div class="container row flex-left flex-middle flex-wrap page-title-wrapper">
                     <h2 class="page-title">
                     Computer Science
                     </h2>

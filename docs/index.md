@@ -114,7 +114,7 @@ Example of mobile navigation components:
 <!--Sticky-bar wrapper-->
 <div class="navbar-mobile-container sticky-bar sticky-sm">
     <div class="green-bar">
-        <div class="container flex-container flex-middle" role="navigation">
+        <div class="container row flex-middle" role="navigation">
             <!--NDSU logo-->
             <h1><img src="images/logo.png" alt="North Dakota State University" title="" height="35" width="73" /></h1>
             <!--Mobile menu toggle button-->

@@ -1,10 +1,3 @@
-
-@mixin flex-size($n) {
-	.flex-#{$n} {
-		flex: $n 1 (100%/$flex-base*$n);
-	}
-}
-
 .layout {
 	display: flex;
 	justify-content: center;
@@ -50,10 +43,6 @@
 	}
     .main-col {
 		flex-grow: 1;
-	}
-	
-	@each $size in $flex-sizes {
-		@include flex-size($size);
 	}
 
 	@include media-xl {

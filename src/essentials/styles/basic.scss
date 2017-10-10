@@ -80,7 +80,7 @@ header {
 	}
 	@include media-md {
 		.search-form {
-			width: 12em;
+			width: 13em;
 		}
 	}
 	@include media-sm {
@@ -103,7 +103,7 @@ header {
 		}
 	}
 	@include media-xs {
-	.flex-container.page-title-wrapper {
+	.row.page-title-wrapper {
 			flex-direction: column;
 			align-items: stretch;
 		}

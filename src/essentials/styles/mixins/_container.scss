@@ -75,3 +75,9 @@
 		}
 	}
 }
+
+@mixin col-size($n) {
+	.col-#{$n} {
+		flex: $n 1 (100%/$flex-base*$n);
+	}
+}
