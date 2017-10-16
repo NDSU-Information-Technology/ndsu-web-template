@@ -335,7 +335,8 @@ header .search-form {
   padding: 1em;
   border-width: 1px;
   border-style: solid;
-  border-color: #a3a3a3; }
+  border-color: #a3a3a3;
+  font-weight: 600; }
   .btn.active {
     cursor: auto; }
   .btn:hover, .btn:focus, .btn[aria-expanded=true], .btn.active {

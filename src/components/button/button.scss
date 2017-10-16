@@ -2,6 +2,7 @@
     transition: all 0.3s ease-out;
     @include buttonify();
     @include btn-border();
+    font-weight: 600;
 }
 a.btn {
     @include linkUnderline(-1);
