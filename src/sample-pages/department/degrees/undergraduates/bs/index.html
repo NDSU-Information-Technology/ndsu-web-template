@@ -1,15 +1,37 @@
-{{#> _layout-department-two-column reverse=true}}
+{{#> _layout-department-two-column reverse}}
     {{#*inline "nav-col"}}
-        <section class=" hide-sm-down" role="navigation">
-            <h5 class="sub-nav-title"><a href="/ndsu-web-template/sample-pages/department/degrees/undergraduates/">Undergraduate Programs</a></h5>
+        <section class="" role="navigation">
+            <h5 class="sub-nav-title"><a href="/ndsu-web-template/sample-pages/department/degrees/undergraduates/" class="nav-link active-branch">Undergraduate Programs</a></h5>
             {{#getJsonContext '{
                 "additionalClasses": [
-                    "navbar-vertical"
+                    "navbar-vertical",
+                    "accordion"
                 ],
                 "links": [
                     {
                         "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/bs/",
-                        "text": "Bachelor of Science"
+                        "text": "Bachelor of Science",
+                        "active": true,
+                        "childNavbar": {
+                            "additionalClasses": [
+                                "navbar-vertical",
+                                "expanded"
+                            ],
+                            "links": [
+                                {
+                                    "url": "#Overall",
+                                    "text": "Overall"
+                                },
+                                {
+                                    "url": "#Courses",
+                                    "text": "Courses"
+                                },
+                                {
+                                    "url": "#Internships",
+                                    "text": "Internships"
+                                }
+                            ]
+                        }
                     },
                     {
                         "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/ba/",

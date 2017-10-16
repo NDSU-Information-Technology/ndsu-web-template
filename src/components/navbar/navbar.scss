@@ -70,12 +70,10 @@
 	}
 	
 	.nav-item.nav-item-haschild:not(.extended-child-section) {
-		& >.nav-link::after,
-		// &.nav-item-haschild-up > .nav-link.active::after
+		& >.nav-link::after
 		 {
 			content: "\00a0\00a0\25BC";
 		}
-		// & >.nav-link.active::after,
 		&.nav-item-haschild-down > .nav-link::after{
 			content: "\00a0\00a0\25B2";
 		}
@@ -88,7 +86,7 @@
 		display: none;
 		box-shadow: inset 0 1px 2px $color-black;
 	}
-	&.active {
+	&.expanded {
 		display: flex;
 	}
 
@@ -120,6 +118,20 @@
 				display: inline;
 			}
 		}
+	}
+
+
+	&.accordion .child-navbar {
+		position: relative;
+		display: flex;
+		box-shadow: initial;
+
+		.nav-link {
+			padding-left: 2em;
+		}
+	}
+	&.accordion .nav-item.nav-item-haschild > .nav-link::after {
+		content: "";
 	}
 	
 }
@@ -157,23 +169,23 @@
 	.child-navbar .child-navbar {
 		text-indent: 2em;
 	}
-	.child-navbar.active {
+	.child-navbar.expanded {
 		display: flex;
 	}
 	.extended-child-navbar {
 		flex-direction: column;
 	}
 
-	// .nav-item.nav-item-haschild {
-	// 	& >.nav-link::after,
-	// 	&.nav-item-haschild-up > .nav-link.active::after {
-	// 		content: "\00a0\00a0\25BC";
-	// 	}
-	// 	& >.nav-link.active::after,
-	// 	&.nav-item-haschild-down > .nav-link::after{
-	// 		content: "\00a0\00a0\25B2";
-	// 	}
-	// }
+	.nav-item.nav-item-haschild {
+		& >.nav-link::after,
+		&.nav-item-haschild-up > .nav-link.expanded::after {
+			content: "\00a0\00a0\25BC";
+		}
+		& >.nav-link.expanded::after,
+		&.nav-item-haschild-down > .nav-link::after{
+			content: "\00a0\00a0\25B2";
+		}
+	}
 
 	.nav-item.nav-item-haschild:not(.extended-child-section), {
 		& >.nav-link::after,{
@@ -230,7 +242,7 @@
 		.child-navbar .child-navbar .nav-link {
 			@include btn-variant($color-gray13, $color-gray99, $color-yellow, $color-gray20, $color-gray85, $color-gray7);
 		}
-		.nav-link.active {
+		.nav-link.expanded {
 			box-shadow: 1px 1px 1px $color-black;
 		}
 	}
@@ -246,7 +258,7 @@ ul.navbar {
 	}
 
 	.navbar-mobile,
-	.navbar-mobile.active,
+	.navbar-mobile.expanded,
 	.navbar-toggle  {
 		display: none;
 	}
@@ -275,7 +287,7 @@ ul.navbar {
 		display: block;
 	}
 	.navbar-mobile,
-	.navbar-mobile.active {
+	.navbar-mobile.expanded {
 		display: flex;
 	}
 	

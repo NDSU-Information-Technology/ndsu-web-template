@@ -833,6 +833,11 @@ var Navbar = function (_NavBaseClass) {
         get: function get() {
             return this.options.extendedChildNavbar;
         }
+    }, {
+        key: 'isAccordion',
+        get: function get() {
+            return this.options.accordion;
+        }
     }]);
 
     function Navbar(navbarElement, parentNavItem) {
@@ -845,11 +850,13 @@ var Navbar = function (_NavBaseClass) {
         var isVerticalNavbar = navbarElement.classList.contains('navbar-vertical');
         var isDropUp = navbarElement.classList.contains('dropup');
         var isExtendedChildNavbar = navbarElement.classList.contains('extended-child-navbar');
+        var isAccordion = navbarElement.classList.contains('accordion');
 
         _this5.options = {
             autoCollapse: true,
             direction: isVerticalNavbar ? 'vertical' : 'horizontal',
             dropup: isDropUp,
+            accordion: isAccordion,
             extendedChildNavbar: isExtendedChildNavbar
         };
 
@@ -923,14 +930,14 @@ var MobileNavbar = function (_Navbar) {
         key: '_openMenu',
         value: function _openMenu(inst) {
             NDSU.showOverlay();
-            inst.element.classList.add('active');
+            inst.element.classList.add('expanded');
             inst.toggleElement.setAttribute('aria-expanded', true);
             inst.setOffset();
         }
     }, {
         key: '_closeMenu',
         value: function _closeMenu(inst) {
-            inst.element.classList.remove('active');
+            inst.element.classList.remove('expanded');
             inst.toggleElement.setAttribute('aria-expanded', false);
             NDSU.hideOverlay();
         }
@@ -999,7 +1006,7 @@ var NavItem = function (_NavBaseClass2) {
         value: function _setEventListeners() {
             var _this10 = this;
 
-            if (!this.parentNavbar.isExtendedChildNavbar) {
+            if (!this.parentNavbar.isExtendedChildNavbar && !this.parentNavbar.isAccordion) {
                 this.element.addEventListener('focusin', this.focusInListener);
                 this.element.addEventListener('focusout', this.focusOutListener);
                 this.element.addEventListener('mouseenter', this.mouseInListener);
@@ -1144,7 +1151,7 @@ var NavItem = function (_NavBaseClass2) {
         value: function _open(inst) {
             if (!inst || !inst.element) return;
             inst.setOffset();
-            inst.element.classList.add('active');
+            inst.element.classList.add('expanded');
             if (inst.parentNavItem) {
                 inst.parentNavItem.linkElement.setAttribute('aria-expanded', true);
             }
@@ -1153,7 +1160,7 @@ var NavItem = function (_NavBaseClass2) {
         key: '_close',
         value: function _close(inst) {
             if (!inst || !inst.element) return;
-            inst.element.classList.remove('active');
+            inst.element.classList.remove('expanded');
             if (inst.parentNavItem) {
                 inst.parentNavItem.linkElement.setAttribute('aria-expanded', false);
             }
@@ -1267,12 +1274,12 @@ var MobileNavItem = function (_NavItem) {
                 if (!childNavbar) return;
 
                 if (childNavbar.element.offsetHeight === 0) {
-                    childNavbar.element.classList.add('active');
-                    _this12.linkElement.classList.add('active');
+                    childNavbar.element.classList.add('expanded');
+                    _this12.linkElement.classList.add('expanded');
                     _this12.linkElement.setAttribute('aria-expanded', true);
                 } else {
-                    childNavbar.element.classList.remove('active');
-                    _this12.linkElement.classList.remove('active');
+                    childNavbar.element.classList.remove('expanded');
+                    _this12.linkElement.classList.remove('expanded');
                     _this12.linkElement.setAttribute('aria-expanded', false);
                 }
                 e.preventDefault();

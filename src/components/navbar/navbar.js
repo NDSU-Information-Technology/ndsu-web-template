@@ -85,6 +85,10 @@ class Navbar extends NavBaseClass {
         return this.options.extendedChildNavbar;
     }
 
+    get isAccordion() {
+        return this.options.accordion;
+    }
+
     constructor(navbarElement, parentNavItem) {
         super(navbarElement);
         this.parentNavItem = parentNavItem;
@@ -92,11 +96,13 @@ class Navbar extends NavBaseClass {
         let isVerticalNavbar = navbarElement.classList.contains('navbar-vertical');
         let isDropUp = navbarElement.classList.contains('dropup');
         let isExtendedChildNavbar = navbarElement.classList.contains('extended-child-navbar');
+        let isAccordion = navbarElement.classList.contains('accordion');
 
         this.options = {
             autoCollapse: true,
             direction: isVerticalNavbar ? 'vertical' : 'horizontal',
             dropup: isDropUp,
+            accordion: isAccordion,
             extendedChildNavbar: isExtendedChildNavbar
         };
 
@@ -119,13 +125,13 @@ class MobileNavbar extends Navbar {
 
     static _openMenu(inst) {
         NDSU.showOverlay();
-        inst.element.classList.add('active');
+        inst.element.classList.add('expanded');
         inst.toggleElement.setAttribute('aria-expanded', true);
         inst.setOffset();
     }
 
     static _closeMenu(inst) {
-        inst.element.classList.remove('active');
+        inst.element.classList.remove('expanded');
         inst.toggleElement.setAttribute('aria-expanded', false);
         NDSU.hideOverlay();
     }
@@ -186,7 +192,7 @@ class NavItem extends NavBaseClass {
     static _open(inst) {
         if (!inst || !inst.element) return;
         inst.setOffset();
-        inst.element.classList.add('active');
+        inst.element.classList.add('expanded');
         if (inst.parentNavItem){
             inst.parentNavItem.linkElement.setAttribute('aria-expanded', true);
         }
@@ -194,7 +200,7 @@ class NavItem extends NavBaseClass {
 
     static _close(inst) {
         if (!inst || !inst.element) return;
-        inst.element.classList.remove('active');
+        inst.element.classList.remove('expanded');
         if (inst.parentNavItem){
             inst.parentNavItem.linkElement.setAttribute('aria-expanded', false);
         }
@@ -258,7 +264,7 @@ class NavItem extends NavBaseClass {
     }
 
     _setEventListeners() {
-        if (!this.parentNavbar.isExtendedChildNavbar){
+        if (!this.parentNavbar.isExtendedChildNavbar && !this.parentNavbar.isAccordion){
             this.element.addEventListener('focusin', this.focusInListener);
             this.element.addEventListener('focusout', this.focusOutListener);
             this.element.addEventListener('mouseenter', this.mouseInListener);
@@ -437,12 +443,12 @@ class MobileNavItem extends NavItem {
             if (!childNavbar) return;
 
             if (childNavbar.element.offsetHeight === 0) {
-                childNavbar.element.classList.add('active');
-                this.linkElement.classList.add('active');
+                childNavbar.element.classList.add('expanded');
+                this.linkElement.classList.add('expanded');
                 this.linkElement.setAttribute('aria-expanded', true);
             } else {
-                childNavbar.element.classList.remove('active');
-                this.linkElement.classList.remove('active');
+                childNavbar.element.classList.remove('expanded');
+                this.linkElement.classList.remove('expanded');
                 this.linkElement.setAttribute('aria-expanded', false);
             }
             e.preventDefault();
