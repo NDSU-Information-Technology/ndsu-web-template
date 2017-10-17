@@ -79,6 +79,7 @@ class GalleryPictureLink extends GalleryBaseObj {
     constructor(pictureLinkElement) {
         super(pictureLinkElement);
         this.imageElement = this.element.querySelector('img');
+        if (!this.imageElement) return;
         
         this.imageSrc = this.imageElement.getAttribute('src');
         this.imageDesc = this.imageElement.getAttribute('alt');

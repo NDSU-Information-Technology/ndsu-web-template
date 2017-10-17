@@ -581,6 +581,7 @@ var GalleryPictureLink = function (_GalleryBaseObj2) {
         var _this3 = _possibleConstructorReturn(this, (GalleryPictureLink.__proto__ || Object.getPrototypeOf(GalleryPictureLink)).call(this, pictureLinkElement));
 
         _this3.imageElement = _this3.element.querySelector('img');
+        if (!_this3.imageElement) return _possibleConstructorReturn(_this3);
 
         _this3.imageSrc = _this3.imageElement.getAttribute('src');
         _this3.imageDesc = _this3.imageElement.getAttribute('alt');
