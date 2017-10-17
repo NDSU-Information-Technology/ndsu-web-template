@@ -29,6 +29,10 @@ footer {
 		flex-basis: 275px;
 	}
 
+	&.footer-left .footer-address {
+		text-align: left;
+	}
+
 	.footer-links .navbar {
 		.nav-link {
 			padding: 0.5em 1em;
