@@ -634,7 +634,9 @@ footer {
     -ms-flex-preferred-size: 275px;
         flex-basis: 275px; }
   footer.footer-left .footer-address {
-    text-align: left; }
+    text-align: left;
+    -ms-flex-item-align: left;
+        align-self: left; }
   footer .footer-links .navbar .nav-link {
     padding: 0.5em 1em;
     font-weight: normal;
