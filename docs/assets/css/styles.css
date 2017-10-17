@@ -1413,7 +1413,7 @@ footer {
     .layout .nav-col .navbar .nav-link:hover, .layout .nav-col .navbar .nav-link:focus, .layout .nav-col .navbar .nav-link[aria-expanded=true], .layout .nav-col .navbar .nav-link.active, .layout .side-col .navbar .nav-link:hover, .layout .side-col .navbar .nav-link:focus, .layout .side-col .navbar .nav-link[aria-expanded=true], .layout .side-col .navbar .nav-link.active {
       background-color: #e5e5e5; }
     .layout .nav-col .navbar .nav-link.active-branch, .layout .side-col .navbar .nav-link.active-branch {
-      background-color: ""; }
+      background-color: #f2f2f2; }
     .layout .nav-col .navbar .nav-link.active-branch:hover, .layout .nav-col .navbar .nav-link.active-branch:focus, .layout .nav-col .navbar .nav-link.active-branch[aria-expanded=true], .layout .nav-col .navbar .nav-link.active-branch.active, .layout .side-col .navbar .nav-link.active-branch:hover, .layout .side-col .navbar .nav-link.active-branch:focus, .layout .side-col .navbar .nav-link.active-branch[aria-expanded=true], .layout .side-col .navbar .nav-link.active-branch.active {
       background-color: #e5e5e5; }
     .layout .nav-col .navbar .nav-link, .layout .side-col .navbar .nav-link {
@@ -1421,7 +1421,7 @@ footer {
     .layout .nav-col .navbar .nav-link:hover, .layout .nav-col .navbar .nav-link:focus, .layout .nav-col .navbar .nav-link[aria-expanded=true], .layout .nav-col .navbar .nav-link.active, .layout .side-col .navbar .nav-link:hover, .layout .side-col .navbar .nav-link:focus, .layout .side-col .navbar .nav-link[aria-expanded=true], .layout .side-col .navbar .nav-link.active {
       color: #222222; }
     .layout .nav-col .navbar .nav-link.active-branch, .layout .side-col .navbar .nav-link.active-branch {
-      color: ""; }
+      color: #002119; }
     .layout .nav-col .navbar .nav-link.active-branch:hover, .layout .nav-col .navbar .nav-link.active-branch:focus, .layout .nav-col .navbar .nav-link.active-branch[aria-expanded=true], .layout .nav-col .navbar .nav-link.active-branch.active, .layout .side-col .navbar .nav-link.active-branch:hover, .layout .side-col .navbar .nav-link.active-branch:focus, .layout .side-col .navbar .nav-link.active-branch[aria-expanded=true], .layout .side-col .navbar .nav-link.active-branch.active {
       color: #222222; }
   .layout .nav-col {
