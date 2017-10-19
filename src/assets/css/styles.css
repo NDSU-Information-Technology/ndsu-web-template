@@ -2068,6 +2068,8 @@ figure figcaption {
             column-count: 4; }
 
 .sflgru {
+  margin-top: 2em;
+  margin-bottom: 2em;
   line-height: 1.5em;
   background: radial-gradient(ellipse at center 60%, #002119 45%, #000 90%);
   color: #fff; }

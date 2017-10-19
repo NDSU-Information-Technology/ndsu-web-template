@@ -1673,6 +1673,8 @@ figure figcaption {
     margin-bottom: 0.25em; }
 
 .sflgru {
+  margin-top: 2em;
+  margin-bottom: 2em;
   line-height: 1.5em;
   background: radial-gradient(ellipse at center 60%, #002119 45%, #000 90%);
   color: #fff; }
