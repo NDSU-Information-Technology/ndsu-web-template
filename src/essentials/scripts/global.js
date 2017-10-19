@@ -14,6 +14,8 @@ if (!NDSU.fullOverlayElement) {
     document.body.appendChild(NDSU.fullOverlayElement);
 }
 
+NDSU.contentElement = document.getElementById('content');
+
 NDSU.showOverlay = (overlayLevel) => {
     NDSU.fullOverlayElement.classList.add('active');
     if (overlayLevel) {

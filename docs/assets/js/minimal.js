@@ -24,6 +24,8 @@ if (!NDSU.fullOverlayElement) {
     document.body.appendChild(NDSU.fullOverlayElement);
 }
 
+NDSU.contentElement = document.getElementById('content');
+
 NDSU.showOverlay = function (overlayLevel) {
     NDSU.fullOverlayElement.classList.add('active');
     if (overlayLevel) {
@@ -695,3 +697,18 @@ var StickyBar = function () {
 NDSU.stickyBars = Array.prototype.map.call(document.querySelectorAll('.sticky-bar'), function (stickyBar) {
     return new StickyBar(stickyBar);
 });
+
+NDSU.resizeTimer;
+
+var padMainContent = function padMainContent() {
+    var stickyBarHeight = Array.prototype.reduce.call(NDSU.stickyBars, function (largestHeight, currentStickyBar) {
+        return Math.max(largestHeight, currentStickyBar.element.clientHeight);
+    }, 0);
+    NDSU.contentElement.style.marginTop = '-' + stickyBarHeight + 'px';
+    NDSU.contentElement.style.paddingTop = stickyBarHeight + 'px';
+};
+window.addEventListener('resize', function (e) {
+    clearTimeout(NDSU.resizeTimer);
+    NDSU.resizeTimer = setTimeout(padMainContent, 250);
+});
+padMainContent();

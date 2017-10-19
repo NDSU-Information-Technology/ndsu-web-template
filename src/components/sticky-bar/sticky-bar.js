@@ -34,3 +34,19 @@ class StickyBar {
 NDSU.stickyBars = Array.prototype.map.call(document.querySelectorAll('.sticky-bar'), (stickyBar) => {
     return new StickyBar(stickyBar);
 });
+
+
+NDSU.resizeTimer;
+
+const padMainContent = () => {
+    let stickyBarHeight = Array.prototype.reduce.call(NDSU.stickyBars, (largestHeight, currentStickyBar) => {
+        return Math.max(largestHeight, currentStickyBar.element.clientHeight);
+    }, 0);
+    NDSU.contentElement.style.marginTop =  '-' + stickyBarHeight + 'px';
+    NDSU.contentElement.style.paddingTop = stickyBarHeight + 'px';
+};
+window.addEventListener('resize', (e) =>{
+    clearTimeout(NDSU.resizeTimer);
+    NDSU.resizeTimer = setTimeout(padMainContent, 250);
+});
+padMainContent();
