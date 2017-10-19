@@ -29,6 +29,19 @@
         {{/getJsonContext}}
     {{/inline}}
 
+    {{#*inline "_footer"}}
+    {{#> _footer}}
+    <address>
+            <h6>Department Name</h6>
+            Address Line 1<br>
+            Address Line 2<br>
+            City, State xxxxx-xxxx<br>
+            <br>
+            <a href="tel:xxxxxxxxxx"><span class="sr-only">Phone: </span>+1 (xxx) xxx-xxx</a><br>
+            <a href="fax:xxxxxxxxxx">Fax: +1 (xxx) xxx-xxxx</a>
+    </address>
+    {{/_footer}}
+    {{/inline}}
     {{#*inline "script-block"}}
     <script type="text/javascript" src="/ndsu-web-template/assets/js/script.min.js"></script>
     {{/inline}}
