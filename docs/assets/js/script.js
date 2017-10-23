@@ -1427,15 +1427,17 @@ NDSU.stickyBars = Array.prototype.map.call(document.querySelectorAll('.sticky-ba
 
 NDSU.resizeTimer;
 
-var padMainContent = function padMainContent() {
-    var stickyBarHeight = Array.prototype.reduce.call(NDSU.stickyBars, function (largestHeight, currentStickyBar) {
-        return Math.max(largestHeight, currentStickyBar.element.clientHeight);
-    }, 0);
-    NDSU.contentElement.style.marginTop = '-' + stickyBarHeight + 'px';
-    NDSU.contentElement.style.paddingTop = stickyBarHeight + 'px';
+var scrollToMainContent = function scrollToMainContent(ev) {
+    if (window.location.hash === "#content") {
+        window.setTimeout(function () {
+            var adjustedHeight = Array.prototype.reduce.call(NDSU.stickyBars, function (rh, sb) {
+                return Math.max(rh, sb.bufferElement.offsetHeight);
+            }, 0);
+            if (adjustedHeight === 0) return;
+
+            window.scrollBy(0, -(adjustedHeight * 2));
+        }, 250);
+    }
 };
-window.addEventListener('resize', function (e) {
-    clearTimeout(NDSU.resizeTimer);
-    NDSU.resizeTimer = setTimeout(padMainContent, 250);
-});
-padMainContent();
+
+window.addEventListener("hashchange", scrollToMainContent);

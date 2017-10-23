@@ -38,15 +38,17 @@ NDSU.stickyBars = Array.prototype.map.call(document.querySelectorAll('.sticky-ba
 
 NDSU.resizeTimer;
 
-const padMainContent = () => {
-    let stickyBarHeight = Array.prototype.reduce.call(NDSU.stickyBars, (largestHeight, currentStickyBar) => {
-        return Math.max(largestHeight, currentStickyBar.element.clientHeight);
-    }, 0);
-    NDSU.contentElement.style.marginTop =  '-' + stickyBarHeight + 'px';
-    NDSU.contentElement.style.paddingTop = stickyBarHeight + 'px';
+const scrollToMainContent = (ev) => {
+    if (window.location.hash === "#content") {
+        window.setTimeout(() => {
+            let adjustedHeight = Array.prototype.reduce.call(NDSU.stickyBars, (rh, sb) => {
+                return Math.max(rh, sb.bufferElement.offsetHeight);
+            }, 0);
+            if (adjustedHeight === 0) return;
+
+            window.scrollBy(0, -(adjustedHeight * 2));
+        }, 250);
+    }
 };
-window.addEventListener('resize', (e) =>{
-    clearTimeout(NDSU.resizeTimer);
-    NDSU.resizeTimer = setTimeout(padMainContent, 250);
-});
-padMainContent();
+
+window.addEventListener("hashchange", scrollToMainContent);
