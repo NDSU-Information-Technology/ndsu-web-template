@@ -714,3 +714,4 @@ var scrollToMainContent = function scrollToMainContent(ev) {
 };
 
 window.addEventListener("hashchange", scrollToMainContent);
+scrollToMainContent();

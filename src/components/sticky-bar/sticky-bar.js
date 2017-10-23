@@ -52,3 +52,4 @@ const scrollToMainContent = (ev) => {
 };
 
 window.addEventListener("hashchange", scrollToMainContent);
+scrollToMainContent();
