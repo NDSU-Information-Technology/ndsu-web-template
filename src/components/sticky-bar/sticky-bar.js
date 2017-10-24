@@ -39,7 +39,7 @@ NDSU.stickyBars = Array.prototype.map.call(document.querySelectorAll('.sticky-ba
 NDSU.resizeTimer;
 
 const scrollToMainContent = (ev) => {
-    if (window.location.hash === "#content") {
+    if (window.location.hash) {
         window.setTimeout(() => {
             let adjustedHeight = Array.prototype.reduce.call(NDSU.stickyBars, (rh, sb) => {
                 return Math.max(rh, sb.bufferElement.offsetHeight);
