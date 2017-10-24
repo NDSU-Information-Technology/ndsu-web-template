@@ -36,7 +36,10 @@ if (typeof enableCodeExample !== 'undefined' && enableCodeExample) {
         let resultLabel = document.createElement('h5');
         resultLabel.innerText = 'Result';
         
-        element.insertBefore(sourceCodeLabel, sourceCodeElement);
+        let sourceCodeParentElement = sourceCodeElement.parentElement;
+        let beforeElement = sourceCodeParentElement === element ? sourceCodeElement : sourceCodeParentElement;
+
+        element.insertBefore(sourceCodeLabel, beforeElement);
         element.appendChild(resultLabel);
         element.appendChild(resultElement);
 
