@@ -1259,6 +1259,9 @@ footer {
   .hero-banner section.bottom {
     top: auto;
     bottom: 2em; }
+  .hero-banner section.right {
+    left: auto;
+    right: 3em; }
   .hero-banner section.wide h2, .hero-banner section.wide h3, .hero-banner section.wide h4, .hero-banner section.wide p {
     width: 800px; }
   .hero-banner .yt-player {
