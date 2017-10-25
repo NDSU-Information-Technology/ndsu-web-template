@@ -240,7 +240,7 @@
   margin-bottom: 10px;
 }
 
-.markdown-body blockquote {
+.markdown-body blockquote:not(.bigquote) {
   margin: 0;
 }
 
@@ -342,7 +342,6 @@
 }
 
 .markdown-body p,
-.markdown-body blockquote,
 .markdown-body ul,
 .markdown-body ol,
 .markdown-body dl,

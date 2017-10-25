@@ -24,3 +24,7 @@ button, input, table, td, th {
 	h5 { font-size: 1em; }
 	h6 { font-size: 1em; }
 }
+
+blockquote {
+	font-size: $font-size-rem-base;
+}

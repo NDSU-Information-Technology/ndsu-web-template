@@ -38,6 +38,9 @@ h6 {
   h6 {
     font-size: 1em; } }
 
+blockquote {
+  font-size: 16px; }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -313,7 +316,20 @@ header .search-form {
 
 .bigquote {
   padding: 3em 0;
-  margin: 0; }
+  padding: 2em;
+  margin: 1em 0; }
+  @media (max-width: 1199px) {
+    .bigquote {
+      padding: 1.755em; } }
+  @media (max-width: 991px) {
+    .bigquote {
+      padding: 1.5em; } }
+  @media (max-width: 767px) {
+    .bigquote {
+      padding: 1.25em; } }
+  @media (max-width: 574px) {
+    .bigquote {
+      padding: 1em; } }
   .bigquote .quote {
     text-align: center;
     margin-bottom: 0.5em;
