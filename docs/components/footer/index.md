@@ -5,16 +5,16 @@ title: Footer Component
 
 ## Basic Usage
 ```html
-<footer class="footer-green">
+<footer class="footer-green ">
     <section class="footer-address">
         <img src="/ndsu-web-template/images/NDSU-twolines-small.png" alt="North Dakota State University" />
-        <address>
+        <div class="address">
             <h6>University Relations</h6>
             North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>
             <br>
             <a href="tel:17012311068"><span class="sr-only">Phone: </span>+1 (701) 231-1068</a><br>
             <a href="fax:17012311989">Fax: +1 (701) 231-1068</a>
-        </address>
+        </div>
     </section>
 </footer>
 ```
@@ -22,16 +22,33 @@ title: Footer Component
 ## Color
 
 ```html
-<footer class="footer-dark">
+<footer class="footer-dark ">
     <section class="footer-address">
         <img src="/ndsu-web-template/images/NDSU-twolines-small.png" alt="North Dakota State University" />
-        <address>
+        <div class="address">
             <h6>University Relations</h6>
             North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>
             <br>
             <a href="tel:17012311068"><span class="sr-only">Phone: </span>+1 (701) 231-1068</a><br>
             <a href="fax:17012311989">Fax: +1 (701) 231-1068</a>
-        </address>
+        </div>
+    </section>
+</footer>
+```
+
+## Alignment
+
+```html
+<footer class="footer-green footer-left">
+    <section class="footer-address">
+        <img src="/ndsu-web-template/images/NDSU-twolines-small.png" alt="North Dakota State University" />
+        <div class="address">
+            <h6>University Relations</h6>
+            North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>
+            <br>
+            <a href="tel:17012311068"><span class="sr-only">Phone: </span>+1 (701) 231-1068</a><br>
+            <a href="fax:17012311989">Fax: +1 (701) 231-1068</a>
+        </div>
     </section>
 </footer>
 ```
@@ -39,16 +56,16 @@ title: Footer Component
 ## Side Navigation
 
 ```html
-<footer class="footer-green">
+<footer class="footer-green footer-left">
     <section class="footer-address">
         <img src="/ndsu-web-template/images/NDSU-twolines-small.png" alt="North Dakota State University" />
-        <address>
+        <div class="address">
             <h6>University Relations</h6>
             North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>
             <br>
             <a href="tel:17012311068"><span class="sr-only">Phone: </span>+1 (701) 231-1068</a><br>
             <a href="fax:17012311989">Fax: +1 (701) 231-1068</a>
-        </address>
+        </div>
     </section>
     <div class="footer-links">
         <div class="nav-box">
@@ -65,16 +82,16 @@ title: Footer Component
 ```
 
 ```html
-<footer class="footer-dark">
+<footer class="footer-dark footer-left">
     <section class="footer-address">
         <img src="/ndsu-web-template/images/NDSU-twolines-small.png" alt="North Dakota State University" />
-        <address>
+        <div class="address">
             <h6>University Relations</h6>
             North Dakota State University<br> Old Main 204<br> Dept 6000 PO Box 6050<br> Fargo, ND 58108-6050<br>
             <br>
             <a href="tel:17012311068"><span class="sr-only">Phone: </span>+1 (701) 231-1068</a><br>
             <a href="fax:17012311989">Fax: +1 (701) 231-1068</a>
-        </address>
+        </div>
     </section>
     <div class="footer-links">
         <div class="nav-box">
