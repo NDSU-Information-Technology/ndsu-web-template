@@ -35,8 +35,9 @@
 	&.flex-wrap {
 		flex-wrap: wrap;
 	}
-	
-	@each $size in $flex-sizes {
-		@include col-size($size);
+	@each $ss in $media-sizes {
+		@each $fs in $flex-sizes {
+			@include col-size($fs, $ss);
+		}
 	}
 }
