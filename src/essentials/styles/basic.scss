@@ -53,6 +53,13 @@ header {
 		.header-ndsu-logo{
 			display: block;
 		}
+
+		@include media-xs() {
+			h1 img {
+				max-width: 210px;
+				height: auto;
+			}
+		}
 		
 	}
 

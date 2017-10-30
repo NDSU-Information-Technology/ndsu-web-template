@@ -265,6 +265,10 @@ header .green-bar {
     color: #fff; }
   header .green-bar .header-ndsu-logo {
     display: block; }
+  @media (max-width: 574px) {
+    header .green-bar h1 img {
+      max-width: 210px;
+      height: auto; } }
 
 header .main-nav {
   background-color: #222222; }
