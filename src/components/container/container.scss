@@ -19,6 +19,7 @@
 	justify-content: space-between;
 	align-items: stretch;
 	list-style: none;
+	flex-wrap: wrap;
 
 	&.flex-left {
 		justify-content: left;
@@ -36,8 +37,10 @@
 		flex-wrap: wrap;
 	}
 	@each $ss in $media-sizes {
-		@each $fs in $flex-sizes {
-			@include col-size($fs, $ss);
+		@include media-size($ss) {
+			@each $fs in $flex-sizes {
+				@include col-size($fs, $ss);
+			}
 		}
 	}
 }
