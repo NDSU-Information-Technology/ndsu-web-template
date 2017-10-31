@@ -205,14 +205,18 @@
 .navbar-dark {
 	&,
 	.navbar {
-		background-color: $default-secondary-bg-color;
+		background-color: $color-gray13;
 	}
 
 	.nav-link{
-    	@include btn-variant($color-white, $default-secondary-bg-color, $color-yellow, $color-black, $color-gray85, $color-gray7);
+    	@include btn-variant($color-white, $color-gray13, $color-yellow, $color-black, $color-gray85, $color-gray7);
 	}
-	.nav-item-home .nav-link{
-    	// @include btn-variant($color-white, $default-secondary-bg-color, $color-yellow, $color-black, $color-yellow, $color-gray7);
+
+	.child-navbar{
+		background-color: $color-gray7;
+	}
+	.child-navbar .nav-link {
+    	@include btn-variant($color-white, $color-gray7, $color-yellow, $color-black, $color-gray85, $color-gray7);
 	}
 
 	.extended-child-navbar {
@@ -272,14 +276,8 @@ ul.navbar {
 	}
 }
 @include media-md() {
-	.navbar .nav-link {
-		padding: 1.125em;
-	}
 }
 @include media-sm() {
-	.navbar .nav-link {
-		padding: 1.25em;
-	}
 	.navbar-mobilize{
 		display: none;
 	}
