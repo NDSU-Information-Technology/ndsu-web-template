@@ -8,18 +8,17 @@
 
 // TODO: Consolidate this with layout
 
-.row {
+.flex-row {
 	flex-direction: row;
 }
-.column{
+.flex-column{
 	flex-direction: column;
 }
-.row, .column {
+.flex-row, .flex-column {
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
 	list-style: none;
-	flex-wrap: wrap;
 
 	&.flex-left {
 		justify-content: left;
@@ -36,11 +35,11 @@
 	&.flex-wrap {
 		flex-wrap: wrap;
 	}
-	@each $ss in $media-sizes {
-		@include media-size($ss) {
-			@each $fs in $flex-sizes {
-				@include col-size($fs, $ss);
-			}
-		}
-	}
+	// @each $ss in $media-sizes {
+	// 	@include media-size($ss) {
+	// 		@each $fs in $flex-sizes {
+	// 			@include col-size($fs, $ss);
+	// 		}
+	// 	}
+	// }
 }
