@@ -122,18 +122,32 @@
 
 
 	&.accordion .child-navbar {
+		display: none;
 		position: relative;
-		display: flex;
 		box-shadow: initial;
 
 		.nav-link {
 			padding-left: 2em;
 		}
 	}
+	&.accordion .child-navbar.expanded {
+		display: flex;
+	}
+
 	&.accordion .nav-item.nav-item-haschild > .nav-link::after {
 		content: "";
 	}
 	
+
+	&.accordion .nav-item .nav-expand-link {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0.5em;
+		
+		@include linkColor($color-green, $color-gray67);
+		@include linkUnderline(-1);
+	}
 }
 
 .navbar-toggle {

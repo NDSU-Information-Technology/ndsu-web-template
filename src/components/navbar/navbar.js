@@ -35,7 +35,7 @@ class Navbar extends NavBaseClass {
     }
 
     setOffset() {
-        if (!this.parentNavItem) return;
+        if (!this.parentNavItem || this.isVerticalNavbar) return;
         
         let el = this.parentNavItem.element;
         let elStyle = window.getComputedStyle(el);
@@ -89,6 +89,10 @@ class Navbar extends NavBaseClass {
         return this.options.accordion;
     }
 
+    get isOpen() {
+        return !this.isAccordion || this.element.classList.contains('expanded');
+    }
+
     constructor(navbarElement, parentNavItem) {
         super(navbarElement);
         this.parentNavItem = parentNavItem;
@@ -96,7 +100,7 @@ class Navbar extends NavBaseClass {
         let isVerticalNavbar = navbarElement.classList.contains('navbar-vertical');
         let isDropUp = navbarElement.classList.contains('dropup');
         let isExtendedChildNavbar = navbarElement.classList.contains('extended-child-navbar');
-        let isAccordion = navbarElement.classList.contains('accordion');
+        let isAccordion = navbarElement.classList.contains('accordion') || (this.parentNavItem && this.parentNavItem.isAccordion);
 
         this.options = {
             autoCollapse: true,
@@ -264,7 +268,7 @@ class NavItem extends NavBaseClass {
     }
 
     _setEventListeners() {
-        if (!this.parentNavbar.isExtendedChildNavbar && !this.parentNavbar.isAccordion){
+        if (!this.parentNavbar.isExtendedChildNavbar && !this.isAccordion){
             this.element.addEventListener('focusin', this.focusInListener);
             this.element.addEventListener('focusout', this.focusOutListener);
             this.element.addEventListener('mouseenter', this.mouseInListener);
@@ -388,6 +392,14 @@ class NavItem extends NavBaseClass {
         return neighbor;
     }
 
+    get isAccordion() {
+        return this.parentNavbar.isAccordion;
+    }
+
+    get isChildOpen() {
+        return this.childNavbar && this.childNavbar.isOpen;
+    }
+
     constructor(navItemElement, parentNavbar) {
         super(navItemElement);
 
@@ -405,6 +417,31 @@ class NavItem extends NavBaseClass {
         this.mouseInListener = (e) => NavItem._focusInEvent(e, this);
 
         this.focusOutListener = (e) => NavItem._focusOutEvent(e, this);
+
+        if (this.isAccordion && this.childNavbar) {
+            let expandElement = document.createElement('a');
+            expandElement.href = '#';
+            expandElement.className = 'nav-expand-link';
+            expandElement.innerText = this.isChildOpen ? '-' : '+';
+
+            let srOnlyText = document.createElement('span');
+            srOnlyText.innerText = "expand/collapse menu";
+            srOnlyText.className = 'sr-only';
+            
+            expandElement.addEventListener('click', e => {
+                e.preventDefault();
+                if (this.isChildOpen){
+                    this.closeChild();
+                    e.currentTarget.innerText = '+';
+                } else {
+                    this.openChild();
+                    e.currentTarget.innerText = '-';
+                }
+            });
+            
+            expandElement.appendChild(srOnlyText);
+            this.element.insertBefore(expandElement, this.linkElement.nextSibling);
+        }
 
         this._setEventListeners();
         this._setRoles();

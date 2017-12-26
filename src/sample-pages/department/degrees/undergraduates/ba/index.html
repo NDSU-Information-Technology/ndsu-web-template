@@ -4,16 +4,37 @@
             <h5 class="sub-nav-title"><a href="/ndsu-web-template/sample-pages/department/degrees/undergraduates/">Undergraduate Programs</a></h5>
             {{#getJsonContext '{
                 "additionalClasses": [
-                    "navbar-vertical"
+                    "navbar-vertical",
+                    "accordion"
                 ],
                 "links": [
                     {
                         "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/bs/",
-                        "text": "Bachelor of Science"
+                        "text": "Bachelor of Science",
+                        "childNavbar": {
+                            "additionalClasses": [
+                                "navbar-vertical"
+                            ],
+                            "links": [
+                                {
+                                    "url": "#Overall",
+                                    "text": "Overall"
+                                },
+                                {
+                                    "url": "#Courses",
+                                    "text": "Courses"
+                                },
+                                {
+                                    "url": "#Internships",
+                                    "text": "Internships"
+                                }
+                            ]
+                        }
                     },
                     {
                         "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/ba/",
-                        "text": "Bachelor of Arts"
+                        "text": "Bachelor of Arts",
+                        "active": true
                     },
                     {
                         "url": "/ndsu-web-template/sample-pages/department/degrees/undergraduates/double/",

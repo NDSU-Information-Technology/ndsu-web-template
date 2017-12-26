@@ -1381,16 +1381,35 @@ footer {
       .navbar .extended-child-section > a.nav-link h5 {
         display: inline; }
   .navbar.accordion .child-navbar {
+    display: none;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-shadow: initial;
             box-shadow: initial; }
     .navbar.accordion .child-navbar .nav-link {
       padding-left: 2em; }
+  .navbar.accordion .child-navbar.expanded {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .navbar.accordion .nav-item.nav-item-haschild > .nav-link::after {
     content: ""; }
+  .navbar.accordion .nav-item .nav-expand-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em; }
+    .navbar.accordion .nav-item .nav-expand-link {
+      color: #002119; }
+    .navbar.accordion .nav-item .nav-expand-link:hover, .navbar.accordion .nav-item .nav-expand-link:focus, .navbar.accordion .nav-item .nav-expand-link[aria-expanded=true], .navbar.accordion .nav-item .nav-expand-link.active {
+      color: #ababab; }
+    .navbar.accordion .nav-item .nav-expand-link.active-branch {
+      color: ""; }
+    .navbar.accordion .nav-item .nav-expand-link.active-branch:hover, .navbar.accordion .nav-item .nav-expand-link.active-branch:focus, .navbar.accordion .nav-item .nav-expand-link.active-branch[aria-expanded=true], .navbar.accordion .nav-item .nav-expand-link.active-branch.active {
+      color: #ababab; }
+    .navbar.accordion .nav-item .nav-expand-link {
+      text-decoration: none; }
+    .navbar.accordion .nav-item .nav-expand-link:hover, .navbar.accordion .nav-item .nav-expand-link:focus, .navbar.accordion .nav-item .nav-expand-link[aria-expanded=true], .navbar.accordion .nav-item .nav-expand-link.active {
+      text-decoration: none; }
 
 .navbar-toggle {
   font-weight: bold; }

@@ -784,7 +784,7 @@ var Navbar = function (_NavBaseClass) {
     }, {
         key: 'setOffset',
         value: function setOffset() {
-            if (!this.parentNavItem) return;
+            if (!this.parentNavItem || this.isVerticalNavbar) return;
 
             var el = this.parentNavItem.element;
             var elStyle = window.getComputedStyle(el);
@@ -844,6 +844,11 @@ var Navbar = function (_NavBaseClass) {
         get: function get() {
             return this.options.accordion;
         }
+    }, {
+        key: 'isOpen',
+        get: function get() {
+            return !this.isAccordion || this.element.classList.contains('expanded');
+        }
     }]);
 
     function Navbar(navbarElement, parentNavItem) {
@@ -856,7 +861,7 @@ var Navbar = function (_NavBaseClass) {
         var isVerticalNavbar = navbarElement.classList.contains('navbar-vertical');
         var isDropUp = navbarElement.classList.contains('dropup');
         var isExtendedChildNavbar = navbarElement.classList.contains('extended-child-navbar');
-        var isAccordion = navbarElement.classList.contains('accordion');
+        var isAccordion = navbarElement.classList.contains('accordion') || _this5.parentNavItem && _this5.parentNavItem.isAccordion;
 
         _this5.options = {
             autoCollapse: true,
@@ -1012,7 +1017,7 @@ var NavItem = function (_NavBaseClass2) {
         value: function _setEventListeners() {
             var _this10 = this;
 
-            if (!this.parentNavbar.isExtendedChildNavbar && !this.parentNavbar.isAccordion) {
+            if (!this.parentNavbar.isExtendedChildNavbar && !this.isAccordion) {
                 this.element.addEventListener('focusin', this.focusInListener);
                 this.element.addEventListener('focusout', this.focusOutListener);
                 this.element.addEventListener('mouseenter', this.mouseInListener);
@@ -1152,6 +1157,16 @@ var NavItem = function (_NavBaseClass2) {
             }
             return neighbor;
         }
+    }, {
+        key: 'isAccordion',
+        get: function get() {
+            return this.parentNavbar.isAccordion;
+        }
+    }, {
+        key: 'isChildOpen',
+        get: function get() {
+            return this.childNavbar && this.childNavbar.isOpen;
+        }
     }], [{
         key: '_open',
         value: function _open(inst) {
@@ -1231,6 +1246,31 @@ var NavItem = function (_NavBaseClass2) {
         _this9.focusOutListener = function (e) {
             return NavItem._focusOutEvent(e, _this9);
         };
+
+        if (_this9.isAccordion && _this9.childNavbar) {
+            var expandElement = document.createElement('a');
+            expandElement.href = '#';
+            expandElement.className = 'nav-expand-link';
+            expandElement.innerText = _this9.isChildOpen ? '-' : '+';
+
+            var srOnlyText = document.createElement('span');
+            srOnlyText.innerText = "expand/collapse menu";
+            srOnlyText.className = 'sr-only';
+
+            expandElement.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (_this9.isChildOpen) {
+                    _this9.closeChild();
+                    e.currentTarget.innerText = '+';
+                } else {
+                    _this9.openChild();
+                    e.currentTarget.innerText = '-';
+                }
+            });
+
+            expandElement.appendChild(srOnlyText);
+            _this9.element.insertBefore(expandElement, _this9.linkElement.nextSibling);
+        }
 
         _this9._setEventListeners();
         _this9._setRoles();
