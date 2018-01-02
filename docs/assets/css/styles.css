@@ -1605,12 +1605,16 @@ footer {
     position: relative;
     -webkit-box-shadow: initial;
             box-shadow: initial; }
-    .navbar.accordion .child-navbar .nav-link {
-      padding-left: 2em; }
   .navbar.accordion .child-navbar.expanded {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .navbar.accordion .child-navbar .nav-link {
+    padding-left: 2em; }
+  .navbar.accordion .child-navbar .child-navbar .nav-link {
+    padding-left: 3em; }
+  .navbar.accordion .child-navbar .child-navbar .child-navbar .nav-link {
+    padding-left: 4em; }
   .navbar.accordion .nav-item.nav-item-haschild > .nav-link::after {
     content: ""; }
   .navbar.accordion .nav-item .nav-expand-link {
