@@ -125,18 +125,10 @@
 		display: none;
 		position: relative;
 		box-shadow: initial;
+		margin-left: 1em;
 	}
 	&.accordion .child-navbar.expanded {
 		display: flex;
-	}
-	&.accordion .child-navbar .nav-link {
-		padding-left: 2em;
-	}
-	&.accordion .child-navbar .child-navbar .nav-link {
-		padding-left: 3em;
-	}
-	&.accordion .child-navbar .child-navbar .child-navbar .nav-link {
-		padding-left: 4em;
 	}
 
 	&.accordion .nav-item.nav-item-haschild > .nav-link::after {

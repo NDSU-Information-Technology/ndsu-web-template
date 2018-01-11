@@ -10,7 +10,6 @@
     .nav-col, .side-col {
 		.sub-nav-title {
 			border-top: 4px solid $color-green;
-			border-bottom: 1px solid $color-gray80;
 			margin: 0;
 			a, div {
 				@include buttonify();
@@ -24,10 +23,14 @@
 		}
 		.navbar {
 			z-index: 0;
+			border-bottom: 1px solid $color-gray80;
+		}
+		.navbar .child-navbar {
+			border-bottom: none;
 		}
 		.navbar .nav-link {
 			padding: 1em;
-			border-bottom: 1px solid $color-gray80;
+			border-top: 1px solid $color-gray80;
 			text-transform: none;
 		}
 		.navbar .nav-link{
