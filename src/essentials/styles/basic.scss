@@ -63,6 +63,10 @@ header {
 		
 	}
 
+	.page-title-bar {
+		border-bottom: 1px solid $color-gray90;
+	}
+
 	.main-nav {
 		background-color: $default-secondary-bg-color;
 	}
@@ -76,6 +80,7 @@ header {
 			padding-bottom: 0.25em;
 			margin-top:0;
 			margin-bottom: 0;
+			border-bottom: none;
 		}
 
 		.search-form {

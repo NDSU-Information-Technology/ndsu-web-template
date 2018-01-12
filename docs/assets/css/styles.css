@@ -270,6 +270,9 @@ header .green-bar {
       max-width: 210px;
       height: auto; } }
 
+header .page-title-bar {
+  border-bottom: 1px solid #e5e5e5; }
+
 header .main-nav {
   background-color: #222222; }
 
@@ -279,7 +282,8 @@ header h2.page-title {
   padding-top: 0.75em;
   padding-bottom: 0.25em;
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  border-bottom: none; }
 
 header .search-form {
   margin-left: 1em;
