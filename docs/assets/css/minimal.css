@@ -1591,9 +1591,7 @@ ul.navbar {
     display: block; }
   .navbar-mobile,
   .navbar-mobile.expanded {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
+    display: block; } }
 
 @media (max-width: 767px) {
   .navbar .nav-link {
