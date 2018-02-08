@@ -26,7 +26,7 @@ For accessibility reason, make sure that the `navbar` component is wrapped aroun
 Basic usage example:
 ```html
 <div role="navigation">
-    <ul class="navbar">
+    <ul class="navbar" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
@@ -61,7 +61,7 @@ Available alignment classes:
 Justified links example:
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-justify">
+    <ul class="navbar navbar-justify" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
@@ -84,7 +84,7 @@ Justified links example:
 Left-align links example:
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-left">
+    <ul class="navbar navbar-left" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
@@ -113,7 +113,7 @@ Available color classes:
 Example:
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-dark">
+    <ul class="navbar navbar-dark" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
@@ -143,7 +143,7 @@ Available direction classes:
 `navbar-vertical` example:
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-vertical">
+    <ul class="navbar navbar-vertical" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
@@ -186,12 +186,12 @@ Example DOM structure for dropdown:
 Example HTML markup for dropdown:
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-dark">
+    <ul class="navbar navbar-dark" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
             </a>
-            <ul class="navbar navbar-vertical child-navbar">
+            <ul class="navbar navbar-vertical child-navbar" >
                 <li class="nav-item">
                     <a class="nav-link " href="submenu1">
                         Sub-Menu 1
@@ -259,15 +259,15 @@ Example HTML markup for the DOM structure given above:
 
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-dark">
+    <ul class="navbar navbar-dark" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
             </a>
-            <ul class="navbar extended-child-navbar child-navbar">
+            <ul class="navbar extended-child-navbar child-navbar" >
                 <li class="nav-item extended-child-section">
                     <h5 class="child-section-title">Section 1</h5>
-                    <ul class="navbar navbar-vertical child-navbar">
+                    <ul class="navbar navbar-vertical child-navbar" >
                         <li class="nav-item">
                             <a class="nav-link " href="submenu1">
                                 Sub-Menu 1
@@ -287,7 +287,7 @@ Example HTML markup for the DOM structure given above:
                 </li>
                 <li class="nav-item extended-child-section">
                     <h5 class="child-section-title">Section 2</h5>
-                    <ul class="navbar navbar-vertical child-navbar">
+                    <ul class="navbar navbar-vertical child-navbar" >
                         <li class="nav-item">
                             <a class="nav-link " href="submenu4">
                                 Sub-Menu 4
@@ -307,7 +307,7 @@ Example HTML markup for the DOM structure given above:
                 </li>
                 <li class="nav-item extended-child-section">
                     <h5 class="child-section-title">Section 3</h5>
-                    <ul class="navbar navbar-vertical child-navbar">
+                    <ul class="navbar navbar-vertical child-navbar" >
                         <li class="nav-item">
                             <a class="nav-link " href="submenu7">
                                 Sub-Menu 7
@@ -368,7 +368,7 @@ Example:
 
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-mobilize">
+    <ul class="navbar navbar-mobilize" >
         <li class="nav-item">
             <a class="nav-link " href="link1">
                 Link 1
@@ -392,6 +392,9 @@ Resize browser window to a mobile page's width, and notice that the links specif
 
 A child `navbar` component will also be included in mobile navigation if its parent is included.
 
+### Mobile Links Ordering
+By default, elements will be added according to their DOM position on a document. To override the position, add the attribute `data-mobile-order` with an integer value. The default value is 0; elements are sorted in ascending order, negative values are accepted.
+
 
 ## Indicating current page and branch
 
@@ -401,7 +404,7 @@ Example below shows a navigation for a page with breadcrumb Home > Link 1 > Sub-
 
 ```html
 <div role="navigation">
-    <ul class="navbar navbar-dark">
+    <ul class="navbar navbar-dark" >
         <li class="nav-item nav-item-home">
             <a class="nav-link active-branch "href="home"><span class="sr-only">Home </span>&#8962;</a>
         </li>
@@ -409,7 +412,7 @@ Example below shows a navigation for a page with breadcrumb Home > Link 1 > Sub-
             <a class="nav-link  active-branch" href="link1">
                 Link 1
             </a>
-            <ul class="navbar navbar-vertical child-navbar">
+            <ul class="navbar navbar-vertical child-navbar" >
                 <li class="nav-item">
                     <a class="nav-link " href="submenu1">
                         Sub-Menu 1

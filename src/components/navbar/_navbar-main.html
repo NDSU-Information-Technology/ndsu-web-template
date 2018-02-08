@@ -1,4 +1,4 @@
-<ul class="navbar{{#each additionalClasses}} {{this}}{{/each}}{{#if childNavbar}} child-navbar{{/if}}">
+<ul class="navbar{{#each additionalClasses}} {{this}}{{/each}}{{#if childNavbar}} child-navbar{{/if}}" {{#if mobileOrder}}data-mobile-order="{{mobileOrder}}"{{/if}}>
     {{#if links}}
     {{#each links}}
     {{> _navbar-nav-item link=this }}

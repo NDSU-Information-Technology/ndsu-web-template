@@ -675,7 +675,16 @@ NDSU.mobileNavbars = Array.prototype.map.call(document.querySelectorAll('.navbar
 
     if (!mobileNavbar || !navbarToggle || !navbarToggle.classList.contains('navbar-toggle')) return 0;
 
-    Array.prototype.forEach.call(document.querySelectorAll('.navbar-mobilize:not(.child-navbar):not(.navbar-mobile)'), function (navbar) {
+    var mobilizedNavbars = Array.from(document.querySelectorAll('.navbar-mobilize:not(.child-navbar):not(.navbar-mobile)'));
+
+    Array.prototype.sort.call(mobilizedNavbars, function (a, b) {
+        var orderA = parseInt(a.getAttribute('data-mobile-order')) || 0;
+        var orderB = parseInt(b.getAttribute('data-mobile-order')) || 0;
+
+        return orderA - orderB;
+    });
+
+    Array.prototype.forEach.call(mobilizedNavbars, function (navbar) {
         Array.from(navbar.children).filter(function (child) {
             return child.classList.contains('nav-item') && !child.classList.contains('nav-item-mobile-hide');
         }).forEach(function (navItem) {

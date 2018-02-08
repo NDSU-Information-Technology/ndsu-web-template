@@ -333,6 +333,9 @@ Resize browser window to a mobile page's width, and notice that the links specif
 
 A child `navbar` component will also be included in mobile navigation if its parent is included.
 
+### Mobile Links Ordering
+By default, elements will be added according to their DOM position on a document. To override the position, add the attribute `data-mobile-order` with an integer value. The default value is 0; elements are sorted in ascending order, negative values are accepted.
+
 
 ## Indicating current page and branch
 

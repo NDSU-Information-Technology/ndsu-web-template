@@ -518,7 +518,16 @@ NDSU.mobileNavbars = Array.prototype.map.call(document.querySelectorAll('.navbar
 
     if (!mobileNavbar || !navbarToggle || !navbarToggle.classList.contains('navbar-toggle')) return 0;
 
-    Array.prototype.forEach.call(document.querySelectorAll('.navbar-mobilize:not(.child-navbar):not(.navbar-mobile)'), (navbar) => {
+    let mobilizedNavbars = Array.from(document.querySelectorAll('.navbar-mobilize:not(.child-navbar):not(.navbar-mobile)'));
+    
+    Array.prototype.sort.call(mobilizedNavbars, (a,b) => {
+        let orderA = parseInt(a.getAttribute('data-mobile-order')) || 0;
+        let orderB = parseInt(b.getAttribute('data-mobile-order')) || 0;
+
+        return orderA - orderB;
+    });
+
+    Array.prototype.forEach.call(mobilizedNavbars, (navbar) => {
         Array.from(navbar.children).filter(child => {
             return child.classList.contains('nav-item') && !child.classList.contains('nav-item-mobile-hide');
         }).forEach((navItem) => {
