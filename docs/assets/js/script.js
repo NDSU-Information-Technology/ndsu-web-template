@@ -1,12 +1,247 @@
-'use strict';
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/* https://cdn.polyfill.io/v2/polyfill.js?features=Promise|gated&ua=ie/10.0.0 */
+
+/* Polyfill service v3.25.1
+ * For detailed credits and licence information see https://github.com/financial-times/polyfill-service.
+ * 
+ * UA detected: ie/10.0.0
+ * Features requested: Promise
+ * 
+ * - Promise, License: MIT */
+
+(function (undefined) {
+    if (!('Promise' in this)) {
+
+        // Promise
+        !function (n) {
+            function t(e) {
+                if (r[e]) return r[e].exports;var o = r[e] = { exports: {}, id: e, loaded: !1 };return n[e].call(o.exports, o, o.exports, t), o.loaded = !0, o.exports;
+            }var r = {};return t.m = n, t.c = r, t.p = "", t(0);
+        }({ 0: /*!***********************!*\
+               !*** ./src/global.js ***!
+               \***********************/
+            function _(n, t, r) {
+                (function (n) {
+                    var t = r( /*! ./yaku */80);try {
+                        (n || {}).Promise = t, window.Promise = t;
+                    } catch (err) {}
+                }).call(t, function () {
+                    return this;
+                }());
+            }, 80: /*!*********************!*\
+                   !*** ./src/yaku.js ***!
+                   \*********************/
+            function _(n, t) {
+                (function (t) {
+                    !function () {
+                        "use strict";
+                        function r() {
+                            return un[B][G] || J;
+                        }function e(n, t) {
+                            for (var r in t) {
+                                n[r] = t[r];
+                            }
+                        }function o(n) {
+                            return n && "object" == (typeof n === "undefined" ? "undefined" : _typeof(n));
+                        }function i(n) {
+                            return "function" == typeof n;
+                        }function u(n, t) {
+                            return n instanceof t;
+                        }function c(n) {
+                            return u(n, U);
+                        }function f(n, t, r) {
+                            if (!t(n)) throw v(r);
+                        }function s() {
+                            try {
+                                return C.apply(F, arguments);
+                            } catch (e) {
+                                return rn.e = e, rn;
+                            }
+                        }function a(n, t) {
+                            return C = n, F = t, s;
+                        }function l(n, t) {
+                            function r() {
+                                for (var r = 0; r < o;) {
+                                    t(e[r], e[r + 1]), e[r++] = S, e[r++] = S;
+                                }o = 0, e.length > n && (e.length = n);
+                            }var e = O(n),
+                                o = 0;return function (n, t) {
+                                e[o++] = n, e[o++] = t, 2 === o && un.nextTick(r);
+                            };
+                        }function h(n, t) {
+                            var r,
+                                e,
+                                o,
+                                c,
+                                f = 0;if (!n) throw v(W);var s = n[un[B][D]];if (i(s)) e = s.call(n);else {
+                                if (!i(n.next)) {
+                                    if (u(n, O)) {
+                                        for (r = n.length; f < r;) {
+                                            t(n[f], f++);
+                                        }return f;
+                                    }throw v(W);
+                                }e = n;
+                            }for (; !(o = e.next()).done;) {
+                                if (c = a(t)(o.value, f++), c === rn) throw i(e[K]) && e[K](), c.e;
+                            }return f;
+                        }function v(n) {
+                            return new TypeError(n);
+                        }function _(n) {
+                            return (n ? "" : X) + new U().stack;
+                        }function d(n, t) {
+                            var r = "on" + n.toLowerCase(),
+                                e = H[r];I && I.listeners(n).length ? n === tn ? I.emit(n, t._v, t) : I.emit(n, t) : e ? e({ reason: t._v, promise: t }) : un[n](t._v, t);
+                        }function p(n) {
+                            return n && n._s;
+                        }function w(n) {
+                            if (p(n)) return new n(en);var t, r, e;return t = new n(function (n, o) {
+                                if (t) throw v();r = n, e = o;
+                            }), f(r, i), f(e, i), t;
+                        }function m(n, t) {
+                            return function (r) {
+                                A && (n[Q] = _(!0)), t === q ? T(n, r) : k(n, t, r);
+                            };
+                        }function y(n, t, r, e) {
+                            return i(r) && (t._onFulfilled = r), i(e) && (n[M] && d(nn, n), t._onRejected = e), A && (t._p = n), n[n._c++] = t, n._s !== z && cn(n, t), t;
+                        }function j(n) {
+                            if (n._umark) return !0;n._umark = !0;for (var t, r = 0, e = n._c; r < e;) {
+                                if (t = n[r++], t._onRejected || j(t)) return !0;
+                            }
+                        }function x(n, t) {
+                            function r(n) {
+                                return e.push(n.replace(/^\s+|\s+$/g, ""));
+                            }var e = [];return A && (t[Q] && r(t[Q]), function o(n) {
+                                n && N in n && (o(n._next), r(n[N] + ""), o(n._p));
+                            }(t)), (n && n.stack ? n.stack : n) + ("\n" + e.join("\n")).replace(on, "");
+                        }function g(n, t) {
+                            return n(t);
+                        }function k(n, t, r) {
+                            var e = 0,
+                                o = n._c;if (n._s === z) for (n._s = t, n._v = r, t === $ && (A && c(r) && (r.longStack = x(r, n)), fn(n)); e < o;) {
+                                cn(n, n[e++]);
+                            }return n;
+                        }function T(n, t) {
+                            if (t === n && t) return k(n, $, v(Y)), n;if (t !== P && (i(t) || o(t))) {
+                                var r = a(b)(t);if (r === rn) return k(n, $, r.e), n;i(r) ? (A && p(t) && (n._next = t), p(t) ? R(n, t, r) : un.nextTick(function () {
+                                    R(n, t, r);
+                                })) : k(n, q, t);
+                            } else k(n, q, t);return n;
+                        }function b(n) {
+                            return n.then;
+                        }function R(n, t, r) {
+                            var e = a(r, t)(function (r) {
+                                t && (t = P, T(n, r));
+                            }, function (r) {
+                                t && (t = P, k(n, $, r));
+                            });e === rn && t && (k(n, $, e.e), t = P);
+                        }var S,
+                            C,
+                            F,
+                            P = null,
+                            E = "object" == (typeof window === "undefined" ? "undefined" : _typeof(window)),
+                            H = E ? window : t,
+                            I = H.process,
+                            L = H.console,
+                            A = !1,
+                            O = Array,
+                            U = Error,
+                            $ = 1,
+                            q = 2,
+                            z = 3,
+                            B = "Symbol",
+                            D = "iterator",
+                            G = "species",
+                            J = B + "(" + G + ")",
+                            K = "return",
+                            M = "_uh",
+                            N = "_pt",
+                            Q = "_st",
+                            V = "Invalid this",
+                            W = "Invalid argument",
+                            X = "\nFrom previous ",
+                            Y = "Chaining cycle detected for promise",
+                            Z = "Uncaught (in promise)",
+                            nn = "rejectionHandled",
+                            tn = "unhandledRejection",
+                            rn = { e: P },
+                            en = function en() {},
+                            on = /^.+\/node_modules\/yaku\/.+\n?/gm,
+                            un = n.exports = function (n) {
+                            var t,
+                                r = this;if (!o(r) || r._s !== S) throw v(V);if (r._s = z, A && (r[N] = _()), n !== en) {
+                                if (!i(n)) throw v(W);t = a(n)(m(r, q), m(r, $)), t === rn && k(r, $, t.e);
+                            }
+                        };un["default"] = un, e(un.prototype, { then: function then(n, t) {
+                                if (void 0 === this._s) throw v();return y(this, w(un.speciesConstructor(this, un)), n, t);
+                            }, "catch": function _catch(n) {
+                                return this.then(S, n);
+                            }, "finally": function _finally(n) {
+                                function t(t) {
+                                    return un.resolve(n()).then(function () {
+                                        return t;
+                                    });
+                                }return this.then(t, t);
+                            }, _c: 0, _p: P }), un.resolve = function (n) {
+                            return p(n) ? n : T(w(this), n);
+                        }, un.reject = function (n) {
+                            return k(w(this), $, n);
+                        }, un.race = function (n) {
+                            var t = this,
+                                r = w(t),
+                                e = function e(n) {
+                                k(r, q, n);
+                            },
+                                o = function o(n) {
+                                k(r, $, n);
+                            },
+                                i = a(h)(n, function (n) {
+                                t.resolve(n).then(e, o);
+                            });return i === rn ? t.reject(i.e) : r;
+                        }, un.all = function (n) {
+                            function t(n) {
+                                k(o, $, n);
+                            }var r,
+                                e = this,
+                                o = w(e),
+                                i = [];return r = a(h)(n, function (n, u) {
+                                e.resolve(n).then(function (n) {
+                                    i[u] = n, --r || k(o, q, i);
+                                }, t);
+                            }), r === rn ? e.reject(r.e) : (r || k(o, q, []), o);
+                        }, un.Symbol = H[B] || {}, a(function () {
+                            Object.defineProperty(un, r(), { get: function get() {
+                                    return this;
+                                } });
+                        })(), un.speciesConstructor = function (n, t) {
+                            var e = n.constructor;return e ? e[r()] || t : t;
+                        }, un.unhandledRejection = function (n, t) {
+                            L && L.error(Z, A ? t.longStack : x(n, t));
+                        }, un.rejectionHandled = en, un.enableLongStackTrace = function () {
+                            A = !0;
+                        }, un.nextTick = E ? function (n) {
+                            setTimeout(n);
+                        } : I.nextTick, un._s = 1;var cn = l(999, function (n, t) {
+                            var r, e;return e = n._s !== $ ? t._onFulfilled : t._onRejected, e === S ? void k(t, n._s, n._v) : (r = a(g)(e, n._v), r === rn ? void k(t, $, r.e) : void T(t, r));
+                        }),
+                            fn = l(9, function (n) {
+                            j(n) || (n[M] = 1, d(tn, n));
+                        });
+                    }();
+                }).call(t, function () {
+                    return this;
+                }());
+            } });
+    }
+}).call('object' === (typeof window === "undefined" ? "undefined" : _typeof(window)) && window || 'object' === (typeof self === "undefined" ? "undefined" : _typeof(self)) && self || 'object' === (typeof global === "undefined" ? "undefined" : _typeof(global)) && global || {});
 
 window.NDSU = {};
 
@@ -479,6 +714,136 @@ var myCarousel = function myCarousel() {
     };
 };
 
+var GalleryBaseObj = function GalleryBaseObj(baseElement) {
+    _classCallCheck(this, GalleryBaseObj);
+
+    this.element = baseElement;
+};
+
+;
+
+var Gallery = function (_GalleryBaseObj) {
+    _inherits(Gallery, _GalleryBaseObj);
+
+    function Gallery(galleryElement) {
+        _classCallCheck(this, Gallery);
+
+        var _this2 = _possibleConstructorReturn(this, (Gallery.__proto__ || Object.getPrototypeOf(Gallery)).call(this, galleryElement));
+
+        _this2.pictureLinks = Array.from(_this2.element.querySelectorAll('.gallery-item')).map(function (link) {
+            return new GalleryPictureLink(link);
+        });
+        return _this2;
+    }
+
+    return Gallery;
+}(GalleryBaseObj);
+
+;
+
+var GalleryPictureLink = function (_GalleryBaseObj2) {
+    _inherits(GalleryPictureLink, _GalleryBaseObj2);
+
+    _createClass(GalleryPictureLink, [{
+        key: "openPopup",
+        value: function openPopup() {
+            var _this4 = this;
+
+            NDSU.showOverlay(this.overlayLevel);
+            var el = NDSU.fullOverlayElement;
+            var containerEl = el.querySelector('.gallery-full-size');
+            var imgEl = el.querySelector('.gallery-full-size img');
+            var closeEl = el.querySelector('.gallery-full-size .close-button');
+            if (!containerEl) {
+                containerEl = document.createElement('div');
+                containerEl.className = 'gallery-full-size';
+                containerEl.setAttribute('role', 'dialog');
+                imgEl = document.createElement('img');
+
+                closeEl = document.createElement('a');
+                closeEl.setAttribute('href', '#');
+                closeEl.className = 'btn  btn-tiny close-button';
+                closeEl.innerText = 'Close';
+                closeEl.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    _this4.closePopup();
+                });
+
+                containerEl.appendChild(closeEl);
+                containerEl.appendChild(imgEl);
+                el.appendChild(containerEl);
+            };
+
+            imgEl.setAttribute('src', this.fullSizeImageSrc);
+            imgEl.setAttribute('alt', this.imageDesc);
+
+            var elId = this.element.getAttribute('id');
+
+            if (!elId) {
+                elId = 'parentLink_' + Math.random().toString(36).substr(2, 10);
+                this.element.setAttribute('id', elId);
+            }
+
+            containerEl.classList.add('active');
+            closeEl.setAttribute('data-parent-control', elId);
+            closeEl.focus();
+        }
+    }, {
+        key: "closePopup",
+        value: function closePopup() {
+            NDSU.hideOverlay(this.overlayLevel);
+            var el = NDSU.fullOverlayElement;
+            var containerEl = el.querySelector('.gallery-full-size');
+            var closeEl = el.querySelector('.gallery-full-size .close-button');
+            if (containerEl) {
+                containerEl.classList.remove('active');
+            }
+            if (closeEl) {
+                var parentId = closeEl.getAttribute('data-parent-control');
+                var parentEl = document.getElementById(parentId);
+                if (parentEl) parentEl.focus();
+            }
+        }
+    }], [{
+        key: "setEvents",
+        value: function setEvents(inst) {
+            inst.element.addEventListener('click', function (event) {
+                event.preventDefault();
+                inst.openPopup();
+            });
+            NDSU.fullOverlayElement.addEventListener('click', inst.closePopup);
+        }
+    }]);
+
+    function GalleryPictureLink(pictureLinkElement) {
+        _classCallCheck(this, GalleryPictureLink);
+
+        var _this3 = _possibleConstructorReturn(this, (GalleryPictureLink.__proto__ || Object.getPrototypeOf(GalleryPictureLink)).call(this, pictureLinkElement));
+
+        _this3.imageElement = _this3.element.querySelector('img');
+        if (!_this3.imageElement) return _possibleConstructorReturn(_this3);
+
+        _this3.imageSrc = _this3.imageElement.getAttribute('src');
+        _this3.imageDesc = _this3.imageElement.getAttribute('alt');
+        _this3.fullSizeImageSrc = _this3.imageElement.getAttribute('data-full-size-src') || _this3.imageSrc;
+        _this3.overlayLevel = 'high';
+
+        if (_this3.element.querySelector('a')) return _possibleConstructorReturn(_this3);
+
+        _this3.element.setAttribute('aria-haspopup', true);
+        GalleryPictureLink.setEvents(_this3);
+        return _this3;
+    }
+
+    return GalleryPictureLink;
+}(GalleryBaseObj);
+
+;
+
+NDSU.galleries = Array.from(document.querySelectorAll('.gallery')).map(function (galleryElement) {
+    return new Gallery(galleryElement);
+});
+
 function timeoutPromise(delay) {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
@@ -600,139 +965,9 @@ detectAutoPlay(1000).then(function (autoplay) {
     console.log(error);
 });
 
-var GalleryBaseObj = function GalleryBaseObj(baseElement) {
-    _classCallCheck(this, GalleryBaseObj);
-
-    this.element = baseElement;
-};
-
-;
-
-var Gallery = function (_GalleryBaseObj) {
-    _inherits(Gallery, _GalleryBaseObj);
-
-    function Gallery(galleryElement) {
-        _classCallCheck(this, Gallery);
-
-        var _this2 = _possibleConstructorReturn(this, (Gallery.__proto__ || Object.getPrototypeOf(Gallery)).call(this, galleryElement));
-
-        _this2.pictureLinks = Array.from(_this2.element.querySelectorAll('.gallery-item')).map(function (link) {
-            return new GalleryPictureLink(link);
-        });
-        return _this2;
-    }
-
-    return Gallery;
-}(GalleryBaseObj);
-
-;
-
-var GalleryPictureLink = function (_GalleryBaseObj2) {
-    _inherits(GalleryPictureLink, _GalleryBaseObj2);
-
-    _createClass(GalleryPictureLink, [{
-        key: 'openPopup',
-        value: function openPopup() {
-            var _this4 = this;
-
-            NDSU.showOverlay(this.overlayLevel);
-            var el = NDSU.fullOverlayElement;
-            var containerEl = el.querySelector('.gallery-full-size');
-            var imgEl = el.querySelector('.gallery-full-size img');
-            var closeEl = el.querySelector('.gallery-full-size .close-button');
-            if (!containerEl) {
-                containerEl = document.createElement('div');
-                containerEl.className = 'gallery-full-size';
-                containerEl.setAttribute('role', 'dialog');
-                imgEl = document.createElement('img');
-
-                closeEl = document.createElement('a');
-                closeEl.setAttribute('href', '#');
-                closeEl.className = 'btn  btn-tiny close-button';
-                closeEl.innerText = 'Close';
-                closeEl.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    _this4.closePopup();
-                });
-
-                containerEl.appendChild(closeEl);
-                containerEl.appendChild(imgEl);
-                el.appendChild(containerEl);
-            };
-
-            imgEl.setAttribute('src', this.fullSizeImageSrc);
-            imgEl.setAttribute('alt', this.imageDesc);
-
-            var elId = this.element.getAttribute('id');
-
-            if (!elId) {
-                elId = 'parentLink_' + Math.random().toString(36).substr(2, 10);
-                this.element.setAttribute('id', elId);
-            }
-
-            containerEl.classList.add('active');
-            closeEl.setAttribute('data-parent-control', elId);
-            closeEl.focus();
-        }
-    }, {
-        key: 'closePopup',
-        value: function closePopup() {
-            NDSU.hideOverlay(this.overlayLevel);
-            var el = NDSU.fullOverlayElement;
-            var containerEl = el.querySelector('.gallery-full-size');
-            var closeEl = el.querySelector('.gallery-full-size .close-button');
-            if (containerEl) {
-                containerEl.classList.remove('active');
-            }
-            if (closeEl) {
-                var parentId = closeEl.getAttribute('data-parent-control');
-                var parentEl = document.getElementById(parentId);
-                if (parentEl) parentEl.focus();
-            }
-        }
-    }], [{
-        key: 'setEvents',
-        value: function setEvents(inst) {
-            inst.element.addEventListener('click', function (event) {
-                event.preventDefault();
-                inst.openPopup();
-            });
-            NDSU.fullOverlayElement.addEventListener('click', inst.closePopup);
-        }
-    }]);
-
-    function GalleryPictureLink(pictureLinkElement) {
-        _classCallCheck(this, GalleryPictureLink);
-
-        var _this3 = _possibleConstructorReturn(this, (GalleryPictureLink.__proto__ || Object.getPrototypeOf(GalleryPictureLink)).call(this, pictureLinkElement));
-
-        _this3.imageElement = _this3.element.querySelector('img');
-        if (!_this3.imageElement) return _possibleConstructorReturn(_this3);
-
-        _this3.imageSrc = _this3.imageElement.getAttribute('src');
-        _this3.imageDesc = _this3.imageElement.getAttribute('alt');
-        _this3.fullSizeImageSrc = _this3.imageElement.getAttribute('data-full-size-src') || _this3.imageSrc;
-        _this3.overlayLevel = 'high';
-
-        if (_this3.element.querySelector('a')) return _possibleConstructorReturn(_this3);
-
-        _this3.element.setAttribute('aria-haspopup', true);
-        GalleryPictureLink.setEvents(_this3);
-        return _this3;
-    }
-
-    return GalleryPictureLink;
-}(GalleryBaseObj);
-
-;
-
-NDSU.galleries = Array.from(document.querySelectorAll('.gallery')).map(function (galleryElement) {
-    return new Gallery(galleryElement);
-});
-
 var NavBaseClass = function () {
     _createClass(NavBaseClass, [{
-        key: 'setRole',
+        key: "setRole",
         value: function setRole(value) {
             this.element.setAttribute('role', value);
         }
@@ -753,7 +988,7 @@ var Navbar = function (_NavBaseClass) {
     _inherits(Navbar, _NavBaseClass);
 
     _createClass(Navbar, [{
-        key: '_setRoles',
+        key: "_setRoles",
         value: function _setRoles() {
             if (this.parentNavItem) {
                 this.setRole('menu');
@@ -766,7 +1001,7 @@ var Navbar = function (_NavBaseClass) {
             }
         }
     }, {
-        key: 'getNextNavItem',
+        key: "getNextNavItem",
         value: function getNextNavItem(currentNavItem) {
             var increment = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
@@ -777,12 +1012,12 @@ var Navbar = function (_NavBaseClass) {
             return nextIndex < this.childNavItems.length ? this.childNavItems[nextIndex] : undefined;
         }
     }, {
-        key: 'getPreviousNavItem',
+        key: "getPreviousNavItem",
         value: function getPreviousNavItem(currentNavItem) {
             return this.getNextNavItem(currentNavItem, -1);
         }
     }, {
-        key: 'setOffset',
+        key: "setOffset",
         value: function setOffset() {
             if (!this.parentNavItem || this.isVerticalNavbar) return;
 
@@ -814,7 +1049,7 @@ var Navbar = function (_NavBaseClass) {
             }
         }
     }, {
-        key: 'getNavItems',
+        key: "getNavItems",
         value: function getNavItems() {
             var _this6 = this;
 
@@ -825,27 +1060,27 @@ var Navbar = function (_NavBaseClass) {
             });
         }
     }, {
-        key: 'isVerticalNavbar',
+        key: "isVerticalNavbar",
         get: function get() {
             return this.options.direction === 'vertical';
         }
     }, {
-        key: 'isDropUp',
+        key: "isDropUp",
         get: function get() {
             return this.options.dropup;
         }
     }, {
-        key: 'isExtendedChildNavbar',
+        key: "isExtendedChildNavbar",
         get: function get() {
             return this.options.extendedChildNavbar;
         }
     }, {
-        key: 'isAccordion',
+        key: "isAccordion",
         get: function get() {
             return this.options.accordion;
         }
     }, {
-        key: 'isOpen',
+        key: "isOpen",
         get: function get() {
             return !this.isAccordion || this.element.classList.contains('expanded');
         }
@@ -885,7 +1120,7 @@ var MobileNavbar = function (_Navbar) {
     _inherits(MobileNavbar, _Navbar);
 
     _createClass(MobileNavbar, [{
-        key: 'getNavItems',
+        key: "getNavItems",
         value: function getNavItems() {
             var _this8 = this;
 
@@ -896,7 +1131,7 @@ var MobileNavbar = function (_Navbar) {
             });
         }
     }, {
-        key: 'setOffset',
+        key: "setOffset",
         value: function setOffset() {
             if (!this.containerElement) return;
 
@@ -916,7 +1151,7 @@ var MobileNavbar = function (_Navbar) {
             }
         }
     }, {
-        key: 'setToggleElement',
+        key: "setToggleElement",
         value: function setToggleElement() {
             if (this.toggleElement) {
                 this.toggleElement.setAttribute('aria-haspopup', true);
@@ -926,7 +1161,7 @@ var MobileNavbar = function (_Navbar) {
             }
         }
     }], [{
-        key: '_clickEvent',
+        key: "_clickEvent",
         value: function _clickEvent(e, inst) {
             e.preventDefault();
 
@@ -938,7 +1173,7 @@ var MobileNavbar = function (_Navbar) {
             e.stopPropagation();
         }
     }, {
-        key: '_openMenu',
+        key: "_openMenu",
         value: function _openMenu(inst) {
             NDSU.showOverlay();
             inst.element.classList.add('expanded');
@@ -946,7 +1181,7 @@ var MobileNavbar = function (_Navbar) {
             inst.setOffset();
         }
     }, {
-        key: '_closeMenu',
+        key: "_closeMenu",
         value: function _closeMenu(inst) {
             inst.element.classList.remove('expanded');
             inst.toggleElement.setAttribute('aria-expanded', false);
@@ -985,13 +1220,13 @@ var NavItem = function (_NavBaseClass2) {
     _inherits(NavItem, _NavBaseClass2);
 
     _createClass(NavItem, [{
-        key: '_getChildNavbar',
+        key: "_getChildNavbar",
         value: function _getChildNavbar() {
             var childNavbarElement = this.element.querySelector('.child-navbar');
             return childNavbarElement ? new Navbar(childNavbarElement, this) : undefined;
         }
     }, {
-        key: '_getLinkElement',
+        key: "_getLinkElement",
         value: function _getLinkElement() {
 
             var linkElement = Array.prototype.filter.call(this.element.children, function (child) {
@@ -1013,7 +1248,7 @@ var NavItem = function (_NavBaseClass2) {
             return linkElement;
         }
     }, {
-        key: '_setEventListeners',
+        key: "_setEventListeners",
         value: function _setEventListeners() {
             var _this10 = this;
 
@@ -1029,7 +1264,7 @@ var NavItem = function (_NavBaseClass2) {
             });
         }
     }, {
-        key: '_setRoles',
+        key: "_setRoles",
         value: function _setRoles() {
             this.setRole('presentation');
             if (this.linkElement) {
@@ -1048,7 +1283,7 @@ var NavItem = function (_NavBaseClass2) {
             }
         }
     }, {
-        key: 'focus',
+        key: "focus",
         value: function focus() {
             if (this.linkElement) {
                 this.linkElement.focus();
@@ -1057,53 +1292,53 @@ var NavItem = function (_NavBaseClass2) {
             }
         }
     }, {
-        key: 'open',
+        key: "open",
         value: function open() {
             NavItem._open(this);
         }
     }, {
-        key: 'openChild',
+        key: "openChild",
         value: function openChild() {
             NavItem._open(this.childNavbar);
         }
     }, {
-        key: 'close',
+        key: "close",
         value: function close() {
             NavItem._close(this);
         }
     }, {
-        key: 'closeChild',
+        key: "closeChild",
         value: function closeChild() {
             NavItem._close(this.childNavbar);
         }
     }, {
-        key: 'closeTimeout',
+        key: "closeTimeout",
         get: function get() {
             return 200;
         }
     }, {
-        key: 'previousNavItem',
+        key: "previousNavItem",
         get: function get() {
             return this.parentNavbar.getPreviousNavItem(this) || this.parentNavbar.parentNavItem;
         }
     }, {
-        key: 'nextNavItem',
+        key: "nextNavItem",
         get: function get() {
             return this.parentNavbar.getNextNavItem(this);
         }
     }, {
-        key: 'parentNavItem',
+        key: "parentNavItem",
         get: function get() {
             return this.parentNavbar.parentNavItem;
         }
     }, {
-        key: 'firstChildNavItem',
+        key: "firstChildNavItem",
         get: function get() {
             if (!this.childNavbar) return undefined;
             return this.childNavbar.childNavItems[0];
         }
     }, {
-        key: 'leftNeighbor',
+        key: "leftNeighbor",
         get: function get() {
             var neighbor = void 0;
             if (!this.parentNavbar.isVerticalNavbar) {
@@ -1115,7 +1350,7 @@ var NavItem = function (_NavBaseClass2) {
             return neighbor;
         }
     }, {
-        key: 'rightNeighbor',
+        key: "rightNeighbor",
         get: function get() {
             var neighbor = void 0;
             if (!this.parentNavbar.isVerticalNavbar) {
@@ -1128,7 +1363,7 @@ var NavItem = function (_NavBaseClass2) {
             return neighbor;
         }
     }, {
-        key: 'downNeighbor',
+        key: "downNeighbor",
         get: function get() {
             var neighbor = void 0;
             if (this.parentNavbar.isVerticalNavbar) {
@@ -1143,7 +1378,7 @@ var NavItem = function (_NavBaseClass2) {
             return neighbor;
         }
     }, {
-        key: 'upNeighbor',
+        key: "upNeighbor",
         get: function get() {
             var neighbor = void 0;
             if (this.parentNavbar.isVerticalNavbar) {
@@ -1158,17 +1393,17 @@ var NavItem = function (_NavBaseClass2) {
             return neighbor;
         }
     }, {
-        key: 'isAccordion',
+        key: "isAccordion",
         get: function get() {
             return this.parentNavbar.isAccordion;
         }
     }, {
-        key: 'isChildOpen',
+        key: "isChildOpen",
         get: function get() {
             return this.childNavbar && this.childNavbar.isOpen;
         }
     }], [{
-        key: '_open',
+        key: "_open",
         value: function _open(inst) {
             if (!inst || !inst.element) return;
             inst.setOffset();
@@ -1178,7 +1413,7 @@ var NavItem = function (_NavBaseClass2) {
             }
         }
     }, {
-        key: '_close',
+        key: "_close",
         value: function _close(inst) {
             if (!inst || !inst.element) return;
             inst.element.classList.remove('expanded');
@@ -1187,7 +1422,7 @@ var NavItem = function (_NavBaseClass2) {
             }
         }
     }, {
-        key: '_keysListener',
+        key: "_keysListener",
         value: function _keysListener(e, inst) {
             e.stopPropagation();
             var nextItem = void 0;
@@ -1207,7 +1442,7 @@ var NavItem = function (_NavBaseClass2) {
             }
         }
     }, {
-        key: '_focusInEvent',
+        key: "_focusInEvent",
         value: function _focusInEvent(e, inst) {
             inst.openChild();
             if (inst.closeTimeoutinst) {
@@ -1215,7 +1450,7 @@ var NavItem = function (_NavBaseClass2) {
             }
         }
     }, {
-        key: '_focusOutEvent',
+        key: "_focusOutEvent",
         value: function _focusOutEvent(e, inst) {
             inst.closeTimeoutinst = setTimeout(function () {
                 inst.closeChild();
@@ -1284,13 +1519,13 @@ var MobileNavItem = function (_NavItem) {
     _inherits(MobileNavItem, _NavItem);
 
     _createClass(MobileNavItem, [{
-        key: '_getChildNavbar',
+        key: "_getChildNavbar",
         value: function _getChildNavbar() {
             var childNavbarElement = this.element.querySelector('.child-navbar');
             return childNavbarElement ? new MobileNavbar(childNavbarElement, this) : undefined;
         }
     }, {
-        key: '_getLinkElement',
+        key: "_getLinkElement",
         value: function _getLinkElement() {
             var linkElement = Array.prototype.filter.call(this.element.children, function (child) {
                 return child.classList.contains('nav-link');
@@ -1311,7 +1546,7 @@ var MobileNavItem = function (_NavItem) {
             return linkElement;
         }
     }, {
-        key: '_setEventListeners',
+        key: "_setEventListeners",
         value: function _setEventListeners() {
             var _this12 = this;
 
@@ -1431,7 +1666,7 @@ Array.prototype.forEach.call(document.querySelectorAll('.img-wrapper.full-size-i
 
 var StickyBar = function () {
     _createClass(StickyBar, null, [{
-        key: '_scrollEvent',
+        key: "_scrollEvent",
         value: function _scrollEvent(e, obj) {
             var currentY = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
 

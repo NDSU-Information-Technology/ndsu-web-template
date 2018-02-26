@@ -39,6 +39,7 @@ const config = {
     },
     "essentials": { 
         "scripts": [
+            "./src/essentials/scripts/polyfill.js",
             "./src/essentials/scripts/global.js",
             "./src/essentials/**/*.js"
         ],
@@ -77,6 +78,7 @@ const config = {
                 "name": "full",
                 "destFileName": "script",
                 "sourceFiles": [
+                    './src/essentials/scripts/polyfill.js',
                     './src/essentials/scripts/global.js',
                     './src/components/code-example/code-example.js',
                     './src/essentials/scripts/**/*.js',
@@ -161,7 +163,14 @@ const generateScriptTask = (sc) => {
         return gulp.src(flatten(sourceFiles))
             .pipe(concat(sc.destFileName + '.js'))
             .pipe(babel({
-                presets: ['es2015']
+                presets: [
+                    ['env', {
+                        'targets': {
+                            'ie': 11,
+                        },
+                        'modules': false
+                    }]
+                ]
             }))
             .pipe(gulp.dest(config.scripts.dest.dev))
             .pipe(rename({suffix: '.min'}))
