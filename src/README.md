@@ -33,28 +33,31 @@ The source code files are divided into two groups: `essentials` and `components`
   * assets
     * css
     * js
-    * scss
+  * build-config
+    * minimal
+    * full
+    * docs (used on github pages)
+    * _other build configurations_
   * components
     * component name
       * _style, script, html partials, index.md_
-  * essentials
+  * utilities
     * scripts
-      _essential script files (e.g. global.js)_
+      * _utility scripts, 3rd party scripts, (e.g. polyfill.js)_
     * styles
       * mixins
-      * _essential style files (e.g basic.scss, variables.scss)_
+      * _utility style files (e.g variables.scss)_
   * README.md for `src` directory
   * _sample basic layouts/templates (e.g. template.html, two-column.html)_
 
-### Essentials
+### Utilities directory
 
-Essentials directory contains:
-* Global scripts for common utilities (e.g. NDSU js object)
-* Header/Footer styles
-* CSS utility classes
+Utilities directory contains:
+* Utility/3rd party JS/CSS (e.g. polyfill.js)
+* 3rd party JS/CSS
 * SASS mixins and variables
 
-_NOTE_: If you intend to add mixins for a component, please place them inside the `mixins` directory under `essentials/styles/mixins`. Although some mixins may be specific to a component, some can also be useful for other components and/or utilities (e.g. `button` mixins);
+_NOTE_: If you intend to add mixins for a component, please place them inside the `mixins` directory under `utilities/styles/mixins`. Although some mixins may be specific to a component, some can also be useful for other components and/or utilities (e.g. `button` mixins);
 
 ### Components
 
@@ -69,6 +72,7 @@ Each component should have its own directory under `components` directory, and i
 * `index.md` file that describes what the component is for and how to use it. A developer guide may also be included here.
 
 List of currently available components:
+* [basic](components/basic/)
 * [bigquote](components/bigquote/)
 * [button](components/button/)
 * [form](components/form/)
@@ -84,12 +88,15 @@ List of currently available components:
 * [sflgru](components/sflgru/)
 * [social-media](components/social-media/)
 * [three-boxes](components/three-boxes/)
+* [typography](components/typography/)
 
-## Template Build Versions
+## Template Build Configurations
 
-Currently there are two build versions of styles and scripts: minimal and full. Minimal is intended to have the bare essentials and components required to have a basic NDSU-styled page for most people.
+Currently there are two build configurations of styles and scripts: [minimal](build-config/minimal/) and [full](build-config/full/). Minimal is intended to have the bare essentials and components required to have a basic NDSU-styled page for most people.
 
-The style definition for each version is located under `src` directory (`minimal.scss` and `full.css`). The sript definition is written into the config object in the `gulpfile.js` file. (_Perhaps a better way to manage a version? JSON file?_).
+There is a third build configurations, [docs](build-config/docs/), intended to use on github documentation pages.
+
+Each build configuration should have its own directory in the [build-config folder](build-config/). Inside the directory, there must be a `config.json` file describing the build configuration and the list of _components_ making up the build.
 
 ## Developing the Template
 
@@ -146,7 +153,7 @@ Additionally, these three custom helpers are also available:
 
 All the scripts needed for the template are written on ES6 Vanilla JS. There is currently no functionality that requires the use of library such as JQuery, although that may change in the future.
 
-The file [global.js](essentials/scripts/global.js) contains functions that are used by multiple components.
+The file [global.js](components/basic/global.js) contains functions that are used by multiple components.
 
 Each component may or may not require the use of script for it to operate. 
 
@@ -163,7 +170,7 @@ The essential directory contains few `.scss` files:
 * utilities.scss: CSS utility classes, such as `sr-only`, `hide-xs`, `hide-sm`, etc.
 * variables.scss: global SCSS variables
 
-The components directory contains all the components of the template. For most cases, a component will require a stylesheet. Add the reference to a component's stylesheet to the `full.scss` file directly underneath the components directory and if it is part of minimal version build, to the `minimal.scss` file.
+The components directory contains all the components of the template. For most cases, a component will require a stylesheet.
 
 
 ### Gulp Tasks
@@ -191,25 +198,25 @@ gulp watch
  **Handlebars Task**
  Compile handlebars partials in _.html_ and _index.md_ files and copy to `docs` directory.
  ```bash
- gulp handlebars
+ gulp handlebars:build
  ```
 
  **Script Task**
  Build and uglify script files:
  ```bash
- gulp scripts
+ gulp scripts:build
  ```
 
  **Style Task**
  Compile `scss` files and minify resulting `css` files:
  ```bash
- gulp styles
+ gulp styles:build
  ```
 
  **Combined Task**
- Run `gulp handlebars`, `gulp scripts`, `gulp styles`, then copy files to docs folder.
+ Run all three (handlebars, script, and style) simultaneously
   ```bash
- gulp copy
+ gulp build
  ```
 
 ## Documentations
@@ -229,7 +236,6 @@ Additionally, a compiled version of _index.md_ will be saved as _README.md_ in t
 
 Make sure to do this before you execute commit and/or push.
 
-
 ### Jekyll
 The end-user documentation located under `docs` directory is hosted on github pages [https://ndsu-information-technology.github.io/ndsu-web-template/](https://ndsu-information-technology.github.io/ndsu-web-template/). Github Pages compile the static files using `jekyll`. Optionally, you can also run jekyll on your local machine to preview the documentation.
 
@@ -237,16 +243,30 @@ Note: `Ruby` is required to generate static files using Jekyll.
 
 Run jekyll on your local machine:
 
+Through `gulp-task` (**recommended**)
 ```bash
-bundle exec jekyll serve
+gulp jekyll:build
+```
+
+Through `bundle` CLI
+```bash
+bundle exec jekyll build
 ``` 
 
-Jekyll ouputs the resulting static files in `_site` directory. The site can be accessed on `localhost:4000/ndsu-web-template`. Jekyll **does not** refresh the pages automatically when changes are made. However, you can run `browsersync` on your local machine by running the `gulp` task:
+Jekyll ouputs the resulting static files in `_site` directory. There are two ways to launch a server showing the documentations and sample pages.
 
+Using `browsersync` through `gulp-task` (**recommended, auto refreshes/injects changes**)
 ```bash
 gulp serve
 ```
-`browsersync` will run on `localhost:3000`.
+Running on `localhost:3000/ndsu-web-template`
+
+Using `gulp-watch` task and `bundle` CLI (**does not auto refresh/inject**, requires two command windows)
+```bash
+gulp watch
+bundle exec jekyll serve
+``` 
+
 
 ### Sample Pages
 

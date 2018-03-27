@@ -1,0 +1,74 @@
+.bigquote {
+  padding: 3em 0;
+  padding: 2em;
+  margin: 1em 0; }
+  @media (max-width: 1199px) {
+    .bigquote {
+      padding: 1.755em; } }
+  @media (max-width: 991px) {
+    .bigquote {
+      padding: 1.5em; } }
+  @media (max-width: 767px) {
+    .bigquote {
+      padding: 1.25em; } }
+  @media (max-width: 574px) {
+    .bigquote {
+      padding: 1em; } }
+  .bigquote .quote {
+    text-align: center;
+    margin-bottom: 0.5em;
+    margin-top: 0; }
+  .bigquote .quote::before {
+    content: "\201C"; }
+  .bigquote .quote::after {
+    content: "\201D"; }
+  .bigquote .byline {
+    text-align: right;
+    font-size: 2em; }
+  .bigquote .byline::before {
+    content: "\2014\0020"; }
+  .bigquote.green-quote {
+    background-color: #002119;
+    background: radial-gradient(ellipse at center 60%, #002119 45%, #000 90%); }
+    .bigquote.green-quote .quote {
+      text-transform: uppercase;
+      color: #ffcc00;
+      line-height: 1.5em; }
+    .bigquote.green-quote .byline {
+      color: #fff; }
+  .bigquote.yellow-quote {
+    background-color: #ffcc00;
+    font-family: Georgia, serif;
+    color: #000; }
+    .bigquote.yellow-quote .quote {
+      line-height: 1.25em; }
+    .bigquote.yellow-quote .byline {
+      font-style: italic; }
+  .bigquote.smaller.green-quote .quote {
+    font-size: 2em; }
+  .bigquote.smaller.yellow-quote .quote {
+    font-size: 3em; }
+  .bigquote.green-quote .quote {
+    font-size: 2.5em; }
+  .bigquote.yellow-quote .quote {
+    font-size: 4em; }
+  @media (max-width: 1199px) {
+    .bigquote.green-quote .quote {
+      font-size: 2.25em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 3.5em; } }
+  @media (max-width: 991px) {
+    .bigquote.green-quote .quote {
+      font-size: 2em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 3em; } }
+  @media (max-width: 767px) {
+    .bigquote.green-quote .quote {
+      font-size: 2em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 3em; } }
+  @media (max-width: 574px) {
+    .bigquote.green-quote .quote {
+      font-size: 1.75em; }
+    .bigquote.yellow-quote .quote {
+      font-size: 2.5em; } }

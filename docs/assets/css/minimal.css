@@ -1,7 +1,13 @@
-/* LINKS */
+:root {
+  font-size: 16px; }
+
 body {
   margin: 0;
-  font-size: 100%; }
+  font-size: 100%;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5em;
+  min-height: 100vh; }
 
 button, input, table, td, th {
   font-family: inherit; }
@@ -40,6 +46,128 @@ h6 {
 
 blockquote {
   font-size: 16px; }
+
+a {
+  color: #002119; }
+
+a:hover, a:focus, a[aria-expanded=true], a.active {
+  color: #999999; }
+
+a.active-branch {
+  color: ""; }
+
+a.active-branch:hover, a.active-branch:focus, a.active-branch[aria-expanded=true], a.active-branch.active {
+  color: #999999; }
+
+a {
+  text-decoration: underline; }
+
+a:hover, a:focus, a[aria-expanded=true], a.active {
+  text-decoration: underline; }
+
+h1, h2, h3, h4, h5 {
+  font-family: Montserrat, sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0.75em;
+  font-weight: 400; }
+
+footer,
+header {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500; }
+
+header .green-bar {
+  background-color: #002119;
+  background-image: url(https://static.ndsu.nodak.edu/templates/images/bg_header.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top left; }
+  header .green-bar .navbar .nav-link {
+    background-color: transparent; }
+    header .green-bar .navbar .nav-link:hover, header .green-bar .navbar .nav-link:focus, header .green-bar .navbar .nav-link[aria-expanded=true], header .green-bar .navbar .nav-link.active {
+      background-color: transparent; }
+    header .green-bar .navbar .nav-link.active-branch {
+      background-color: ""; }
+    header .green-bar .navbar .nav-link.active-branch:hover, header .green-bar .navbar .nav-link.active-branch:focus, header .green-bar .navbar .nav-link.active-branch[aria-expanded=true], header .green-bar .navbar .nav-link.active-branch.active {
+      background-color: transparent; }
+    header .green-bar .navbar .nav-link {
+      color: #ffcc00; }
+    header .green-bar .navbar .nav-link:hover, header .green-bar .navbar .nav-link:focus, header .green-bar .navbar .nav-link[aria-expanded=true], header .green-bar .navbar .nav-link.active {
+      color: #fff; }
+    header .green-bar .navbar .nav-link.active-branch {
+      color: ""; }
+    header .green-bar .navbar .nav-link.active-branch:hover, header .green-bar .navbar .nav-link.active-branch:focus, header .green-bar .navbar .nav-link.active-branch[aria-expanded=true], header .green-bar .navbar .nav-link.active-branch.active {
+      color: #fff; }
+  header .green-bar h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto; }
+  header .green-bar h1 a {
+    color: #ffcc00; }
+  header .green-bar h1 a:hover, header .green-bar h1 a:focus, header .green-bar h1 a[aria-expanded=true], header .green-bar h1 a.active {
+    color: #fff; }
+  header .green-bar h1 a.active-branch {
+    color: ""; }
+  header .green-bar h1 a.active-branch:hover, header .green-bar h1 a.active-branch:focus, header .green-bar h1 a.active-branch[aria-expanded=true], header .green-bar h1 a.active-branch.active {
+    color: #fff; }
+  header .green-bar .header-ndsu-logo {
+    display: block; }
+  @media (max-width: 574px) {
+    header .green-bar h1 img {
+      max-width: 210px;
+      height: auto; } }
+
+header .page-title-bar {
+  border-bottom: 1px solid #e5e5e5; }
+
+header .main-nav {
+  background-color: #222222; }
+
+header h2.page-title {
+  font-size: 2em;
+  font-weight: 100;
+  padding-top: 0.75em;
+  padding-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: none; }
+
+header .search-form {
+  margin-left: 1em;
+  width: 14em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+
+@media (max-width: 991px) {
+  header .search-form {
+    width: 13em; } }
+
+@media (max-width: 767px) {
+  header .page-title-wrapper {
+    background-color: #121212;
+    color: #fff;
+    border-bottom: 1px solid #000;
+    padding: 0.75em 1em; }
+  header h2.page-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 0.25em 0;
+    margin-right: 1em; }
+  header .search-form {
+    margin-left: 0;
+    width: 14em; } }
+
+@media (max-width: 574px) {
+  header .row.page-title-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  header .search-form {
+    width: auto; } }
 
 .sr-only {
   position: absolute;
@@ -191,137 +319,6 @@ ul.inline-list {
   margin-top: auto !important;
   margin-bottom: auto !important; }
 
-:root {
-  font-size: 16px; }
-
-a {
-  color: #002119; }
-
-a:hover, a:focus, a[aria-expanded=true], a.active {
-  color: #999999; }
-
-a.active-branch {
-  color: ""; }
-
-a.active-branch:hover, a.active-branch:focus, a.active-branch[aria-expanded=true], a.active-branch.active {
-  color: #999999; }
-
-a {
-  text-decoration: underline; }
-
-a:hover, a:focus, a[aria-expanded=true], a.active {
-  text-decoration: underline; }
-
-body {
-  font-family: sans-serif;
-  font-size: 1rem;
-  line-height: 1.5em;
-  min-height: 100vh; }
-
-h1, h2, h3, h4, h5 {
-  font-family: Montserrat, sans-serif;
-  margin-top: 1em;
-  margin-bottom: 0.75em;
-  font-weight: 400; }
-
-footer,
-header {
-  font-family: Montserrat, sans-serif;
-  font-weight: 500; }
-
-header .green-bar {
-  background-color: #002119;
-  background-image: url(https://static.ndsu.nodak.edu/templates/images/bg_header.jpg);
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: top left; }
-  header .green-bar .navbar .nav-link {
-    background-color: transparent; }
-    header .green-bar .navbar .nav-link:hover, header .green-bar .navbar .nav-link:focus, header .green-bar .navbar .nav-link[aria-expanded=true], header .green-bar .navbar .nav-link.active {
-      background-color: transparent; }
-    header .green-bar .navbar .nav-link.active-branch {
-      background-color: ""; }
-    header .green-bar .navbar .nav-link.active-branch:hover, header .green-bar .navbar .nav-link.active-branch:focus, header .green-bar .navbar .nav-link.active-branch[aria-expanded=true], header .green-bar .navbar .nav-link.active-branch.active {
-      background-color: transparent; }
-    header .green-bar .navbar .nav-link {
-      color: #ffcc00; }
-    header .green-bar .navbar .nav-link:hover, header .green-bar .navbar .nav-link:focus, header .green-bar .navbar .nav-link[aria-expanded=true], header .green-bar .navbar .nav-link.active {
-      color: #fff; }
-    header .green-bar .navbar .nav-link.active-branch {
-      color: ""; }
-    header .green-bar .navbar .nav-link.active-branch:hover, header .green-bar .navbar .nav-link.active-branch:focus, header .green-bar .navbar .nav-link.active-branch[aria-expanded=true], header .green-bar .navbar .nav-link.active-branch.active {
-      color: #fff; }
-  header .green-bar h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: auto; }
-  header .green-bar h1 a {
-    color: #ffcc00; }
-  header .green-bar h1 a:hover, header .green-bar h1 a:focus, header .green-bar h1 a[aria-expanded=true], header .green-bar h1 a.active {
-    color: #fff; }
-  header .green-bar h1 a.active-branch {
-    color: ""; }
-  header .green-bar h1 a.active-branch:hover, header .green-bar h1 a.active-branch:focus, header .green-bar h1 a.active-branch[aria-expanded=true], header .green-bar h1 a.active-branch.active {
-    color: #fff; }
-  header .green-bar .header-ndsu-logo {
-    display: block; }
-  @media (max-width: 574px) {
-    header .green-bar h1 img {
-      max-width: 210px;
-      height: auto; } }
-
-header .page-title-bar {
-  border-bottom: 1px solid #e5e5e5; }
-
-header .main-nav {
-  background-color: #222222; }
-
-header h2.page-title {
-  font-size: 2em;
-  font-weight: 100;
-  padding-top: 0.75em;
-  padding-bottom: 0.25em;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-bottom: none; }
-
-header .search-form {
-  margin-left: 1em;
-  width: 14em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em; }
-
-@media (max-width: 991px) {
-  header .search-form {
-    width: 13em; } }
-
-@media (max-width: 767px) {
-  header .page-title-wrapper {
-    background-color: #121212;
-    color: #fff;
-    border-bottom: 1px solid #000;
-    padding: 0.75em 1em; }
-  header h2.page-title {
-    font-size: 1.25em;
-    font-weight: bold;
-    padding: 0.25em 0;
-    margin-right: 1em; }
-  header .search-form {
-    margin-left: 0;
-    width: 14em; } }
-
-@media (max-width: 574px) {
-  header .row.page-title-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch; }
-  header .search-form {
-    width: auto; } }
-
 .btn {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -329,8 +326,8 @@ header .search-form {
           transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  -webkit-transition-property: background, background-color, color, padding, width, height;
-  transition-property: background, background-color, color, padding, width, height;
+  -webkit-transition-property: background-color, color, padding, width, height;
+  transition-property: background-color, color, padding, width, height;
   text-decoration: none;
   font-weight: 400;
   line-height: 1em;
@@ -338,7 +335,6 @@ header .search-form {
   white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
@@ -565,123 +561,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
   .flex-row.flex-wrap, .flex-column.flex-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-
-footer {
-  margin-top: 3rem;
-  padding: 3em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #030303;
-  line-height: 1.25em; }
-  footer .address {
-    font-style: normal;
-    margin-top: 2em; }
-  footer h5, footer h6 {
-    text-transform: uppercase;
-    margin: 1em auto; }
-  footer h5 {
-    font-size: 1.125em;
-    padding: 0 0.75em 0.5em 0.75em; }
-  footer .footer-address {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    text-align: center;
-    -ms-flex-item-align: center;
-        align-self: center; }
-  footer .footer-links {
-    -ms-flex-preferred-size: 275px;
-        flex-basis: 275px; }
-  footer.footer-left .footer-address {
-    text-align: left;
-    -ms-flex-item-align: left;
-        align-self: left; }
-  footer .footer-links .navbar .nav-link {
-    padding: 0.5em 1em;
-    font-weight: normal;
-    text-transform: none; }
-  footer .navbar.social-media .nav-link {
-    height: 2em; }
-  footer .navbar.social-media .nav-item + .nav-item {
-    margin-left: 1em; }
-  footer .nav-box {
-    margin-bottom: 2em; }
-    footer .nav-box h5 {
-      margin: 0; }
-  footer.footer-dark .nav-box h5 {
-    padding-left: 0;
-    margin: 0; }
-  footer.footer-dark .nav-box .navbar .nav-link {
-    padding-left: 0; }
-    footer.footer-dark .nav-box .navbar .nav-link {
-      text-decoration: underline; }
-    footer.footer-dark .nav-box .navbar .nav-link:hover, footer.footer-dark .nav-box .navbar .nav-link:focus, footer.footer-dark .nav-box .navbar .nav-link[aria-expanded=true], footer.footer-dark .nav-box .navbar .nav-link.active {
-      text-decoration: underline; }
-  footer.footer-green .nav-box {
-    background-color: #fff;
-    padding: 1em 0.5em; }
-    footer.footer-green .nav-box .nav-item {
-      border-top: 1px solid #000; }
-    footer.footer-green .nav-box h5 {
-      padding-left: 0.25em; }
-    footer.footer-green .nav-box .navbar .nav-link {
-      padding-left: 0.5em; }
-      footer.footer-green .nav-box .navbar .nav-link {
-        color: #000; }
-      footer.footer-green .nav-box .navbar .nav-link:hover, footer.footer-green .nav-box .navbar .nav-link:focus, footer.footer-green .nav-box .navbar .nav-link[aria-expanded=true], footer.footer-green .nav-box .navbar .nav-link.active {
-        color: #000; }
-      footer.footer-green .nav-box .navbar .nav-link.active-branch {
-        color: ""; }
-      footer.footer-green .nav-box .navbar .nav-link.active-branch:hover, footer.footer-green .nav-box .navbar .nav-link.active-branch:focus, footer.footer-green .nav-box .navbar .nav-link.active-branch[aria-expanded=true], footer.footer-green .nav-box .navbar .nav-link.active-branch.active {
-        color: #000; }
-      footer.footer-green .nav-box .navbar .nav-link {
-        text-decoration: none; }
-      footer.footer-green .nav-box .navbar .nav-link:hover, footer.footer-green .nav-box .navbar .nav-link:focus, footer.footer-green .nav-box .navbar .nav-link[aria-expanded=true], footer.footer-green .nav-box .navbar .nav-link.active {
-        text-decoration: underline; }
-  footer .nav-box .navbar-vertical.social-media .social-media-icon {
-    height: auto;
-    margin: 0.25em 0;
-    text-indent: 2em; }
-  footer .nav-box .navbar-vertical.social-media .nav-item + .nav-item {
-    margin-left: 0; }
-  footer .nav-box .navbar-vertical.social-media .nav-link {
-    text-decoration: none; }
-  footer .nav-box .navbar-vertical.social-media .nav-link:hover, footer .nav-box .navbar-vertical.social-media .nav-link:focus, footer .nav-box .navbar-vertical.social-media .nav-link[aria-expanded=true], footer .nav-box .navbar-vertical.social-media .nav-link.active {
-    text-decoration: none; }
-  footer.footer-dark, footer.footer-green {
-    color: #fff; }
-    footer.footer-dark h5, footer.footer-dark h6, footer.footer-green h5, footer.footer-green h6 {
-      color: #ffcc00; }
-    footer.footer-dark a, footer.footer-green a {
-      color: #fff; }
-    footer.footer-dark a:hover, footer.footer-dark a:focus, footer.footer-dark a[aria-expanded=true], footer.footer-dark a.active, footer.footer-green a:hover, footer.footer-green a:focus, footer.footer-green a[aria-expanded=true], footer.footer-green a.active {
-      color: #ffcc00; }
-    footer.footer-dark a.active-branch, footer.footer-green a.active-branch {
-      color: ""; }
-    footer.footer-dark a.active-branch:hover, footer.footer-dark a.active-branch:focus, footer.footer-dark a.active-branch[aria-expanded=true], footer.footer-dark a.active-branch.active, footer.footer-green a.active-branch:hover, footer.footer-green a.active-branch:focus, footer.footer-green a.active-branch[aria-expanded=true], footer.footer-green a.active-branch.active {
-      color: #ffcc00; }
-  footer.footer-dark {
-    background-color: #030303; }
-  footer.footer-green {
-    background-color: #002119;
-    background: radial-gradient(ellipse at center 60%, #002119 45%, #000 90%); }
-  footer.footer-yellow {
-    background-color: #ffcc00; }
-  @media (max-width: 767px) {
-    footer {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-      footer section {
-        margin-bottom: 3em; }
-      footer .footer-links {
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto; } }
 
 .search-form {
   position: relative; }
@@ -1127,8 +1006,8 @@ footer {
               transition-duration: 0.3s;
       -webkit-transition-timing-function: ease-out;
               transition-timing-function: ease-out;
-      -webkit-transition-property: background, background-color, color, padding, width, height;
-      transition-property: background, background-color, color, padding, width, height;
+      -webkit-transition-property: background-color, color, padding, width, height;
+      transition-property: background-color, color, padding, width, height;
       text-decoration: none;
       font-weight: 400;
       line-height: 1em;
@@ -1136,7 +1015,6 @@ footer {
       white-space: nowrap;
       vertical-align: middle;
       -webkit-user-select: none;
-         -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       cursor: pointer;
@@ -1257,8 +1135,8 @@ footer {
             transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
             transition-timing-function: ease-out;
-    -webkit-transition-property: background, background-color, color, padding, width, height;
-    transition-property: background, background-color, color, padding, width, height;
+    -webkit-transition-property: background-color, color, padding, width, height;
+    transition-property: background-color, color, padding, width, height;
     text-decoration: none;
     font-weight: 400;
     line-height: 1em;
@@ -1266,7 +1144,6 @@ footer {
     white-space: nowrap;
     vertical-align: middle;
     -webkit-user-select: none;
-       -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;

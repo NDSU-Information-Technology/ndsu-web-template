@@ -1,6 +1,7 @@
  encoding: UTF-8
  source: docs
  destination: _site
+ exclude: [node_modules]
  kramdown:
    input: GFM
    hard_wrap: false

@@ -1,3 +1,5 @@
+"use strict";
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -242,7 +244,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } });
     }
 }).call('object' === (typeof window === "undefined" ? "undefined" : _typeof(window)) && window || 'object' === (typeof self === "undefined" ? "undefined" : _typeof(self)) && self || 'object' === (typeof global === "undefined" ? "undefined" : _typeof(global)) && global || {});
-
 window.NDSU = {};
 
 if (!NDSU.fullOverlayElement) {
@@ -275,54 +276,6 @@ NDSU.hideOverlay = function (overlayLevel) {
     }
     document.body.style.overflow = '';
 };
-
-if (typeof enableCodeExample !== 'undefined' && enableCodeExample) {
-    Array.prototype.forEach.call(document.querySelectorAll('.code-example, .language-html'), function (element) {
-        var elementId = element.getAttribute('id');
-        if (!elementId) {
-            elementId = 'codeExample_' + Math.random().toString(36).substr(2, 10);
-            element.setAttribute('id', elementId);
-        }
-
-        var sourceCodeElement = element.querySelector('.code-source, pre.highlight');
-        if (!sourceCodeElement) return;
-
-        var sourceCode = void 0;
-        if (sourceCodeElement.nodeName === 'TEXTAREA') {
-            sourceCode = sourceCodeElement.value;
-        } else if (sourceCodeElement.nodeName === 'PRE') {
-            sourceCode = sourceCodeElement.innerText;
-        }
-
-        if (!sourceCode) return;
-        var sourceCodeElementId = sourceCodeElement.getAttribute('id');
-        if (!sourceCodeElementId) {
-            sourceCodeElementId = elementId + '_sourceCode';
-            sourceCodeElement.setAttribute('id', sourceCodeElementId);
-        }
-        sourceCodeElement.style.height = sourceCodeElement.scrollHeight + 'px';
-        var sourceCodeLabel = document.createElement('h5');
-        sourceCodeLabel.innerText = 'Source Code';
-
-        var resultElement = document.createElement('div');
-        var resultElementId = elementId + '_result';
-        resultElement.setAttribute('id', resultElementId);
-        resultElement.className = 'code-result';
-        resultElement.innerHTML = sourceCode;
-        var resultLabel = document.createElement('h5');
-        resultLabel.innerText = 'Result';
-
-        var sourceCodeParentElement = sourceCodeElement.parentElement;
-        var beforeElement = sourceCodeParentElement === element ? sourceCodeElement : sourceCodeParentElement;
-
-        element.insertBefore(sourceCodeLabel, beforeElement);
-        element.appendChild(resultLabel);
-        element.appendChild(resultElement);
-
-        // TODO: Implement Tabbing
-        // http://w3c.github.io/aria-practices/examples/tabs/tabs-1/tabs.html
-    });
-}
 
 // From https://www.w3.org/WAI/tutorials/carousels/examples/carousel/
 

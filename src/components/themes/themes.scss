@@ -1,3 +1,7 @@
+@import 'variables';
+@import 'mixins/links';
+@import 'mixins/themes';
+
 @include createTheme('dark', $color-black, $color-gray67, $color-white, $color-yellow) {
     a {
         @include linkUnderline(2);

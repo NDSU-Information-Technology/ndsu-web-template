@@ -1,0 +1,67 @@
+@mixin linkColor($primary: $color-green, $secondary: $color-gray60, $ternary: '', $selector: '&'){
+    #{$selector} {
+        color: $primary;
+        @content;
+    }
+    #{$selector}:hover, 
+    #{$selector}:focus,
+    #{$selector}[aria-expanded=true],
+    #{$selector}.active  {
+        color: $secondary;
+    }
+    @if ($ternary) {
+        #{$selector}.active-branch {
+            color: $ternary;
+        }
+        #{$selector}.active-branch:hover, 
+        #{$selector}.active-branch:focus,
+        #{$selector}.active-branch[aria-expanded=true],
+        #{$selector}.active-branch.active  {
+            color: $secondary;
+        }
+    }
+}
+
+@mixin linkUnderline($underline-mode: 0, $selector: '&') {
+    @if ($underline-mode == 0) {
+        #{$selector} {
+            text-decoration: none;
+        }
+        #{$selector}:hover, 
+        #{$selector}:focus,
+        #{$selector}[aria-expanded=true],
+        #{$selector}.active {
+            text-decoration: underline;
+        }
+    } @else if ($underline-mode == 1) {
+        #{$selector} {
+            text-decoration: underline;
+        }
+        #{$selector}:hover,
+        #{$selector}:focus,
+        #{$selector}[aria-expanded=true],
+        #{$selector}.active {
+            text-decoration: none;
+        }
+    } @else if ($underline-mode == 2) {
+        #{$selector} {
+            text-decoration: underline;
+        }
+        #{$selector}:hover,
+        #{$selector}:focus,
+        #{$selector}[aria-expanded=true],
+        #{$selector}.active {
+            text-decoration: underline;
+        }
+    } @else {
+        #{$selector} {
+            text-decoration: none;
+        }
+        #{$selector}:hover, 
+        #{$selector}:focus,
+        #{$selector}[aria-expanded=true],
+        #{$selector}.active {
+            text-decoration: none;
+        }
+    }
+}

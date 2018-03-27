@@ -1,0 +1,32 @@
+{
+    "name": "docs",
+    "outputName": {
+        "script": "script.docs",
+        "style": "style.docs"
+    },
+    "usePolyfill": true,
+    "components": [
+        "basic",
+        "bigquote",
+        "button",
+        "carousel",
+        "code-example",
+        "container",
+        "footer",
+        "form",
+        "gallery",
+        "hero-banner",
+        "layout",
+        "markdown",
+        "navbar",
+        "news-events",
+        "picture",
+        "quick-links",
+        "sflgru",
+        "social-media",
+        "sticky-bar",
+        "themes",
+        "three-boxes",
+        "typography"
+    ]
+}

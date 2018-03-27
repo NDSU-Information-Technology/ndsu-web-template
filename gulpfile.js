@@ -1,5 +1,8 @@
 'use strict';
 
+const spawn = require('child_process').spawn;
+const spawnSync = require('child_process').spawnSync;
+
 const p = require('./package.json');
 let currentPackageVersion = p.version;
 
@@ -9,6 +12,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
+const del = require('del');
 const fs = require('fs');
 const filter = require('gulp-filter');
 const glob = require('glob');
@@ -17,114 +21,50 @@ const gutil = require('gulp-util');
 const handlebars = require('gulp-compile-handlebars');
 const insert = require('gulp-insert');
 const mkdirp = require('mkdirp');
+const path = require('path');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
+const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 
-const config = {
-    "components": {
-        "get": (componentName) => {
-            let componentDir = './src/components/' + componentName;
-            if (!fs.existsSync(componentDir)) {
-                return undefined;
+var srcDir = path.resolve(__dirname, 'src');
+var docsDir = path.resolve(__dirname, 'docs');
+var buildConfigDir = path.resolve(__dirname, 'src/build-config');
+var componentsDir = path.resolve(__dirname, 'src/components');
+
+const getSubdirectoriesSync = (dir) => fs.readdirSync(dir)
+    .filter(f => fs.statSync(path.join(dir, f)));
+
+let components = getSubdirectoriesSync(componentsDir)
+.map(c => {
+    let cdir = path.join(componentsDir, c);
+    return {
+        name: c,
+        dir: cdir,
+        builds: [],
+        js: cdir + '/**/*.js',
+        sass: cdir + '/**/*.scss',
+        css: cdir + '/**/*.css'
+    };
+})
+.reduce((ac, c) => {
+    ac[c.name] = c;
+    return ac;
+}, {});
+
+let buildConfigs = getSubdirectoriesSync(buildConfigDir)
+    .map(f => {
+        let bcDir = path.join(buildConfigDir, f);
+        let bc = JSON.parse(fs.readFileSync(path.join(bcDir, 'config.json')));
+        bc.dir = bcDir;
+        bc.components.forEach(c => {
+            if (components[c]) {
+                components[c].builds.push(bc.name);
             }
-            return {
-                "scripts": componentDir + '/**/*.js',
-                "styles": componentDir + '/**/*.scss'
-            };
-        },
-        "scripts": "./src/components/**/*.js",
-        "styles": "./src/components/**/*.scss"
-    },
-    "essentials": { 
-        "scripts": [
-            "./src/essentials/scripts/polyfill.js",
-            "./src/essentials/scripts/global.js",
-            "./src/essentials/**/*.js"
-        ],
-        "styles": "./src/essentials/**/*.scss",
-    },
-    "handlebars": {
-        "compile": [
-            './src/**/index.md',
-            './src/**/[^_]*.html'
-        ],
-        "dest": {
-            "dev": "./src",
-            "docs": "./docs",
-        },
-        "partials": [
-            './src/**/_*.html'
-        ],
-        "watch": {
-            "dev": [
-                './src/**/index.md',
-                './src/**/*.html'
-            ]
-        }
-    },
-    "scripts": {
-        "compile": [
-            {
-                "name": "minimal",
-                "destFileName": "minimal",
-                "sourceFiles": [
-                    './src/essentials/scripts/global.js',
-                ],
-                "components": ['container', 'navbar', 'sticky-bar']
-            },
-            {
-                "name": "full",
-                "destFileName": "script",
-                "sourceFiles": [
-                    './src/essentials/scripts/polyfill.js',
-                    './src/essentials/scripts/global.js',
-                    './src/components/code-example/code-example.js',
-                    './src/essentials/scripts/**/*.js',
-                    './src/components/**/*.js'
-                ],
-                "components": []
-            },
-        ],
-        "dest": {
-            "dev": './src/assets/js',
-            "docs": "./docs/assets/js"
-        },
-        "watch": {
-            "dev": [
-                './src/components/**/*.js',
-                './src/essentials/scripts/**/*.js'
-            ]
-        }
-    },
-    "styles": {
-        "compile": [
-            {
-                "name": "minimal",
-                "destFileName": "minimal",
-                "sourceFiles": ['./src/assets/scss/minimal.scss']
-            },
-            {
-                "name": "full",
-                "destFileName": "styles",
-                "sourceFiles": ['./src/assets/scss/full.scss']
-            }
-        ],
-        "dest": {
-            "dev": './src/assets/css',
-            "docs": "./docs/assets/css"
-        },
-        "watch": {
-            "dev": [
-                './src/components/**/*.scss',
-                './src/essentials/**/*.scss',
-                './src/assets/**/*.scss',
-                './src/assets/css/markdown.css'
-            ]
-        }
-    }
-};
+        });
+        return bc;
+    });
 
 function continueOnError(err) {
     gutil.log(err.toString());
@@ -134,65 +74,239 @@ function continueOnError(err) {
 const flatten = arr => arr.reduce(
   (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []
 );
-const generateStyleTask = (sc) => {
-    let taskName = 'style:' + sc.name;
+
+/* SASS AND CSS TASKS */
+
+const getSassCompileTaskName = (componentName) => 'sass:component:' + componentName;
+const getStyleConcatTaskName = (buildName) => 'style:concat:' + buildName;
+const getStyleCopyTaskName = (buildName) => 'style:copy:' + buildName;
+const getStyleBuildTaskName = (buildName) => 'style:build:' + buildName;
+const getSassWatchTaskName = (componentName) => 'sass:component:watch:' + componentName;
+const getCssWatchTaskName = (componentName) => 'css:component:watch:' + componentName;
+
+const getSassCompileTask = (component) => {
+    let taskName = getSassCompileTaskName(component.name);
     gulp.task(taskName, () => {
-        return gulp.src(sc.sourceFiles)
-            .pipe(sass({includePaths: ['./src']}).on('error', sass.logError))
-            .pipe(rename(sc.destFileName + '.css'))
+        let utilitiesStylesDir = path.join(srcDir, 'utilities/styles');
+        return gulp.src(component.sass, {base: './'})
+            .pipe(sass({includePaths: [utilitiesStylesDir]})).on('error', sass.logError)
             .pipe(autoprefixer())
-            .pipe(gulp.dest(config.styles.dest.dev))
-            .pipe(rename({suffix: '.min'}))
-            .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(gulp.dest(config.styles.dest.dev));
+            .pipe(rename({extname: '.css'}))
+            .pipe(gulp.dest('.'));styles
     });
     return taskName;
 };
-const generateScriptTask = (sc) => {
-    let taskName = 'script:concat' + sc.name;
+
+const getStyleConcatTask = (bc) => {
+    let taskName = getStyleConcatTaskName(bc.name);
+    let cssAssetDir = path.join(srcDir, 'assets/css');
+    let cssFiles = bc.components.map(c => {
+        let component = components[c];
+        return component.css;
+    });
+
+
     gulp.task(taskName, () => {
-        let sourceFiles = sc.sourceFiles;
-        sourceFiles.push(sc.components.map(componentName => {
-            let component = config.components.get(componentName);
-            if (!component) {
-                console.log("WARNING: Component " + componentName + " is not found.")
-                return [];
-            };
-            return component.scripts;
-        }));
-        return gulp.src(flatten(sourceFiles))
-            .pipe(concat(sc.destFileName + '.js'))
+        return gulp.src(cssFiles)
+            .pipe(concat(bc.outputName.style + '.css'))
+            .pipe(gulp.dest(cssAssetDir))
+            .pipe(rename({suffix: '.min'}))
+            .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(gulp.dest(cssAssetDir))
+    });
+    return taskName;
+};
+
+const getStyleCopyTask = (bc) => {
+    let taskName = getStyleCopyTaskName(bc.name);
+    let concatTaskName = getStyleConcatTaskName(bc.name);
+    let cssFiles =  [path.join(srcDir, 'assets/css', bc.outputName.style) + '.css',
+                path.join(srcDir, 'assets/css', bc.outputName.style) + '.min.css'];
+
+    let cssDocsAssetDir = path.join(docsDir, 'assets/css');
+
+    gulp.task(taskName, [concatTaskName], () => {
+        return gulp.src(cssFiles)
+            .pipe(gulp.dest(cssDocsAssetDir));
+    });
+    return taskName;
+};
+
+const getStyleBuildTask = (bc) => {
+    let componentSassTasks = bc.components.map(getSassCompileTaskName);
+    let taskName = getStyleBuildTaskName(bc.name);
+    let copyTaskName = getStyleCopyTaskName(bc.name);
+    
+    gulp.task(taskName, (callback) => {
+        runSequence(componentSassTasks, copyTaskName, callback);
+    });
+    return taskName;
+};
+
+const getSassWatchTask = (component) => {
+    let taskName = getSassWatchTaskName(component.name);
+    let compileTaskName = getSassCompileTaskName(component.name);
+    gulp.task(taskName, () => {
+        return gulp.watch(component.sass, [compileTaskName]);
+    });
+
+    return taskName;
+};
+
+const getCssWatchTask = (component) => {
+    let taskName = getCssWatchTaskName(component.name);
+    let copyTaskNames = component.builds.map(getStyleCopyTaskName);
+    gulp.task(taskName, () => {
+        return gulp.watch(component.css, copyTaskNames);
+    });
+
+    return taskName;options
+};
+
+let sassCompileTasks = Object.values(components).map(getSassCompileTask);
+let styleConcatTasks = buildConfigs.map(getStyleConcatTask);
+let styleCopyTasks = buildConfigs.map(getStyleCopyTask);
+let styleBuildTasks = buildConfigs.map(getStyleBuildTask);
+let sassWatchTasks = Object.values(components).map(getSassWatchTask);
+let cssWatchTasks = Object.values(components).map(getCssWatchTask);
+
+gulp.task('style:build', styleBuildTasks);
+gulp.task('style:watch', flatten([sassWatchTasks,cssWatchTasks]));
+
+
+/* JS TASKS */
+
+
+const getScriptConcatTaskName = (buildName) => 'script:concat:' + buildName;
+const getScriptBuildTaskName = (buildName) => 'script:build:' + buildName;
+const getScriptWatchTaskName = (buildName) => 'script:component:watch:' + buildName;
+
+const getScriptConcatTask = (bc) => {
+    let taskName = getScriptConcatTaskName(bc.name);
+    let utilitiesScriptsDir = path.join(srcDir, 'utilities/scripts');
+    let jsFiles = [];
+
+    if (bc.usePolyfill) jsFiles.push(path.join(utilitiesScriptsDir, 'polyfill.js'));
+    Array.prototype.push.apply(jsFiles, bc.components.map(c => {
+        let component = components[c];
+        return component.js;
+    }));
+    
+    gulp.task(taskName, () => {
+        return gulp.src(jsFiles)
+            .pipe(concat(bc.outputName.script + '.js'))
+            .pipe(gulp.dest(bc.dir));
+    });
+
+    return taskName;
+};
+
+const getScriptBuildTask = (bc) => {
+    let taskName = getScriptBuildTaskName(bc.name);
+    let concatTaskName = getScriptConcatTaskName(bc.name);
+    let concattenatedJsFile = path.join(bc.dir, bc.outputName.script + '.js');
+    let jsAssetDir = path.join(srcDir, 'assets/js');
+    let jsDocsAssetDir = path.join(docsDir, 'assets/js');
+
+    gulp.task(taskName, [concatTaskName], () => {
+        return gulp.src(concattenatedJsFile)
             .pipe(babel({
                 presets: [
                     ['env', {
-                        'targets': {
-                            'ie': 11,
-                        },
-                        'modules': false
+                        'targets': p.browserslist
                     }]
                 ]
             }))
-            .pipe(gulp.dest(config.scripts.dest.dev))
-            .pipe(rename({suffix: '.min'}))
+            .pipe(gulp.dest(jsAssetDir))
+            .pipe(gulp.dest(jsDocsAssetDir))
             .pipe(uglify())
-            .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-            .pipe(gulp.dest(config.scripts.dest.dev));
+            .pipe(rename({suffix: '.min'}))
+            .pipe(gulp.dest(jsAssetDir))
+            .pipe(gulp.dest(jsDocsAssetDir))
+            .on('end', () => {
+                del(concattenatedJsFile);
+            })
+            .on('error', (err) => { 
+                gutil.log(gutil.colors.red('[Error]'), err.toString()); 
+            });
     });
+
     return taskName;
 };
 
-let styleTasks = config.styles.compile.map(generateStyleTask);
-let scriptTasks = config.scripts.compile.map(generateScriptTask);
+const getScriptWatchTask = (component) => {
+    let taskName = getScriptWatchTaskName(component.name);
+    let scriptBuildTaskNames = component.builds.map(getScriptBuildTaskName);
 
-gulp.task('styles', styleTasks, () => {});
+    gulp.task(taskName, () => {
+        return gulp.watch(component.js, scriptBuildTaskNames);
+    });
 
-gulp.task('scripts', scriptTasks, () => {});
+    return taskName;
+};
+
+let scriptConcatTasks = buildConfigs.map(getScriptConcatTask);
+let scriptBuildTasks = buildConfigs.map(getScriptBuildTask);
+let scriptWatchTasks = Object.values(components).map(getScriptWatchTask);
 
 
-// COPY TASKS -------------------------------------------
+gulp.task('script:build', scriptBuildTasks);
+gulp.task('script:watch', scriptWatchTasks);
 
-gulp.task('handlebars', () => {
-    var partials = globArray.sync(config.handlebars.partials)
+/* HANDLEBARS TASKS */
+
+const handlebarsConfig = {
+    helpers: {
+        getJsonContext: (data, opt) => {
+            try {
+                return opt.fn(JSON.parse(data));
+            }
+            catch (err) {
+                console.log(err);
+                return undefined;
+            }
+        },
+        ifnull: (v1, v2) => {
+            return v1 || v2;
+        },
+        ifcond: (v1, operator, v2, options) => {
+            switch (operator) {
+                case '==':
+                    return (v1 == v2) ? options.fn(this) : options.inverse(this);
+                case '===':
+                    return (v1 === v2) ? options.fn(this) : options.inverse(this);
+                case '!=':
+                    return (v1 != v2) ? options.fn(this) : options.inverse(this);
+                case '!==':
+                    return (v1 !== v2) ? options.fn(this) : options.inverse(this);
+                case '<':
+                    return (v1 < v2) ? options.fn(this) : options.inverse(this);
+                case '<=':
+                    return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+                case '>':
+                    return (v1 > v2) ? options.fn(this) : options.inverse(this);
+                case '>=':
+                    return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+                case '&&':
+                    return (v1 && v2) ? options.fn(this) : options.inverse(this);
+                case '||':
+                    return (v1 || v2) ? options.fn(this) : options.inverse(this);
+                default:
+                    return options.inverse(this);
+            }
+        }
+    },
+    htmlFiles: path.join(srcDir, '**/[^_]*.html'),
+    htmlPartials: path.join(srcDir, '**/_*.html'),
+    mdFiles: path.join(srcDir, '**/index.md'),
+    output: {
+        "dev": srcDir,
+        "docs": docsDir,
+    }
+};
+
+gulp.task('handlebars:build', () => {
+    var partials = globArray.sync([handlebarsConfig.htmlPartials])
         .reduce((acc, filePath) => {
             var fileName = filePath.substring(filePath.lastIndexOf("/") + 1, filePath.lastIndexOf("."));
             var template = fs.readFileSync(filePath, 'utf8');
@@ -202,113 +316,78 @@ gulp.task('handlebars', () => {
     
     var options = {
         partials: partials,
-        helpers: {
-            getJsonContext: (data, opt) => {
-                try {
-                    return opt.fn(JSON.parse(data));
-                }
-                catch (err) {
-                    console.log(err);
-                    return undefined;
-                }
-            },
-            ifnull: (v1, v2) => {
-                return v1 || v2;
-            },
-            ifcond: (v1, operator, v2, options) => {
-                switch (operator) {
-                    case '==':
-                        return (v1 == v2) ? options.fn(this) : options.inverse(this);
-                    case '===':
-                        return (v1 === v2) ? options.fn(this) : options.inverse(this);
-                    case '!=':
-                        return (v1 != v2) ? options.fn(this) : options.inverse(this);
-                    case '!==':
-                        return (v1 !== v2) ? options.fn(this) : options.inverse(this);
-                    case '<':
-                        return (v1 < v2) ? options.fn(this) : options.inverse(this);
-                    case '<=':
-                        return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-                    case '>':
-                        return (v1 > v2) ? options.fn(this) : options.inverse(this);
-                    case '>=':
-                        return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-                    case '&&':
-                        return (v1 && v2) ? options.fn(this) : options.inverse(this);
-                    case '||':
-                        return (v1 || v2) ? options.fn(this) : options.inverse(this);
-                    default:
-                        return options.inverse(this);
-                }
-            }
-        },
+        helpers: handlebarsConfig.helpers,
         compile: {
             noEscape: true
         }
     };
     
-    return gulp.src(config.handlebars.compile)
+    return gulp.src([handlebarsConfig.mdFiles, handlebarsConfig.htmlFiles])
         .pipe(handlebars({}, options).on('error', continueOnError))
-        .pipe(gulp.dest(config.handlebars.dest.docs))
+        .pipe(gulp.dest(handlebarsConfig.output.docs))
         .pipe(filter(['**/index.md']))
         .pipe(rename({basename: 'README'}))
         .pipe(replace(/^---([\s\S]*?)---/i, ''))
         .pipe(insert.prepend('_**WARNING**: This README.md file is auto-generated by build process. To edit the content of this file, please edit the `index.md` file located in the same folder instead._\n'))
-        .pipe(gulp.dest(config.handlebars.dest.dev));
+        .pipe(gulp.dest(handlebarsConfig.output.dev))
+        ;
 });
 
-gulp.task('copy:scripts', ['scripts'], () => {
-    return gulp.src(config.scripts.dest.dev + '/**/*.js')
-        .pipe(gulp.dest(config.scripts.dest.docs));
+gulp.task('handlebars:watch', () => {
+    return gulp.watch([
+        handlebarsConfig.mdFiles, 
+        handlebarsConfig.htmlFiles, 
+        handlebarsConfig.htmlPartials
+    ], ['handlebars:build']);
 });
 
 
-gulp.task('copy:styles', ['styles'], () => {
-    return gulp.src(config.styles.dest.dev + '/**/*.css')
-        .pipe(gulp.dest(config.styles.dest.docs))
-        .pipe(browserSync.stream());
+
+/* JEKYLL TASKS */
+
+const runJekyllProcess = (callback, useWatch) => {
+    let exitHandler = () => {
+        if (jekyll && jekyll.constructor.name === 'ChildProcess') {
+            console.log('Killing jekyll process');
+            jekyll.kill();
+        };
+        process.exit();
+    };
+    
+    let bundleArgs = ['exec', 'jekyll', 'build', '--incremental'];
+    if (useWatch) bundleArgs.push('--watch');
+
+    let jekyll = spawn('bundle', bundleArgs, {stdio: 'inherit'})
+        .on('error', (err) => {
+            console.log(err);
+            if (typeof callback === 'function') callback();
+        })
+        .on('close', (code, signal) => {
+            if (typeof callback === 'function') callback();
+        });
+        
+    process.on('exit', exitHandler);
+    process.on('SIGINT', exitHandler);
+    process.on('SIGTERM', exitHandler);
+
+    return jekyll;
+};
+
+gulp.task('jekyll:build', [], (callback) => {
+    runJekyllProcess(callback, false);
 });
 
-gulp.task('copy:scripts:versioned', ['scripts'], () => {
-    let versionDir = config.scripts.dest.docs + '/' + currentPackageVersion;
-    if (!fs.existsSync(versionDir)){
-        mkdirp.sync(versionDir);
-    }
-
-    return gulp.src(config.scripts.dest.dev + '/**/*.js')
-        .pipe(rename({suffix: '-' + currentPackageVersion}))
-        .pipe(gulp.dest(versionDir));
-});
-gulp.task('copy:styles:versioned', ['styles'], () => {
-    let versionDir = config.styles.dest.docs + '/' + currentPackageVersion;
-    if (!fs.existsSync(versionDir)){
-        mkdirp.sync(versionDir);
-    }
-
-    return gulp.src(config.styles.dest.dev + '/**/*.css')
-        .pipe(rename({suffix: '-' + currentPackageVersion}))
-        .pipe(gulp.dest(versionDir));
+gulp.task('build', ['script:build', 'style:build', 'handlebars:build'], (callback) => {
+    runSequence('jekyll:build', callback);
 });
 
-gulp.task('copy', ['copy:scripts', 'copy:styles', 'handlebars']);
+/* COMBINED TASKS */
 
-// WATCH TASKS ---------------------------
 
-gulp.task('watch:handlebars', () => {
-    gulp.watch(config.handlebars.watch.dev, ['handlebars']);
-});
+gulp.task('watch', ['script:watch', 'style:watch', 'handlebars:watch']);
 
-gulp.task('watch:scripts', () => {
-    gulp.watch(config.scripts.watch.dev, ['copy:scripts']);
-});
 
-gulp.task('watch:styles', () => {
-    gulp.watch(config.styles.watch.dev, ['copy:styles']);
-});
-
-gulp.task('watch', ['watch:handlebars', 'watch:scripts', 'watch:styles']);
-
-gulp.task('serve', ['copy', 'watch'], () => {
+gulp.task('serve', ['build', 'watch'], (callback) => {
     browserSync.init({
         server: {
             baseDir: '_site',
@@ -317,9 +396,16 @@ gulp.task('serve', ['copy', 'watch'], () => {
             }
         },
         startPath: '/ndsu-web-template',
-        ui: false
+        ui: false,
+        files: [
+            '_site/assets/css/style.docs*.css',
+            '_site/assets/js/script.docs*.js',
+            '_site/**/*.html'
+        ],
+        // Prevent multiple reloads
+        // Adjust this depending on how fast your machine is
+        reloadDebounce: 1800
     });
 
-    gulp.watch(['_site/**/*.css'], browserSync.stream);
-    gulp.watch(['_site/**/*.js', '_site/**/*.html'], browserSync.reload);
+    runJekyllProcess(callback, true);
 });

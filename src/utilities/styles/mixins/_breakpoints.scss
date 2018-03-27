@@ -1,0 +1,49 @@
+@import 'variables';
+
+@mixin media-xl() {
+    @content;
+}
+@mixin media-lg() {
+    @media (max-width: $max-size-lg){
+        @content;
+    }
+}
+@mixin media-md() {
+    @media (max-width: $max-size-md){
+        @content;
+    }
+}
+@mixin media-sm() {
+    @media (max-width: $max-size-sm){
+        @content;
+    }
+}
+@mixin media-xs() {
+    @media (max-width: $max-size-xs){
+        @content;
+    }
+}
+
+@mixin media-size($size){
+    @if ($size == 'xl') {
+        @include media-xl() {
+            @content;
+        }
+    } @else if($size == 'lg') {
+        @include media-lg() {
+            @content;
+        }
+    } @else if($size == 'md') {
+        @include media-md() {
+            @content;
+        }
+    } @else if($size == 'sm') {
+        @include media-sm() {
+            @content;
+        }
+    } @else if($size == 'xs') {
+        @include media-xs() {
+            @content;
+        }
+    }
+}

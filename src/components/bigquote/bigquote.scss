@@ -1,3 +1,7 @@
+@import 'variables';
+@import 'mixins/breakpoints';
+@import 'mixins/container';
+
 .bigquote {
     padding: 3em 0;
     @include content-padding();
@@ -9,7 +13,7 @@
     }
     .quote::before{
         content: "\201C"
-    }
+    };
     .quote::after{
         content: "\201D"
     }
@@ -48,7 +52,7 @@
             font-style: italic;
         }
     }
-
+    
     &.smaller {
         &.green-quote .quote {
             font-size: 2em;

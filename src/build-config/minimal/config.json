@@ -1,0 +1,23 @@
+{
+    "name": "minimal",
+    "outputName": {
+        "script": "minimal",
+        "style": "minimal"
+    },
+    "usePolyfill": false,
+    "components": [
+        "basic",
+        "button",
+        "container",
+        "form",
+        "gallery",
+        "hero-banner",
+        "layout",
+        "navbar",
+        "picture",
+        "sflgru",
+        "social-media",
+        "sticky-bar",
+        "typography"
+    ]
+}

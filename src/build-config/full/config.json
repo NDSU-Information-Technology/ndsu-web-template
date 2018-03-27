@@ -1,0 +1,30 @@
+{
+    "name": "full",
+    "outputName": {
+        "script": "script",
+        "style": "style"
+    },
+    "usePolyfill": true,
+    "components": [
+        "basic",
+        "bigquote",
+        "button",
+        "carousel",
+        "container",
+        "footer",
+        "form",
+        "gallery",
+        "hero-banner",
+        "layout",
+        "navbar",
+        "news-events",
+        "picture",
+        "quick-links",
+        "sflgru",
+        "social-media",
+        "sticky-bar",
+        "themes",
+        "three-boxes",
+        "typography"
+    ]
+}

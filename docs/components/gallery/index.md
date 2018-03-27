@@ -3,7 +3,7 @@ layout: component
 title: Button Component
 ---
 
-NOTE: This component depends on the [`picture` component](/ndsu-web-template/components/picture). Sample DOM structure:
+NOTE: This component depends on the [`picture` component](/ndsu-web-template/components/picture). Ssample DOM structure:
 
 ## Basic Usage
 

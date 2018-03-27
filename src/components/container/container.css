@@ -1,0 +1,80 @@
+.container {
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width: 1220px; }
+  @media (max-width: 1199px) {
+    .container {
+      padding: 0 1.755em; } }
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 1.5em; } }
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 1.25em; } }
+  @media (max-width: 574px) {
+    .container {
+      padding: 0 1em; } }
+  @media (max-width: 1199px) {
+    .container {
+      max-width: 1050px; } }
+  @media (max-width: 991px) {
+    .container {
+      max-width: 880px; } }
+
+.container-fluid {
+  padding: 0 2em; }
+  @media (max-width: 1199px) {
+    .container-fluid {
+      padding: 0 1.755em; } }
+  @media (max-width: 991px) {
+    .container-fluid {
+      padding: 0 1.5em; } }
+  @media (max-width: 767px) {
+    .container-fluid {
+      padding: 0 1.25em; } }
+  @media (max-width: 574px) {
+    .container-fluid {
+      padding: 0 1em; } }
+
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex-row, .flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  list-style: none; }
+  .flex-row.flex-left, .flex-column.flex-left {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left; }
+  .flex-row.flex-center, .flex-column.flex-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .flex-row.flex-right, .flex-column.flex-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .flex-row.flex-middle, .flex-column.flex-middle {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .flex-row.flex-wrap, .flex-column.flex-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }

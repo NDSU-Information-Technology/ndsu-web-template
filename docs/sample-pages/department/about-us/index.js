@@ -1,0 +1,30 @@
+{"1":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing;
+
+  return ((stack1 = container.invokePartial(partials["_hero-banner"],depth0,{"name":"_hero-banner","hash":{"vAlign":"middle","dim":"black","imgSrc":"https://www.ndsu.edu/fileadmin/www.ur.ndsu.edu/images/photoGallery/Buildings/bison_statue_2_HR.jpg"},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
+    + " \n\n"
+    + ((stack1 = (helpers.getJsonContext || (depth0 && depth0.getJsonContext) || alias2).call(alias1,"{\"title\": \"About Us\", \"container\": true}",{"name":"getJsonContext","hash":{},"fn":container.program(4, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + " "
+    + ((stack1 = (helpers.getJsonContext || (depth0 && depth0.getJsonContext) || alias2).call(alias1,"{\"title\": \"History\", \"h5\": true, \"bgColor\": \"gray\", \"container\": true,\n\"multiColumns\": 3}",{"name":"getJsonContext","hash":{},"fn":container.program(7, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = container.invokePartial(partials._sflgru,depth0,{"name":"_sflgru","data":data,"indent":"    ","helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "");
+},"2":function(container,depth0,helpers,partials,data) {
+    return " ";
+},"4":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = container.invokePartial(partials["_generic-content"],depth0,{"name":"_generic-content","fn":container.program(5, data, 0),"inverse":container.noop,"data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
+    + " ";
+},"5":function(container,depth0,helpers,partials,data) {
+    return "<p>The general computer science departmental objectives are:</p>\n<ol>\n    <li> Continuous review and improvement of our undergraduate programs to ensure that all graduates remain competitive for quality\n        jobs,</li>\n    <li> Continuous review and improvement of our service courses to ensure that they meet the needs of students and community\n        members in successful ways,</li>\n    <li> Enhancement of our M.S. and Ph.D. programs to ensure that our graduates are nationally competitive,</li>\n    <li> Expansion of our research activities,</li>\n    <li> Expansion of our service activities to provide more varied and extensive service to the state and region, including leadership\n        and participation in economic development activities, and </li>\n    <li> Development of increased cooperation with other departments at North Dakota State University and with departments at\n        other schools in the state.</li>\n</ol>\n";
+},"7":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return " "
+    + ((stack1 = container.invokePartial(partials["_generic-content"],depth0,{"name":"_generic-content","fn":container.program(8, data, 0),"inverse":container.noop,"data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "");
+},"8":function(container,depth0,helpers,partials,data) {
+    return "\n<p>North Dakota State University has offered Computer Science since 1973. The first courses were offered in the Division of Mathematical Sciences and the Department of Electrical and Electronics Engineering (now the Department of Electrical and Computer Engineering). A Bachelor of Science degree in Computer Science first was offered in 1977, the Master of Science degree in Computer Science was added in 1979 and the Ph.D. program in Computer Science began in 1986. The Department began the Management Information Systems (MIS) program in 1988. Graduate programs in Software Engineering were launched in 2002, including; Certificate, Master of Science, and Ph.D. curriculums. A graduate certificate in Electronic Commerce first was first offered in 2002. Most recently, in 2009, an online ‘distance education’ professional Master’s degree program was initiated.\n</p>\n<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Division of Mathematical Sciences split into three departments: Mathematics, Statistics, and Computer Science / Operations Research in 1988. Kenneth Magel served as the Department Chair for the first eight years. Then, in 1996, Kendall Nygard took the helm for nine years.&nbsp; In 2005, Kenneth Magel once again accepted the Chair position until the leadership structure changed to a Department Head system. (The main difference between a Chair and a Head is that the Head is appointed by the upper administration rather than elected by the faculty.)&nbsp; On July 1, 2007, Brian M. Slator became the first Head of the Department. \n</p>\n<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In 2009, the Department had; five full professors, three associate professors, seven assistant professors, a senior lecturer, an advisor/lecturer, and three lecturers. There were 33 Doctoral students, 163 Master's students, and 272 Computer Science Majors.  \n</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp; The staff consists of; the administrative assistant - Carole Huber, the full time secretary - Annette Sprague, two part time staff - Betty Opheim and Jane Dickerson, and the department systems administrator - Nate Olson. \n</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp; The Department occupies 7,460 square feet of space on the first and second floors of the Quentin Burdick Building (QBB, formerly IACC, the Industrial Agriculture and Communications Center building) which was built in 1992.</p>\n\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = container.invokePartial(partials["_layout-department"],depth0,{"name":"_layout-department","fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "");
+},"usePartial":true,"useData":true}

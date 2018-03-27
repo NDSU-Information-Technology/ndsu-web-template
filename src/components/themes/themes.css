@@ -1,0 +1,31 @@
+.theme-dark {
+  background-color: #000;
+  color: #ababab; }
+  .theme-dark a {
+    color: #fff; }
+  .theme-dark a:hover, .theme-dark a:focus, .theme-dark a[aria-expanded=true], .theme-dark a.active {
+    color: #ffcc00; }
+  .theme-dark a.active-branch {
+    color: ""; }
+  .theme-dark a.active-branch:hover, .theme-dark a.active-branch:focus, .theme-dark a.active-branch[aria-expanded=true], .theme-dark a.active-branch.active {
+    color: #ffcc00; }
+  .theme-dark a {
+    text-decoration: underline; }
+  .theme-dark a:hover, .theme-dark a:focus, .theme-dark a[aria-expanded=true], .theme-dark a.active {
+    text-decoration: underline; }
+
+.theme-gray {
+  background-color: #222222;
+  color: #fff; }
+  .theme-gray a {
+    color: #fff; }
+  .theme-gray a:hover, .theme-gray a:focus, .theme-gray a[aria-expanded=true], .theme-gray a.active {
+    color: #ffcc00; }
+  .theme-gray a.active-branch {
+    color: ""; }
+  .theme-gray a.active-branch:hover, .theme-gray a.active-branch:focus, .theme-gray a.active-branch[aria-expanded=true], .theme-gray a.active-branch.active {
+    color: #ffcc00; }
+  .theme-gray a {
+    text-decoration: underline; }
+  .theme-gray a:hover, .theme-gray a:focus, .theme-gray a[aria-expanded=true], .theme-gray a.active {
+    text-decoration: underline; }
