@@ -125,10 +125,10 @@ const getStyleCopyTask = (bc) => {
 
     let cssDocsAssetDir = path.join(docsDir, 'assets/css');
 
-    gulp.task(taskName, [concatTaskName], () => {
+    gulp.task(taskName, gulp.series(concatTaskName, function() {
         return gulp.src(cssFiles)
             .pipe(gulp.dest(cssDocsAssetDir));
-    });
+    }));
     return taskName;
 };
 
@@ -137,9 +137,9 @@ const getStyleBuildTask = (bc) => {
     let taskName = getStyleBuildTaskName(bc.name);
     let copyTaskName = getStyleCopyTaskName(bc.name);
     
-    gulp.task(taskName, (callback) => {
-        runSequence(componentSassTasks, copyTaskName, callback);
-    });
+    gulp.task(taskName, gulp.series(
+        componentSassTasks, copyTaskName
+    ));
     return taskName;
 };
 
@@ -170,8 +170,8 @@ let styleBuildTasks = buildConfigs.map(getStyleBuildTask);
 let sassWatchTasks = Object.values(components).map(getSassWatchTask);
 let cssWatchTasks = Object.values(components).map(getCssWatchTask);
 
-gulp.task('style:build', styleBuildTasks);
-gulp.task('style:watch', flatten([sassWatchTasks,cssWatchTasks]));
+gulp.task('style:build', gulp.series(styleBuildTasks));
+gulp.task('style:watch', gulp.series(flatten([sassWatchTasks,cssWatchTasks])));
 
 
 /* JS TASKS */
@@ -208,7 +208,7 @@ const getScriptBuildTask = (bc) => {
     let jsAssetDir = path.join(srcDir, 'assets/js');
     let jsDocsAssetDir = path.join(docsDir, 'assets/js');
 
-    gulp.task(taskName, [concatTaskName], () => {
+    gulp.task(taskName, gulp.series(concatTaskName, function() {
         return gulp.src(concattenatedJsFile)
             .pipe(babel({
                 presets: [
@@ -229,7 +229,7 @@ const getScriptBuildTask = (bc) => {
             .on('error', (err) => { 
                 gutil.log(gutil.colors.red('[Error]'), err.toString()); 
             });
-    });
+    }));
 
     return taskName;
 };
@@ -250,8 +250,8 @@ let scriptBuildTasks = buildConfigs.map(getScriptBuildTask);
 let scriptWatchTasks = Object.values(components).map(getScriptWatchTask);
 
 
-gulp.task('script:build', scriptBuildTasks);
-gulp.task('script:watch', scriptWatchTasks);
+gulp.task('script:build', gulp.series(scriptBuildTasks));
+gulp.task('script:watch', gulp.series(scriptWatchTasks));
 
 /* HANDLEBARS TASKS */
 
@@ -373,21 +373,26 @@ const runJekyllProcess = (callback, useWatch) => {
     return jekyll;
 };
 
-gulp.task('jekyll:build', [], (callback) => {
+gulp.task('jekyll:build', gulp.series([], function(callback) {
     runJekyllProcess(callback, false);
-});
+}));
 
-gulp.task('build', ['script:build', 'style:build', 'handlebars:build'], (callback) => {
-    runSequence('jekyll:build', callback);
-});
+gulp.task('build', gulp.series(
+	gulp.parallel(
+		'script:build',
+		'style:build',
+		'handlebars:build'
+	),
+    'jekyll:build'
+));
 
 /* COMBINED TASKS */
 
 
-gulp.task('watch', ['script:watch', 'style:watch', 'handlebars:watch']);
+gulp.task('watch', gulp.series(['script:watch', 'style:watch', 'handlebars:watch']));
 
 
-gulp.task('serve', ['build', 'watch'], (callback) => {
+gulp.task('serve', gulp.series(['build', 'watch'], function(callback) {
     browserSync.init({
         server: {
             baseDir: '_site',
@@ -408,4 +413,4 @@ gulp.task('serve', ['build', 'watch'], (callback) => {
     });
 
     runJekyllProcess(callback, true);
-});
+}));
