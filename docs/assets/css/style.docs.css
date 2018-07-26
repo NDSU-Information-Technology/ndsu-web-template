@@ -410,7 +410,6 @@ ul.inline-list {
   white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
@@ -1353,7 +1352,6 @@ footer {
       white-space: nowrap;
       vertical-align: middle;
       -webkit-user-select: none;
-         -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       cursor: pointer;
@@ -2223,7 +2221,6 @@ footer {
     white-space: nowrap;
     vertical-align: middle;
     -webkit-user-select: none;
-       -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;

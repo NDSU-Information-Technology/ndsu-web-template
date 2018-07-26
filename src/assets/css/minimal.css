@@ -335,7 +335,6 @@ ul.inline-list {
   white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
@@ -1016,7 +1015,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
       white-space: nowrap;
       vertical-align: middle;
       -webkit-user-select: none;
-         -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       cursor: pointer;
@@ -1146,7 +1144,6 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     white-space: nowrap;
     vertical-align: middle;
     -webkit-user-select: none;
-       -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;
