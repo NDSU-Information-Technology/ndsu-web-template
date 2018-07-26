@@ -284,7 +284,7 @@ ul.inline-list {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   z-index: 1500;
   -webkit-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;

@@ -31,12 +31,13 @@
       white-space: nowrap;
       vertical-align: middle;
       -webkit-user-select: none;
+         -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       cursor: pointer;
       display: inline-block;
       padding: 1em;
-      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0);
       text-align: left;
       line-height: 1.25em;
       white-space: normal;
@@ -68,7 +69,7 @@
     border-top: 1px solid #cccccc;
     text-transform: none; }
   .layout .nav-col .navbar .nav-link, .layout .side-col .navbar .nav-link {
-    background-color: transparent; }
+    background-color: rgba(0, 0, 0, 0); }
     .layout .nav-col .navbar .nav-link:hover, .layout .nav-col .navbar .nav-link:focus, .layout .nav-col .navbar .nav-link[aria-expanded=true], .layout .nav-col .navbar .nav-link.active, .layout .side-col .navbar .nav-link:hover, .layout .side-col .navbar .nav-link:focus, .layout .side-col .navbar .nav-link[aria-expanded=true], .layout .side-col .navbar .nav-link.active {
       background-color: #e5e5e5; }
     .layout .nav-col .navbar .nav-link.active-branch, .layout .side-col .navbar .nav-link.active-branch {
