@@ -1,6 +1,6 @@
 ---
 layout: component
-title: SGLGRU Component
+title: SFLGRU Component
 ---
 
 ## Basic Usage
