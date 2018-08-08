@@ -210,7 +210,7 @@ gulp watch
  **Style Task**
  Compile `scss` files and minify resulting `css` files:
  ```bash
- gulp styles:build
+ gulp style:build
  ```
 
  **Combined Task**
