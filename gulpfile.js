@@ -1,10 +1,8 @@
 'use strict';
 
-const spawn = require('child_process').spawn;
-const spawnSync = require('child_process').spawnSync;
+const {spawn} = require('child_process');
 
 const p = require('./package.json');
-let currentPackageVersion = p.version;
 
 const gulp = require('gulp');
 
@@ -15,16 +13,13 @@ const concat = require('gulp-concat');
 const del = require('del');
 const fs = require('fs');
 const filter = require('gulp-filter');
-const glob = require('glob');
 const globArray = require('glob-array');
 const gutil = require('gulp-util');
 const handlebars = require('gulp-compile-handlebars');
 const insert = require('gulp-insert');
-const mkdirp = require('mkdirp');
 const path = require('path');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
-const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 
@@ -147,7 +142,7 @@ const getSassWatchTask = (component) => {
     let taskName = getSassWatchTaskName(component.name);
     let compileTaskName = getSassCompileTaskName(component.name);
     gulp.task(taskName, () => {
-        return gulp.watch(component.sass, [compileTaskName]);
+        return gulp.watch(component.sass, gulp.series([compileTaskName]));
     });
 
     return taskName;
@@ -157,7 +152,7 @@ const getCssWatchTask = (component) => {
     let taskName = getCssWatchTaskName(component.name);
     let copyTaskNames = component.builds.map(getStyleCopyTaskName);
     gulp.task(taskName, () => {
-        return gulp.watch(component.css, copyTaskNames);
+        return gulp.watch(component.css, gulp.series(copyTaskNames));
     });
 
     return taskName;options
@@ -171,7 +166,7 @@ let sassWatchTasks = Object.values(components).map(getSassWatchTask);
 let cssWatchTasks = Object.values(components).map(getCssWatchTask);
 
 gulp.task('style:build', gulp.series(styleBuildTasks));
-gulp.task('style:watch', gulp.series(flatten([sassWatchTasks,cssWatchTasks])));
+gulp.task('style:watch', gulp.parallel(flatten([sassWatchTasks,cssWatchTasks])));
 
 
 /* JS TASKS */
@@ -239,7 +234,7 @@ const getScriptWatchTask = (component) => {
     let scriptBuildTaskNames = component.builds.map(getScriptBuildTaskName);
 
     gulp.task(taskName, () => {
-        return gulp.watch(component.js, scriptBuildTaskNames);
+        return gulp.watch(component.js, gulp.series(scriptBuildTaskNames));
     });
 
     return taskName;
@@ -251,7 +246,7 @@ let scriptWatchTasks = Object.values(components).map(getScriptWatchTask);
 
 
 gulp.task('script:build', gulp.series(scriptBuildTasks));
-gulp.task('script:watch', gulp.series(scriptWatchTasks));
+gulp.task('script:watch', gulp.parallel(scriptWatchTasks));
 
 /* HANDLEBARS TASKS */
 
@@ -338,7 +333,7 @@ gulp.task('handlebars:watch', () => {
         handlebarsConfig.mdFiles, 
         handlebarsConfig.htmlFiles, 
         handlebarsConfig.htmlPartials
-    ], ['handlebars:build']);
+    ], gulp.series(['handlebars:build']));
 });
 
 
@@ -354,10 +349,10 @@ const runJekyllProcess = (callback, useWatch) => {
         process.exit();
     };
     
-    let bundleArgs = ['exec', 'jekyll', 'build', '--incremental'];
-    if (useWatch) bundleArgs.push('--watch');
+    let runArgs = ['exec', 'jekyll', 'build'];
+    if (useWatch) runArgs.push('--watch');
 
-    let jekyll = spawn('bundle', bundleArgs, {stdio: 'inherit'})
+    let jekyll = spawn('bundle', runArgs, {stdio: 'inherit'})
         .on('error', (err) => {
             console.log(err);
             if (typeof callback === 'function') callback();
@@ -389,10 +384,10 @@ gulp.task('build', gulp.series(
 /* COMBINED TASKS */
 
 
-gulp.task('watch', gulp.series(['script:watch', 'style:watch', 'handlebars:watch']));
+gulp.task('watch', gulp.parallel(['script:watch', 'style:watch', 'handlebars:watch']));
 
 
-gulp.task('serve', gulp.series(['build', 'watch'], function(callback) {
+gulp.task('serve', gulp.parallel(gulp.series(['build', 'watch']), function(callback) {
     browserSync.init({
         server: {
             baseDir: '_site',
@@ -414,3 +409,7 @@ gulp.task('serve', gulp.series(['build', 'watch'], function(callback) {
 
     runJekyllProcess(callback, true);
 }));
+
+gulp.task('dummy', (cb) => {
+    runJekyllProcess(cb, true)
+})
