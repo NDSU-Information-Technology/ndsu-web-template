@@ -101,7 +101,9 @@ header .green-bar {
   header .green-bar h1 {
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: auto; }
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
   header .green-bar h1 a {
     color: #ffcc00; }
   header .green-bar h1 a:hover, header .green-bar h1 a:focus, header .green-bar h1 a[aria-expanded=true], header .green-bar h1 a.active {
