@@ -1360,12 +1360,22 @@ var Navbar = function (_NavBaseClass) {
     }, {
         key: 'setOffset',
         value: function setOffset() {
-            if (!this.parentNavItem || this.isVerticalNavbar) return;
+            if (!this.parentNavItem) return;
 
-            var el = this.parentNavItem.element;
-            var elStyle = window.getComputedStyle(el);
+            if (this.isVerticalNavbar) {
+                var currentEl = this.element;
+                var boundingRect = currentEl.getBoundingClientRect();
+                if (document.body.clientWidth - (boundingRect.x + boundingRect.width) < 0) {
+                    currentEl.style.left = 'auto';
+                    currentEl.style.right = 0;
+                }
+                return;
+            }
 
-            var elHeight = el.offsetHeight;
+            var parentEl = this.parentNavItem.element;
+            var elStyle = window.getComputedStyle(parentEl);
+
+            var elHeight = parentEl.offsetHeight;
 
             if (this.isDropUp) {
                 elHeight += parseInt(elStyle.marginTop);
@@ -1378,14 +1388,14 @@ var Navbar = function (_NavBaseClass) {
             if (this.isExtendedChildNavbar) {
                 var rootNavbar = this.parentNavItem.parentNavbar;
                 if (rootNavbar && rootNavbar.element) {
-                    var destLeft = -el.offsetLeft;
+                    var destLeft = -parentEl.offsetLeft;
                     var elWidth = rootNavbar.element.offsetWidth;
 
-                    this.element.style.left = -el.offsetLeft + 'px';
+                    this.element.style.left = -parentEl.offsetLeft + 'px';
                     this.element.style.minWidth = elWidth + 'px';
                 }
             } else {
-                var _elWidth = el.offsetWidth;
+                var _elWidth = parentEl.offsetWidth;
                 this.element.style.minWidth = _elWidth + 'px';
             }
         }
@@ -1747,8 +1757,8 @@ var NavItem = function (_NavBaseClass2) {
         key: '_open',
         value: function _open(inst) {
             if (!inst || !inst.element) return;
-            inst.setOffset();
             inst.element.classList.add('expanded');
+            inst.setOffset();
             if (inst.parentNavItem) {
                 inst.parentNavItem.linkElement.setAttribute('aria-expanded', true);
             }

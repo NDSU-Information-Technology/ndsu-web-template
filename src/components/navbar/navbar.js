@@ -35,12 +35,22 @@ class Navbar extends NavBaseClass {
     }
 
     setOffset() {
-        if (!this.parentNavItem || this.isVerticalNavbar) return;
+        if (!this.parentNavItem) return;
+
+        if (this.isVerticalNavbar) {
+            let currentEl = this.element;
+            let boundingRect = currentEl.getBoundingClientRect();
+            if (document.body.clientWidth - (boundingRect.x + boundingRect.width) < 0) {
+                currentEl.style.left = 'auto';
+                currentEl.style.right = 0;
+            }
+            return;
+        }
         
-        let el = this.parentNavItem.element;
-        let elStyle = window.getComputedStyle(el);
+        let parentEl = this.parentNavItem.element;
+        let elStyle = window.getComputedStyle(parentEl);
         
-        let elHeight = el.offsetHeight;
+        let elHeight = parentEl.offsetHeight;
 
         if (this.isDropUp) {
             elHeight += parseInt(elStyle.marginTop);
@@ -53,14 +63,14 @@ class Navbar extends NavBaseClass {
         if (this.isExtendedChildNavbar){
             let rootNavbar = this.parentNavItem.parentNavbar;
             if (rootNavbar && rootNavbar.element) {
-                let destLeft = -el.offsetLeft;
+                let destLeft = -parentEl.offsetLeft;
                 let elWidth = rootNavbar.element.offsetWidth;
 
-                this.element.style.left = -el.offsetLeft + 'px';
+                this.element.style.left = -parentEl.offsetLeft + 'px';
                 this.element.style.minWidth = elWidth + 'px';
             }
         } else {
-            let elWidth = el.offsetWidth;
+            let elWidth = parentEl.offsetWidth;
             this.element.style.minWidth = elWidth + 'px';
         }
     }
@@ -195,8 +205,8 @@ class NavItem extends NavBaseClass {
     
     static _open(inst) {
         if (!inst || !inst.element) return;
-        inst.setOffset();
         inst.element.classList.add('expanded');
+        inst.setOffset();
         if (inst.parentNavItem){
             inst.parentNavItem.linkElement.setAttribute('aria-expanded', true);
         }
