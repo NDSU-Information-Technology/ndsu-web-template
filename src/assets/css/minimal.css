@@ -337,6 +337,7 @@ ul.inline-list {
   white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
@@ -1017,6 +1018,7 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
       white-space: nowrap;
       vertical-align: middle;
       -webkit-user-select: none;
+         -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       cursor: pointer;
@@ -1146,6 +1148,7 @@ a.btn:hover, a.btn:focus, a.btn[aria-expanded=true], a.btn.active {
     white-space: nowrap;
     vertical-align: middle;
     -webkit-user-select: none;
+       -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;
@@ -1794,18 +1797,22 @@ body .quick-picture-container {
 
 body .text-column-2 {
   -webkit-column-count: 2;
+     -moz-column-count: 2;
           column-count: 2; }
 
 body .text-column-3 {
   -webkit-column-count: 3;
+     -moz-column-count: 3;
           column-count: 3; }
 
 body .text-column-4 {
   -webkit-column-count: 4;
+     -moz-column-count: 4;
           column-count: 4; }
 
 body [class*='text-column-'] {
   -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
           column-gap: 2em; }
 
 @media (max-width: 991px) {
@@ -1828,6 +1835,7 @@ body [class*='text-column-'] {
 @media (max-width: 767px) {
   body [class^='text-column-'] {
     -webkit-column-count: 1;
+       -moz-column-count: 1;
             column-count: 1; }
   body .multi-sections {
     -ms-flex-wrap: nowrap;
