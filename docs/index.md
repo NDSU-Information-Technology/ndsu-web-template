@@ -62,7 +62,7 @@ Each NDSU page is required to have the following structure:
         </section>
     </footer>
     <!--Referece(s) to script-->
-    <script type="text/javascript" src="https://static.ndsu.nodak.edu/scripts/minimal.min.js"></script>
+    <script type="text/javascript" src="https://static.ndsu.edu/scripts/minimal.min.js"></script>
 </body>
 ```
 
@@ -160,7 +160,7 @@ An example of footer with address:
 <footer class="footer-green">
     <section class="footer-address">
         <!--NDSU logo-->
-        <img src="https://static.ndsu.nodak.edu/images/NDSU.twolines.png" alt="North Dakota State University" />
+        <img src="https://static.ndsu.edu/images/NDSU.twolines.png" alt="North Dakota State University" />
         <!--Wrap the address text in address element-->
         <address>
             <h6>University Relations</h6>
@@ -179,7 +179,7 @@ Script files should go at the end of the `body` HTML element after footer. Make 
 Example:
 ```html
 <!--Minimal version of script-->
-<script type="text/javascript" src="https://static.ndsu.nodak.edu/scripts/minimal.min.js"></script>
+<script type="text/javascript" src="https://static.ndsu.edu/scripts/minimal.min.js"></script>
 ```
 
 ## Minimal and Full Version Builds
@@ -199,6 +199,6 @@ Example:
  ```html
 <head>
     <!--...-->
-    <link rel="stylesheet" type="text/css" href="https://static.ndsu.nodak.edu/styles/minimal.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://static.ndsu.edu/styles/minimal.min.css" />
 </head>
  ```
