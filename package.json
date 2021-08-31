@@ -34,7 +34,7 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "tar": "^4.4.2"
+    "tar": "^4.4.18"
   },
   "browserslist": [
     "> 1%",
